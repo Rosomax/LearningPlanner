@@ -135,12 +135,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\acquisition.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\ikony\icons8-delete-40.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ZadanieIcon.ico" />
   </ItemGroup>
   <ItemGroup>
