@@ -15,11 +15,6 @@ namespace LearningPlanner_1._0._0
         public ZadaniaControl1()
         {
             InitializeComponent();
-
-
         }
-
-     
-
     }
 }
