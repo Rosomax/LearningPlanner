@@ -168,8 +168,12 @@
   <ItemGroup>
     <Content Include="Hand.cur" />
     <Content Include="HandZad.cur" />
-    <Content Include="Resources\Hand-kursor.cur" />
-    <Content Include="Resources\Kursor.cur" />
+    <Content Include="Resources\Hand-kursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
