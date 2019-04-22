@@ -32,9 +32,7 @@ namespace LearningPlanner_1._0._0
         {
             BackColor = Color.Transparent;
             label1.ForeColor = Color.White;
-            
-
-            
+     
         }
     }
 }
