@@ -15,20 +15,6 @@ namespace LearningPlanner_1._0._0
         public ZadaniaControl1()
         {
             InitializeComponent();
-
-
-        }
-
-        private void label1_MouseEnter(object sender, EventArgs e)
-        {
-            BackColor = Color.FromArgb(178, 8, 55);
-            label1.ForeColor = Color.Black;
-        }
-
-        private void label1_MouseLeave(object sender, EventArgs e)
-        {
-            BackColor = Color.Transparent;
-            label1.ForeColor = Color.White;
         }
     }
 }
