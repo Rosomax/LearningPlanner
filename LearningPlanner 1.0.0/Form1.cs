@@ -55,8 +55,12 @@ namespace LearningPlanner_1._0._0
             }
         }
 
+
         #endregion
 
-      
+        private void closePictureBox_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

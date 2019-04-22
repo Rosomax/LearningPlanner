@@ -52,6 +52,7 @@
     <Compile Include="ciekawoskiControl5.Designer.cs">
       <DependentUpon>ciekawoskiControl5.cs</DependentUpon>
     </Compile>
+    <Compile Include="DrawActiveBarLeftMenu.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
