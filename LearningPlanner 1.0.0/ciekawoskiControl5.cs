@@ -21,12 +21,24 @@ namespace LearningPlanner_1._0._0
         {
             BackColor = Color.FromArgb(178, 8, 55);
             label1.ForeColor = Color.Black;
+            this.Cursor = new Cursor("Resources\\Hand-kursor.cur");
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
             BackColor = Color.Transparent;
             label1.ForeColor = Color.White;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+
+            ZeSwiataIt Childform = new ZeSwiataIt();
+
+            Childform.MdiParent = this.ParentForm ;
+            Childform.Dock = DockStyle.Fill;
+            Childform.Show();
         }
     }
 }

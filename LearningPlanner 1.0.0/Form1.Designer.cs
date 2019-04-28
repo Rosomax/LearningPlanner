@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.LeftMainPanel = new System.Windows.Forms.Panel();
+            this.PanelLeftDraw = new System.Windows.Forms.Panel();
             this.TopMainPanel = new System.Windows.Forms.Panel();
             this.learningPlannerLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -50,17 +51,29 @@
             // LeftMainPanel
             // 
             this.LeftMainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.LeftMainPanel.Controls.Add(this.zadaniaControl11);
+            this.LeftMainPanel.Controls.Add(this.PanelLeftDraw);
             this.LeftMainPanel.Controls.Add(this.ustawieniaControl61);
             this.LeftMainPanel.Controls.Add(this.ciekawoskiControl51);
             this.LeftMainPanel.Controls.Add(this.znajdzZadanieControl41);
             this.LeftMainPanel.Controls.Add(this.kategorieControl31);
             this.LeftMainPanel.Controls.Add(this.zakonczoneZadaniaControl21);
-            this.LeftMainPanel.Controls.Add(this.zadaniaControl11);
             this.LeftMainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftMainPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftMainPanel.Name = "LeftMainPanel";
             this.LeftMainPanel.Size = new System.Drawing.Size(197, 586);
             this.LeftMainPanel.TabIndex = 0;
+            this.LeftMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LeftMainPanel_Paint);
+            // 
+            // PanelLeftDraw
+            // 
+            this.PanelLeftDraw.BackColor = System.Drawing.Color.White;
+            this.PanelLeftDraw.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelLeftDraw.Location = new System.Drawing.Point(0, 0);
+            this.PanelLeftDraw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLeftDraw.Name = "PanelLeftDraw";
+            this.PanelLeftDraw.Size = new System.Drawing.Size(12, 586);
+            this.PanelLeftDraw.TabIndex = 6;
             // 
             // TopMainPanel
             // 
@@ -95,18 +108,19 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = global::LearningPlanner_1._0._0.Properties.Resources.stronaGlowna_icon;
             this.pictureBox2.Location = new System.Drawing.Point(600, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 42);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.info_icon;
             this.pictureBox1.Location = new System.Drawing.Point(641, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 42);
             this.pictureBox1.TabIndex = 2;
@@ -117,7 +131,7 @@
             this.closePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.closePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.delete_icon;
             this.closePictureBox.Location = new System.Drawing.Point(682, 0);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(5);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.closePictureBox.Name = "closePictureBox";
             this.closePictureBox.Size = new System.Drawing.Size(41, 42);
             this.closePictureBox.TabIndex = 0;
@@ -141,11 +155,13 @@
             this.ciekawoskiControl51.Name = "ciekawoskiControl51";
             this.ciekawoskiControl51.Size = new System.Drawing.Size(185, 92);
             this.ciekawoskiControl51.TabIndex = 4;
+           
+            this.ciekawoskiControl51.Click += new System.EventHandler(this.ciekawoskiControl51_Click);
             // 
             // znajdzZadanieControl41
             // 
             this.znajdzZadanieControl41.BackColor = System.Drawing.Color.Transparent;
-            this.znajdzZadanieControl41.Location = new System.Drawing.Point(12, 297);
+            this.znajdzZadanieControl41.Location = new System.Drawing.Point(12, 299);
             this.znajdzZadanieControl41.Margin = new System.Windows.Forms.Padding(4);
             this.znajdzZadanieControl41.Name = "znajdzZadanieControl41";
             this.znajdzZadanieControl41.Size = new System.Drawing.Size(185, 92);
@@ -172,11 +188,10 @@
             // zadaniaControl11
             // 
             this.zadaniaControl11.BackColor = System.Drawing.Color.Transparent;
-            this.zadaniaControl11.Location = new System.Drawing.Point(12, -1);
-            this.zadaniaControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.zadaniaControl11.Location = new System.Drawing.Point(12, 0);
             this.zadaniaControl11.Name = "zadaniaControl11";
             this.zadaniaControl11.Size = new System.Drawing.Size(185, 92);
-            this.zadaniaControl11.TabIndex = 0;
+            this.zadaniaControl11.TabIndex = 7;
             // 
             // mainForm
             // 
@@ -189,9 +204,11 @@
             this.Controls.Add(this.LeftMainPanel);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearningPlanner";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.mainForm_Paint);
             this.LeftMainPanel.ResumeLayout(false);
             this.TopMainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -205,7 +222,6 @@
 
         private System.Windows.Forms.Panel LeftMainPanel;
         private System.Windows.Forms.Panel TopMainPanel;
-        private ZadaniaControl1 zadaniaControl11;
         private zakonczoneZadaniaControl2 zakonczoneZadaniaControl21;
         private kategorieControl3 kategorieControl31;
         private znajdzZadanieControl4 znajdzZadanieControl41;
@@ -215,6 +231,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label learningPlannerLabel;
+        private System.Windows.Forms.Panel PanelLeftDraw;
+        private ZadaniaControl1 zadaniaControl11;
     }
 }
 

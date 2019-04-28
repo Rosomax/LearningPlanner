@@ -45,6 +45,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ustawienia";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label1_MouseClick);
             this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
@@ -52,7 +53,7 @@
             // 
             this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.Ustawienia_icon;
             this.pictureBox1.Location = new System.Drawing.Point(5, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 62);
             this.pictureBox1.TabIndex = 1;
@@ -65,7 +66,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ustawieniaControl6";
             this.Size = new System.Drawing.Size(200, 113);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

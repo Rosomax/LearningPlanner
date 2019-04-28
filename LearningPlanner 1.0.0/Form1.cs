@@ -30,7 +30,7 @@ namespace LearningPlanner_1._0._0
             this.Close();
         }
 
-        
+
         #region PanelMove
 
         private bool mouseDown;
@@ -60,5 +60,37 @@ namespace LearningPlanner_1._0._0
         }
         #endregion
 
+
+
+        private void mainForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void ciekawoskiControl51_Click(object sender, EventArgs e)
+        {
+            ZeSwiataIt Childform = new ZeSwiataIt();
+            Childform.MdiParent = this;
+            Childform.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form c in this.MdiChildren)
+            {
+                c.Close();
+            }
+        }
+
+        private void LeftMainPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (zadaniaControl11.zadanie==true)
+            {
+                DrawActiveBarLeftMenu zadanie = new DrawActiveBarLeftMenu();
+                zadanie.RysujZadania(e.Graphics);
+            }
+        }
     }
 }

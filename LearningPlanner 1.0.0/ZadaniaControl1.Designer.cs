@@ -35,16 +35,17 @@
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
+            this.label1.Location = new System.Drawing.Point(78, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 92);
+            this.label1.Size = new System.Drawing.Size(100, 53);
             this.label1.TabIndex = 0;
             this.label1.Text = "Zadania";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+           
             this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
@@ -58,6 +59,9 @@
             this.pictureBox1.Size = new System.Drawing.Size(45, 38);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
             // ZadaniaControl1
             // 
@@ -67,7 +71,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "ZadaniaControl1";
-            this.Size = new System.Drawing.Size(150, 92);
+            this.Size = new System.Drawing.Size(185, 92);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ZadaniaControl1_MouseClick);
+            this.MouseEnter += new System.EventHandler(this.ZadaniaControl1_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ZadaniaControl1_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

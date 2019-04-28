@@ -9,8 +9,8 @@ namespace LearningPlanner_1._0._0
 {
     class DrawActiveBarLeftMenu
     {
-        int wysokosc = 113;
-        int szerokosc = 15;
+        int wysokosc = 185;
+        int szerokosc = 12;
         // Mysle czy calosci nie zrobic jako oddzielnej klasy? 
 
         // Rysowanie zaznaczen przy aktywmym pod menu do programu learning planner - kolor panelu w RGB - 178;8;55
