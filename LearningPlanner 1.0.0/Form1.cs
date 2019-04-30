@@ -62,18 +62,10 @@ namespace LearningPlanner_1._0._0
 
 
 
-        private void mainForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
-        private void ciekawoskiControl51_Click(object sender, EventArgs e)
-        {
-            ZeSwiataIt Childform = new ZeSwiataIt();
-            Childform.MdiParent = this;
-            Childform.Show();
-        }
+
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -84,13 +76,30 @@ namespace LearningPlanner_1._0._0
             }
         }
 
-        private void LeftMainPanel_Paint(object sender, PaintEventArgs e)
+        #region top menu options
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
-            if (zadaniaControl11.zadanie==true)
-            {
-                DrawActiveBarLeftMenu zadanie = new DrawActiveBarLeftMenu();
-                zadanie.RysujZadania(e.Graphics);
-            }
+            pictureBox2.Cursor = new Cursor("Resources\\Hand-kursor.cur");
+            pictureBox2.Size = new Size(43, 44);
         }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(41, 42);
+        }
+
+        private void closePictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            closePictureBox.Cursor = new Cursor("Resources\\Hand-kursor.cur");
+            closePictureBox.Size = new Size(39, 40);
+        }
+
+        private void closePictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            closePictureBox.Size = new Size(41, 42);
+        }
+        #endregion
+
+     
     }
 }

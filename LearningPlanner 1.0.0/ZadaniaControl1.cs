@@ -29,7 +29,7 @@ namespace LearningPlanner_1._0._0
             Childform.Show();
         }
 
-        public bool zadanie { get; private set; }
+        
         #region metody
         // Mouse methods 
         public void MouseEnterMechanics(Control control)
@@ -90,18 +90,18 @@ namespace LearningPlanner_1._0._0
         // Click
         private void ZadaniaControl1_MouseClick(object sender, MouseEventArgs e)
         {
-            zadanie = true;
+            
             OpenFormZadania();
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            zadanie = true;
+            
             OpenFormZadania();
         }
         private void label1_Click(object sender, EventArgs e)
         {
-            zadanie = true;
+            
             OpenFormZadania();
         }
     }

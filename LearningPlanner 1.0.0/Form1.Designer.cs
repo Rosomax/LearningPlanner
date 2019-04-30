@@ -30,16 +30,16 @@
         {
             this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.PanelLeftDraw = new System.Windows.Forms.Panel();
-            this.TopMainPanel = new System.Windows.Forms.Panel();
-            this.learningPlannerLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.closePictureBox = new System.Windows.Forms.PictureBox();
             this.ustawieniaControl61 = new LearningPlanner_1._0._0.ustawieniaControl6();
             this.ciekawoskiControl51 = new LearningPlanner_1._0._0.ciekawoskiControl5();
             this.znajdzZadanieControl41 = new LearningPlanner_1._0._0.znajdzZadanieControl4();
             this.kategorieControl31 = new LearningPlanner_1._0._0.kategorieControl3();
             this.zakonczoneZadaniaControl21 = new LearningPlanner_1._0._0.zakonczoneZadaniaControl2();
+            this.TopMainPanel = new System.Windows.Forms.Panel();
+            this.learningPlannerLabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.closePictureBox = new System.Windows.Forms.PictureBox();
             this.zadaniaControl11 = new LearningPlanner_1._0._0.ZadaniaControl1();
             this.LeftMainPanel.SuspendLayout();
             this.TopMainPanel.SuspendLayout();
@@ -63,17 +63,62 @@
             this.LeftMainPanel.Name = "LeftMainPanel";
             this.LeftMainPanel.Size = new System.Drawing.Size(197, 586);
             this.LeftMainPanel.TabIndex = 0;
-            this.LeftMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LeftMainPanel_Paint);
             // 
             // PanelLeftDraw
             // 
-            this.PanelLeftDraw.BackColor = System.Drawing.Color.White;
+            this.PanelLeftDraw.BackColor = System.Drawing.Color.Transparent;
             this.PanelLeftDraw.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLeftDraw.Location = new System.Drawing.Point(0, 0);
-            this.PanelLeftDraw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLeftDraw.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLeftDraw.Name = "PanelLeftDraw";
             this.PanelLeftDraw.Size = new System.Drawing.Size(12, 586);
             this.PanelLeftDraw.TabIndex = 6;
+            // 
+            // ustawieniaControl61
+            // 
+            this.ustawieniaControl61.BackColor = System.Drawing.Color.Transparent;
+            this.ustawieniaControl61.Location = new System.Drawing.Point(12, 485);
+            this.ustawieniaControl61.Margin = new System.Windows.Forms.Padding(4);
+            this.ustawieniaControl61.Name = "ustawieniaControl61";
+            this.ustawieniaControl61.Size = new System.Drawing.Size(185, 101);
+            this.ustawieniaControl61.TabIndex = 5;
+            // 
+            // ciekawoskiControl51
+            // 
+            this.ciekawoskiControl51.BackColor = System.Drawing.Color.Transparent;
+            this.ciekawoskiControl51.Location = new System.Drawing.Point(12, 388);
+            this.ciekawoskiControl51.Margin = new System.Windows.Forms.Padding(4);
+            this.ciekawoskiControl51.Name = "ciekawoskiControl51";
+            this.ciekawoskiControl51.Size = new System.Drawing.Size(185, 97);
+            this.ciekawoskiControl51.TabIndex = 4;
+            // 
+            // znajdzZadanieControl41
+            // 
+            this.znajdzZadanieControl41.BackColor = System.Drawing.Color.Transparent;
+            this.znajdzZadanieControl41.Location = new System.Drawing.Point(12, 291);
+            this.znajdzZadanieControl41.Margin = new System.Windows.Forms.Padding(4);
+            this.znajdzZadanieControl41.Name = "znajdzZadanieControl41";
+            this.znajdzZadanieControl41.Size = new System.Drawing.Size(185, 97);
+            this.znajdzZadanieControl41.TabIndex = 3;
+            // 
+            // kategorieControl31
+            // 
+            this.kategorieControl31.BackColor = System.Drawing.Color.Transparent;
+            this.kategorieControl31.kategorie = false;
+            this.kategorieControl31.Location = new System.Drawing.Point(12, 194);
+            this.kategorieControl31.Margin = new System.Windows.Forms.Padding(4);
+            this.kategorieControl31.Name = "kategorieControl31";
+            this.kategorieControl31.Size = new System.Drawing.Size(185, 97);
+            this.kategorieControl31.TabIndex = 2;
+            // 
+            // zakonczoneZadaniaControl21
+            // 
+            this.zakonczoneZadaniaControl21.BackColor = System.Drawing.Color.Transparent;
+            this.zakonczoneZadaniaControl21.Location = new System.Drawing.Point(12, 97);
+            this.zakonczoneZadaniaControl21.Margin = new System.Windows.Forms.Padding(4);
+            this.zakonczoneZadaniaControl21.Name = "zakonczoneZadaniaControl21";
+            this.zakonczoneZadaniaControl21.Size = new System.Drawing.Size(185, 97);
+            this.zakonczoneZadaniaControl21.TabIndex = 1;
             // 
             // TopMainPanel
             // 
@@ -108,19 +153,21 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = global::LearningPlanner_1._0._0.Properties.Resources.stronaGlowna_icon;
             this.pictureBox2.Location = new System.Drawing.Point(600, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 42);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.info_icon;
             this.pictureBox1.Location = new System.Drawing.Point(641, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 42);
             this.pictureBox1.TabIndex = 2;
@@ -131,66 +178,21 @@
             this.closePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.closePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.delete_icon;
             this.closePictureBox.Location = new System.Drawing.Point(682, 0);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(5);
             this.closePictureBox.Name = "closePictureBox";
             this.closePictureBox.Size = new System.Drawing.Size(41, 42);
             this.closePictureBox.TabIndex = 0;
             this.closePictureBox.TabStop = false;
             this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
-            // 
-            // ustawieniaControl61
-            // 
-            this.ustawieniaControl61.BackColor = System.Drawing.Color.Transparent;
-            this.ustawieniaControl61.Location = new System.Drawing.Point(12, 491);
-            this.ustawieniaControl61.Margin = new System.Windows.Forms.Padding(4);
-            this.ustawieniaControl61.Name = "ustawieniaControl61";
-            this.ustawieniaControl61.Size = new System.Drawing.Size(182, 92);
-            this.ustawieniaControl61.TabIndex = 5;
-            // 
-            // ciekawoskiControl51
-            // 
-            this.ciekawoskiControl51.BackColor = System.Drawing.Color.Transparent;
-            this.ciekawoskiControl51.Location = new System.Drawing.Point(12, 395);
-            this.ciekawoskiControl51.Margin = new System.Windows.Forms.Padding(4);
-            this.ciekawoskiControl51.Name = "ciekawoskiControl51";
-            this.ciekawoskiControl51.Size = new System.Drawing.Size(185, 92);
-            this.ciekawoskiControl51.TabIndex = 4;
-           
-            this.ciekawoskiControl51.Click += new System.EventHandler(this.ciekawoskiControl51_Click);
-            // 
-            // znajdzZadanieControl41
-            // 
-            this.znajdzZadanieControl41.BackColor = System.Drawing.Color.Transparent;
-            this.znajdzZadanieControl41.Location = new System.Drawing.Point(12, 299);
-            this.znajdzZadanieControl41.Margin = new System.Windows.Forms.Padding(4);
-            this.znajdzZadanieControl41.Name = "znajdzZadanieControl41";
-            this.znajdzZadanieControl41.Size = new System.Drawing.Size(185, 92);
-            this.znajdzZadanieControl41.TabIndex = 3;
-            // 
-            // kategorieControl31
-            // 
-            this.kategorieControl31.BackColor = System.Drawing.Color.Transparent;
-            this.kategorieControl31.Location = new System.Drawing.Point(12, 199);
-            this.kategorieControl31.Margin = new System.Windows.Forms.Padding(4);
-            this.kategorieControl31.Name = "kategorieControl31";
-            this.kategorieControl31.Size = new System.Drawing.Size(185, 92);
-            this.kategorieControl31.TabIndex = 2;
-            // 
-            // zakonczoneZadaniaControl21
-            // 
-            this.zakonczoneZadaniaControl21.BackColor = System.Drawing.Color.Transparent;
-            this.zakonczoneZadaniaControl21.Location = new System.Drawing.Point(12, 101);
-            this.zakonczoneZadaniaControl21.Margin = new System.Windows.Forms.Padding(4);
-            this.zakonczoneZadaniaControl21.Name = "zakonczoneZadaniaControl21";
-            this.zakonczoneZadaniaControl21.Size = new System.Drawing.Size(185, 92);
-            this.zakonczoneZadaniaControl21.TabIndex = 1;
+            this.closePictureBox.MouseEnter += new System.EventHandler(this.closePictureBox_MouseEnter);
+            this.closePictureBox.MouseLeave += new System.EventHandler(this.closePictureBox_MouseLeave);
             // 
             // zadaniaControl11
             // 
             this.zadaniaControl11.BackColor = System.Drawing.Color.Transparent;
             this.zadaniaControl11.Location = new System.Drawing.Point(12, 0);
             this.zadaniaControl11.Name = "zadaniaControl11";
-            this.zadaniaControl11.Size = new System.Drawing.Size(185, 92);
+            this.zadaniaControl11.Size = new System.Drawing.Size(185, 97);
             this.zadaniaControl11.TabIndex = 7;
             // 
             // mainForm
@@ -208,7 +210,6 @@
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearningPlanner";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.mainForm_Paint);
             this.LeftMainPanel.ResumeLayout(false);
             this.TopMainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
