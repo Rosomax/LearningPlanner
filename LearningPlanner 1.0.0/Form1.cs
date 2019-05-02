@@ -15,9 +15,9 @@ namespace LearningPlanner_1._0._0
 
         public mainForm()
         {
-
             InitializeComponent();
-            zadaniaControl11.MouseEnter += ZadaniaControl11_MouseEnter;
+            
+
         }
 
         private void ZadaniaControl11_MouseEnter(object sender, EventArgs e)
@@ -62,11 +62,6 @@ namespace LearningPlanner_1._0._0
 
 
 
-
-
-
-
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -75,31 +70,53 @@ namespace LearningPlanner_1._0._0
                 c.Close();
             }
         }
+        // Utworzenie delegata 
+       
+        SetColorHandler colorHandler;
+           
+        
 
-        #region top menu options
-        private void pictureBox2_MouseEnter(object sender, EventArgs e)
-        {
-            pictureBox2.Cursor = new Cursor("Resources\\Hand-kursor.cur");
-            pictureBox2.Size = new Size(43, 44);
+        private void zadaniaControl11_MouseClick(object sender, MouseEventArgs e)
+        {            
+             
+               // Resetowanie koloru dla nieaktywnej karty
+
+                ResetColor();
+                // Przypisanie do delegata metody
+               colorHandler += leftActiveControl1.setBackColorMethod;
+                // wywolanie delegata                   
+                colorHandler(leftActiveControl1);
+                colorHandler -= leftActiveControl1.setBackColorMethod;
+                                         
         }
 
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox2.Size = new Size(41, 42);
+
+        private void zakonczoneZadaniaControl21_MouseClick(object sender, MouseEventArgs e)
+        {            
+         
+            ResetColor();
+            colorHandler += leftActiveControl2.setBackColorMethod;
+            colorHandler(leftActiveControl2);
+            colorHandler -= leftActiveControl2.setBackColorMethod;
+            zakonczoneZadaniaControl21.OpenFormZakonczoneZadania();
+            
         }
 
-        private void closePictureBox_MouseEnter(object sender, EventArgs e)
+        // Metoda do resetu koloru
+        public void ResetColor()
         {
-            closePictureBox.Cursor = new Cursor("Resources\\Hand-kursor.cur");
-            closePictureBox.Size = new Size(39, 40);
+            foreach (var tmp in LeftActiveControl.controlList)
+            {
+                tmp.BackColor = Color.Transparent;
+                this.Refresh();
+            }
+
         }
 
-        private void closePictureBox_MouseLeave(object sender, EventArgs e)
-        {
-            closePictureBox.Size = new Size(41, 42);
-        }
-        #endregion
 
-     
+
     }
+   
+
+
 }

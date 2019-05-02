@@ -15,10 +15,10 @@ namespace LearningPlanner_1._0._0
         public ZadaniaControl1()
         {
             InitializeComponent();
-
-
+            
         }
 
+     
 
         public void OpenFormZadania()
         {
@@ -28,7 +28,7 @@ namespace LearningPlanner_1._0._0
             Childform.Dock = DockStyle.Fill;
             Childform.Show();
         }
-
+        
         
         #region metody
         // Mouse methods 
@@ -87,7 +87,7 @@ namespace LearningPlanner_1._0._0
         }
         #endregion
 
-        // Click
+       // Click
         private void ZadaniaControl1_MouseClick(object sender, MouseEventArgs e)
         {
             

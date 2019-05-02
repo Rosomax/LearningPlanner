@@ -64,11 +64,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "zakonczoneZadaniaControl2";
-            this.Size = new System.Drawing.Size(185, 97);
+            this.Size = new System.Drawing.Size(188, 97);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zakonczoneZadaniaControl2_MouseClick);
             this.MouseEnter += new System.EventHandler(this.zakonczoneZadaniaControl2_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.zakonczoneZadaniaControl2_MouseLeave);
@@ -78,8 +81,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

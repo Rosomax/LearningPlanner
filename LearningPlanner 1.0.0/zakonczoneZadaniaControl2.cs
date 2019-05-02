@@ -15,8 +15,9 @@ namespace LearningPlanner_1._0._0
         public zakonczoneZadaniaControl2()
         {
             InitializeComponent();
+            
         }
-
+        
         public void OpenFormZakonczoneZadania()
         {
             ZakonczoneZadaniaForm Childform = new ZakonczoneZadaniaForm();
@@ -26,6 +27,7 @@ namespace LearningPlanner_1._0._0
             Childform.Show();
         }
 
+        
         
         #region metody
         // Mouse methods 
@@ -96,5 +98,7 @@ namespace LearningPlanner_1._0._0
             
             OpenFormZakonczoneZadania();
         }
+
+       
     }
   }
