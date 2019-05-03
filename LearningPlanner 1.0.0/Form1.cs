@@ -73,21 +73,21 @@ namespace LearningPlanner_1._0._0
         // Utworzenie delegata 
        
         SetColorHandler colorHandler;
-           
-        
+
+
 
         private void zadaniaControl11_MouseClick(object sender, MouseEventArgs e)
-        {            
-             
-               // Resetowanie koloru dla nieaktywnej karty
+        {
 
-                ResetColor();
-                // Przypisanie do delegata metody
-               colorHandler += leftActiveControl1.setBackColorMethod;
-                // wywolanie delegata                   
-                colorHandler(leftActiveControl1);
-                colorHandler -= leftActiveControl1.setBackColorMethod;
-                                         
+            // Resetowanie koloru dla nieaktywnej karty
+
+            ResetColor();
+            // Przypisanie do delegata metody
+            colorHandler += leftActiveControl1.setBackColorMethod;
+            // wywolanie delegata                   
+            colorHandler(leftActiveControl1);
+            colorHandler -= leftActiveControl1.setBackColorMethod;
+
         }
 
 
@@ -113,10 +113,22 @@ namespace LearningPlanner_1._0._0
 
         }
 
+        //private void zadaniaControl11_Load(object sender, EventArgs e)
+        //{
+        //    if (zadaniaControl11.kajak==true)
+        //    {
+        //        // Resetowanie koloru dla nieaktywnej karty
 
-
+        //        ResetColor();
+        //        // Przypisanie do delegata metody
+        //        colorHandler += leftActiveControl1.setBackColorMethod;
+        //        // wywolanie delegata                   
+        //        colorHandler(leftActiveControl1);
+        //        colorHandler -= leftActiveControl1.setBackColorMethod;
+        //    }
+        }
     }
    
 
 
-}
+

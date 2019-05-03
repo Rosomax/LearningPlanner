@@ -129,6 +129,7 @@
             this.zadaniaControl11.Name = "zadaniaControl11";
             this.zadaniaControl11.Size = new System.Drawing.Size(185, 97);
             this.zadaniaControl11.TabIndex = 7;
+
             this.zadaniaControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zadaniaControl11_MouseClick);
             // 
             // ustawieniaControl61
@@ -170,12 +171,13 @@
             // 
             // zakonczoneZadaniaControl21
             // 
+            this.zakonczoneZadaniaControl21.AutoSize = true;
             this.zakonczoneZadaniaControl21.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.zakonczoneZadaniaControl21.BackColor = System.Drawing.Color.Transparent;
             this.zakonczoneZadaniaControl21.Location = new System.Drawing.Point(12, 97);
             this.zakonczoneZadaniaControl21.Margin = new System.Windows.Forms.Padding(4);
             this.zakonczoneZadaniaControl21.Name = "zakonczoneZadaniaControl21";
-            this.zakonczoneZadaniaControl21.Size = new System.Drawing.Size(185, 97);
+            this.zakonczoneZadaniaControl21.Size = new System.Drawing.Size(188, 97);
             this.zakonczoneZadaniaControl21.TabIndex = 1;
             this.zakonczoneZadaniaControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zakonczoneZadaniaControl21_MouseClick);
             // 
@@ -258,6 +260,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearningPlanner";
             this.LeftMainPanel.ResumeLayout(false);
+            this.LeftMainPanel.PerformLayout();
             this.TopMainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -121,8 +121,8 @@
   <data name="delete icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ikony\delete icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ze swiata icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ikony\ze swiata icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stronaGlowna icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ikony\stronaGlowna icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Znajdz zadanie icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ikony\Znajdz zadanie icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,19 +130,22 @@
   <data name="kategoria icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ikony\kategoria icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ustawienia icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ikony\Ustawienia icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zakonczone zadanie icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ikony\Zakonczone zadanie icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zadanie icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ikony\Zadanie icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ustawienia icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ikony\Ustawienia icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ze swiata icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ikony\ze swiata icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="info icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ikony\info icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stronaGlowna icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ikony\stronaGlowna icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RssImagePNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RssImagePNG1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

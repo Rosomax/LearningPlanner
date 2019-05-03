@@ -17,8 +17,7 @@ namespace LearningPlanner_1._0._0
             InitializeComponent();
             
         }
-
-     
+        
 
         public void OpenFormZadania()
         {
@@ -27,7 +26,9 @@ namespace LearningPlanner_1._0._0
             Childform.MdiParent = this.ParentForm;
             Childform.Dock = DockStyle.Fill;
             Childform.Show();
+            
         }
+        
         
         
         #region metody
@@ -51,12 +52,14 @@ namespace LearningPlanner_1._0._0
         private void label1_MouseEnter(object sender, EventArgs e)
         {
             MouseEnterMechanics(this);
+            
+            
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
             MouseLeaveMechanics(this);
-     
+            
         }
 
        

@@ -35,6 +35,7 @@
             // 
             // label1
             // 
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(78, 17);
@@ -47,11 +48,11 @@
             this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
-             
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.Zadanie_icon;
             this.pictureBox1.Location = new System.Drawing.Point(4, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
