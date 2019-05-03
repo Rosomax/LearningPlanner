@@ -25,7 +25,7 @@ namespace LearningPlanner_1._0._0
             Childform.Show();
         }
         
-        #region metody
+        #region metodyObslugiMyszy
         // Mouse methods 
         public void MouseEnterMechanics(Control control)
         {
@@ -71,7 +71,7 @@ namespace LearningPlanner_1._0._0
         {
             MouseLeaveMechanics(this);
         }
-        #endregion
+        
         //click 
         private void label1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -90,5 +90,7 @@ namespace LearningPlanner_1._0._0
            
             OpenFormUstawienia();
         }
+        #endregion
+
     }
 }

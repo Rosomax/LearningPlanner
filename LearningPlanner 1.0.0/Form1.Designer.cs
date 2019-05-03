@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.leftActiveControl6 = new LearningPlanner_1._0._0.LeftActiveControl();
             this.leftActiveControl5 = new LearningPlanner_1._0._0.LeftActiveControl();
@@ -129,7 +130,6 @@
             this.zadaniaControl11.Name = "zadaniaControl11";
             this.zadaniaControl11.Size = new System.Drawing.Size(185, 97);
             this.zadaniaControl11.TabIndex = 7;
-
             this.zadaniaControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zadaniaControl11_MouseClick);
             // 
             // ustawieniaControl61
@@ -162,7 +162,7 @@
             // kategorieControl31
             // 
             this.kategorieControl31.BackColor = System.Drawing.Color.Transparent;
-            this.kategorieControl31.kategorie = false;
+            
             this.kategorieControl31.Location = new System.Drawing.Point(12, 194);
             this.kategorieControl31.Margin = new System.Windows.Forms.Padding(4);
             this.kategorieControl31.Name = "kategorieControl31";
@@ -255,6 +255,7 @@
             this.Controls.Add(this.LeftMainPanel);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

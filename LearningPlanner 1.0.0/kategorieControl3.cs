@@ -25,9 +25,9 @@ namespace LearningPlanner_1._0._0
             Childform.Dock = DockStyle.Fill;
             Childform.Show();
         }
-        public bool kategorie { get; set; }
+        
 
-        #region metody
+        #region metodyObslugiMyszy
         // Mouse methods 
         public void MouseEnterMechanics(Control control)
         {
@@ -77,7 +77,7 @@ namespace LearningPlanner_1._0._0
         {
             MouseLeaveMechanics(this);
         }
-        #endregion
+        
         //click
         private void label1_Click(object sender, EventArgs e)
         {
@@ -96,5 +96,7 @@ namespace LearningPlanner_1._0._0
             kategorie = true;
             OpenFormKategorie();
         }
+
+        #endregion
     }
 }
