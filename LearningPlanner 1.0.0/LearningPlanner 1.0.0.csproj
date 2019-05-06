@@ -54,6 +54,12 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="AboutLearningPlanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutLearningPlanner.Designer.cs">
+      <DependentUpon>AboutLearningPlanner.cs</DependentUpon>
+    </Compile>
     <Compile Include="ciekawoskiControl5.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutLearningPlanner.resx">
+      <DependentUpon>AboutLearningPlanner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ciekawoskiControl5.resx">
       <DependentUpon>ciekawoskiControl5.cs</DependentUpon>

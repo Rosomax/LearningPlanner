@@ -31,10 +31,10 @@
             this.addUrlButton = new System.Windows.Forms.Button();
             this.urlTextBox = new System.Windows.Forms.TextBox();
             this.urlGroupBox = new System.Windows.Forms.GroupBox();
+            this.rssImage = new System.Windows.Forms.PictureBox();
             this.channelsTitleLabel = new System.Windows.Forms.Label();
             this.channelsListBox = new System.Windows.Forms.ListBox();
             this.displayForNewsTabControl = new System.Windows.Forms.TabControl();
-            this.rssImage = new System.Windows.Forms.PictureBox();
             this.urlGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rssImage)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             this.urlTextBox.Location = new System.Drawing.Point(6, 34);
             this.urlTextBox.Name = "urlTextBox";
-            this.urlTextBox.Size = new System.Drawing.Size(188, 20);
+            this.urlTextBox.Size = new System.Drawing.Size(188, 22);
             this.urlTextBox.TabIndex = 1;
             // 
             // urlGroupBox
@@ -77,6 +77,16 @@
             this.urlGroupBox.TabIndex = 3;
             this.urlGroupBox.TabStop = false;
             this.urlGroupBox.Text = "RSS URL";
+            // 
+            // rssImage
+            // 
+            this.rssImage.Image = global::LearningPlanner_1._0._0.Properties.Resources.RssImagePNG;
+            this.rssImage.Location = new System.Drawing.Point(6, 109);
+            this.rssImage.Name = "rssImage";
+            this.rssImage.Size = new System.Drawing.Size(188, 133);
+            this.rssImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rssImage.TabIndex = 4;
+            this.rssImage.TabStop = false;
             // 
             // channelsTitleLabel
             // 
@@ -96,10 +106,12 @@
             // channelsListBox
             // 
             this.channelsListBox.FormattingEnabled = true;
+            this.channelsListBox.ItemHeight = 16;
             this.channelsListBox.Location = new System.Drawing.Point(12, 287);
             this.channelsListBox.Name = "channelsListBox";
-            this.channelsListBox.Size = new System.Drawing.Size(171, 238);
+            this.channelsListBox.Size = new System.Drawing.Size(171, 228);
             this.channelsListBox.TabIndex = 2;
+            this.channelsListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.channelsListBox_MouseClick);
             // 
             // displayForNewsTabControl
             // 
@@ -109,16 +121,6 @@
             this.displayForNewsTabControl.SelectedIndex = 0;
             this.displayForNewsTabControl.Size = new System.Drawing.Size(523, 544);
             this.displayForNewsTabControl.TabIndex = 4;
-            // 
-            // rssImage
-            // 
-            this.rssImage.Image = global::LearningPlanner_1._0._0.Properties.Resources.RssImagePNG;
-            this.rssImage.Location = new System.Drawing.Point(6, 109);
-            this.rssImage.Name = "rssImage";
-            this.rssImage.Size = new System.Drawing.Size(188, 133);
-            this.rssImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.rssImage.TabIndex = 4;
-            this.rssImage.TabStop = false;
             // 
             // ZeSwiataIt
             // 

@@ -25,78 +25,14 @@ namespace LearningPlanner_1._0._0
             Childform.Dock = DockStyle.Fill;
             Childform.Show();
         }
-        
 
-        #region metodyObslugiMyszy
-        // Mouse methods 
-        public void MouseEnterMechanics(Control control)
+        private void kategorieControl3_Paint(object sender, PaintEventArgs e)
         {
-            control.BackColor = Color.FromArgb(178, 8, 55);
-            control.ForeColor = Color.Black;
-            control.Cursor = new Cursor("Resources\\Hand-kursor.cur");
+            SolidBrush zad = new SolidBrush(Color.White);
+            Graphics g = this.CreateGraphics();
+            FontFamily zadf = new FontFamily("Century Gothic");
+            System.Drawing.Font zfont = new System.Drawing.Font(zadf, 16);
+            g.DrawString("Kategorie", zfont, zad, new PointF(80, 35));
         }
-
-        public void MouseLeaveMechanics(Control control)
-        {
-            control.BackColor = Color.Transparent;
-            control.ForeColor = Color.White;
-        }
-
-        // Events for mouse methods mechanics
-
-        private void label1_MouseEnter(object sender, EventArgs e)
-        {
-            MouseEnterMechanics(this);
-        }
-
-        private void label1_MouseLeave(object sender, EventArgs e)
-        {
-            MouseLeaveMechanics(this);
-        }
-
-
-        
-
-        private void kategorieControl3_MouseEnter(object sender, EventArgs e)
-        {
-            MouseEnterMechanics(this);
-        }
-
-        private void kategorieControl3_MouseLeave(object sender, EventArgs e)
-        {
-            MouseLeaveMechanics(this);
-        }
-
-
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
-        {
-            MouseEnterMechanics(this);
-        }
-
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-            MouseLeaveMechanics(this);
-        }
-        
-        //click
-        private void label1_Click(object sender, EventArgs e)
-        {
-            kategorie = true;
-            OpenFormKategorie();
-        }
-
-        private void kategorieControl3_MouseClick(object sender, MouseEventArgs e)
-        {
-            kategorie = true;
-            OpenFormKategorie();
-        }
-
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            kategorie = true;
-            OpenFormKategorie();
-        }
-
-        #endregion
     }
 }

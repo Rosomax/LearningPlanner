@@ -17,6 +17,14 @@ namespace LearningPlanner_1._0._0
 {
     public partial class ZeSwiataIt : Form
     {
+#region Kanały RSS po linkach
+        string s0 = "https://www.gry-online.pl/rss/news.xml"; // gryonline
+        string s1 = "http://pclab.pl/xml/rss.xml"; //pclab
+        string s2 = "http://www.gazeta.pl/pub/rss/sport.xml"; // Sport
+        string s3 = "http://kanaly.rss.interia.pl/fakty.xml"; // Fakty kraj interia
+        string s4 = "http://vitalia.pl/artykuly.xml"; // Dietetyka
+
+        #endregion
         public ZeSwiataIt()
         {
             InitializeComponent();
@@ -26,8 +34,53 @@ namespace LearningPlanner_1._0._0
         {
             this.Cursor= new Cursor("Resources\\Kursor.cur");
             this.BackColor = Color.FromArgb(138, 197, 222);
-           
+            #region channel box
             
+            string s0t = "GRY ONLINE";
+            string s1t = "PC-LAB";
+            string s2t = "SPORT";
+            string s3t = "FAKTY - POLSKA";
+            string s4t = "DIETETYKA i FITNESS";
+            channelsListBox.Items.Add(s0t);
+            channelsListBox.Items.Add(s1t);
+            channelsListBox.Items.Add(s2t);
+            channelsListBox.Items.Add(s3t);
+            channelsListBox.Items.Add(s4t);
+            #endregion
+        }
+
+      
+
+        private void transferToUrlTextBox()
+        {
+            if (channelsListBox.SelectedItem != null)
+            {
+                string copyUrl;
+                copyUrl = (channelsListBox.SelectedItem as string);
+                if(channelsListBox.SelectedIndex==0)
+                {
+                    copyUrl = s0;
+                }
+                else if(channelsListBox.SelectedIndex == 1)
+                {
+                    copyUrl = s1;
+                }
+                 else if(channelsListBox.SelectedIndex == 2)
+                {
+                    copyUrl = s2;
+                }
+                else if (channelsListBox.SelectedIndex == 3)
+                {
+                    copyUrl = s3;
+                }
+                else if (channelsListBox.SelectedIndex == 4)
+                {
+                    copyUrl = s4;
+                }
+                urlTextBox.Text = copyUrl;
+                copyUrl = (channelsListBox.SelectedItem as string);
+            }
+                
         }
 
         private void addUrlButton_Click(object sender, EventArgs e)
@@ -50,6 +103,8 @@ namespace LearningPlanner_1._0._0
                 feedList.Dock = DockStyle.Fill;
                 // Dodanie scroll bara do lepszego przewijania contentu
                 feedList.HorizontalScrollbar = true;
+              
+
 
                 foreach (SyndicationItem feedItem in feedXML.Items)
                 {
@@ -59,7 +114,7 @@ namespace LearningPlanner_1._0._0
                     bool running = true;
 
                     string fix_sum = "";
-
+                    string link = "";
                     foreach (char characterdata in summary)
                     {
                         if (characterdata != '<' && running)
@@ -71,11 +126,31 @@ namespace LearningPlanner_1._0._0
                             running = false;
                         }
                     }
+                    foreach (char characterdata in summary)
+                    {
+                        if (characterdata == '>' && running)
+                        {
+                            string tmp;
+                            //tmp=
+                            if (characterdata == '<' && running)
+                            {
+                                link = link + characterdata;
+                            }
+                            else
+                            {
+                                running = false;
+                            }
+                        }
+
+                    }
 
                     // Dodanie tytulu wiadomosci z kanalu rss
                     feedList.Items.Add(feedItem.Title.Text);
                     // dodanie textu wiadomosci z kanalu rss
                     feedList.Items.Add(fix_sum);
+                    //feedList.Items.Add(link);
+               
+                    
                     // DOdanie separatora
                     feedList.Items.Add("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
                 }
@@ -83,6 +158,11 @@ namespace LearningPlanner_1._0._0
             catch { MessageBox.Show("Nie dodano żadengo adresu URL kanału RSS", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error ); }
 
 
+        }
+
+        private void channelsListBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            transferToUrlTextBox();
         }
     }
 }

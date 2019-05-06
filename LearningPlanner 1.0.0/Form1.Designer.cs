@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.LeftMainPanel = new System.Windows.Forms.Panel();
+            this.TopMainPanel = new System.Windows.Forms.Panel();
+            this.learningPlannerLabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.closePictureBox = new System.Windows.Forms.PictureBox();
+            this.zakonczoneZadaniaControl21 = new LearningPlanner_1._0._0.zakonczoneZadaniaControl2();
             this.leftActiveControl6 = new LearningPlanner_1._0._0.LeftActiveControl();
             this.leftActiveControl5 = new LearningPlanner_1._0._0.LeftActiveControl();
             this.leftActiveControl4 = new LearningPlanner_1._0._0.LeftActiveControl();
@@ -41,12 +47,6 @@
             this.ciekawoskiControl51 = new LearningPlanner_1._0._0.ciekawoskiControl5();
             this.znajdzZadanieControl41 = new LearningPlanner_1._0._0.znajdzZadanieControl4();
             this.kategorieControl31 = new LearningPlanner_1._0._0.kategorieControl3();
-            this.zakonczoneZadaniaControl21 = new LearningPlanner_1._0._0.zakonczoneZadaniaControl2();
-            this.TopMainPanel = new System.Windows.Forms.Panel();
-            this.learningPlannerLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.closePictureBox = new System.Windows.Forms.PictureBox();
             this.LeftMainPanel.SuspendLayout();
             this.TopMainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,6 +57,7 @@
             // LeftMainPanel
             // 
             this.LeftMainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.LeftMainPanel.Controls.Add(this.zakonczoneZadaniaControl21);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl6);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl5);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl4);
@@ -68,118 +69,11 @@
             this.LeftMainPanel.Controls.Add(this.ciekawoskiControl51);
             this.LeftMainPanel.Controls.Add(this.znajdzZadanieControl41);
             this.LeftMainPanel.Controls.Add(this.kategorieControl31);
-            this.LeftMainPanel.Controls.Add(this.zakonczoneZadaniaControl21);
             this.LeftMainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftMainPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftMainPanel.Name = "LeftMainPanel";
             this.LeftMainPanel.Size = new System.Drawing.Size(197, 586);
             this.LeftMainPanel.TabIndex = 0;
-            // 
-            // leftActiveControl6
-            // 
-            this.leftActiveControl6.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl6.Location = new System.Drawing.Point(0, 477);
-            this.leftActiveControl6.Name = "leftActiveControl6";
-            this.leftActiveControl6.Size = new System.Drawing.Size(12, 109);
-            this.leftActiveControl6.TabIndex = 13;
-            // 
-            // leftActiveControl5
-            // 
-            this.leftActiveControl5.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl5.Location = new System.Drawing.Point(0, 388);
-            this.leftActiveControl5.Name = "leftActiveControl5";
-            this.leftActiveControl5.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl5.TabIndex = 12;
-            // 
-            // leftActiveControl4
-            // 
-            this.leftActiveControl4.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl4.Location = new System.Drawing.Point(0, 291);
-            this.leftActiveControl4.Name = "leftActiveControl4";
-            this.leftActiveControl4.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl4.TabIndex = 11;
-            // 
-            // leftActiveControl3
-            // 
-            this.leftActiveControl3.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl3.Location = new System.Drawing.Point(0, 194);
-            this.leftActiveControl3.Name = "leftActiveControl3";
-            this.leftActiveControl3.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl3.TabIndex = 10;
-            // 
-            // leftActiveControl2
-            // 
-            this.leftActiveControl2.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl2.Location = new System.Drawing.Point(0, 97);
-            this.leftActiveControl2.Name = "leftActiveControl2";
-            this.leftActiveControl2.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl2.TabIndex = 9;
-            // 
-            // leftActiveControl1
-            // 
-            this.leftActiveControl1.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl1.Location = new System.Drawing.Point(0, 0);
-            this.leftActiveControl1.Name = "leftActiveControl1";
-            this.leftActiveControl1.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl1.TabIndex = 8;
-            // 
-            // zadaniaControl11
-            // 
-            this.zadaniaControl11.BackColor = System.Drawing.Color.Transparent;
-            this.zadaniaControl11.Location = new System.Drawing.Point(12, 0);
-            this.zadaniaControl11.Name = "zadaniaControl11";
-            this.zadaniaControl11.Size = new System.Drawing.Size(185, 97);
-            this.zadaniaControl11.TabIndex = 7;
-            this.zadaniaControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zadaniaControl11_MouseClick);
-            // 
-            // ustawieniaControl61
-            // 
-            this.ustawieniaControl61.BackColor = System.Drawing.Color.Transparent;
-            this.ustawieniaControl61.Location = new System.Drawing.Point(12, 485);
-            this.ustawieniaControl61.Margin = new System.Windows.Forms.Padding(4);
-            this.ustawieniaControl61.Name = "ustawieniaControl61";
-            this.ustawieniaControl61.Size = new System.Drawing.Size(185, 101);
-            this.ustawieniaControl61.TabIndex = 5;
-            // 
-            // ciekawoskiControl51
-            // 
-            this.ciekawoskiControl51.BackColor = System.Drawing.Color.Transparent;
-            this.ciekawoskiControl51.Location = new System.Drawing.Point(12, 388);
-            this.ciekawoskiControl51.Margin = new System.Windows.Forms.Padding(4);
-            this.ciekawoskiControl51.Name = "ciekawoskiControl51";
-            this.ciekawoskiControl51.Size = new System.Drawing.Size(185, 97);
-            this.ciekawoskiControl51.TabIndex = 4;
-            // 
-            // znajdzZadanieControl41
-            // 
-            this.znajdzZadanieControl41.BackColor = System.Drawing.Color.Transparent;
-            this.znajdzZadanieControl41.Location = new System.Drawing.Point(12, 291);
-            this.znajdzZadanieControl41.Margin = new System.Windows.Forms.Padding(4);
-            this.znajdzZadanieControl41.Name = "znajdzZadanieControl41";
-            this.znajdzZadanieControl41.Size = new System.Drawing.Size(185, 97);
-            this.znajdzZadanieControl41.TabIndex = 3;
-            // 
-            // kategorieControl31
-            // 
-            this.kategorieControl31.BackColor = System.Drawing.Color.Transparent;
-            
-            this.kategorieControl31.Location = new System.Drawing.Point(12, 194);
-            this.kategorieControl31.Margin = new System.Windows.Forms.Padding(4);
-            this.kategorieControl31.Name = "kategorieControl31";
-            this.kategorieControl31.Size = new System.Drawing.Size(185, 97);
-            this.kategorieControl31.TabIndex = 2;
-            // 
-            // zakonczoneZadaniaControl21
-            // 
-            this.zakonczoneZadaniaControl21.AutoSize = true;
-            this.zakonczoneZadaniaControl21.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.zakonczoneZadaniaControl21.BackColor = System.Drawing.Color.Transparent;
-            this.zakonczoneZadaniaControl21.Location = new System.Drawing.Point(12, 97);
-            this.zakonczoneZadaniaControl21.Margin = new System.Windows.Forms.Padding(4);
-            this.zakonczoneZadaniaControl21.Name = "zakonczoneZadaniaControl21";
-            this.zakonczoneZadaniaControl21.Size = new System.Drawing.Size(188, 97);
-            this.zakonczoneZadaniaControl21.TabIndex = 1;
-            this.zakonczoneZadaniaControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zakonczoneZadaniaControl21_MouseClick);
             // 
             // TopMainPanel
             // 
@@ -231,6 +125,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(41, 42);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // closePictureBox
             // 
@@ -243,6 +138,134 @@
             this.closePictureBox.TabIndex = 0;
             this.closePictureBox.TabStop = false;
             this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
+            // 
+            // zakonczoneZadaniaControl21
+            // 
+            this.zakonczoneZadaniaControl21.AutoSize = true;
+            this.zakonczoneZadaniaControl21.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.zakonczoneZadaniaControl21.BackColor = System.Drawing.Color.Transparent;
+            this.zakonczoneZadaniaControl21.Location = new System.Drawing.Point(12, 97);
+            this.zakonczoneZadaniaControl21.Margin = new System.Windows.Forms.Padding(4);
+            this.zakonczoneZadaniaControl21.Name = "zakonczoneZadaniaControl21";
+            this.zakonczoneZadaniaControl21.Size = new System.Drawing.Size(185, 97);
+            this.zakonczoneZadaniaControl21.TabIndex = 1;
+            this.zakonczoneZadaniaControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zakonczoneZadaniaControl21_MouseClick);
+            this.zakonczoneZadaniaControl21.MouseEnter += new System.EventHandler(this.zakonczoneZadaniaControl21_MouseEnter);
+            this.zakonczoneZadaniaControl21.MouseLeave += new System.EventHandler(this.zakonczoneZadaniaControl21_MouseLeave);
+            // 
+            // leftActiveControl6
+            // 
+            this.leftActiveControl6.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl6.Location = new System.Drawing.Point(0, 477);
+            this.leftActiveControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl6.Name = "leftActiveControl6";
+            this.leftActiveControl6.Size = new System.Drawing.Size(12, 109);
+            this.leftActiveControl6.TabIndex = 13;
+            // 
+            // leftActiveControl5
+            // 
+            this.leftActiveControl5.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl5.Location = new System.Drawing.Point(0, 388);
+            this.leftActiveControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl5.Name = "leftActiveControl5";
+            this.leftActiveControl5.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl5.TabIndex = 12;
+            // 
+            // leftActiveControl4
+            // 
+            this.leftActiveControl4.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl4.Location = new System.Drawing.Point(0, 291);
+            this.leftActiveControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl4.Name = "leftActiveControl4";
+            this.leftActiveControl4.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl4.TabIndex = 11;
+            // 
+            // leftActiveControl3
+            // 
+            this.leftActiveControl3.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl3.Location = new System.Drawing.Point(0, 194);
+            this.leftActiveControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl3.Name = "leftActiveControl3";
+            this.leftActiveControl3.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl3.TabIndex = 10;
+            // 
+            // leftActiveControl2
+            // 
+            this.leftActiveControl2.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl2.Location = new System.Drawing.Point(0, 97);
+            this.leftActiveControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl2.Name = "leftActiveControl2";
+            this.leftActiveControl2.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl2.TabIndex = 9;
+            // 
+            // leftActiveControl1
+            // 
+            this.leftActiveControl1.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl1.Location = new System.Drawing.Point(0, 0);
+            this.leftActiveControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl1.Name = "leftActiveControl1";
+            this.leftActiveControl1.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl1.TabIndex = 8;
+            // 
+            // zadaniaControl11
+            // 
+            this.zadaniaControl11.BackColor = System.Drawing.Color.Transparent;
+            this.zadaniaControl11.Location = new System.Drawing.Point(12, 0);
+            this.zadaniaControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.zadaniaControl11.Name = "zadaniaControl11";
+            this.zadaniaControl11.Size = new System.Drawing.Size(185, 97);
+            this.zadaniaControl11.TabIndex = 7;
+            this.zadaniaControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zadaniaControl11_MouseClick);
+            this.zadaniaControl11.MouseEnter += new System.EventHandler(this.zadaniaControl11_MouseEnter_1);
+            this.zadaniaControl11.MouseLeave += new System.EventHandler(this.zadaniaControl11_MouseLeave);
+            // 
+            // ustawieniaControl61
+            // 
+            this.ustawieniaControl61.BackColor = System.Drawing.Color.Transparent;
+            this.ustawieniaControl61.Location = new System.Drawing.Point(12, 485);
+            this.ustawieniaControl61.Margin = new System.Windows.Forms.Padding(4);
+            this.ustawieniaControl61.Name = "ustawieniaControl61";
+            this.ustawieniaControl61.Size = new System.Drawing.Size(185, 101);
+            this.ustawieniaControl61.TabIndex = 5;
+            this.ustawieniaControl61.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ustawieniaControl61_MouseClick);
+            this.ustawieniaControl61.MouseEnter += new System.EventHandler(this.ustawieniaControl61_MouseEnter);
+            this.ustawieniaControl61.MouseLeave += new System.EventHandler(this.ustawieniaControl61_MouseLeave);
+            // 
+            // ciekawoskiControl51
+            // 
+            this.ciekawoskiControl51.BackColor = System.Drawing.Color.Transparent;
+            this.ciekawoskiControl51.Location = new System.Drawing.Point(12, 388);
+            this.ciekawoskiControl51.Margin = new System.Windows.Forms.Padding(4);
+            this.ciekawoskiControl51.Name = "ciekawoskiControl51";
+            this.ciekawoskiControl51.Size = new System.Drawing.Size(185, 97);
+            this.ciekawoskiControl51.TabIndex = 4;
+            this.ciekawoskiControl51.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ciekawoskiControl51_MouseClick);
+            this.ciekawoskiControl51.MouseEnter += new System.EventHandler(this.ciekawoskiControl51_MouseEnter);
+            this.ciekawoskiControl51.MouseLeave += new System.EventHandler(this.ciekawoskiControl51_MouseLeave);
+            // 
+            // znajdzZadanieControl41
+            // 
+            this.znajdzZadanieControl41.BackColor = System.Drawing.Color.Transparent;
+            this.znajdzZadanieControl41.Location = new System.Drawing.Point(12, 291);
+            this.znajdzZadanieControl41.Margin = new System.Windows.Forms.Padding(4);
+            this.znajdzZadanieControl41.Name = "znajdzZadanieControl41";
+            this.znajdzZadanieControl41.Size = new System.Drawing.Size(185, 97);
+            this.znajdzZadanieControl41.TabIndex = 3;
+            this.znajdzZadanieControl41.MouseClick += new System.Windows.Forms.MouseEventHandler(this.znajdzZadanieControl41_MouseClick);
+            this.znajdzZadanieControl41.MouseEnter += new System.EventHandler(this.znajdzZadanieControl41_MouseEnter);
+            this.znajdzZadanieControl41.MouseLeave += new System.EventHandler(this.znajdzZadanieControl41_MouseLeave);
+            // 
+            // kategorieControl31
+            // 
+            this.kategorieControl31.BackColor = System.Drawing.Color.Transparent;
+            this.kategorieControl31.Location = new System.Drawing.Point(12, 194);
+            this.kategorieControl31.Margin = new System.Windows.Forms.Padding(4);
+            this.kategorieControl31.Name = "kategorieControl31";
+            this.kategorieControl31.Size = new System.Drawing.Size(185, 97);
+            this.kategorieControl31.TabIndex = 2;
+            this.kategorieControl31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.kategorieControl31_MouseClick);
+            this.kategorieControl31.MouseEnter += new System.EventHandler(this.kategorieControl31_MouseEnter);
+            this.kategorieControl31.MouseLeave += new System.EventHandler(this.kategorieControl31_MouseLeave);
             // 
             // mainForm
             // 

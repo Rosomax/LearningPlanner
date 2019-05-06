@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
 [assembly: AssemblyTitle("LearningPlanner 1.0.0")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Program do planowania nauki")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LearningPlanner 1.0.0")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Jakub Benzef i Michał Białek")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

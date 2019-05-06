@@ -20,17 +20,42 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        private void ZadaniaControl11_MouseEnter(object sender, EventArgs e)
+        #region metodyObslugiMyszy
+        // Mouse methods 
+        public void MouseEnterMechanics(Control control)
         {
-            this.BackColor = SystemColors.ActiveCaption;
+            control.BackColor = Color.FromArgb(178, 8, 55);
+            control.ForeColor = Color.Black;
+            control.Cursor = new Cursor("Resources\\Hand-kursor.cur");
         }
 
+        public void MouseLeaveMechanics(Control control)
+        {
+            control.BackColor = Color.Transparent;
+            control.ForeColor = Color.White;
+        }
+
+        #endregion
+
+        #region obsluga ikon na gornym pasku
         private void closePictureBox_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
 
-
+            foreach (Form c in this.MdiChildren)
+            {
+                c.Close();
+            }
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
+            aboutLearningPlanner.Show();
+        }
+        #endregion
         #region PanelMove
 
         private bool mouseDown;
@@ -62,16 +87,9 @@ namespace LearningPlanner_1._0._0
 
 
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-            foreach (Form c in this.MdiChildren)
-            {
-                c.Close();
-            }
-        }
+        #region Delegat zaznaczajacy prostokat oraz obsluga kontrolek pod klik (z lewego  paska)
         // Utworzenie delegata 
-       
+
         SetColorHandler colorHandler;
 
 
@@ -87,6 +105,7 @@ namespace LearningPlanner_1._0._0
             // wywolanie delegata                   
             colorHandler(leftActiveControl1);
             colorHandler -= leftActiveControl1.setBackColorMethod;
+            zadaniaControl11.OpenFormZadania();
 
         }
 
@@ -101,7 +120,38 @@ namespace LearningPlanner_1._0._0
             zakonczoneZadaniaControl21.OpenFormZakonczoneZadania();
             
         }
-
+        private void kategorieControl31_MouseClick(object sender, MouseEventArgs e)
+        {
+            ResetColor();
+            colorHandler += leftActiveControl3.setBackColorMethod;
+            colorHandler(leftActiveControl3);
+            colorHandler -= leftActiveControl3.setBackColorMethod;
+            kategorieControl31.OpenFormKategorie();
+        }
+        private void znajdzZadanieControl41_MouseClick(object sender, MouseEventArgs e)
+        {
+            ResetColor();
+            colorHandler += leftActiveControl4.setBackColorMethod;
+            colorHandler(leftActiveControl4);
+            colorHandler -= leftActiveControl4.setBackColorMethod;
+            znajdzZadanieControl41.OpenFormZnajdzZadanie();
+        }
+        private void ciekawoskiControl51_MouseClick(object sender, MouseEventArgs e)
+        {
+            ResetColor();
+            colorHandler += leftActiveControl5.setBackColorMethod;
+            colorHandler(leftActiveControl5);
+            colorHandler -= leftActiveControl5.setBackColorMethod;
+            ciekawoskiControl51.OpenFormCiekawostki();
+        }
+        private void ustawieniaControl61_MouseClick(object sender, MouseEventArgs e)
+        {
+            ResetColor();
+            colorHandler += leftActiveControl6.setBackColorMethod;
+            colorHandler(leftActiveControl6);
+            colorHandler -= leftActiveControl6.setBackColorMethod;
+            ustawieniaControl61.OpenFormUstawienia();
+        }
         // Metoda do resetu koloru
         public void ResetColor()
         {
@@ -112,10 +162,70 @@ namespace LearningPlanner_1._0._0
             }
 
         }
+        #endregion
 
-      
+        #region Obsluga wejscia i wyjscia myszy na kontrolki - zdarzenia
+        private void zadaniaControl11_MouseEnter_1(object sender, EventArgs e)
+        {
+           MouseEnterMechanics(zadaniaControl11);
         }
+
+        private void zadaniaControl11_MouseLeave(object sender, EventArgs e)
+        {
+           MouseLeaveMechanics(zadaniaControl11);
+        }
+
+        private void zakonczoneZadaniaControl21_MouseEnter(object sender, EventArgs e)
+        {
+            MouseEnterMechanics(zakonczoneZadaniaControl21);
+
+        }
+
+        private void zakonczoneZadaniaControl21_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeaveMechanics(zakonczoneZadaniaControl21);
+        }
+        private void kategorieControl31_MouseEnter(object sender, EventArgs e)
+        {
+            MouseEnterMechanics(kategorieControl31);
+        }
+
+        private void kategorieControl31_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeaveMechanics(kategorieControl31);
+        }
+        private void znajdzZadanieControl41_MouseEnter(object sender, EventArgs e)
+        {
+            MouseEnterMechanics(znajdzZadanieControl41);
+        }
+        private void znajdzZadanieControl41_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeaveMechanics(znajdzZadanieControl41);
+        }
+        private void ciekawoskiControl51_MouseEnter(object sender, EventArgs e)
+        {
+            MouseEnterMechanics(ciekawoskiControl51);
+        }
+
+        private void ciekawoskiControl51_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeaveMechanics(ciekawoskiControl51);
+        }
+
+        private void ustawieniaControl61_MouseEnter(object sender, EventArgs e)
+        {
+            MouseEnterMechanics(ustawieniaControl61);
+        }
+        private void ustawieniaControl61_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeaveMechanics(ustawieniaControl61);
+        }
+
+        #endregion
+
+
     }
+}
    
 
 
