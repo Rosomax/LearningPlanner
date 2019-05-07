@@ -113,6 +113,26 @@ namespace LearningPlanner_1._0._0.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tlo {
+            get {
+                object obj = ResourceManager.GetObject("Tlo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TloCytat {
+            get {
+                object obj = ResourceManager.GetObject("TloCytat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ustawienia_icon {
             get {
                 object obj = ResourceManager.GetObject("Ustawienia icon", resourceCulture);

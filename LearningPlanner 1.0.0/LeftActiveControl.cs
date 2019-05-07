@@ -22,7 +22,7 @@ namespace LearningPlanner_1._0._0
         {
             InitializeComponent();
             controlList.Add(this);
-        
+            
         }
 
      
@@ -30,8 +30,7 @@ namespace LearningPlanner_1._0._0
         public void setBackColorMethod(LeftActiveControl control)            
         {           
          control.BackColor= Color.FromArgb(178, 8, 55);
-            Console.WriteLine("akuku");
-            
+            Console.WriteLine("akuku");           
         }
       
 

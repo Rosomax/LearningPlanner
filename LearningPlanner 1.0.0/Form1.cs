@@ -52,8 +52,8 @@ namespace LearningPlanner_1._0._0
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
-            aboutLearningPlanner.Show();
+           // AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
+          //  aboutLearningPlanner.Show();
         }
         #endregion
         #region PanelMove
@@ -105,8 +105,7 @@ namespace LearningPlanner_1._0._0
             // wywolanie delegata                   
             colorHandler(leftActiveControl1);
             colorHandler -= leftActiveControl1.setBackColorMethod;
-            zadaniaControl11.OpenFormZadania();
-
+            zadaniaControl11.OpenFormZadania();            
         }
 
 

@@ -12,7 +12,7 @@ namespace LearningPlanner_1._0._0
 {
     public partial class ZadaniaControl1 : UserControl
     {
-        public ZadaniaControl1()
+        public  ZadaniaControl1()
         {
             InitializeComponent();
             
@@ -29,15 +29,16 @@ namespace LearningPlanner_1._0._0
             
         }
       
-
+        
         // Rysowanie napisu na kontrolce
         private void ZadaniaControl1_Paint(object sender, PaintEventArgs e)
-        {
+        {            
             SolidBrush zad = new SolidBrush(Color.White);
             Graphics g = this.CreateGraphics();
             FontFamily zadf = new FontFamily("Century Gothic");
             System.Drawing.Font zfont = new System.Drawing.Font(zadf, 16);
             g.DrawString("Zadanie", zfont, zad, new PointF(93, 35));
+            
         }
     }
 }
