@@ -283,17 +283,20 @@
     <None Include="bin\Debug\ikony\stronaGlowna icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Resources\maximize-window.png" />
-    <None Include="bin\Debug\Resources\minimize-window.png" />
-    <Content Include="bin\Debug\ikony\restore-window.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="bin\Debug\Resources\restore-window.png" />
     <Content Include="Hand.cur" />
     <Content Include="HandZad.cur" />
     <Content Include="Resources\Hand-kursor.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="WariantyOkna\restore-window.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WariantyOkna\minimize-window.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WariantyOkna\maximize-window.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Tlo.jpg" />
     <None Include="Resources\TloCytat.jpg" />
     <None Include="Resources\Icon1.ico" />

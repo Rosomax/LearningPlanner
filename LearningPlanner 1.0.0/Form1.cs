@@ -225,17 +225,17 @@ namespace LearningPlanner_1._0._0
 
         private void maximilaziPictureBox_Click(object sender, EventArgs e)
         {
-            
-            if(this.WindowState == FormWindowState.Maximized)
+
+            if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                maximilaziPictureBox.Load("Resources\\maximize-window.png");
+                maximilaziPictureBox.Load("WariantyOkna\\maximize-window.png");
             }
-            else if(this.WindowState==FormWindowState.Normal )
+            else if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
-                
-                maximilaziPictureBox.Load("Resources\\restore-window.png");
+
+                maximilaziPictureBox.Load("WariantyOkna\\restore-window.png");
             }
         }
 

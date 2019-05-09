@@ -32,6 +32,11 @@
             this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.TopMainPanel = new System.Windows.Forms.Panel();
             this.learningPlannerLabel = new System.Windows.Forms.Label();
+            this.minimalizePictureBox = new System.Windows.Forms.PictureBox();
+            this.maximilaziPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.closePictureBox = new System.Windows.Forms.PictureBox();
             this.zakonczoneZadaniaControl21 = new LearningPlanner_1._0._0.zakonczoneZadaniaControl2();
             this.leftActiveControl6 = new LearningPlanner_1._0._0.LeftActiveControl();
             this.leftActiveControl5 = new LearningPlanner_1._0._0.LeftActiveControl();
@@ -44,11 +49,6 @@
             this.ciekawoskiControl51 = new LearningPlanner_1._0._0.ciekawoskiControl5();
             this.znajdzZadanieControl41 = new LearningPlanner_1._0._0.znajdzZadanieControl4();
             this.kategorieControl31 = new LearningPlanner_1._0._0.kategorieControl3();
-            this.minimalizePictureBox = new System.Windows.Forms.PictureBox();
-            this.maximilaziPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.closePictureBox = new System.Windows.Forms.PictureBox();
             this.LeftMainPanel.SuspendLayout();
             this.TopMainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimalizePictureBox)).BeginInit();
@@ -108,6 +108,64 @@
             this.learningPlannerLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseDown);
             this.learningPlannerLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseMove);
             this.learningPlannerLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseUp);
+            // 
+            // minimalizePictureBox
+            // 
+            this.minimalizePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.minimalizePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.minimize_window;
+            this.minimalizePictureBox.Location = new System.Drawing.Point(509, 0);
+            this.minimalizePictureBox.Name = "minimalizePictureBox";
+            this.minimalizePictureBox.Size = new System.Drawing.Size(45, 42);
+            this.minimalizePictureBox.TabIndex = 6;
+            this.minimalizePictureBox.TabStop = false;
+            this.minimalizePictureBox.Click += new System.EventHandler(this.minimalizePictureBox_Click);
+            // 
+            // maximilaziPictureBox
+            // 
+            this.maximilaziPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.maximilaziPictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.maximize_window;
+            this.maximilaziPictureBox.Location = new System.Drawing.Point(554, 0);
+            this.maximilaziPictureBox.Name = "maximilaziPictureBox";
+            this.maximilaziPictureBox.Size = new System.Drawing.Size(46, 42);
+            this.maximilaziPictureBox.TabIndex = 5;
+            this.maximilaziPictureBox.TabStop = false;
+            this.maximilaziPictureBox.Click += new System.EventHandler(this.maximilaziPictureBox_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = global::LearningPlanner_1._0._0.Properties.Resources.stronaGlowna_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(600, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 42);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.info_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(641, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 42);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // closePictureBox
+            // 
+            this.closePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.closePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.delete_icon;
+            this.closePictureBox.Location = new System.Drawing.Point(682, 0);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(5);
+            this.closePictureBox.Name = "closePictureBox";
+            this.closePictureBox.Size = new System.Drawing.Size(41, 42);
+            this.closePictureBox.TabIndex = 0;
+            this.closePictureBox.TabStop = false;
+            this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
             // 
             // zakonczoneZadaniaControl21
             // 
@@ -236,64 +294,6 @@
             this.kategorieControl31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.kategorieControl31_MouseClick);
             this.kategorieControl31.MouseEnter += new System.EventHandler(this.kategorieControl31_MouseEnter);
             this.kategorieControl31.MouseLeave += new System.EventHandler(this.kategorieControl31_MouseLeave);
-            // 
-            // minimalizePictureBox
-            // 
-            this.minimalizePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.minimalizePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.minimize_window;
-            this.minimalizePictureBox.Location = new System.Drawing.Point(509, 0);
-            this.minimalizePictureBox.Name = "minimalizePictureBox";
-            this.minimalizePictureBox.Size = new System.Drawing.Size(45, 42);
-            this.minimalizePictureBox.TabIndex = 6;
-            this.minimalizePictureBox.TabStop = false;
-            this.minimalizePictureBox.Click += new System.EventHandler(this.minimalizePictureBox_Click);
-            // 
-            // maximilaziPictureBox
-            // 
-            this.maximilaziPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.maximilaziPictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.maximize_window;
-            this.maximilaziPictureBox.Location = new System.Drawing.Point(554, 0);
-            this.maximilaziPictureBox.Name = "maximilaziPictureBox";
-            this.maximilaziPictureBox.Size = new System.Drawing.Size(46, 42);
-            this.maximilaziPictureBox.TabIndex = 5;
-            this.maximilaziPictureBox.TabStop = false;
-            this.maximilaziPictureBox.Click += new System.EventHandler(this.maximilaziPictureBox_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = global::LearningPlanner_1._0._0.Properties.Resources.stronaGlowna_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(600, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 42);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.info_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(641, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 42);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // closePictureBox
-            // 
-            this.closePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.delete_icon;
-            this.closePictureBox.Location = new System.Drawing.Point(682, 0);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(5);
-            this.closePictureBox.Name = "closePictureBox";
-            this.closePictureBox.Size = new System.Drawing.Size(41, 42);
-            this.closePictureBox.TabIndex = 0;
-            this.closePictureBox.TabStop = false;
-            this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
             // 
             // mainForm
             // 
