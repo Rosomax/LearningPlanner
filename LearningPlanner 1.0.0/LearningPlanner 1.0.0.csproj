@@ -283,6 +283,12 @@
     <None Include="bin\Debug\ikony\stronaGlowna icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Resources\maximize-window.png" />
+    <None Include="bin\Debug\Resources\minimize-window.png" />
+    <Content Include="bin\Debug\ikony\restore-window.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="bin\Debug\Resources\restore-window.png" />
     <Content Include="Hand.cur" />
     <Content Include="HandZad.cur" />
     <Content Include="Resources\Hand-kursor.cur">
@@ -293,6 +299,12 @@
     <None Include="Resources\Icon1.ico" />
     <Content Include="Resources\Kursor.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\maximize-window.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\minimize-window.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\RssImagePNG.png" />
     <None Include="Resources\Taskbar icon.bmp" />

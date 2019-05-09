@@ -16,7 +16,7 @@ namespace LearningPlanner_1._0._0
         public mainForm()
         {
             InitializeComponent();
-            
+
 
         }
 
@@ -52,8 +52,8 @@ namespace LearningPlanner_1._0._0
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           // AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
-          //  aboutLearningPlanner.Show();
+            // AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
+            //  aboutLearningPlanner.Show();
         }
         #endregion
         #region PanelMove
@@ -105,19 +105,19 @@ namespace LearningPlanner_1._0._0
             // wywolanie delegata                   
             colorHandler(leftActiveControl1);
             colorHandler -= leftActiveControl1.setBackColorMethod;
-            zadaniaControl11.OpenFormZadania();            
+            zadaniaControl11.OpenFormZadania();
         }
 
 
         private void zakonczoneZadaniaControl21_MouseClick(object sender, MouseEventArgs e)
-        {            
-         
+        {
+
             ResetColor();
             colorHandler += leftActiveControl2.setBackColorMethod;
             colorHandler(leftActiveControl2);
             colorHandler -= leftActiveControl2.setBackColorMethod;
             zakonczoneZadaniaControl21.OpenFormZakonczoneZadania();
-            
+
         }
         private void kategorieControl31_MouseClick(object sender, MouseEventArgs e)
         {
@@ -166,12 +166,12 @@ namespace LearningPlanner_1._0._0
         #region Obsluga wejscia i wyjscia myszy na kontrolki - zdarzenia
         private void zadaniaControl11_MouseEnter_1(object sender, EventArgs e)
         {
-           MouseEnterMechanics(zadaniaControl11);
+            MouseEnterMechanics(zadaniaControl11);
         }
 
         private void zadaniaControl11_MouseLeave(object sender, EventArgs e)
         {
-           MouseLeaveMechanics(zadaniaControl11);
+            MouseLeaveMechanics(zadaniaControl11);
         }
 
         private void zakonczoneZadaniaControl21_MouseEnter(object sender, EventArgs e)
@@ -220,12 +220,32 @@ namespace LearningPlanner_1._0._0
             MouseLeaveMechanics(ustawieniaControl61);
         }
 
+
         #endregion
 
+        private void maximilaziPictureBox_Click(object sender, EventArgs e)
+        {
+            
+            if(this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                maximilaziPictureBox.Load("Resources\\maximize-window.png");
+            }
+            else if(this.WindowState==FormWindowState.Normal )
+            {
+                this.WindowState = FormWindowState.Maximized;
+                
+                maximilaziPictureBox.Load("Resources\\restore-window.png");
+            }
+        }
 
+        private void minimalizePictureBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
-   
+
 
 
 
