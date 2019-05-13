@@ -130,7 +130,7 @@ namespace LearningPlanner_1._0._0
                     {
                         if (characterdata == '>' && running)
                         {
-                            string tmp;
+                           // string tmp;
                             //tmp=
                             if (characterdata == '<' && running)
                             {
@@ -163,6 +163,22 @@ namespace LearningPlanner_1._0._0
         private void channelsListBox_MouseClick(object sender, MouseEventArgs e)
         {
             transferToUrlTextBox();
+        }
+
+        
+
+        private void ZeSwiataIt_SizeChanged(object sender, EventArgs e)
+        {
+            if ( this.Size.Width <= 799)
+            {
+                channelsListBox.Size = new Size(176, 212);
+                channelsListBox.BackColor = Color.PaleGreen;
+            }
+            else if ( this.Size.Width >= 800)
+            {
+                channelsListBox.BackColor = Color.Red;
+                channelsListBox.Size = new Size(176, 500);
+            }
         }
     }
 }

@@ -52,8 +52,8 @@ namespace LearningPlanner_1._0._0
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
-            //  aboutLearningPlanner.Show();
+            //AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
+            //aboutLearningPlanner.Show();
         }
         #endregion
         #region PanelMove
@@ -230,6 +230,7 @@ namespace LearningPlanner_1._0._0
             {
                 this.WindowState = FormWindowState.Normal;
                 maximilaziPictureBox.Load("WariantyOkna\\maximize-window.png");
+                
             }
             else if (this.WindowState == FormWindowState.Normal)
             {

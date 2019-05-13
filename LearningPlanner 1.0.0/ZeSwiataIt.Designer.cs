@@ -31,96 +31,121 @@
             this.addUrlButton = new System.Windows.Forms.Button();
             this.urlTextBox = new System.Windows.Forms.TextBox();
             this.urlGroupBox = new System.Windows.Forms.GroupBox();
-            this.rssImage = new System.Windows.Forms.PictureBox();
             this.channelsTitleLabel = new System.Windows.Forms.Label();
+            this.rssImage = new System.Windows.Forms.PictureBox();
             this.channelsListBox = new System.Windows.Forms.ListBox();
             this.displayForNewsTabControl = new System.Windows.Forms.TabControl();
+            this.panelHide = new System.Windows.Forms.Panel();
             this.urlGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rssImage)).BeginInit();
             this.SuspendLayout();
             // 
             // addUrlButton
             // 
-            this.addUrlButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addUrlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.addUrlButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.addUrlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.addUrlButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addUrlButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.addUrlButton.FlatAppearance.BorderSize = 3;
+            this.addUrlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addUrlButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.addUrlButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addUrlButton.Location = new System.Drawing.Point(6, 62);
-            this.addUrlButton.MaximumSize = new System.Drawing.Size(188, 100);
+            this.addUrlButton.Location = new System.Drawing.Point(10, 34);
+            this.addUrlButton.Margin = new System.Windows.Forms.Padding(8);
+            this.addUrlButton.MaximumSize = new System.Drawing.Size(185, 100);
             this.addUrlButton.Name = "addUrlButton";
             this.addUrlButton.Padding = new System.Windows.Forms.Padding(5);
             this.addUrlButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.addUrlButton.Size = new System.Drawing.Size(188, 50);
+            this.addUrlButton.Size = new System.Drawing.Size(180, 53);
             this.addUrlButton.TabIndex = 0;
             this.addUrlButton.Text = "Dodaj";
+            this.addUrlButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.addUrlButton.UseVisualStyleBackColor = false;
             this.addUrlButton.Click += new System.EventHandler(this.addUrlButton_Click);
             // 
             // urlTextBox
             // 
-            this.urlTextBox.Location = new System.Drawing.Point(6, 34);
+            this.urlTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.urlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.urlTextBox.Location = new System.Drawing.Point(13, 13);
             this.urlTextBox.Name = "urlTextBox";
-            this.urlTextBox.Size = new System.Drawing.Size(188, 22);
+            this.urlTextBox.Size = new System.Drawing.Size(175, 13);
             this.urlTextBox.TabIndex = 1;
             // 
             // urlGroupBox
             // 
-            this.urlGroupBox.Controls.Add(this.rssImage);
+            this.urlGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.urlGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.urlGroupBox.Controls.Add(this.panelHide);
             this.urlGroupBox.Controls.Add(this.channelsTitleLabel);
-            this.urlGroupBox.Controls.Add(this.channelsListBox);
+            this.urlGroupBox.Controls.Add(this.rssImage);
             this.urlGroupBox.Controls.Add(this.addUrlButton);
             this.urlGroupBox.Controls.Add(this.urlTextBox);
+            this.urlGroupBox.Controls.Add(this.channelsListBox);
             this.urlGroupBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.urlGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.urlGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.urlGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.urlGroupBox.Margin = new System.Windows.Forms.Padding(0);
             this.urlGroupBox.Name = "urlGroupBox";
-            this.urlGroupBox.Size = new System.Drawing.Size(200, 544);
+            this.urlGroupBox.Padding = new System.Windows.Forms.Padding(0);
+            this.urlGroupBox.Size = new System.Drawing.Size(203, 544);
             this.urlGroupBox.TabIndex = 3;
             this.urlGroupBox.TabStop = false;
-            this.urlGroupBox.Text = "RSS URL";
-            // 
-            // rssImage
-            // 
-            this.rssImage.Image = global::LearningPlanner_1._0._0.Properties.Resources.RssImagePNG;
-            this.rssImage.Location = new System.Drawing.Point(6, 109);
-            this.rssImage.Name = "rssImage";
-            this.rssImage.Size = new System.Drawing.Size(188, 133);
-            this.rssImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.rssImage.TabIndex = 4;
-            this.rssImage.TabStop = false;
             // 
             // channelsTitleLabel
             // 
-            this.channelsTitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.channelsTitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.channelsTitleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.channelsTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.channelsTitleLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.channelsTitleLabel.Location = new System.Drawing.Point(6, 245);
-            this.channelsTitleLabel.MaximumSize = new System.Drawing.Size(188, 0);
+            this.channelsTitleLabel.Location = new System.Drawing.Point(14, 94);
+            this.channelsTitleLabel.MaximumSize = new System.Drawing.Size(200, 87);
             this.channelsTitleLabel.Name = "channelsTitleLabel";
             this.channelsTitleLabel.Padding = new System.Windows.Forms.Padding(5);
             this.channelsTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.channelsTitleLabel.Size = new System.Drawing.Size(188, 34);
+            this.channelsTitleLabel.Size = new System.Drawing.Size(175, 74);
             this.channelsTitleLabel.TabIndex = 3;
             this.channelsTitleLabel.Text = "Polecane Kanały";
             this.channelsTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // rssImage
+            // 
+            this.rssImage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.rssImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.rssImage.Image = global::LearningPlanner_1._0._0.Properties.Resources.RssImagePNG;
+            this.rssImage.Location = new System.Drawing.Point(11, 444);
+            this.rssImage.Name = "rssImage";
+            this.rssImage.Size = new System.Drawing.Size(184, 92);
+            this.rssImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rssImage.TabIndex = 4;
+            this.rssImage.TabStop = false;
+            // 
             // channelsListBox
             // 
+            this.channelsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
             this.channelsListBox.FormattingEnabled = true;
-            this.channelsListBox.ItemHeight = 16;
-            this.channelsListBox.Location = new System.Drawing.Point(12, 287);
+            this.channelsListBox.Location = new System.Drawing.Point(12, 182);
             this.channelsListBox.Name = "channelsListBox";
-            this.channelsListBox.Size = new System.Drawing.Size(171, 228);
+            this.channelsListBox.Size = new System.Drawing.Size(176, 212);
             this.channelsListBox.TabIndex = 2;
             this.channelsListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.channelsListBox_MouseClick);
             // 
             // displayForNewsTabControl
             // 
             this.displayForNewsTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.displayForNewsTabControl.Location = new System.Drawing.Point(200, 0);
+            this.displayForNewsTabControl.Location = new System.Drawing.Point(203, 0);
             this.displayForNewsTabControl.Name = "displayForNewsTabControl";
             this.displayForNewsTabControl.SelectedIndex = 0;
-            this.displayForNewsTabControl.Size = new System.Drawing.Size(523, 544);
+            this.displayForNewsTabControl.Size = new System.Drawing.Size(520, 544);
             this.displayForNewsTabControl.TabIndex = 4;
+            // 
+            // panelHide
+            // 
+            this.panelHide.Location = new System.Drawing.Point(2, 2);
+            this.panelHide.Name = "panelHide";
+            this.panelHide.Size = new System.Drawing.Size(198, 4);
+            this.panelHide.TabIndex = 5;
             // 
             // ZeSwiataIt
             // 
@@ -133,6 +158,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ZeSwiataIt";
             this.Load += new System.EventHandler(this.ZeSwiataIt_Load);
+            this.SizeChanged += new System.EventHandler(this.ZeSwiataIt_SizeChanged);
             this.urlGroupBox.ResumeLayout(false);
             this.urlGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rssImage)).EndInit();
@@ -147,7 +173,8 @@
         private System.Windows.Forms.GroupBox urlGroupBox;
         private System.Windows.Forms.TabControl displayForNewsTabControl;
         private System.Windows.Forms.ListBox channelsListBox;
-        private System.Windows.Forms.Label channelsTitleLabel;
         private System.Windows.Forms.PictureBox rssImage;
+        private System.Windows.Forms.Label channelsTitleLabel;
+        private System.Windows.Forms.Panel panelHide;
     }
 }
