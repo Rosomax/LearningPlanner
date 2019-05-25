@@ -76,10 +76,10 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ciekawoskiControl5.cs">
+    <Compile Include="UserControlsLeftMenu\ciekawoskiControl5.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ciekawoskiControl5.Designer.cs">
+    <Compile Include="UserControlsLeftMenu\ciekawoskiControl5.Designer.cs">
       <DependentUpon>ciekawoskiControl5.cs</DependentUpon>
     </Compile>
     <Compile Include="Cytaty.cs" />
@@ -95,16 +95,16 @@
     <Compile Include="IntroForm1.Designer.cs">
       <DependentUpon>IntroForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="kategorieControl3.cs">
+    <Compile Include="UserControlsLeftMenu\kategorieControl3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="kategorieControl3.Designer.cs">
+    <Compile Include="UserControlsLeftMenu\kategorieControl3.Designer.cs">
       <DependentUpon>kategorieControl3.cs</DependentUpon>
     </Compile>
-    <Compile Include="KategorieForm.cs">
+    <Compile Include="FormsForLeftMenuItems\KategorieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KategorieForm.Designer.cs">
+    <Compile Include="FormsForLeftMenuItems\KategorieForm.Designer.cs">
       <DependentUpon>KategorieForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LeftActiveControl.cs">
@@ -128,64 +128,64 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ustawieniaControl6.cs">
+    <Compile Include="UserControlsLeftMenu\ustawieniaControl6.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ustawieniaControl6.Designer.cs">
+    <Compile Include="UserControlsLeftMenu\ustawieniaControl6.Designer.cs">
       <DependentUpon>ustawieniaControl6.cs</DependentUpon>
     </Compile>
-    <Compile Include="UstawieniaForm.cs">
+    <Compile Include="FormsForLeftMenuItems\UstawieniaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UstawieniaForm.Designer.cs">
+    <Compile Include="FormsForLeftMenuItems\UstawieniaForm.Designer.cs">
       <DependentUpon>UstawieniaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZadaniaControl1.cs">
+    <Compile Include="UserControlsLeftMenu\ZadaniaControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZadaniaControl1.Designer.cs">
+    <Compile Include="UserControlsLeftMenu\ZadaniaControl1.Designer.cs">
       <DependentUpon>ZadaniaControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZadanieForm.cs">
+    <Compile Include="FormsForLeftMenuItems\ZadanieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZadanieForm.Designer.cs">
+    <Compile Include="FormsForLeftMenuItems\ZadanieForm.Designer.cs">
       <DependentUpon>ZadanieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="zakonczoneZadaniaControl2.cs">
+    <Compile Include="UserControlsLeftMenu\zakonczoneZadaniaControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="zakonczoneZadaniaControl2.Designer.cs">
+    <Compile Include="UserControlsLeftMenu\zakonczoneZadaniaControl2.Designer.cs">
       <DependentUpon>zakonczoneZadaniaControl2.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZakonczoneZadaniaForm.cs">
+    <Compile Include="FormsForLeftMenuItems\ZakonczoneZadaniaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZakonczoneZadaniaForm.Designer.cs">
+    <Compile Include="FormsForLeftMenuItems\ZakonczoneZadaniaForm.Designer.cs">
       <DependentUpon>ZakonczoneZadaniaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZeSwiataIt.cs">
+    <Compile Include="FormsForLeftMenuItems\ZeSwiataIt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZeSwiataIt.Designer.cs">
+    <Compile Include="FormsForLeftMenuItems\ZeSwiataIt.Designer.cs">
       <DependentUpon>ZeSwiataIt.cs</DependentUpon>
     </Compile>
-    <Compile Include="znajdzZadanieControl.cs">
+    <Compile Include="UserControlsLeftMenu\znajdzZadanieControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="znajdzZadanieControl.Designer.cs">
+    <Compile Include="UserControlsLeftMenu\znajdzZadanieControl.Designer.cs">
       <DependentUpon>znajdzZadanieControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZnajdzZadanieForm.cs">
+    <Compile Include="FormsForLeftMenuItems\ZnajdzZadanieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZnajdzZadanieForm.Designer.cs">
+    <Compile Include="FormsForLeftMenuItems\ZnajdzZadanieForm.Designer.cs">
       <DependentUpon>ZnajdzZadanieForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ciekawoskiControl5.resx">
+    <EmbeddedResource Include="UserControlsLeftMenu\ciekawoskiControl5.resx">
       <DependentUpon>ciekawoskiControl5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -194,10 +194,10 @@
     <EmbeddedResource Include="IntroForm1.resx">
       <DependentUpon>IntroForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="kategorieControl3.resx">
+    <EmbeddedResource Include="UserControlsLeftMenu\kategorieControl3.resx">
       <DependentUpon>kategorieControl3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KategorieForm.resx">
+    <EmbeddedResource Include="FormsForLeftMenuItems\KategorieForm.resx">
       <DependentUpon>KategorieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeftActiveControl.resx">
@@ -211,31 +211,31 @@
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ustawieniaControl6.resx">
+    <EmbeddedResource Include="UserControlsLeftMenu\ustawieniaControl6.resx">
       <DependentUpon>ustawieniaControl6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UstawieniaForm.resx">
+    <EmbeddedResource Include="FormsForLeftMenuItems\UstawieniaForm.resx">
       <DependentUpon>UstawieniaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZadaniaControl1.resx">
+    <EmbeddedResource Include="UserControlsLeftMenu\ZadaniaControl1.resx">
       <DependentUpon>ZadaniaControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZadanieForm.resx">
+    <EmbeddedResource Include="FormsForLeftMenuItems\ZadanieForm.resx">
       <DependentUpon>ZadanieForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="zakonczoneZadaniaControl2.resx">
+    <EmbeddedResource Include="UserControlsLeftMenu\zakonczoneZadaniaControl2.resx">
       <DependentUpon>zakonczoneZadaniaControl2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZakonczoneZadaniaForm.resx">
+    <EmbeddedResource Include="FormsForLeftMenuItems\ZakonczoneZadaniaForm.resx">
       <DependentUpon>ZakonczoneZadaniaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZeSwiataIt.resx">
+    <EmbeddedResource Include="FormsForLeftMenuItems\ZeSwiataIt.resx">
       <DependentUpon>ZeSwiataIt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="znajdzZadanieControl.resx">
+    <EmbeddedResource Include="UserControlsLeftMenu\znajdzZadanieControl.resx">
       <DependentUpon>znajdzZadanieControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZnajdzZadanieForm.resx">
+    <EmbeddedResource Include="FormsForLeftMenuItems\ZnajdzZadanieForm.resx">
       <DependentUpon>ZnajdzZadanieForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -342,5 +342,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

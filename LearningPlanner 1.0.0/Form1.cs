@@ -157,7 +157,7 @@ namespace LearningPlanner_1._0._0
             foreach (var tmp in LeftActiveControl.controlList)
             {
                 tmp.BackColor = Color.Transparent;
-                this.Refresh();
+                
             }
 
         }

@@ -172,11 +172,11 @@ namespace LearningPlanner_1._0._0
             if ( this.Size.Width <= 799)
             {
                 channelsListBox.Size = new Size(176, 212);
-                channelsListBox.BackColor = Color.PaleGreen;
+                channelsListBox.BackColor = Color.FromArgb(138, 197, 222);
             }
             else if ( this.Size.Width >= 800)
             {
-                channelsListBox.BackColor = Color.Red;
+                channelsListBox.BackColor = Color.FromArgb(138, 197, 222);
                 channelsListBox.Size = new Size(176, 500);
             }
         }

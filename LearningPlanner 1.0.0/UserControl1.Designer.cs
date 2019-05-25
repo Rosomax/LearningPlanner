@@ -52,6 +52,7 @@
             this.Controls.Add(this.label1);
             this.Name = "IntroUserControl";
             this.Size = new System.Drawing.Size(920, 517);
+            this.Load += new System.EventHandler(this.IntroUserControl_Load);
             this.ResumeLayout(false);
 
         }

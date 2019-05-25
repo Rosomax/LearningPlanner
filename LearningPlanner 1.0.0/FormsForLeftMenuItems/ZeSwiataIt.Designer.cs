@@ -31,11 +31,12 @@
             this.addUrlButton = new System.Windows.Forms.Button();
             this.urlTextBox = new System.Windows.Forms.TextBox();
             this.urlGroupBox = new System.Windows.Forms.GroupBox();
+            this.panelHide = new System.Windows.Forms.Panel();
             this.channelsTitleLabel = new System.Windows.Forms.Label();
             this.rssImage = new System.Windows.Forms.PictureBox();
             this.channelsListBox = new System.Windows.Forms.ListBox();
             this.displayForNewsTabControl = new System.Windows.Forms.TabControl();
-            this.panelHide = new System.Windows.Forms.Panel();
+            this.WebBrowserForXml = new System.Windows.Forms.WebBrowser();
             this.urlGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rssImage)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             this.urlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.urlTextBox.Location = new System.Drawing.Point(13, 13);
             this.urlTextBox.Name = "urlTextBox";
-            this.urlTextBox.Size = new System.Drawing.Size(175, 13);
+            this.urlTextBox.Size = new System.Drawing.Size(175, 15);
             this.urlTextBox.TabIndex = 1;
             // 
             // urlGroupBox
@@ -92,6 +93,13 @@
             this.urlGroupBox.Size = new System.Drawing.Size(203, 544);
             this.urlGroupBox.TabIndex = 3;
             this.urlGroupBox.TabStop = false;
+            // 
+            // panelHide
+            // 
+            this.panelHide.Location = new System.Drawing.Point(2, 2);
+            this.panelHide.Name = "panelHide";
+            this.panelHide.Size = new System.Drawing.Size(198, 4);
+            this.panelHide.TabIndex = 5;
             // 
             // channelsTitleLabel
             // 
@@ -125,6 +133,7 @@
             // 
             this.channelsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
             this.channelsListBox.FormattingEnabled = true;
+            this.channelsListBox.ItemHeight = 16;
             this.channelsListBox.Location = new System.Drawing.Point(12, 182);
             this.channelsListBox.Name = "channelsListBox";
             this.channelsListBox.Size = new System.Drawing.Size(176, 212);
@@ -133,24 +142,28 @@
             // 
             // displayForNewsTabControl
             // 
-            this.displayForNewsTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.displayForNewsTabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.displayForNewsTabControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.displayForNewsTabControl.Location = new System.Drawing.Point(203, 0);
             this.displayForNewsTabControl.Name = "displayForNewsTabControl";
             this.displayForNewsTabControl.SelectedIndex = 0;
-            this.displayForNewsTabControl.Size = new System.Drawing.Size(520, 544);
+            this.displayForNewsTabControl.Size = new System.Drawing.Size(520, 276);
             this.displayForNewsTabControl.TabIndex = 4;
             // 
-            // panelHide
+            // WebBrowserForXml
             // 
-            this.panelHide.Location = new System.Drawing.Point(2, 2);
-            this.panelHide.Name = "panelHide";
-            this.panelHide.Size = new System.Drawing.Size(198, 4);
-            this.panelHide.TabIndex = 5;
+            this.WebBrowserForXml.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.WebBrowserForXml.Location = new System.Drawing.Point(203, 276);
+            this.WebBrowserForXml.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WebBrowserForXml.Name = "WebBrowserForXml";
+            this.WebBrowserForXml.Size = new System.Drawing.Size(520, 268);
+            this.WebBrowserForXml.TabIndex = 5;
             // 
             // ZeSwiataIt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(723, 544);
+            this.Controls.Add(this.WebBrowserForXml);
             this.Controls.Add(this.displayForNewsTabControl);
             this.Controls.Add(this.urlGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -176,5 +189,6 @@
         private System.Windows.Forms.PictureBox rssImage;
         private System.Windows.Forms.Label channelsTitleLabel;
         private System.Windows.Forms.Panel panelHide;
+        private System.Windows.Forms.WebBrowser WebBrowserForXml;
     }
 }

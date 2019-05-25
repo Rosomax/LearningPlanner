@@ -15,6 +15,7 @@ namespace LearningPlanner_1._0._0
         public IntroForm1()
         {
             InitializeComponent();
+           
             CreateTimer();
         }
 

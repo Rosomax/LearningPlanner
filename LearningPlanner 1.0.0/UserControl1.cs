@@ -15,8 +15,13 @@ namespace LearningPlanner_1._0._0
         public IntroUserControl()
         {
             InitializeComponent();
+            Load += IntroUserControl_Load1;
+         
+        }
 
-            // Pobranie z bazy danych losowego cytatu i wypisanie go
+        private void IntroUserControl_Load1(object sender, EventArgs e)
+        {
+            if(!DesignMode)
             using (Model1 context = new Model1())
             {
 
@@ -30,11 +35,12 @@ namespace LearningPlanner_1._0._0
                 label1.Text = tmp.Tresc;
 
             }
-
+            
         }
 
-
-
-
+        private void IntroUserControl_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
