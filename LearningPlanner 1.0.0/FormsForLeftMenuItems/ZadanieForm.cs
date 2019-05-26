@@ -15,12 +15,15 @@ namespace LearningPlanner_1._0._0
         public ZadanieForm()
         {
             InitializeComponent();
+            ZadaniaDataGridView1.BackgroundColor = Color.FromArgb(178, 8, 55);
+            ZadaniaDataGridView1.ForeColor = Color.FromArgb(178, 8, 55);
+            
         }
 
 
-        public int Nazwa { get; set; }
-        public int Kategoria { get; set; }
-        public int Opis { get; set; }
+        public string Nazwa { get; set; }
+        public string Kategoria { get; set; }
+        public string Opis { get; set; }
 
 
         private void ZadanieForm_Load(object sender, EventArgs e)
@@ -34,6 +37,11 @@ namespace LearningPlanner_1._0._0
             { Nazwa = o.Nazwa, Kategoria = o.Kategoria, Opis = o.Opis }).ToList();
 
 
+            
+        }
+
+        private void ZadaniaDataGridView1_Click(object sender, EventArgs e)
+        {
             
         }
     }

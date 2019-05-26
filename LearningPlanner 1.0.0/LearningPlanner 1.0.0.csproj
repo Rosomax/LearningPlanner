@@ -79,6 +79,12 @@
     <Compile Include="Cytaty.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataGridZadaniaInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataGridZadaniaInfoControl.Designer.cs">
+      <DependentUpon>DataGridZadaniaInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,6 +214,9 @@
     </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGridZadaniaInfoControl.resx">
+      <DependentUpon>DataGridZadaniaInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsLeftMenu\ciekawoskiControl5.resx">
       <DependentUpon>ciekawoskiControl5.cs</DependentUpon>

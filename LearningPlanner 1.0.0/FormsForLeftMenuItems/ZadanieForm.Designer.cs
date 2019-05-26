@@ -120,12 +120,17 @@
             // 
             // ZadaniaDataGridView1
             // 
+            this.ZadaniaDataGridView1.BackgroundColor = System.Drawing.Color.DarkRed;
+            this.ZadaniaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ZadaniaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.ZadaniaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ZadaniaDataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ZadaniaDataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
             this.ZadaniaDataGridView1.Location = new System.Drawing.Point(406, 0);
             this.ZadaniaDataGridView1.Name = "ZadaniaDataGridView1";
             this.ZadaniaDataGridView1.Size = new System.Drawing.Size(344, 500);
             this.ZadaniaDataGridView1.TabIndex = 7;
+            this.ZadaniaDataGridView1.Click += new System.EventHandler(this.ZadaniaDataGridView1_Click);
             // 
             // ZadanieForm
             // 
@@ -142,7 +147,7 @@
             this.Controls.Add(this.NazwaZadaniaLabel);
             this.Controls.Add(this.NazwaZadaniaTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ZadanieForm";
             this.Text = "ZadanieForm";
             this.Load += new System.EventHandler(this.ZadanieForm_Load);
