@@ -23,5 +23,8 @@ namespace LearningPlanner_1._0._0
             this.BackColor = Color.FromArgb(138, 197, 222);
 
         }
+
+
+
     }
 }

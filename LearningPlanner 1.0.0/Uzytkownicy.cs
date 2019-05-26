@@ -12,12 +12,10 @@ namespace LearningPlanner_1._0._0
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Uzytkownicy
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int IDosoby { get; set; }
+        public string Login { get; set; }
+        public string Haslo { get; set; }
     }
 }

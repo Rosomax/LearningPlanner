@@ -31,12 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.TopMainPanel = new System.Windows.Forms.Panel();
-            this.learningPlannerLabel = new System.Windows.Forms.Label();
             this.minimalizePictureBox = new System.Windows.Forms.PictureBox();
             this.maximilaziPictureBox = new System.Windows.Forms.PictureBox();
+            this.learningPlannerLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.closePictureBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PokazHasloCheckBox = new System.Windows.Forms.CheckBox();
+            this.HaslotextBox1 = new System.Windows.Forms.TextBox();
+            this.LogintextBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.zakonczoneZadaniaControl21 = new LearningPlanner_1._0._0.zakonczoneZadaniaControl2();
             this.leftActiveControl6 = new LearningPlanner_1._0._0.LeftActiveControl();
             this.leftActiveControl5 = new LearningPlanner_1._0._0.LeftActiveControl();
@@ -56,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMainPanel
@@ -94,21 +102,6 @@
             this.TopMainPanel.Size = new System.Drawing.Size(723, 42);
             this.TopMainPanel.TabIndex = 1;
             // 
-            // learningPlannerLabel
-            // 
-            this.learningPlannerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.learningPlannerLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.learningPlannerLabel.ForeColor = System.Drawing.Color.Black;
-            this.learningPlannerLabel.Location = new System.Drawing.Point(0, 0);
-            this.learningPlannerLabel.Name = "learningPlannerLabel";
-            this.learningPlannerLabel.Size = new System.Drawing.Size(600, 42);
-            this.learningPlannerLabel.TabIndex = 4;
-            this.learningPlannerLabel.Text = "Learning Planner";
-            this.learningPlannerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.learningPlannerLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseDown);
-            this.learningPlannerLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseMove);
-            this.learningPlannerLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseUp);
-            // 
             // minimalizePictureBox
             // 
             this.minimalizePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
@@ -130,6 +123,21 @@
             this.maximilaziPictureBox.TabIndex = 5;
             this.maximilaziPictureBox.TabStop = false;
             this.maximilaziPictureBox.Click += new System.EventHandler(this.maximilaziPictureBox_Click);
+            // 
+            // learningPlannerLabel
+            // 
+            this.learningPlannerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.learningPlannerLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.learningPlannerLabel.ForeColor = System.Drawing.Color.Black;
+            this.learningPlannerLabel.Location = new System.Drawing.Point(0, 0);
+            this.learningPlannerLabel.Name = "learningPlannerLabel";
+            this.learningPlannerLabel.Size = new System.Drawing.Size(600, 42);
+            this.learningPlannerLabel.TabIndex = 4;
+            this.learningPlannerLabel.Text = "Learning Planner";
+            this.learningPlannerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.learningPlannerLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseDown);
+            this.learningPlannerLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseMove);
+            this.learningPlannerLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.learningPlannerLabel_MouseUp);
             // 
             // pictureBox2
             // 
@@ -167,6 +175,86 @@
             this.closePictureBox.TabStop = false;
             this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.PokazHasloCheckBox);
+            this.panel1.Controls.Add(this.HaslotextBox1);
+            this.panel1.Controls.Add(this.LogintextBox1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(385, 161);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(366, 276);
+            this.panel1.TabIndex = 3;
+            // 
+            // PokazHasloCheckBox
+            // 
+            this.PokazHasloCheckBox.AutoSize = true;
+            this.PokazHasloCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PokazHasloCheckBox.Location = new System.Drawing.Point(142, 189);
+            this.PokazHasloCheckBox.Name = "PokazHasloCheckBox";
+            this.PokazHasloCheckBox.Size = new System.Drawing.Size(86, 17);
+            this.PokazHasloCheckBox.TabIndex = 2;
+            this.PokazHasloCheckBox.Text = "Pokaż hasło";
+            this.PokazHasloCheckBox.UseVisualStyleBackColor = true;
+            this.PokazHasloCheckBox.CheckedChanged += new System.EventHandler(this.PokazHasloCheckBox_CheckedChanged);
+            // 
+            // HaslotextBox1
+            // 
+            this.HaslotextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HaslotextBox1.Location = new System.Drawing.Point(103, 152);
+            this.HaslotextBox1.Name = "HaslotextBox1";
+            this.HaslotextBox1.Size = new System.Drawing.Size(159, 31);
+            this.HaslotextBox1.TabIndex = 1;
+            this.HaslotextBox1.UseSystemPasswordChar = true;
+            // 
+            // LogintextBox1
+            // 
+            this.LogintextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogintextBox1.Location = new System.Drawing.Point(103, 69);
+            this.LogintextBox1.Name = "LogintextBox1";
+            this.LogintextBox1.Size = new System.Drawing.Size(159, 31);
+            this.LogintextBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(132, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Zaloguj";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(11, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(345, 33);
+            this.label2.TabIndex = 1;
+            this.label2.Text = ":Hasło";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(11, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(345, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = ":Login";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // zakonczoneZadaniaControl21
             // 
             this.zakonczoneZadaniaControl21.AutoSize = true;
@@ -177,6 +265,7 @@
             this.zakonczoneZadaniaControl21.Name = "zakonczoneZadaniaControl21";
             this.zakonczoneZadaniaControl21.Size = new System.Drawing.Size(185, 97);
             this.zakonczoneZadaniaControl21.TabIndex = 1;
+            this.zakonczoneZadaniaControl21.Load += new System.EventHandler(this.zakonczoneZadaniaControl21_Load);
             this.zakonczoneZadaniaControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zakonczoneZadaniaControl21_MouseClick);
             this.zakonczoneZadaniaControl21.MouseEnter += new System.EventHandler(this.zakonczoneZadaniaControl21_MouseEnter);
             this.zakonczoneZadaniaControl21.MouseLeave += new System.EventHandler(this.zakonczoneZadaniaControl21_MouseLeave);
@@ -196,7 +285,7 @@
             this.leftActiveControl5.Location = new System.Drawing.Point(0, 388);
             this.leftActiveControl5.Margin = new System.Windows.Forms.Padding(4);
             this.leftActiveControl5.Name = "leftActiveControl5";
-            this.leftActiveControl5.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl5.Size = new System.Drawing.Size(12, 120);
             this.leftActiveControl5.TabIndex = 12;
             // 
             // leftActiveControl4
@@ -302,6 +391,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(920, 586);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.TopMainPanel);
             this.Controls.Add(this.LeftMainPanel);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
@@ -319,6 +409,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -345,6 +437,13 @@
         private LeftActiveControl leftActiveControl1;
         private System.Windows.Forms.PictureBox maximilaziPictureBox;
         private System.Windows.Forms.PictureBox minimalizePictureBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox LogintextBox1;
+        private System.Windows.Forms.TextBox HaslotextBox1;
+        private System.Windows.Forms.CheckBox PokazHasloCheckBox;
     }
 }
 

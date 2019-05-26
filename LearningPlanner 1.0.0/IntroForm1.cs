@@ -27,7 +27,7 @@ namespace LearningPlanner_1._0._0
         void CreateTimer()
         {
             Timer t1 = new Timer();
-            t1.Interval = 7000;
+            t1.Interval = 500;
             t1.Tick += T1_Tick;
             this.Invalidate();
             t1.Start();

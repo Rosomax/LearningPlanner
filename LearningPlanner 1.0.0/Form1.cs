@@ -16,7 +16,7 @@ namespace LearningPlanner_1._0._0
         public mainForm()
         {
             InitializeComponent();
-
+          
 
         }
 
@@ -244,6 +244,21 @@ namespace LearningPlanner_1._0._0
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        // Zmiana widocznosci wpisywanego hasla
+        private void PokazHasloCheckBox_CheckedChanged(object sender, EventArgs e)
+        {       
+                if (PokazHasloCheckBox.Checked)
+                    HaslotextBox1.UseSystemPasswordChar = false;
+                else
+                    HaslotextBox1.UseSystemPasswordChar = true;            
+        }
+
+        private void zakonczoneZadaniaControl21_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
 

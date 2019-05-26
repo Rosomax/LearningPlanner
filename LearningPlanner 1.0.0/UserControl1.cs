@@ -22,11 +22,10 @@ namespace LearningPlanner_1._0._0
         private void IntroUserControl_Load1(object sender, EventArgs e)
         {
             if(!DesignMode)
-            using (Model1 context = new Model1())
+            using (EntitiesModel2 context = new EntitiesModel2())
             {
 
                 int x = context.Cytaty.Count();
-
 
                 Random rand = new Random();
                 int a = rand.Next(x) + 1;
