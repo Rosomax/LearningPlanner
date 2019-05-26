@@ -31,11 +31,13 @@
             this.NazwaZadaniaTextBox = new System.Windows.Forms.TextBox();
             this.NazwaZadaniaLabel = new System.Windows.Forms.Label();
             this.KategoriaLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.KategoriaTextBox = new System.Windows.Forms.TextBox();
             this.OpisLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.OpisTextBox = new System.Windows.Forms.TextBox();
+            this.ZapiszButton = new System.Windows.Forms.Button();
             this.ZadaniaDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.UsunButton = new System.Windows.Forms.Button();
+            this.AnulujButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ZadaniaDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,14 +78,14 @@
             this.KategoriaLabel.TabIndex = 2;
             this.KategoriaLabel.Text = "Kategoria:";
             // 
-            // textBox1
+            // KategoriaTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(65, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 35);
-            this.textBox1.TabIndex = 3;
+            this.KategoriaTextBox.BackColor = System.Drawing.Color.White;
+            this.KategoriaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KategoriaTextBox.Location = new System.Drawing.Point(65, 151);
+            this.KategoriaTextBox.Name = "KategoriaTextBox";
+            this.KategoriaTextBox.Size = new System.Drawing.Size(130, 35);
+            this.KategoriaTextBox.TabIndex = 3;
             // 
             // OpisLabel
             // 
@@ -99,24 +101,25 @@
             this.OpisLabel.TabIndex = 4;
             this.OpisLabel.Text = "Opis:";
             // 
-            // textBox2
+            // OpisTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(65, 233);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 35);
-            this.textBox2.TabIndex = 5;
+            this.OpisTextBox.BackColor = System.Drawing.Color.White;
+            this.OpisTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpisTextBox.Location = new System.Drawing.Point(65, 233);
+            this.OpisTextBox.Name = "OpisTextBox";
+            this.OpisTextBox.Size = new System.Drawing.Size(130, 35);
+            this.OpisTextBox.TabIndex = 5;
             // 
-            // button1
+            // ZapiszButton
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(75, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Dodaj";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ZapiszButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZapiszButton.Location = new System.Drawing.Point(11, 392);
+            this.ZapiszButton.Name = "ZapiszButton";
+            this.ZapiszButton.Size = new System.Drawing.Size(108, 50);
+            this.ZapiszButton.TabIndex = 6;
+            this.ZapiszButton.Text = "Zapisz";
+            this.ZapiszButton.UseVisualStyleBackColor = true;
+            this.ZapiszButton.Click += new System.EventHandler(this.ZapiszButton_Click);
             // 
             // ZadaniaDataGridView1
             // 
@@ -132,17 +135,41 @@
             this.ZadaniaDataGridView1.TabIndex = 7;
             this.ZadaniaDataGridView1.Click += new System.EventHandler(this.ZadaniaDataGridView1_Click);
             // 
+            // UsunButton
+            // 
+            this.UsunButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsunButton.Location = new System.Drawing.Point(125, 392);
+            this.UsunButton.Name = "UsunButton";
+            this.UsunButton.Size = new System.Drawing.Size(108, 50);
+            this.UsunButton.TabIndex = 8;
+            this.UsunButton.Text = "Usuń";
+            this.UsunButton.UseVisualStyleBackColor = true;
+            this.UsunButton.Click += new System.EventHandler(this.UsunButton_Click);
+            // 
+            // AnulujButton
+            // 
+            this.AnulujButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnulujButton.Location = new System.Drawing.Point(239, 392);
+            this.AnulujButton.Name = "AnulujButton";
+            this.AnulujButton.Size = new System.Drawing.Size(108, 50);
+            this.AnulujButton.TabIndex = 9;
+            this.AnulujButton.Text = "Anuluj";
+            this.AnulujButton.UseVisualStyleBackColor = true;
+            this.AnulujButton.Click += new System.EventHandler(this.AnulujButton_Click);
+            // 
             // ZadanieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(750, 500);
+            this.Controls.Add(this.AnulujButton);
+            this.Controls.Add(this.UsunButton);
             this.Controls.Add(this.ZadaniaDataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ZapiszButton);
+            this.Controls.Add(this.OpisTextBox);
             this.Controls.Add(this.OpisLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.KategoriaTextBox);
             this.Controls.Add(this.KategoriaLabel);
             this.Controls.Add(this.NazwaZadaniaLabel);
             this.Controls.Add(this.NazwaZadaniaTextBox);
@@ -151,6 +178,7 @@
             this.Name = "ZadanieForm";
             this.Text = "ZadanieForm";
             this.Load += new System.EventHandler(this.ZadanieForm_Load);
+            this.SizeChanged += new System.EventHandler(this.ZadanieForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.ZadaniaDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -162,10 +190,12 @@
         private System.Windows.Forms.TextBox NazwaZadaniaTextBox;
         private System.Windows.Forms.Label NazwaZadaniaLabel;
         private System.Windows.Forms.Label KategoriaLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox KategoriaTextBox;
         private System.Windows.Forms.Label OpisLabel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox OpisTextBox;
+        private System.Windows.Forms.Button ZapiszButton;
         private System.Windows.Forms.DataGridView ZadaniaDataGridView1;
+        private System.Windows.Forms.Button UsunButton;
+        private System.Windows.Forms.Button AnulujButton;
     }
 }
