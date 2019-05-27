@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NazwaZadaniaTextBox = new System.Windows.Forms.TextBox();
             this.NazwaZadaniaLabel = new System.Windows.Forms.Label();
             this.KategoriaLabel = new System.Windows.Forms.Label();
@@ -112,49 +113,67 @@
             // 
             // ZapiszButton
             // 
+            this.ZapiszButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.ZapiszButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZapiszButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ZapiszButton.Location = new System.Drawing.Point(11, 392);
             this.ZapiszButton.Name = "ZapiszButton";
             this.ZapiszButton.Size = new System.Drawing.Size(108, 50);
             this.ZapiszButton.TabIndex = 6;
             this.ZapiszButton.Text = "Zapisz";
-            this.ZapiszButton.UseVisualStyleBackColor = true;
+            this.ZapiszButton.UseVisualStyleBackColor = false;
             this.ZapiszButton.Click += new System.EventHandler(this.ZapiszButton_Click);
             // 
             // ZadaniaDataGridView1
             // 
+            this.ZadaniaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ZadaniaDataGridView1.BackgroundColor = System.Drawing.Color.DarkRed;
             this.ZadaniaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ZadaniaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ZadaniaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ZadaniaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ZadaniaDataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ZadaniaDataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.ZadaniaDataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
             this.ZadaniaDataGridView1.Location = new System.Drawing.Point(406, 0);
             this.ZadaniaDataGridView1.Name = "ZadaniaDataGridView1";
+            this.ZadaniaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ZadaniaDataGridView1.Size = new System.Drawing.Size(344, 500);
             this.ZadaniaDataGridView1.TabIndex = 7;
             this.ZadaniaDataGridView1.Click += new System.EventHandler(this.ZadaniaDataGridView1_Click);
+            this.ZadaniaDataGridView1.DoubleClick += new System.EventHandler(this.ZadaniaDataGridView1_DoubleClick);
             // 
             // UsunButton
             // 
+            this.UsunButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.UsunButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsunButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.UsunButton.Location = new System.Drawing.Point(125, 392);
             this.UsunButton.Name = "UsunButton";
             this.UsunButton.Size = new System.Drawing.Size(108, 50);
             this.UsunButton.TabIndex = 8;
             this.UsunButton.Text = "Usuń";
-            this.UsunButton.UseVisualStyleBackColor = true;
+            this.UsunButton.UseVisualStyleBackColor = false;
             this.UsunButton.Click += new System.EventHandler(this.UsunButton_Click);
             // 
             // AnulujButton
             // 
+            this.AnulujButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.AnulujButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnulujButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.AnulujButton.Location = new System.Drawing.Point(239, 392);
             this.AnulujButton.Name = "AnulujButton";
             this.AnulujButton.Size = new System.Drawing.Size(108, 50);
             this.AnulujButton.TabIndex = 9;
             this.AnulujButton.Text = "Anuluj";
-            this.AnulujButton.UseVisualStyleBackColor = true;
+            this.AnulujButton.UseVisualStyleBackColor = false;
             this.AnulujButton.Click += new System.EventHandler(this.AnulujButton_Click);
             // 
             // ZadanieForm

@@ -18,32 +18,38 @@ namespace LearningPlanner_1._0._0
             ZadaniaDataGridView1.BackgroundColor = Color.FromArgb(178, 8, 55);
             ZadaniaDataGridView1.ForeColor = Color.FromArgb(178, 8, 55);
             Clear();
-            
+           
         }
 
-       // public string IDZadania { get; set; }
-        public string Nazwa { get; set; }
-        public string Kategoria { get; set; }
-        public string Opis { get; set; }
+     
         EntitiesModel2 model = new EntitiesModel2();
 
         private void ZadanieForm_Load(object sender, EventArgs e)
         {
-            this.Cursor = new Cursor("Resources\\Kursor.cur");
+            
+
             this.BackColor = Color.FromArgb(138, 197, 222);
 
-            
+          
             //  ZadaniaDataGridView1.DataSource = model.Zadania.ToList();
             ZadaniaDataGridView1.DataSource = model.Zadania.Select(o => new
-            { o.IDZadania, Nazwa = o.Nazwa, Kategoria = o.Kategoria, Opis = o.Opis }).ToList();
+            { o.IDZadania, o.Nazwa,  o.Kategoria,  o.Opis,
+                o.DataUtworzenia, o.CzyZakonczone }).ToList();
 
-
-            
+            // Ukrycie kolumn
+            ZadaniaDataGridView1.Columns["IDZadania"].Visible = false;
+            ZadaniaDataGridView1.Columns["DataUtworzenia"].Visible = false;
+            ZadaniaDataGridView1.Columns["CzyZakonczone"].Visible = false;
         }
+
+
         Zadania modelz = new Zadania();
         private void ZadaniaDataGridView1_Click(object sender, EventArgs e)
         {
-            if(ZadaniaDataGridView1.CurrentRow.Index != -1)
+          var  a =  ZadaniaDataGridView1.CurrentRow.Index.ToString();
+
+
+            if (ZadaniaDataGridView1.CurrentRow.Index != -1)
             {
                modelz.IDZadania = Convert.ToInt32(ZadaniaDataGridView1.CurrentRow.Cells["IDZadania"].Value);
                 using (EntitiesModel2 db = new EntitiesModel2())
@@ -54,17 +60,17 @@ namespace LearningPlanner_1._0._0
                     OpisTextBox.Text = modelz.Opis;
                 }
                 ZapiszButton.Text = "Zaaktualizuj";
-                UsunButton.Enabled = true;
+             //   UsunButton.Enabled = true;
             }
         }
-
+       
         
         // czyszczenie pol tekstowych
         void Clear ()
         {
             NazwaZadaniaTextBox.Text = KategoriaTextBox.Text = OpisTextBox.Text = "";
             ZapiszButton.Text = "Zapisz";
-            UsunButton.Enabled = false;
+           // UsunButton.Enabled = false;
             modelz.IDZadania = 0;
         }
         // Metody do CRUD - buttony
@@ -135,7 +141,8 @@ namespace LearningPlanner_1._0._0
         void RefreshGrid ()
         {
             ZadaniaDataGridView1.DataSource = model.Zadania.Select(o => new
-            { o.IDZadania, Nazwa = o.Nazwa, Kategoria = o.Kategoria, Opis = o.Opis }).ToList();
+            { o.IDZadania, o.Nazwa,  o.Kategoria,  o.Opis,
+                o.DataUtworzenia, o.CzyZakonczone }).ToList();
         }
 
         private void UsunButton_Click(object sender, EventArgs e)
@@ -152,6 +159,35 @@ namespace LearningPlanner_1._0._0
                     Clear();
                     MessageBox.Show("Pomyślnie usunięto zadanie");
                 }
+        }
+
+      
+       
+       
+        
+
+        private void ZadaniaDataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            
+            if (ZadaniaDataGridView1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = ZadaniaDataGridView1.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = ZadaniaDataGridView1.Rows[selectedrowindex];
+
+                string nazwa = Convert.ToString(selectedRow.Cells["Nazwa"].Value);
+                string kategoria = Convert.ToString(selectedRow.Cells["Kategoria"].Value);
+                string opis = Convert.ToString(selectedRow.Cells["Opis"].Value);
+                DateTime dataUtworzenia = Convert.ToDateTime(selectedRow.Cells["DataUtworzenia"].Value);
+                string status = Convert.ToString(selectedRow.Cells["CzyZakonczone"].Value);
+
+
+                ZadaniaInfoForm frm = new ZadaniaInfoForm();
+                frm.Metoda(nazwa, kategoria, opis, dataUtworzenia, status);
+                frm.Show();
+
+
+            }
         }
     }
 }
