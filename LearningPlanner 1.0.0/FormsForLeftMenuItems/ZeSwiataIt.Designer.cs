@@ -31,6 +31,10 @@
             this.addUrlButton = new System.Windows.Forms.Button();
             this.urlTextBox = new System.Windows.Forms.TextBox();
             this.urlGroupBox = new System.Windows.Forms.GroupBox();
+            this.WWWtextbox = new System.Windows.Forms.TextBox();
+            this.ZaladujWWWbutton = new System.Windows.Forms.Button();
+            this.PolecaneStronyListBox = new System.Windows.Forms.ListBox();
+            this.StronyLabel = new System.Windows.Forms.Label();
             this.panelHide = new System.Windows.Forms.Panel();
             this.channelsTitleLabel = new System.Windows.Forms.Label();
             this.rssImage = new System.Windows.Forms.PictureBox();
@@ -49,15 +53,15 @@
             this.addUrlButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.addUrlButton.FlatAppearance.BorderSize = 3;
             this.addUrlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addUrlButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addUrlButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUrlButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addUrlButton.Location = new System.Drawing.Point(10, 34);
+            this.addUrlButton.Location = new System.Drawing.Point(13, 34);
             this.addUrlButton.Margin = new System.Windows.Forms.Padding(8);
             this.addUrlButton.MaximumSize = new System.Drawing.Size(185, 100);
             this.addUrlButton.Name = "addUrlButton";
-            this.addUrlButton.Padding = new System.Windows.Forms.Padding(5);
+            this.addUrlButton.Padding = new System.Windows.Forms.Padding(2);
             this.addUrlButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.addUrlButton.Size = new System.Drawing.Size(180, 53);
+            this.addUrlButton.Size = new System.Drawing.Size(175, 40);
             this.addUrlButton.TabIndex = 0;
             this.addUrlButton.Text = "Dodaj";
             this.addUrlButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -66,17 +70,21 @@
             // 
             // urlTextBox
             // 
-            this.urlTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.urlTextBox.BackColor = System.Drawing.Color.White;
             this.urlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.urlTextBox.Location = new System.Drawing.Point(13, 13);
             this.urlTextBox.Name = "urlTextBox";
-            this.urlTextBox.Size = new System.Drawing.Size(175, 15);
+            this.urlTextBox.Size = new System.Drawing.Size(175, 13);
             this.urlTextBox.TabIndex = 1;
             // 
             // urlGroupBox
             // 
             this.urlGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.urlGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.urlGroupBox.Controls.Add(this.WWWtextbox);
+            this.urlGroupBox.Controls.Add(this.ZaladujWWWbutton);
+            this.urlGroupBox.Controls.Add(this.PolecaneStronyListBox);
+            this.urlGroupBox.Controls.Add(this.StronyLabel);
             this.urlGroupBox.Controls.Add(this.panelHide);
             this.urlGroupBox.Controls.Add(this.channelsTitleLabel);
             this.urlGroupBox.Controls.Add(this.rssImage);
@@ -94,6 +102,64 @@
             this.urlGroupBox.TabIndex = 3;
             this.urlGroupBox.TabStop = false;
             // 
+            // WWWtextbox
+            // 
+            this.WWWtextbox.BackColor = System.Drawing.Color.White;
+            this.WWWtextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.WWWtextbox.Location = new System.Drawing.Point(13, 434);
+            this.WWWtextbox.Name = "WWWtextbox";
+            this.WWWtextbox.Size = new System.Drawing.Size(175, 13);
+            this.WWWtextbox.TabIndex = 9;
+            // 
+            // ZaladujWWWbutton
+            // 
+            this.ZaladujWWWbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ZaladujWWWbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.ZaladujWWWbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ZaladujWWWbutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.ZaladujWWWbutton.FlatAppearance.BorderSize = 3;
+            this.ZaladujWWWbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ZaladujWWWbutton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZaladujWWWbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ZaladujWWWbutton.Location = new System.Drawing.Point(13, 389);
+            this.ZaladujWWWbutton.Margin = new System.Windows.Forms.Padding(8);
+            this.ZaladujWWWbutton.MaximumSize = new System.Drawing.Size(185, 100);
+            this.ZaladujWWWbutton.Name = "ZaladujWWWbutton";
+            this.ZaladujWWWbutton.Padding = new System.Windows.Forms.Padding(2);
+            this.ZaladujWWWbutton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ZaladujWWWbutton.Size = new System.Drawing.Size(175, 40);
+            this.ZaladujWWWbutton.TabIndex = 8;
+            this.ZaladujWWWbutton.Text = "Załaduj strone";
+            this.ZaladujWWWbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ZaladujWWWbutton.UseVisualStyleBackColor = false;
+            this.ZaladujWWWbutton.Click += new System.EventHandler(this.ZaladujWWWbutton_Click);
+            // 
+            // PolecaneStronyListBox
+            // 
+            this.PolecaneStronyListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.PolecaneStronyListBox.FormattingEnabled = true;
+            this.PolecaneStronyListBox.Location = new System.Drawing.Point(13, 293);
+            this.PolecaneStronyListBox.Name = "PolecaneStronyListBox";
+            this.PolecaneStronyListBox.Size = new System.Drawing.Size(175, 95);
+            this.PolecaneStronyListBox.TabIndex = 7;
+            this.PolecaneStronyListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PolecaneStronyListBox_MouseClick);
+            // 
+            // StronyLabel
+            // 
+            this.StronyLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.StronyLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StronyLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StronyLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.StronyLabel.Location = new System.Drawing.Point(13, 236);
+            this.StronyLabel.MaximumSize = new System.Drawing.Size(200, 87);
+            this.StronyLabel.Name = "StronyLabel";
+            this.StronyLabel.Padding = new System.Windows.Forms.Padding(5);
+            this.StronyLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StronyLabel.Size = new System.Drawing.Size(175, 50);
+            this.StronyLabel.TabIndex = 6;
+            this.StronyLabel.Text = "Polecane Strony";
+            this.StronyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panelHide
             // 
             this.panelHide.Location = new System.Drawing.Point(2, 2);
@@ -103,16 +169,16 @@
             // 
             // channelsTitleLabel
             // 
-            this.channelsTitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.channelsTitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.channelsTitleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.channelsTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.channelsTitleLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.channelsTitleLabel.Location = new System.Drawing.Point(14, 94);
+            this.channelsTitleLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.channelsTitleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.channelsTitleLabel.Location = new System.Drawing.Point(13, 77);
             this.channelsTitleLabel.MaximumSize = new System.Drawing.Size(200, 87);
             this.channelsTitleLabel.Name = "channelsTitleLabel";
             this.channelsTitleLabel.Padding = new System.Windows.Forms.Padding(5);
             this.channelsTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.channelsTitleLabel.Size = new System.Drawing.Size(175, 74);
+            this.channelsTitleLabel.Size = new System.Drawing.Size(175, 50);
             this.channelsTitleLabel.TabIndex = 3;
             this.channelsTitleLabel.Text = "Polecane Kanały";
             this.channelsTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,9 +188,9 @@
             this.rssImage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.rssImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.rssImage.Image = global::LearningPlanner_1._0._0.Properties.Resources.RssImagePNG;
-            this.rssImage.Location = new System.Drawing.Point(11, 444);
+            this.rssImage.Location = new System.Drawing.Point(13, 452);
             this.rssImage.Name = "rssImage";
-            this.rssImage.Size = new System.Drawing.Size(184, 92);
+            this.rssImage.Size = new System.Drawing.Size(177, 84);
             this.rssImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rssImage.TabIndex = 4;
             this.rssImage.TabStop = false;
@@ -133,10 +199,9 @@
             // 
             this.channelsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
             this.channelsListBox.FormattingEnabled = true;
-            this.channelsListBox.ItemHeight = 16;
-            this.channelsListBox.Location = new System.Drawing.Point(12, 182);
+            this.channelsListBox.Location = new System.Drawing.Point(13, 133);
             this.channelsListBox.Name = "channelsListBox";
-            this.channelsListBox.Size = new System.Drawing.Size(176, 212);
+            this.channelsListBox.Size = new System.Drawing.Size(175, 95);
             this.channelsListBox.TabIndex = 2;
             this.channelsListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.channelsListBox_MouseClick);
             // 
@@ -147,17 +212,19 @@
             this.displayForNewsTabControl.Location = new System.Drawing.Point(203, 0);
             this.displayForNewsTabControl.Name = "displayForNewsTabControl";
             this.displayForNewsTabControl.SelectedIndex = 0;
-            this.displayForNewsTabControl.Size = new System.Drawing.Size(520, 276);
+            this.displayForNewsTabControl.Size = new System.Drawing.Size(520, 195);
             this.displayForNewsTabControl.TabIndex = 4;
+            this.displayForNewsTabControl.SelectedIndexChanged += new System.EventHandler(this.displayForNewsTabControl_SelectedIndexChanged);
             // 
             // WebBrowserForXml
             // 
             this.WebBrowserForXml.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.WebBrowserForXml.Location = new System.Drawing.Point(203, 276);
+            this.WebBrowserForXml.Location = new System.Drawing.Point(203, 201);
             this.WebBrowserForXml.MinimumSize = new System.Drawing.Size(20, 20);
             this.WebBrowserForXml.Name = "WebBrowserForXml";
-            this.WebBrowserForXml.Size = new System.Drawing.Size(520, 268);
+            this.WebBrowserForXml.Size = new System.Drawing.Size(520, 343);
             this.WebBrowserForXml.TabIndex = 5;
+            this.WebBrowserForXml.Url = new System.Uri("https://www.itnews.com/", System.UriKind.Absolute);
             // 
             // ZeSwiataIt
             // 
@@ -190,5 +257,9 @@
         private System.Windows.Forms.Label channelsTitleLabel;
         private System.Windows.Forms.Panel panelHide;
         private System.Windows.Forms.WebBrowser WebBrowserForXml;
+        private System.Windows.Forms.ListBox PolecaneStronyListBox;
+        private System.Windows.Forms.Label StronyLabel;
+        private System.Windows.Forms.Button ZaladujWWWbutton;
+        private System.Windows.Forms.TextBox WWWtextbox;
     }
 }

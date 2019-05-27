@@ -128,7 +128,7 @@ namespace LearningPlanner_1._0._0
                 AnulujButton.Size = new Size(500, 40);
                 AnulujButton.Location = new Point(40, 740);
                 ZadaniaDataGridView1.Size = new Size(720, 500);
-
+                
             }
         }
 
