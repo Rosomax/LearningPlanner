@@ -57,7 +57,7 @@
             this.addUrlButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.addUrlButton.Location = new System.Drawing.Point(13, 34);
             this.addUrlButton.Margin = new System.Windows.Forms.Padding(8);
-            this.addUrlButton.MaximumSize = new System.Drawing.Size(185, 100);
+            this.addUrlButton.MaximumSize = new System.Drawing.Size(300, 100);
             this.addUrlButton.Name = "addUrlButton";
             this.addUrlButton.Padding = new System.Windows.Forms.Padding(2);
             this.addUrlButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -123,7 +123,7 @@
             this.ZaladujWWWbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ZaladujWWWbutton.Location = new System.Drawing.Point(13, 389);
             this.ZaladujWWWbutton.Margin = new System.Windows.Forms.Padding(8);
-            this.ZaladujWWWbutton.MaximumSize = new System.Drawing.Size(185, 100);
+            this.ZaladujWWWbutton.MaximumSize = new System.Drawing.Size(300, 100);
             this.ZaladujWWWbutton.Name = "ZaladujWWWbutton";
             this.ZaladujWWWbutton.Padding = new System.Windows.Forms.Padding(2);
             this.ZaladujWWWbutton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -137,10 +137,12 @@
             // PolecaneStronyListBox
             // 
             this.PolecaneStronyListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.PolecaneStronyListBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PolecaneStronyListBox.FormattingEnabled = true;
+            this.PolecaneStronyListBox.ItemHeight = 16;
             this.PolecaneStronyListBox.Location = new System.Drawing.Point(13, 293);
             this.PolecaneStronyListBox.Name = "PolecaneStronyListBox";
-            this.PolecaneStronyListBox.Size = new System.Drawing.Size(175, 95);
+            this.PolecaneStronyListBox.Size = new System.Drawing.Size(175, 84);
             this.PolecaneStronyListBox.TabIndex = 7;
             this.PolecaneStronyListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PolecaneStronyListBox_MouseClick);
             // 
@@ -151,7 +153,7 @@
             this.StronyLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StronyLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.StronyLabel.Location = new System.Drawing.Point(13, 236);
-            this.StronyLabel.MaximumSize = new System.Drawing.Size(200, 87);
+            this.StronyLabel.MaximumSize = new System.Drawing.Size(300, 100);
             this.StronyLabel.Name = "StronyLabel";
             this.StronyLabel.Padding = new System.Windows.Forms.Padding(5);
             this.StronyLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -174,7 +176,7 @@
             this.channelsTitleLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.channelsTitleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.channelsTitleLabel.Location = new System.Drawing.Point(13, 77);
-            this.channelsTitleLabel.MaximumSize = new System.Drawing.Size(200, 87);
+            this.channelsTitleLabel.MaximumSize = new System.Drawing.Size(300, 100);
             this.channelsTitleLabel.Name = "channelsTitleLabel";
             this.channelsTitleLabel.Padding = new System.Windows.Forms.Padding(5);
             this.channelsTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -198,10 +200,12 @@
             // channelsListBox
             // 
             this.channelsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.channelsListBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.channelsListBox.FormattingEnabled = true;
+            this.channelsListBox.ItemHeight = 16;
             this.channelsListBox.Location = new System.Drawing.Point(13, 133);
             this.channelsListBox.Name = "channelsListBox";
-            this.channelsListBox.Size = new System.Drawing.Size(175, 95);
+            this.channelsListBox.Size = new System.Drawing.Size(175, 84);
             this.channelsListBox.TabIndex = 2;
             this.channelsListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.channelsListBox_MouseClick);
             // 
@@ -209,6 +213,7 @@
             // 
             this.displayForNewsTabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.displayForNewsTabControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.displayForNewsTabControl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.displayForNewsTabControl.Location = new System.Drawing.Point(203, 0);
             this.displayForNewsTabControl.Name = "displayForNewsTabControl";
             this.displayForNewsTabControl.SelectedIndex = 0;
@@ -220,11 +225,12 @@
             // 
             this.WebBrowserForXml.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.WebBrowserForXml.Location = new System.Drawing.Point(203, 201);
+            this.WebBrowserForXml.MaximumSize = new System.Drawing.Size(1400, 800);
             this.WebBrowserForXml.MinimumSize = new System.Drawing.Size(20, 20);
             this.WebBrowserForXml.Name = "WebBrowserForXml";
             this.WebBrowserForXml.Size = new System.Drawing.Size(520, 343);
             this.WebBrowserForXml.TabIndex = 5;
-            this.WebBrowserForXml.Url = new System.Uri("https://www.itnews.com/", System.UriKind.Absolute);
+            this.WebBrowserForXml.Url = new System.Uri("", System.UriKind.Relative);
             // 
             // ZeSwiataIt
             // 

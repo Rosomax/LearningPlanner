@@ -48,7 +48,7 @@
             this.NazwaZadaniaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NazwaZadaniaTextBox.Location = new System.Drawing.Point(65, 66);
             this.NazwaZadaniaTextBox.Name = "NazwaZadaniaTextBox";
-            this.NazwaZadaniaTextBox.Size = new System.Drawing.Size(130, 35);
+            this.NazwaZadaniaTextBox.Size = new System.Drawing.Size(220, 35);
             this.NazwaZadaniaTextBox.TabIndex = 0;
             // 
             // NazwaZadaniaLabel
@@ -85,7 +85,7 @@
             this.KategoriaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KategoriaTextBox.Location = new System.Drawing.Point(65, 151);
             this.KategoriaTextBox.Name = "KategoriaTextBox";
-            this.KategoriaTextBox.Size = new System.Drawing.Size(130, 35);
+            this.KategoriaTextBox.Size = new System.Drawing.Size(220, 35);
             this.KategoriaTextBox.TabIndex = 3;
             // 
             // OpisLabel
@@ -107,8 +107,9 @@
             this.OpisTextBox.BackColor = System.Drawing.Color.White;
             this.OpisTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpisTextBox.Location = new System.Drawing.Point(65, 233);
+            this.OpisTextBox.Multiline = true;
             this.OpisTextBox.Name = "OpisTextBox";
-            this.OpisTextBox.Size = new System.Drawing.Size(130, 35);
+            this.OpisTextBox.Size = new System.Drawing.Size(220, 85);
             this.OpisTextBox.TabIndex = 5;
             // 
             // ZapiszButton

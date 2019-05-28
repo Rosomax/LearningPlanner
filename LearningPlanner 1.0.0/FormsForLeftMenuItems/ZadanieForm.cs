@@ -109,9 +109,9 @@ namespace LearningPlanner_1._0._0
         {
             if (this.Size.Width <= 799)
             {
-                NazwaZadaniaTextBox.Size = new Size(200,35);
-                KategoriaTextBox.Size = new Size(200, 35);
-                OpisTextBox.Size = new Size(200, 65);
+                NazwaZadaniaTextBox.Size = new Size(220,35);
+                KategoriaTextBox.Size = new Size(220, 35);
+                OpisTextBox.Size = new Size(220, 85);
                 ZadaniaDataGridView1.Size = new Size(344,500);
                 ZapiszButton.Size = new Size(108, 50);
                 ZapiszButton.Location = new Point(11, 392);
@@ -123,17 +123,17 @@ namespace LearningPlanner_1._0._0
             }
             else if (this.Size.Width >= 800)
             {
-                NazwaZadaniaTextBox.Size = new Size(450, 35);
-                KategoriaTextBox.Size = new Size(450, 35);
-                OpisTextBox.Size = new Size(450, 350);
+                NazwaZadaniaTextBox.Size = new Size(500, 35);
+                KategoriaTextBox.Size = new Size(500, 35);
+                OpisTextBox.Size = new Size(500, 350);
                 OpisTextBox.Multiline = true;
-                ZapiszButton.Size = new Size(500, 40);
-                ZapiszButton.Location = new Point(40, 620);
-                UsunButton.Size = new Size(500, 40);
-                UsunButton.Location = new Point(40, 680);
-                AnulujButton.Size = new Size(500, 40);
-                AnulujButton.Location = new Point(40, 740);
-                ZadaniaDataGridView1.Size = new Size(720, 500);
+                ZapiszButton.Size = new Size(500, 80);
+                ZapiszButton.Location = new Point(65, 660);
+                UsunButton.Size = new Size(500, 80);
+                UsunButton.Location = new Point(65, 750);
+                AnulujButton.Size = new Size(500, 80);
+                AnulujButton.Location = new Point(65, 840);
+                ZadaniaDataGridView1.Size = new Size(900, 500);
                 
             }
         }

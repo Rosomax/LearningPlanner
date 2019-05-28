@@ -226,7 +226,13 @@ namespace LearningPlanner_1._0._0
         {
             if ( this.Size.Width <= 799)
             {
-                channelsListBox.Size = new Size(175, 95);
+                urlGroupBox.Size = new Size(203, 544);
+                urlTextBox.Size = new Size(175, 13);
+                addUrlButton.Size = new Size(175, 40);
+                channelsTitleLabel.Size = new Size(175, 50);
+                channelsTitleLabel.Location = new Point(13, 77);
+                channelsListBox.Size = new Size(175, 84);
+                channelsListBox.Location = new Point(13, 133);
                 channelsListBox.BackColor = Color.FromArgb(138, 197, 222);
                 WebBrowserForXml.Size = new Size(520, 268);
                 StronyLabel.Size = new Size(175, 50);
@@ -237,21 +243,39 @@ namespace LearningPlanner_1._0._0
                 ZaladujWWWbutton.Location = new Point(13, 389);
                 WWWtextbox.Size = new Size(175, 13);
                 WWWtextbox.Location = new Point(13, 434);
+                WebBrowserForXml.Size = new Size(520, 343); // ROZMIAR PRZEGLDARKI
+                displayForNewsTabControl.Size = new Size(520, 195); // Rozmiar okna na xml
+                // zmiana fonta
+                PolecaneStronyListBox.Font = new Font("Centhury gothic", 8);
+                channelsListBox.Font = new Font("Centhury gothic", 8);
 
             }
             else if ( this.Size.Width >= 800)
             {
+                /// Planuje jeszcze czcionki zwiekszyc odpowiednio do rozmiaru okna
+                urlGroupBox.Size = new Size(320, 544);
+                urlTextBox.Size = new Size(294, 13);
+                addUrlButton.Size = new Size(294, 60);
+                channelsTitleLabel.Size = new Size(294, 50);
+                channelsTitleLabel.Location = new Point(13, 97);
                 channelsListBox.BackColor = Color.FromArgb(138, 197, 222);
-                channelsListBox.Size = new Size(176, 200);
-                WebBrowserForXml.Size = new Size(520, 560);
-                StronyLabel.Size = new Size(175, 50);
-                StronyLabel.Location = new Point(13, 361);
-                PolecaneStronyListBox.Size = new Size(175, 200);
-                PolecaneStronyListBox.Location = new Point(13, 420);
-                ZaladujWWWbutton.Size = new Size(175, 40);
-                ZaladujWWWbutton.Location = new Point(13, 627);
-                WWWtextbox.Size = new Size(175, 13);
-                WWWtextbox.Location = new Point(13, 672);
+                channelsListBox.Size = new Size(294, 280);
+                channelsListBox.Location = new Point(13, 156);
+                //channelsListBox.Font = new Font ("Cen")
+                
+                StronyLabel.Size = new Size(294, 50);
+                StronyLabel.Location = new Point(13, 461);
+                PolecaneStronyListBox.Size = new Size(294, 280);
+                PolecaneStronyListBox.Location = new Point(13, 520);
+                ZaladujWWWbutton.Size = new Size(294, 60);
+                ZaladujWWWbutton.Location = new Point(13, 807);
+                WWWtextbox.Size = new Size(294, 13);
+                WWWtextbox.Location = new Point(13, 872);
+                WebBrowserForXml.Size = new Size(1020, 740); // ROZMIAR PRZEGLDARKI
+                displayForNewsTabControl.Size = new Size(1020, 300); // Rozmiar okna na xml
+                // zmiana fonta
+                PolecaneStronyListBox.Font = new Font("Centhury gothic", 14);
+                channelsListBox.Font = new Font("Centhury gothic", 14);
             }
         }
         #endregion
@@ -262,8 +286,16 @@ namespace LearningPlanner_1._0._0
 
         private void ZaladujWWWbutton_Click(object sender, EventArgs e)
         {
-            Uri uri = new Uri(WWWtextbox.Text);
-            WebBrowserForXml.Url = uri;
+            try
+            {
+                Uri uri = new Uri(WWWtextbox.Text);
+                WebBrowserForXml.Url = uri;
+            }
+            
+            catch { MessageBox.Show("Nie dodano żadengo adresu URL strony WWW", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+           
+            
+           
         }
 
        
