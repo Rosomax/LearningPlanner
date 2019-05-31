@@ -402,6 +402,7 @@
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearningPlanner";
+         //   this.Load += new System.EventHandler(this.mainForm_Load);
             this.LeftMainPanel.ResumeLayout(false);
             this.LeftMainPanel.PerformLayout();
             this.TopMainPanel.ResumeLayout(false);

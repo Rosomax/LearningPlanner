@@ -26,6 +26,7 @@ namespace LearningPlanner_1._0._0
 
         private void UstawieniaForm_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             var m = e.Graphics.Transform;
             // rysowanie kola glownego - tarcza zegara
             e.Graphics.FillEllipse(Brushes.AntiqueWhite, 150, 150, 300, 300);
@@ -131,10 +132,8 @@ namespace LearningPlanner_1._0._0
             e.Graphics.Transform = m;
             e.Graphics.TranslateTransform(437, 360); 
             e.Graphics.RotateTransform(30);
-            e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);
-
-
-
+            e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);      
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

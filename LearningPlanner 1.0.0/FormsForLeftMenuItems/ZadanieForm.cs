@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Threading;
 
 namespace LearningPlanner_1._0._0
 {
@@ -18,7 +20,7 @@ namespace LearningPlanner_1._0._0
             ZadaniaDataGridView1.BackgroundColor = Color.FromArgb(178, 8, 55);
             ZadaniaDataGridView1.ForeColor = Color.FromArgb(178, 8, 55);
             Clear();
-           
+            
         }
 
      
@@ -40,6 +42,9 @@ namespace LearningPlanner_1._0._0
             ZadaniaDataGridView1.Columns["IDZadania"].Visible = false;
             ZadaniaDataGridView1.Columns["DataUtworzenia"].Visible = false;
             ZadaniaDataGridView1.Columns["CzyZakonczone"].Visible = false;
+
+            Zapisz();
+
         }
 
 
@@ -60,7 +65,9 @@ namespace LearningPlanner_1._0._0
                     OpisTextBox.Text = modelz.Opis;
                 }
                 ZapiszButton.Text = "Zaaktualizuj";
-             //   UsunButton.Enabled = true;
+                //   UsunButton.Enabled = true;
+
+                
             }
         }
        
@@ -102,6 +109,9 @@ namespace LearningPlanner_1._0._0
             RefreshGrid();
             Clear();
             MessageBox.Show("Pomyślnie dodano zadanie");
+
+
+
         }
 
         // ZMiana ROzmiaru
@@ -161,10 +171,7 @@ namespace LearningPlanner_1._0._0
                 }
         }
 
-      
-       
-       
-        
+              
 
         private void ZadaniaDataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -185,9 +192,35 @@ namespace LearningPlanner_1._0._0
                 ZadaniaInfoForm frm = new ZadaniaInfoForm();
                 frm.Metoda(nazwa, kategoria, opis, dataUtworzenia, status);
                 frm.Show();
-
+               
 
             }
+
         }
+
+        
+
+        public void Zapisz()
+        {
+            if (File.Exists("Log.txt"))
+                using (StreamWriter write = new StreamWriter("Logi\\Log.txt", true))
+                {
+                     write.WriteLine("Liczba zadan: " +
+                        ZadaniaDataGridView1.Rows.Count + ", " + DateTime.Now);
+                }
+               else
+                using (StreamWriter write = new StreamWriter("Logi\\Log.txt", false))
+                {
+                    write.WriteLine("Liczba zadan: " +
+                        ZadaniaDataGridView1.Rows.Count + ", " + DateTime.Now);
+                    
+                }
+          
+            
+        }
+       
+
+
+
     }
 }

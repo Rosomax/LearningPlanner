@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
-
+using System.IO;
 namespace LearningPlanner_1._0._0
 {
     public partial class mainForm : Form
@@ -16,7 +16,7 @@ namespace LearningPlanner_1._0._0
         public mainForm()
         {
             InitializeComponent();
-          
+            
 
         }
 
@@ -40,7 +40,9 @@ namespace LearningPlanner_1._0._0
         #region obsluga ikon na gornym pasku
         private void closePictureBox_Click(object sender, EventArgs e)
         {
+            
             this.Close();
+            
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -264,7 +266,39 @@ namespace LearningPlanner_1._0._0
             panel1.Hide();
             panel1.Enabled = false;
         }
+
+        //Thread t = new Thread(new ThreadStart(Statystyki));
+
+        //private static void Statystyki()
+        //{
+        //    var dateStart = DateTime.Now;
+        //    var netBIOS = System.Environment.MachineName;
+        //    var physicalMemory = System.Environment.WorkingSet;
+        //    var loggedUserName = System.Environment.UserName;
+        //    var timeZone = System.TimeZone.CurrentTimeZone;
+
+        //    if (File.Exists("LocalLogs.txt"))
+        //        using (StreamWriter write = new StreamWriter("Logi\\LocalLogs.txt", true))
+        //        {
+        //            write.WriteLine($"start: {dateStart} NetBIOS: {netBIOS} physical memory:" +
+        //                $" {physicalMemory} username: {loggedUserName} timezone: {timeZone}");
+        //        }
+        //    else
+        //        using (StreamWriter write = new StreamWriter("Logi\\LocalLogs.txt", false))
+        //        {
+        //            write.WriteLine();
+
+        //        }
+
+        //}
+        
+        //private void mainForm_Load(object sender, EventArgs e)
+        //{
+            
+        //    t.Start();           
+        //}
     }
+
 }
 
 

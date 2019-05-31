@@ -44,7 +44,7 @@
             this.ClientSize = new System.Drawing.Size(529, 404);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UstawieniaForm";
             this.Text = "UstawieniaForm";
             this.Load += new System.EventHandler(this.UstawieniaForm_Load);

@@ -334,6 +334,12 @@
   <ItemGroup>
     <Content Include="Hand.cur" />
     <Content Include="HandZad.cur" />
+    <Content Include="Logi\LocalLogs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Logi\Log.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Model2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model2.edmx</DependentUpon>
