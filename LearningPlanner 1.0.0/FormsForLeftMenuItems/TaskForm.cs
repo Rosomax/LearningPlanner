@@ -190,8 +190,8 @@ namespace LearningPlanner_1._0._0
                 string status = Convert.ToString(selectedRow.Cells["CzyZakonczone"].Value);
 
 
-                ZadaniaInfoForm frm = new ZadaniaInfoForm();
-                frm.Metoda(name, category, description, creationDate, status);
+                TaskInfoForm frm = new TaskInfoForm();
+                frm.SetDoubleClickInfo(name, category, description, creationDate, status);
                 frm.Show();
               
 
@@ -206,6 +206,7 @@ namespace LearningPlanner_1._0._0
             if (File.Exists("Log.txt"))
                 using (StreamWriter write = new StreamWriter("Logi\\Log.txt", true))
                 {
+                    
                      write.WriteLine("Liczba zadan: " +
                         TaskDataGridView1.Rows.Count + ", " + DateTime.Now);
                 }

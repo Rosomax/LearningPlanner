@@ -1,6 +1,6 @@
 ﻿namespace LearningPlanner_1._0._0
 {
-    partial class ZadaniaInfoForm
+    partial class TaskInfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZadaniaInfoForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskInfoForm));
             this.nazwaInfoLbl = new System.Windows.Forms.Label();
             this.kategoriaInfoLbl = new System.Windows.Forms.Label();
             this.middlePanelInfo = new System.Windows.Forms.Panel();
             this.utworzonoInfoLbl = new System.Windows.Forms.Label();
             this.statusInfoLbl = new System.Windows.Forms.Label();
-            this.OpisInfoRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.nazwaInfoLbl1 = new System.Windows.Forms.Label();
-            this.kategoriaInfoLbl1 = new System.Windows.Forms.Label();
+            this.descriptionInfoRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.nameInfoLbl1 = new System.Windows.Forms.Label();
+            this.categoryInfoLbl1 = new System.Windows.Forms.Label();
             this.statusInfoLbl1 = new System.Windows.Forms.Label();
-            this.utworzonoInfoLbl1 = new System.Windows.Forms.Label();
+            this.creationDateInfoLbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nazwaInfoLbl
@@ -90,35 +90,35 @@
             // 
             // OpisInfoRichTextBox
             // 
-            this.OpisInfoRichTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.OpisInfoRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpisInfoRichTextBox.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.OpisInfoRichTextBox.Location = new System.Drawing.Point(1, 152);
-            this.OpisInfoRichTextBox.Name = "OpisInfoRichTextBox";
-            this.OpisInfoRichTextBox.ReadOnly = true;
-            this.OpisInfoRichTextBox.Size = new System.Drawing.Size(696, 249);
-            this.OpisInfoRichTextBox.TabIndex = 5;
-            this.OpisInfoRichTextBox.Text = "";
+            this.descriptionInfoRichTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.descriptionInfoRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionInfoRichTextBox.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.descriptionInfoRichTextBox.Location = new System.Drawing.Point(1, 152);
+            this.descriptionInfoRichTextBox.Name = "OpisInfoRichTextBox";
+            this.descriptionInfoRichTextBox.ReadOnly = true;
+            this.descriptionInfoRichTextBox.Size = new System.Drawing.Size(696, 249);
+            this.descriptionInfoRichTextBox.TabIndex = 5;
+            this.descriptionInfoRichTextBox.Text = "";
             // 
             // nazwaInfoLbl1
             // 
-            this.nazwaInfoLbl1.AutoSize = true;
-            this.nazwaInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazwaInfoLbl1.Location = new System.Drawing.Point(125, 33);
-            this.nazwaInfoLbl1.Name = "nazwaInfoLbl1";
-            this.nazwaInfoLbl1.Size = new System.Drawing.Size(40, 24);
-            this.nazwaInfoLbl1.TabIndex = 6;
-            this.nazwaInfoLbl1.Text = "xxx";
+            this.nameInfoLbl1.AutoSize = true;
+            this.nameInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameInfoLbl1.Location = new System.Drawing.Point(125, 33);
+            this.nameInfoLbl1.Name = "nazwaInfoLbl1";
+            this.nameInfoLbl1.Size = new System.Drawing.Size(40, 24);
+            this.nameInfoLbl1.TabIndex = 6;
+            this.nameInfoLbl1.Text = "xxx";
             // 
             // kategoriaInfoLbl1
             // 
-            this.kategoriaInfoLbl1.AutoSize = true;
-            this.kategoriaInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kategoriaInfoLbl1.Location = new System.Drawing.Point(153, 83);
-            this.kategoriaInfoLbl1.Name = "kategoriaInfoLbl1";
-            this.kategoriaInfoLbl1.Size = new System.Drawing.Size(40, 24);
-            this.kategoriaInfoLbl1.TabIndex = 7;
-            this.kategoriaInfoLbl1.Text = "xxx";
+            this.categoryInfoLbl1.AutoSize = true;
+            this.categoryInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryInfoLbl1.Location = new System.Drawing.Point(153, 83);
+            this.categoryInfoLbl1.Name = "kategoriaInfoLbl1";
+            this.categoryInfoLbl1.Size = new System.Drawing.Size(40, 24);
+            this.categoryInfoLbl1.TabIndex = 7;
+            this.categoryInfoLbl1.Text = "xxx";
             // 
             // statusInfoLbl1
             // 
@@ -131,23 +131,23 @@
             // 
             // utworzonoInfoLbl1
             // 
-            this.utworzonoInfoLbl1.AutoSize = true;
-            this.utworzonoInfoLbl1.Location = new System.Drawing.Point(588, 408);
-            this.utworzonoInfoLbl1.Name = "utworzonoInfoLbl1";
-            this.utworzonoInfoLbl1.Size = new System.Drawing.Size(35, 13);
-            this.utworzonoInfoLbl1.TabIndex = 9;
-            this.utworzonoInfoLbl1.Text = "label2";
+            this.creationDateInfoLbl1.AutoSize = true;
+            this.creationDateInfoLbl1.Location = new System.Drawing.Point(588, 408);
+            this.creationDateInfoLbl1.Name = "utworzonoInfoLbl1";
+            this.creationDateInfoLbl1.Size = new System.Drawing.Size(35, 13);
+            this.creationDateInfoLbl1.TabIndex = 9;
+            this.creationDateInfoLbl1.Text = "label2";
             // 
             // ZadaniaInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 430);
-            this.Controls.Add(this.utworzonoInfoLbl1);
+            this.Controls.Add(this.creationDateInfoLbl1);
             this.Controls.Add(this.statusInfoLbl1);
-            this.Controls.Add(this.kategoriaInfoLbl1);
-            this.Controls.Add(this.nazwaInfoLbl1);
-            this.Controls.Add(this.OpisInfoRichTextBox);
+            this.Controls.Add(this.categoryInfoLbl1);
+            this.Controls.Add(this.nameInfoLbl1);
+            this.Controls.Add(this.descriptionInfoRichTextBox);
             this.Controls.Add(this.statusInfoLbl);
             this.Controls.Add(this.utworzonoInfoLbl);
             this.Controls.Add(this.middlePanelInfo);
@@ -158,7 +158,7 @@
             this.Name = "ZadaniaInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Szczegóły zadania";
-            this.Load += new System.EventHandler(this.ZadaniaInfoForm_Load);
+            this.Load += new System.EventHandler(this.TaskInfoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,10 +171,10 @@
         private System.Windows.Forms.Panel middlePanelInfo;
         private System.Windows.Forms.Label utworzonoInfoLbl;
         private System.Windows.Forms.Label statusInfoLbl;
-        private System.Windows.Forms.RichTextBox OpisInfoRichTextBox;
-        private System.Windows.Forms.Label nazwaInfoLbl1;
-        private System.Windows.Forms.Label kategoriaInfoLbl1;
+        private System.Windows.Forms.RichTextBox descriptionInfoRichTextBox;
+        private System.Windows.Forms.Label nameInfoLbl1;
+        private System.Windows.Forms.Label categoryInfoLbl1;
         private System.Windows.Forms.Label statusInfoLbl1;
-        private System.Windows.Forms.Label utworzonoInfoLbl1;
+        private System.Windows.Forms.Label creationDateInfoLbl1;
     }
 }

@@ -10,27 +10,27 @@ using System.Windows.Forms;
 
 namespace LearningPlanner_1._0._0
 {
-    public partial class ZadaniaInfoForm : Form
+    public partial class TaskInfoForm : Form
     {
-        public ZadaniaInfoForm()
+        public TaskInfoForm()
         {
             InitializeComponent();         
         }
        
 
       
-       public void Metoda(string nazw, string kat, string opis, DateTime dataUtw ,string status)
+       public void SetDoubleClickInfo(string nazw, string kat, string opis, DateTime dataUtw ,string status)
         {
             
-            nazwaInfoLbl1.Text = nazw;
-            kategoriaInfoLbl1.Text = kat;
-            OpisInfoRichTextBox.Text = opis;
-            utworzonoInfoLbl1.Text = dataUtw.ToString();
+            nameInfoLbl1.Text = nazw;
+            categoryInfoLbl1.Text = kat;
+            descriptionInfoRichTextBox.Text = opis;
+            creationDateInfoLbl1.Text = dataUtw.ToString();
             statusInfoLbl1.Text = status;
 
         }
 
-        private void ZadaniaInfoForm_Load(object sender, EventArgs e)
+        private void TaskInfoForm_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(138, 197, 222);
             this.MinimizeBox = false;
