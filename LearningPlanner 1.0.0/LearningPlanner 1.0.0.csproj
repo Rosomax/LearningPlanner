@@ -79,11 +79,11 @@
     <Compile Include="Cytaty.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataGridZadaniaInfoControl.cs">
+    <Compile Include="DataGridTasksInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DataGridZadaniaInfoControl.Designer.cs">
-      <DependentUpon>DataGridZadaniaInfoControl.cs</DependentUpon>
+    <Compile Include="DataGridTasksInfoControl.Designer.cs">
+      <DependentUpon>DataGridTasksInfoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Model2.Context.cs">
       <AutoGen>True</AutoGen>
@@ -100,17 +100,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\ciekawoskiControl5.cs">
+    <Compile Include="UserControlsLeftMenu\ITNewsControl5.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\ciekawoskiControl5.Designer.cs">
-      <DependentUpon>ciekawoskiControl5.cs</DependentUpon>
+    <Compile Include="UserControlsLeftMenu\ITNewsControl5.Designer.cs">
+      <DependentUpon>ITNewsControl5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IntroForm1.cs">
       <SubType>Form</SubType>
@@ -118,17 +118,17 @@
     <Compile Include="IntroForm1.Designer.cs">
       <DependentUpon>IntroForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\kategorieControl3.cs">
+    <Compile Include="UserControlsLeftMenu\CategoryControl3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\kategorieControl3.Designer.cs">
-      <DependentUpon>kategorieControl3.cs</DependentUpon>
+    <Compile Include="UserControlsLeftMenu\CategoryControl3.Designer.cs">
+      <DependentUpon>CategoryControl3.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\KategorieForm.cs">
+    <Compile Include="FormsForLeftMenuItems\CategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\KategorieForm.Designer.cs">
-      <DependentUpon>KategorieForm.cs</DependentUpon>
+    <Compile Include="FormsForLeftMenuItems\CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LeftActiveControl.cs">
       <SubType>UserControl</SubType>
@@ -152,59 +152,59 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\ustawieniaControl6.cs">
+    <Compile Include="UserControlsLeftMenu\SettingsControl6.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\ustawieniaControl6.Designer.cs">
-      <DependentUpon>ustawieniaControl6.cs</DependentUpon>
+    <Compile Include="UserControlsLeftMenu\SettingsControl6.Designer.cs">
+      <DependentUpon>SettingsControl6.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\UstawieniaForm.cs">
+    <Compile Include="FormsForLeftMenuItems\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\UstawieniaForm.Designer.cs">
-      <DependentUpon>UstawieniaForm.cs</DependentUpon>
+    <Compile Include="FormsForLeftMenuItems\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\ZadaniaControl1.cs">
+    <Compile Include="UserControlsLeftMenu\TaskControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\ZadaniaControl1.Designer.cs">
-      <DependentUpon>ZadaniaControl1.cs</DependentUpon>
+    <Compile Include="UserControlsLeftMenu\TaskControl1.Designer.cs">
+      <DependentUpon>TaskControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZadanieForm.cs">
+    <Compile Include="FormsForLeftMenuItems\TaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZadanieForm.Designer.cs">
-      <DependentUpon>ZadanieForm.cs</DependentUpon>
+    <Compile Include="FormsForLeftMenuItems\TaskForm.Designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\zakonczoneZadaniaControl2.cs">
+    <Compile Include="UserControlsLeftMenu\CompletedTaskControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\zakonczoneZadaniaControl2.Designer.cs">
-      <DependentUpon>zakonczoneZadaniaControl2.cs</DependentUpon>
+    <Compile Include="UserControlsLeftMenu\CompletedTaskControl2.Designer.cs">
+      <DependentUpon>CompletedTaskControl2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZakonczoneZadaniaForm.cs">
+    <Compile Include="FormsForLeftMenuItems\CompletedTasksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZakonczoneZadaniaForm.Designer.cs">
-      <DependentUpon>ZakonczoneZadaniaForm.cs</DependentUpon>
+    <Compile Include="FormsForLeftMenuItems\CompletedTasksForm.Designer.cs">
+      <DependentUpon>CompletedTasksForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZeSwiataIt.cs">
+    <Compile Include="FormsForLeftMenuItems\ITNews.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZeSwiataIt.Designer.cs">
-      <DependentUpon>ZeSwiataIt.cs</DependentUpon>
+    <Compile Include="FormsForLeftMenuItems\ITNews.Designer.cs">
+      <DependentUpon>ITNews.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\znajdzZadanieControl.cs">
+    <Compile Include="UserControlsLeftMenu\FindTaskControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlsLeftMenu\znajdzZadanieControl.Designer.cs">
-      <DependentUpon>znajdzZadanieControl.cs</DependentUpon>
+    <Compile Include="UserControlsLeftMenu\FindTaskControl.Designer.cs">
+      <DependentUpon>FindTaskControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZnajdzZadanieForm.cs">
+    <Compile Include="FormsForLeftMenuItems\FindTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForLeftMenuItems\ZnajdzZadanieForm.Designer.cs">
-      <DependentUpon>ZnajdzZadanieForm.cs</DependentUpon>
+    <Compile Include="FormsForLeftMenuItems\FindTaskForm.Designer.cs">
+      <DependentUpon>FindTaskForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Uzytkownicy.cs">
       <DependentUpon>Model2.tt</DependentUpon>
@@ -221,23 +221,23 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataGridZadaniaInfoControl.resx">
-      <DependentUpon>DataGridZadaniaInfoControl.cs</DependentUpon>
+    <EmbeddedResource Include="DataGridTasksInfoControl.resx">
+      <DependentUpon>DataGridTasksInfoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsLeftMenu\ciekawoskiControl5.resx">
-      <DependentUpon>ciekawoskiControl5.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlsLeftMenu\ITNewsControl5.resx">
+      <DependentUpon>ITNewsControl5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IntroForm1.resx">
       <DependentUpon>IntroForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsLeftMenu\kategorieControl3.resx">
-      <DependentUpon>kategorieControl3.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlsLeftMenu\CategoryControl3.resx">
+      <DependentUpon>CategoryControl3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForLeftMenuItems\KategorieForm.resx">
-      <DependentUpon>KategorieForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormsForLeftMenuItems\CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeftActiveControl.resx">
       <DependentUpon>LeftActiveControl.cs</DependentUpon>
@@ -250,32 +250,32 @@
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsLeftMenu\ustawieniaControl6.resx">
-      <DependentUpon>ustawieniaControl6.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlsLeftMenu\SettingsControl6.resx">
+      <DependentUpon>SettingsControl6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForLeftMenuItems\UstawieniaForm.resx">
-      <DependentUpon>UstawieniaForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormsForLeftMenuItems\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsLeftMenu\ZadaniaControl1.resx">
-      <DependentUpon>ZadaniaControl1.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlsLeftMenu\TaskControl1.resx">
+      <DependentUpon>TaskControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForLeftMenuItems\ZadanieForm.resx">
-      <DependentUpon>ZadanieForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormsForLeftMenuItems\TaskForm.resx">
+      <DependentUpon>TaskForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsLeftMenu\zakonczoneZadaniaControl2.resx">
-      <DependentUpon>zakonczoneZadaniaControl2.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlsLeftMenu\CompletedTaskControl2.resx">
+      <DependentUpon>CompletedTaskControl2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForLeftMenuItems\ZakonczoneZadaniaForm.resx">
-      <DependentUpon>ZakonczoneZadaniaForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormsForLeftMenuItems\CompletedTasksForm.resx">
+      <DependentUpon>CompletedTasksForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForLeftMenuItems\ZeSwiataIt.resx">
-      <DependentUpon>ZeSwiataIt.cs</DependentUpon>
+    <EmbeddedResource Include="FormsForLeftMenuItems\ITNews.resx">
+      <DependentUpon>ITNews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlsLeftMenu\znajdzZadanieControl.resx">
-      <DependentUpon>znajdzZadanieControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlsLeftMenu\FindTaskControl.resx">
+      <DependentUpon>FindTaskControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForLeftMenuItems\ZnajdzZadanieForm.resx">
-      <DependentUpon>ZnajdzZadanieForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormsForLeftMenuItems\FindTaskForm.resx">
+      <DependentUpon>FindTaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZadaniaInfoForm.resx">
       <DependentUpon>ZadaniaInfoForm.cs</DependentUpon>
@@ -302,34 +302,54 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ZadanieIcon.ico" />
+    <None Include="Resources\ZadanieIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\Zadanie icon.png" />
+    <None Include="Ikony\Zadanie icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\Zakonczone zadanie icon.png" />
+    <None Include="Ikony\Zakonczone zadanie icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\Znajdz zadanie icon.png" />
+    <None Include="Ikony\Znajdz zadanie icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\kategoria icon.png" />
+    <None Include="Ikony\kategoria icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\ze swiata icon.png" />
+    <None Include="Ikony\ze swiata icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\Ustawienia icon.png" />
+    <None Include="Ikony\Ustawienia icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\delete icon.png" />
+    <None Include="Ikony\delete icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\info icon.png" />
+    <None Include="Ikony\info icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\ikony\stronaGlowna icon.png" />
+    <None Include="Ikony\stronaGlowna icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hand.cur" />
@@ -362,21 +382,33 @@
     <None Include="WariantyOkna\maximize-window.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\Tlo.jpg" />
-    <None Include="Resources\TloCytat.jpg" />
-    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\Tlo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\TloCytat.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Icon1.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Resources\Kursor.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\maximize-window.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\minimize-window.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\RssImagePNG.png" />
-    <None Include="Resources\Taskbar icon.bmp" />
-    <None Include="Resources\RssImagePNG1.png" />
+    <Content Include="Resources\RssImagePNG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Taskbar icon.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\RssImagePNG1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="MediaPlayer">
@@ -411,7 +443,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Ikony\" />
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

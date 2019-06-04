@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
@@ -45,11 +39,9 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            
-            
-            
+       
             Thread t = new Thread(new ThreadStart(Statystyki));
             t.Start();
 
@@ -58,8 +50,10 @@ namespace LearningPlanner_1._0._0
 
        private void CreateTimer()
         {
-            Timer t1 = new Timer();
-            t1.Interval = 500;
+            Timer t1 = new Timer
+            {
+                Interval = 500
+            };
             t1.Tick += T1_Tick;
             this.Invalidate();
             t1.Start();
