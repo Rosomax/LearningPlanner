@@ -224,7 +224,7 @@ namespace LearningPlanner_1._0._0
 
 
         #endregion
-
+        
         private void maximilaziPictureBox_Click(object sender, EventArgs e)
         {
 
@@ -267,36 +267,13 @@ namespace LearningPlanner_1._0._0
             panel1.Enabled = false;
         }
 
-        //Thread t = new Thread(new ThreadStart(Statystyki));
-
-        //private static void Statystyki()
-        //{
-        //    var dateStart = DateTime.Now;
-        //    var netBIOS = System.Environment.MachineName;
-        //    var physicalMemory = System.Environment.WorkingSet;
-        //    var loggedUserName = System.Environment.UserName;
-        //    var timeZone = System.TimeZone.CurrentTimeZone;
-
-        //    if (File.Exists("LocalLogs.txt"))
-        //        using (StreamWriter write = new StreamWriter("Logi\\LocalLogs.txt", true))
-        //        {
-        //            write.WriteLine($"start: {dateStart} NetBIOS: {netBIOS} physical memory:" +
-        //                $" {physicalMemory} username: {loggedUserName} timezone: {timeZone}");
-        //        }
-        //    else
-        //        using (StreamWriter write = new StreamWriter("Logi\\LocalLogs.txt", false))
-        //        {
-        //            write.WriteLine();
-
-        //        }
-
-        //}
         
-        //private void mainForm_Load(object sender, EventArgs e)
-        //{
-            
-        //    t.Start();           
-        //}
+
+       
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
