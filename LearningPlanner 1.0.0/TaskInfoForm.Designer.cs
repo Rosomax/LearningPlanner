@@ -45,7 +45,7 @@
             // 
             this.nazwaInfoLbl.AutoSize = true;
             this.nazwaInfoLbl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazwaInfoLbl.Location = new System.Drawing.Point(30, 32);
+            this.nazwaInfoLbl.Location = new System.Drawing.Point(30, 18);
             this.nazwaInfoLbl.Name = "nazwaInfoLbl";
             this.nazwaInfoLbl.Size = new System.Drawing.Size(89, 25);
             this.nazwaInfoLbl.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.kategoriaInfoLbl.AutoSize = true;
             this.kategoriaInfoLbl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kategoriaInfoLbl.Location = new System.Drawing.Point(30, 83);
+            this.kategoriaInfoLbl.Location = new System.Drawing.Point(30, 66);
             this.kategoriaInfoLbl.Name = "kategoriaInfoLbl";
             this.kategoriaInfoLbl.Size = new System.Drawing.Size(117, 25);
             this.kategoriaInfoLbl.TabIndex = 1;
@@ -88,34 +88,34 @@
             this.statusInfoLbl.TabIndex = 4;
             this.statusInfoLbl.Text = "Status:";
             // 
-            // OpisInfoRichTextBox
+            // descriptionInfoRichTextBox
             // 
             this.descriptionInfoRichTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.descriptionInfoRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionInfoRichTextBox.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.descriptionInfoRichTextBox.Location = new System.Drawing.Point(1, 152);
-            this.descriptionInfoRichTextBox.Name = "OpisInfoRichTextBox";
+            this.descriptionInfoRichTextBox.Name = "descriptionInfoRichTextBox";
             this.descriptionInfoRichTextBox.ReadOnly = true;
             this.descriptionInfoRichTextBox.Size = new System.Drawing.Size(696, 249);
             this.descriptionInfoRichTextBox.TabIndex = 5;
             this.descriptionInfoRichTextBox.Text = "";
             // 
-            // nazwaInfoLbl1
+            // nameInfoLbl1
             // 
             this.nameInfoLbl1.AutoSize = true;
             this.nameInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameInfoLbl1.Location = new System.Drawing.Point(125, 33);
-            this.nameInfoLbl1.Name = "nazwaInfoLbl1";
+            this.nameInfoLbl1.Location = new System.Drawing.Point(125, 19);
+            this.nameInfoLbl1.Name = "nameInfoLbl1";
             this.nameInfoLbl1.Size = new System.Drawing.Size(40, 24);
             this.nameInfoLbl1.TabIndex = 6;
             this.nameInfoLbl1.Text = "xxx";
             // 
-            // kategoriaInfoLbl1
+            // categoryInfoLbl1
             // 
             this.categoryInfoLbl1.AutoSize = true;
             this.categoryInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryInfoLbl1.Location = new System.Drawing.Point(153, 83);
-            this.categoryInfoLbl1.Name = "kategoriaInfoLbl1";
+            this.categoryInfoLbl1.Location = new System.Drawing.Point(153, 67);
+            this.categoryInfoLbl1.Name = "categoryInfoLbl1";
             this.categoryInfoLbl1.Size = new System.Drawing.Size(40, 24);
             this.categoryInfoLbl1.TabIndex = 7;
             this.categoryInfoLbl1.Text = "xxx";
@@ -129,16 +129,16 @@
             this.statusInfoLbl1.TabIndex = 8;
             this.statusInfoLbl1.Text = "label1";
             // 
-            // utworzonoInfoLbl1
+            // creationDateInfoLbl1
             // 
             this.creationDateInfoLbl1.AutoSize = true;
             this.creationDateInfoLbl1.Location = new System.Drawing.Point(588, 408);
-            this.creationDateInfoLbl1.Name = "utworzonoInfoLbl1";
+            this.creationDateInfoLbl1.Name = "creationDateInfoLbl1";
             this.creationDateInfoLbl1.Size = new System.Drawing.Size(35, 13);
             this.creationDateInfoLbl1.TabIndex = 9;
             this.creationDateInfoLbl1.Text = "label2";
             // 
-            // ZadaniaInfoForm
+            // TaskInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +155,7 @@
             this.Controls.Add(this.nazwaInfoLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ZadaniaInfoForm";
+            this.Name = "TaskInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Szczegóły zadania";
             this.Load += new System.EventHandler(this.TaskInfoForm_Load);

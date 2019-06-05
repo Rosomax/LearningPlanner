@@ -43,14 +43,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Resources\DirectX\Microsoft.DirectX.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Resources\DirectX\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -206,6 +198,7 @@
     <Compile Include="FormsForLeftMenuItems\FindTaskForm.Designer.cs">
       <DependentUpon>FindTaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserLogging.cs" />
     <Compile Include="Uzytkownicy.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -358,7 +351,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Logi\Log.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Model2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -411,24 +404,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="MediaPlayer">
-      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="ShockwaveFlashObjects">
-      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="stdole">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>2</VersionMajor>

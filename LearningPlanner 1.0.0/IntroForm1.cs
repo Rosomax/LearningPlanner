@@ -15,23 +15,24 @@ namespace LearningPlanner_1._0._0
             CreateTimer();
         }
 
-        private void Statystyki()
+        private void Statistics()
         {
             var dateStart = DateTime.Now.ToString();
             var netBIOS = System.Environment.MachineName.ToString();
             var physicalMemory = System.Environment.WorkingSet.ToString();
             var loggedUserName = System.Environment.UserName.ToString();
-            
 
-            if (File.Exists("LocalLogs.txt"))
-                using (StreamWriter write = new StreamWriter("LocalLogs.txt", true))
+            string path = "Logi\\LocalLogs.txt";
+
+            if (File.Exists(path))
+                using (StreamWriter write = new StreamWriter(path, true))
                 {
                     write.WriteLine($"start: {dateStart} username: {loggedUserName} NetBIOS: {netBIOS} physical memory:" +
                         $" {physicalMemory}  ");
 
                 }
             else
-                using (StreamWriter write = new StreamWriter("LocalLogs.txt", false))
+                using (StreamWriter write = new StreamWriter(path, false))
                 {
                     write.WriteLine();
 
@@ -42,7 +43,7 @@ namespace LearningPlanner_1._0._0
         private void Button1_Click(object sender, EventArgs e)
         {
        
-            Thread t = new Thread(new ThreadStart(Statystyki));
+            Thread t = new Thread(new ThreadStart(Statistics));
             t.Start();
 
             this.Close();           

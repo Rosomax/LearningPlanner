@@ -138,7 +138,7 @@ namespace LearningPlanner_1._0._0
             
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             Invalidate();
         }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TaskNameTextBox = new System.Windows.Forms.TextBox();
             this.NazwaZadaniaLabel = new System.Windows.Forms.Label();
             this.KategoriaLabel = new System.Windows.Forms.Label();
@@ -39,15 +39,16 @@
             this.TaskDataGridView1 = new System.Windows.Forms.DataGridView();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.errorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // NazwaZadaniaTextBox
+            // TaskNameTextBox
             // 
             this.TaskNameTextBox.BackColor = System.Drawing.Color.White;
             this.TaskNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskNameTextBox.Location = new System.Drawing.Point(65, 66);
-            this.TaskNameTextBox.Name = "NazwaZadaniaTextBox";
+            this.TaskNameTextBox.Name = "TaskNameTextBox";
             this.TaskNameTextBox.Size = new System.Drawing.Size(220, 35);
             this.TaskNameTextBox.TabIndex = 0;
             // 
@@ -79,12 +80,12 @@
             this.KategoriaLabel.TabIndex = 2;
             this.KategoriaLabel.Text = "Kategoria:";
             // 
-            // KategoriaTextBox
+            // CategoryTextBox
             // 
             this.CategoryTextBox.BackColor = System.Drawing.Color.White;
             this.CategoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryTextBox.Location = new System.Drawing.Point(65, 151);
-            this.CategoryTextBox.Name = "KategoriaTextBox";
+            this.CategoryTextBox.Name = "CategoryTextBox";
             this.CategoryTextBox.Size = new System.Drawing.Size(220, 35);
             this.CategoryTextBox.TabIndex = 3;
             // 
@@ -102,87 +103,101 @@
             this.OpisLabel.TabIndex = 4;
             this.OpisLabel.Text = "Opis:";
             // 
-            // OpisTextBox
+            // DescriptionTextBox
             // 
             this.DescriptionTextBox.BackColor = System.Drawing.Color.White;
             this.DescriptionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescriptionTextBox.Location = new System.Drawing.Point(65, 233);
             this.DescriptionTextBox.Multiline = true;
-            this.DescriptionTextBox.Name = "OpisTextBox";
+            this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(220, 85);
             this.DescriptionTextBox.TabIndex = 5;
             // 
-            // ZapiszButton
+            // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.SaveButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SaveButton.Location = new System.Drawing.Point(11, 392);
-            this.SaveButton.Name = "ZapiszButton";
+            this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(108, 50);
             this.SaveButton.TabIndex = 6;
             this.SaveButton.Text = "Zapisz";
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // ZadaniaDataGridView1
+            // TaskDataGridView1
             // 
             this.TaskDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TaskDataGridView1.BackgroundColor = System.Drawing.Color.DarkRed;
             this.TaskDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.TaskDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaskDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TaskDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TaskDataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TaskDataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.TaskDataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
             this.TaskDataGridView1.Location = new System.Drawing.Point(406, 0);
-            this.TaskDataGridView1.Name = "ZadaniaDataGridView1";
+            this.TaskDataGridView1.Name = "TaskDataGridView1";
             this.TaskDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TaskDataGridView1.Size = new System.Drawing.Size(344, 500);
             this.TaskDataGridView1.TabIndex = 7;
             this.TaskDataGridView1.Click += new System.EventHandler(this.TaskDataGridView1_Click);
             this.TaskDataGridView1.DoubleClick += new System.EventHandler(this.TaskDataGridView1_DoubleClick);
             // 
-            // UsunButton
+            // DeleteButton
             // 
             this.DeleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.DeleteButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.DeleteButton.Location = new System.Drawing.Point(125, 392);
-            this.DeleteButton.Name = "UsunButton";
+            this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(108, 50);
             this.DeleteButton.TabIndex = 8;
             this.DeleteButton.Text = "Usuń";
             this.DeleteButton.UseVisualStyleBackColor = false;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
-            // AnulujButton
+            // CancelButton
             // 
             this.CancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.CancelButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.CancelButton.Location = new System.Drawing.Point(239, 392);
-            this.CancelButton.Name = "AnulujButton";
+            this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(108, 50);
             this.CancelButton.TabIndex = 9;
             this.CancelButton.Text = "Anuluj";
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // ZadanieForm
+            // errorLabel
+            // 
+            this.errorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(-2, 480);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(40, 24);
+            this.errorLabel.TabIndex = 10;
+            this.errorLabel.Text = "xxx";
+            this.errorLabel.Visible = false;
+            // 
+            // TaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(750, 500);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.TaskDataGridView1);
@@ -195,7 +210,7 @@
             this.Controls.Add(this.TaskNameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ZadanieForm";
+            this.Name = "TaskForm";
             this.Text = "ZadanieForm";
             this.Load += new System.EventHandler(this.TaskForm_Load);
             this.SizeChanged += new System.EventHandler(this.TaskForm_SizeChanged);
@@ -217,5 +232,6 @@
         private System.Windows.Forms.DataGridView TaskDataGridView1;
         private System.Windows.Forms.Button DeleteButton;
         private new System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

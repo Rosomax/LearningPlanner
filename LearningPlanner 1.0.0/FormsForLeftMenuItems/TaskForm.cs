@@ -8,6 +8,7 @@ using System.IO;
 
 namespace LearningPlanner_1._0._0
 {
+    
     public partial class TaskForm : Form
     {
         public TaskForm()
@@ -19,13 +20,15 @@ namespace LearningPlanner_1._0._0
             
         }
 
-     
+       
+        
         EntitiesModel2 model = new EntitiesModel2();
 
         private void TaskForm_Load(object sender, EventArgs e)
         {
-            
-            this.BackColor = Color.FromArgb(138, 197, 222);
+           
+
+                this.BackColor = Color.FromArgb(138, 197, 222);
         
            
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new
@@ -36,12 +39,13 @@ namespace LearningPlanner_1._0._0
             TaskDataGridView1.Columns["IDZadania"].Visible = false;
             TaskDataGridView1.Columns["DataUtworzenia"].Visible = false;
             TaskDataGridView1.Columns["CzyZakonczone"].Visible = false;
+           // TaskDataGridView1.Columns["IDUzytkownika"].Visible = false;
 
             Save();
-
+            
         }
 
-
+        
         Zadania modelz = new Zadania();
         private void TaskDataGridView1_Click(object sender, EventArgs e)
         {
@@ -166,7 +170,18 @@ namespace LearningPlanner_1._0._0
                 }
                 catch
                 {
-                      MessageBox.Show("Nie zaznaczono zadania");
+                    string errorDelete = "Błąd: Nie zaznaczono żadnego rekordu";
+                    errorLabel.Visible = true;
+                    errorLabel.Text = errorDelete;
+                    Timer exceptionTimer = new Timer
+                    {
+                        Interval = 7000
+                    
+                    };
+                    exceptionTimer.Tick += ExceptionTimer_Tick;
+                    exceptionTimer.Start();
+                 
+                    
                 }
                 
                 
@@ -199,29 +214,52 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        
+       
 
         private void Save()
         {
-            if (File.Exists("Log.txt"))
-                using (StreamWriter write = new StreamWriter("Logi\\Log.txt", true))
+            var tasksNumber = TaskDataGridView1.Rows.Count.ToString();
+            var actualDate = DateTime.Now.ToString();
+
+            string path = "Logi\\Log.txt";
+
+            try
+            {
+                if (File.Exists(path))
+                    using (StreamWriter write = new StreamWriter(path, true))
+                    {
+                        write.WriteLine("Liczba zadan: " + tasksNumber
+                           + ", " + actualDate);
+
+                    }
+                else
+                    using (StreamWriter write = new StreamWriter(path, false))
+                    {
+                        write.WriteLine("Liczba zadan: " +
+                           tasksNumber + ", " + actualDate);
+                        
+                    }
+            }
+            catch(IOException exc)
+            {
+                string logError = exc.Message;
+                errorLabel.Visible = true;
+                errorLabel.Text = logError;
+                Timer exceptionTimer = new Timer
                 {
-                    
-                     write.WriteLine("Liczba zadan: " +
-                        TaskDataGridView1.Rows.Count + ", " + DateTime.Now);
-                }
-               else
-                using (StreamWriter write = new StreamWriter("Logi\\Log.txt", false))
-                {
-                    write.WriteLine("Liczba zadan: " +
-                        TaskDataGridView1.Rows.Count + ", " + DateTime.Now);
-                    
-                }        
-            
+                    Interval = 7000
+                };
+                exceptionTimer.Tick += ExceptionTimer_Tick;
+                exceptionTimer.Start();
+
+            }
+
+       }
+
+        private void ExceptionTimer_Tick(object sender, EventArgs e)
+        {
+            errorLabel.Visible = false;
+            errorLabel.Text = "";
         }
-       
-
-
-
     }
 }

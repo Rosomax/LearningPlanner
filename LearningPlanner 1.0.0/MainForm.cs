@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System.Linq;
+using System.Threading;
 namespace LearningPlanner_1._0._0
 {
+    
+
     public partial class MainForm : Form
     {
 
         public MainForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            
         }
 
         #region metodyObslugiMyszy
@@ -32,9 +36,9 @@ namespace LearningPlanner_1._0._0
         #region obsluga ikon na gornym pasku
         private void ClosePictureBox_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
-            
+
         }
         private void PictureBox2_Click(object sender, EventArgs e)
         {
@@ -150,7 +154,7 @@ namespace LearningPlanner_1._0._0
             foreach (var tmp in LeftActiveControl.controlList)
             {
                 tmp.BackColor = Color.Transparent;
-                
+
             }
 
         }
@@ -215,7 +219,7 @@ namespace LearningPlanner_1._0._0
 
 
         #endregion
-        
+
         private void MaximilaziPictureBox_Click(object sender, EventArgs e)
         {
 
@@ -223,7 +227,7 @@ namespace LearningPlanner_1._0._0
             {
                 this.WindowState = FormWindowState.Normal;
                 maximilaziPictureBox.Load("WariantyOkna\\maximize-window.png");
-                
+
             }
             else if (this.WindowState == FormWindowState.Normal)
             {
@@ -240,27 +244,63 @@ namespace LearningPlanner_1._0._0
 
         // Zmiana widocznosci wpisywanego hasla
         private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
-        {       
-                if (ShowPasswordCheckBox.Checked)
-                    passwordtextBox1.UseSystemPasswordChar = false;
-                else
-                    passwordtextBox1.UseSystemPasswordChar = true;            
+        {
+            if (ShowPasswordCheckBox.Checked)
+                passwordtextBox1.UseSystemPasswordChar = false;
+            else
+                passwordtextBox1.UseSystemPasswordChar = true;
         }
 
-       
+
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            panel1.Hide();
-            panel1.Enabled = false;
+            DataBaseLogging();
+            
         }
 
-       
-       
+        int userID;
+
+       private void DataBaseLogging()
+        {
+           
+            var login = LogintextBox1.Text;
+            var password = passwordtextBox1.Text;
+
+            using (EntitiesModel2 x = new EntitiesModel2())
+            {
+
+                var user = x.Uzytkownicy.FirstOrDefault(e => e.Login == login);
+                if (user != null)
+                {
+                    if (user.Haslo == password)
+                    {
+                        MessageBox.Show("Zalogowano");
+                        userID = user.IDosoby;                        
+                        panel1.Hide();
+                        panel1.Enabled = false;
+
+                        
+                    }
+                   
+                  
+                    else
+                        MessageBox.Show("Złe hasło");
+                }
+                else
+                    MessageBox.Show($"Nie znaleziono użytkownika '{login}' ");
+                
+
+            }
+            
+
+        }
+
+     
+
     }
-
+   
 }
-
 
 
 
