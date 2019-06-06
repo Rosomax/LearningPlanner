@@ -20,26 +20,32 @@ namespace LearningPlanner_1._0._0
             
         }
 
-       
-        
+        int IDUser = MainForm.userID;
+
         EntitiesModel2 model = new EntitiesModel2();
 
         private void TaskForm_Load(object sender, EventArgs e)
         {
-           
 
                 this.BackColor = Color.FromArgb(138, 197, 222);
-        
-           
+
+
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new
-            { o.IDZadania, o.Nazwa,  o.Kategoria,  o.Opis,
-                o.DataUtworzenia, o.CzyZakonczone }).ToList();
+            {
+                o.IDZadania,
+                o.Nazwa,
+                o.Kategoria,
+                o.Opis,
+                o.DataUtworzenia,
+                o.CzyZakonczone,
+                o.IDUzytkownika
+            }).Where(o => o.IDUzytkownika == IDUser).ToList();
 
             // Ukrycie kolumn
             TaskDataGridView1.Columns["IDZadania"].Visible = false;
             TaskDataGridView1.Columns["DataUtworzenia"].Visible = false;
             TaskDataGridView1.Columns["CzyZakonczone"].Visible = false;
-           // TaskDataGridView1.Columns["IDUzytkownika"].Visible = false;
+            TaskDataGridView1.Columns["IDUzytkownika"].Visible = false;
 
             Save();
             
@@ -89,7 +95,7 @@ namespace LearningPlanner_1._0._0
             modelz.Opis = DescriptionTextBox.Text.Trim();
             modelz.DataUtworzenia = DateTime.Now;
             modelz.CzyZakonczone = false;
-            modelz.IDUzytkownika = 1;
+            modelz.IDUzytkownika = (short)IDUser;
 
             using (EntitiesModel2 db = new EntitiesModel2())
             {
@@ -144,8 +150,15 @@ namespace LearningPlanner_1._0._0
         void RefreshGrid ()
         {
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new
-            { o.IDZadania, o.Nazwa,  o.Kategoria,  o.Opis,
-                o.DataUtworzenia, o.CzyZakonczone }).ToList();
+            {
+                o.IDZadania,
+                o.Nazwa,
+                o.Kategoria,
+                o.Opis,
+                o.DataUtworzenia,
+                o.CzyZakonczone,
+                o.IDUzytkownika
+            }).Where(o => o.IDUzytkownika == IDUser).ToList();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)

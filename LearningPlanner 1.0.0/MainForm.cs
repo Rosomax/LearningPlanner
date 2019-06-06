@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 namespace LearningPlanner_1._0._0
 {
-    
+
 
     public partial class MainForm : Form
     {
@@ -13,7 +13,7 @@ namespace LearningPlanner_1._0._0
         public MainForm()
         {
             InitializeComponent();
-            
+
         }
 
         #region metodyObslugiMyszy
@@ -256,14 +256,15 @@ namespace LearningPlanner_1._0._0
         private void Button1_Click(object sender, EventArgs e)
         {
             DataBaseLogging();
-            
+
         }
 
-        int userID;
+        
 
-       private void DataBaseLogging()
+
+        private void DataBaseLogging()
         {
-           
+
             var login = LogintextBox1.Text;
             var password = passwordtextBox1.Text;
 
@@ -276,31 +277,34 @@ namespace LearningPlanner_1._0._0
                     if (user.Haslo == password)
                     {
                         MessageBox.Show("Zalogowano");
-                        userID = user.IDosoby;                        
+                        userID = user.IDosoby;                      
                         panel1.Hide();
                         panel1.Enabled = false;
-
                         
+
                     }
-                   
-                  
+
                     else
                         MessageBox.Show("Złe hasło");
                 }
                 else
                     MessageBox.Show($"Nie znaleziono użytkownika '{login}' ");
-                
+               
 
             }
-            
+
 
         }
 
-     
-
+        public static int userID;
+        
     }
+
+  
+
    
 }
+   
 
 
 
