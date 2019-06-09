@@ -50,6 +50,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.closePictureBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.registerLinkLabel = new System.Windows.Forms.LinkLabel();
             this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.passwordtextBox1 = new System.Windows.Forms.TextBox();
             this.LogintextBox1 = new System.Windows.Forms.TextBox();
@@ -87,16 +88,17 @@
             this.LeftMainPanel.Size = new System.Drawing.Size(197, 586);
             this.LeftMainPanel.TabIndex = 0;
             // 
-            // zakonczoneZadaniaControl21
+            // completedTaskControl21
             // 
             this.completedTaskControl21.AutoSize = true;
             this.completedTaskControl21.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.completedTaskControl21.BackColor = System.Drawing.Color.Transparent;
+            this.completedTaskControl21.Enabled = false;
             this.completedTaskControl21.Location = new System.Drawing.Point(12, 97);
             this.completedTaskControl21.Margin = new System.Windows.Forms.Padding(4);
-            this.completedTaskControl21.Name = "zakonczoneZadaniaControl21";
+            this.completedTaskControl21.Name = "completedTaskControl21";
             this.completedTaskControl21.Size = new System.Drawing.Size(185, 97);
-            this.completedTaskControl21.TabIndex = 1;            
+            this.completedTaskControl21.TabIndex = 1;
             this.completedTaskControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CompletedTasksControl21_MouseClick);
             this.completedTaskControl21.MouseEnter += new System.EventHandler(this.CompletedTaskControl21_MouseEnter);
             this.completedTaskControl21.MouseLeave += new System.EventHandler(this.CompletedTaskControl21_MouseLeave);
@@ -104,10 +106,10 @@
             // leftActiveControl6
             // 
             this.leftActiveControl6.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl6.Location = new System.Drawing.Point(0, 477);
+            this.leftActiveControl6.Location = new System.Drawing.Point(0, 485);
             this.leftActiveControl6.Margin = new System.Windows.Forms.Padding(4);
             this.leftActiveControl6.Name = "leftActiveControl6";
-            this.leftActiveControl6.Size = new System.Drawing.Size(12, 109);
+            this.leftActiveControl6.Size = new System.Drawing.Size(12, 101);
             this.leftActiveControl6.TabIndex = 13;
             // 
             // leftActiveControl5
@@ -116,7 +118,7 @@
             this.leftActiveControl5.Location = new System.Drawing.Point(0, 388);
             this.leftActiveControl5.Margin = new System.Windows.Forms.Padding(4);
             this.leftActiveControl5.Name = "leftActiveControl5";
-            this.leftActiveControl5.Size = new System.Drawing.Size(12, 120);
+            this.leftActiveControl5.Size = new System.Drawing.Size(12, 97);
             this.leftActiveControl5.TabIndex = 12;
             // 
             // leftActiveControl4
@@ -155,60 +157,65 @@
             this.leftActiveControl1.Size = new System.Drawing.Size(12, 97);
             this.leftActiveControl1.TabIndex = 8;
             // 
-            // zadaniaControl11
+            // taskControl11
             // 
             this.taskControl11.BackColor = System.Drawing.Color.Transparent;
+            this.taskControl11.Enabled = false;
             this.taskControl11.Location = new System.Drawing.Point(12, 0);
             this.taskControl11.Margin = new System.Windows.Forms.Padding(4);
-            this.taskControl11.Name = "zadaniaControl11";
+            this.taskControl11.Name = "taskControl11";
             this.taskControl11.Size = new System.Drawing.Size(185, 97);
             this.taskControl11.TabIndex = 7;
             this.taskControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TaskControl11_MouseClick);
             this.taskControl11.MouseEnter += new System.EventHandler(this.TaskControl11_MouseEnter_1);
             this.taskControl11.MouseLeave += new System.EventHandler(this.TaskControl11_MouseLeave);
             // 
-            // ustawieniaControl61
+            // settingsControl61
             // 
             this.settingsControl61.BackColor = System.Drawing.Color.Transparent;
+            this.settingsControl61.Enabled = false;
             this.settingsControl61.Location = new System.Drawing.Point(12, 485);
             this.settingsControl61.Margin = new System.Windows.Forms.Padding(4);
-            this.settingsControl61.Name = "ustawieniaControl61";
+            this.settingsControl61.Name = "settingsControl61";
             this.settingsControl61.Size = new System.Drawing.Size(185, 101);
             this.settingsControl61.TabIndex = 5;
             this.settingsControl61.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SettingsControl61_MouseClick);
             this.settingsControl61.MouseEnter += new System.EventHandler(this.SettingsControl61_MouseEnter);
             this.settingsControl61.MouseLeave += new System.EventHandler(this.SettingsControl61_MouseLeave);
             // 
-            // ciekawoskiControl51
+            // itnewsControl51
             // 
             this.itnewsControl51.BackColor = System.Drawing.Color.Transparent;
+            this.itnewsControl51.Enabled = false;
             this.itnewsControl51.Location = new System.Drawing.Point(12, 388);
             this.itnewsControl51.Margin = new System.Windows.Forms.Padding(4);
-            this.itnewsControl51.Name = "ciekawoskiControl51";
+            this.itnewsControl51.Name = "itnewsControl51";
             this.itnewsControl51.Size = new System.Drawing.Size(185, 97);
             this.itnewsControl51.TabIndex = 4;
             this.itnewsControl51.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ITNewsControl51_MouseClick);
             this.itnewsControl51.MouseEnter += new System.EventHandler(this.ITNewsControl51_MouseEnter);
             this.itnewsControl51.MouseLeave += new System.EventHandler(this.ITNewsControl51_MouseLeave);
             // 
-            // znajdzZadanieControl41
+            // findTaskControl41
             // 
             this.findTaskControl41.BackColor = System.Drawing.Color.Transparent;
+            this.findTaskControl41.Enabled = false;
             this.findTaskControl41.Location = new System.Drawing.Point(12, 291);
             this.findTaskControl41.Margin = new System.Windows.Forms.Padding(4);
-            this.findTaskControl41.Name = "znajdzZadanieControl41";
+            this.findTaskControl41.Name = "findTaskControl41";
             this.findTaskControl41.Size = new System.Drawing.Size(185, 97);
             this.findTaskControl41.TabIndex = 3;
             this.findTaskControl41.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FindTaskControl41_MouseClick);
             this.findTaskControl41.MouseEnter += new System.EventHandler(this.FindTaskControl41_MouseEnter);
             this.findTaskControl41.MouseLeave += new System.EventHandler(this.FindTaskControl41_MouseLeave);
             // 
-            // kategorieControl31
+            // categoryControl31
             // 
             this.categoryControl31.BackColor = System.Drawing.Color.Transparent;
+            this.categoryControl31.Enabled = false;
             this.categoryControl31.Location = new System.Drawing.Point(12, 194);
             this.categoryControl31.Margin = new System.Windows.Forms.Padding(4);
-            this.categoryControl31.Name = "kategorieControl31";
+            this.categoryControl31.Name = "categoryControl31";
             this.categoryControl31.Size = new System.Drawing.Size(185, 97);
             this.categoryControl31.TabIndex = 2;
             this.categoryControl31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CategoryControl31_MouseClick);
@@ -233,7 +240,7 @@
             // minimalizePictureBox
             // 
             this.minimalizePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.minimalizePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.minimize_window;
+            this.minimalizePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("minimalizePictureBox.Image")));
             this.minimalizePictureBox.Location = new System.Drawing.Point(509, 0);
             this.minimalizePictureBox.Name = "minimalizePictureBox";
             this.minimalizePictureBox.Size = new System.Drawing.Size(45, 42);
@@ -244,7 +251,8 @@
             // maximilaziPictureBox
             // 
             this.maximilaziPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.maximilaziPictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.maximize_window;
+            this.maximilaziPictureBox.Enabled = false;
+            this.maximilaziPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("maximilaziPictureBox.Image")));
             this.maximilaziPictureBox.Location = new System.Drawing.Point(554, 0);
             this.maximilaziPictureBox.Name = "maximilaziPictureBox";
             this.maximilaziPictureBox.Size = new System.Drawing.Size(46, 42);
@@ -270,7 +278,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = global::LearningPlanner_1._0._0.Properties.Resources.stronaGlowna_icon;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(600, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
@@ -282,7 +290,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.info_icon;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(641, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
@@ -294,7 +302,7 @@
             // closePictureBox
             // 
             this.closePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closePictureBox.Image = global::LearningPlanner_1._0._0.Properties.Resources.delete_icon;
+            this.closePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("closePictureBox.Image")));
             this.closePictureBox.Location = new System.Drawing.Point(682, 0);
             this.closePictureBox.Margin = new System.Windows.Forms.Padding(5);
             this.closePictureBox.Name = "closePictureBox";
@@ -305,7 +313,12 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.registerLinkLabel);
             this.panel1.Controls.Add(this.ShowPasswordCheckBox);
             this.panel1.Controls.Add(this.passwordtextBox1);
             this.panel1.Controls.Add(this.LogintextBox1);
@@ -317,23 +330,37 @@
             this.panel1.Size = new System.Drawing.Size(366, 276);
             this.panel1.TabIndex = 3;
             // 
-            // PokazHasloCheckBox
+            // registerLinkLabel
+            // 
+            this.registerLinkLabel.AutoSize = true;
+            this.registerLinkLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerLinkLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.registerLinkLabel.LinkColor = System.Drawing.Color.Black;
+            this.registerLinkLabel.Location = new System.Drawing.Point(3, 246);
+            this.registerLinkLabel.Name = "registerLinkLabel";
+            this.registerLinkLabel.Size = new System.Drawing.Size(89, 16);
+            this.registerLinkLabel.TabIndex = 4;
+            this.registerLinkLabel.TabStop = true;
+            this.registerLinkLabel.Text = "Utwórz konto";
+            this.registerLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegisterLinkLabel_LinkClicked);
+            // 
+            // ShowPasswordCheckBox
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
             this.ShowPasswordCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ShowPasswordCheckBox.Location = new System.Drawing.Point(142, 189);
-            this.ShowPasswordCheckBox.Name = "PokazHasloCheckBox";
+            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(86, 17);
             this.ShowPasswordCheckBox.TabIndex = 2;
             this.ShowPasswordCheckBox.Text = "Pokaż hasło";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = true;
             this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
             // 
-            // HaslotextBox1
+            // passwordtextBox1
             // 
             this.passwordtextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordtextBox1.Location = new System.Drawing.Point(103, 152);
-            this.passwordtextBox1.Name = "HaslotextBox1";
+            this.passwordtextBox1.Name = "passwordtextBox1";
             this.passwordtextBox1.Size = new System.Drawing.Size(159, 31);
             this.passwordtextBox1.TabIndex = 1;
             this.passwordtextBox1.UseSystemPasswordChar = true;
@@ -384,7 +411,7 @@
             this.label1.Text = ":Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // mainForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -398,10 +425,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearningPlanner";
-         //   this.Load += new System.EventHandler(this.mainForm_Load);
             this.LeftMainPanel.ResumeLayout(false);
             this.LeftMainPanel.PerformLayout();
             this.TopMainPanel.ResumeLayout(false);
@@ -445,6 +471,7 @@
         private System.Windows.Forms.TextBox LogintextBox1;
         private System.Windows.Forms.TextBox passwordtextBox1;
         private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
+        private System.Windows.Forms.LinkLabel registerLinkLabel;
     }
 }
 

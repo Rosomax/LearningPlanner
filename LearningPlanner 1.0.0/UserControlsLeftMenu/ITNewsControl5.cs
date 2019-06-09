@@ -21,11 +21,11 @@ namespace LearningPlanner_1._0._0
 
         private void ITNewsControl5_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             SolidBrush zad = new SolidBrush(Color.White);
-            Graphics g = this.CreateGraphics();
             FontFamily zadf = new FontFamily("Century Gothic");
             Font zfont = new Font(zadf, 16);
-            g.DrawString("Ze świata IT", zfont, zad, new PointF(60, 35));
+            e.Graphics.DrawString("Ze świata IT", zfont, zad, new PointF(60, 35));
         }
     }
     

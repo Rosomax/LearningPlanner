@@ -39,6 +39,8 @@
             this.categoryInfoLbl1 = new System.Windows.Forms.Label();
             this.statusInfoLbl1 = new System.Windows.Forms.Label();
             this.creationDateInfoLbl1 = new System.Windows.Forms.Label();
+            this.FinishTask = new System.Windows.Forms.Button();
+            this.EditTask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nazwaInfoLbl
@@ -138,11 +140,33 @@
             this.creationDateInfoLbl1.TabIndex = 9;
             this.creationDateInfoLbl1.Text = "label2";
             // 
+            // FinishTask
+            // 
+            this.FinishTask.Location = new System.Drawing.Point(575, 66);
+            this.FinishTask.Name = "FinishTask";
+            this.FinishTask.Size = new System.Drawing.Size(110, 42);
+            this.FinishTask.TabIndex = 10;
+            this.FinishTask.Text = "Zakończ zadanie";
+            this.FinishTask.UseVisualStyleBackColor = true;
+            this.FinishTask.Click += new System.EventHandler(this.FinishTask_Click);
+            // 
+            // EditTask
+            // 
+            this.EditTask.Location = new System.Drawing.Point(575, 12);
+            this.EditTask.Name = "EditTask";
+            this.EditTask.Size = new System.Drawing.Size(110, 44);
+            this.EditTask.TabIndex = 11;
+            this.EditTask.Text = "Edytuj";
+            this.EditTask.UseVisualStyleBackColor = true;
+            this.EditTask.Visible = false;
+            // 
             // TaskInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 430);
+            this.Controls.Add(this.EditTask);
+            this.Controls.Add(this.FinishTask);
             this.Controls.Add(this.creationDateInfoLbl1);
             this.Controls.Add(this.statusInfoLbl1);
             this.Controls.Add(this.categoryInfoLbl1);
@@ -174,7 +198,9 @@
         private System.Windows.Forms.RichTextBox descriptionInfoRichTextBox;
         private System.Windows.Forms.Label nameInfoLbl1;
         private System.Windows.Forms.Label categoryInfoLbl1;
-        private System.Windows.Forms.Label statusInfoLbl1;
         private System.Windows.Forms.Label creationDateInfoLbl1;
+        private System.Windows.Forms.Button FinishTask;
+        private System.Windows.Forms.Button EditTask;
+        public System.Windows.Forms.Label statusInfoLbl1;
     }
 }

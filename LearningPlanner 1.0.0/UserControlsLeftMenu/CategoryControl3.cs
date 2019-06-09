@@ -22,11 +22,12 @@ namespace LearningPlanner_1._0._0
 
         private void CategoryControl3_Paint(object sender, PaintEventArgs e)
         {
-            SolidBrush zad = new SolidBrush(Color.White);
-            Graphics g = this.CreateGraphics();
-            FontFamily zadf = new FontFamily("Century Gothic");
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            SolidBrush zad = new SolidBrush(Color.White);           
+            FontFamily zadf = new FontFamily("Century Gothic");           
             Font zfont = new Font(zadf, 16);
-            g.DrawString("Kategorie", zfont, zad, new PointF(80, 35));
+            e.Graphics.DrawString("Kategorie", zfont, zad, new PointF(80, 35));
+            
         }
     }
 }

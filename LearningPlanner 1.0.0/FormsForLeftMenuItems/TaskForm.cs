@@ -8,7 +8,7 @@ using System.IO;
 
 namespace LearningPlanner_1._0._0
 {
-    
+
     public partial class TaskForm : Form
     {
         public TaskForm()
@@ -19,15 +19,15 @@ namespace LearningPlanner_1._0._0
             Clear();
             
         }
+        
+        int IDUser = MainForm.UserID;
 
-        int IDUser = MainForm.userID;
-
-        EntitiesModel2 model = new EntitiesModel2();
+         EntitiesModel2 model = new EntitiesModel2();
 
         private void TaskForm_Load(object sender, EventArgs e)
         {
-
-                this.BackColor = Color.FromArgb(138, 197, 222);
+            
+            this.BackColor = Color.FromArgb(138, 197, 222);
 
 
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new
@@ -39,7 +39,7 @@ namespace LearningPlanner_1._0._0
                 o.DataUtworzenia,
                 o.CzyZakonczone,
                 o.IDUzytkownika
-            }).Where(o => o.IDUzytkownika == IDUser).ToList();
+            }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == false).ToList();
 
             // Ukrycie kolumn
             TaskDataGridView1.Columns["IDZadania"].Visible = false;
@@ -51,34 +51,37 @@ namespace LearningPlanner_1._0._0
             
         }
 
-        
+
         Zadania modelz = new Zadania();
         private void TaskDataGridView1_Click(object sender, EventArgs e)
         {
-          var  a =  TaskDataGridView1.CurrentRow.Index.ToString();
-
-
-            if (TaskDataGridView1.CurrentRow.Index != -1)
+            try
             {
-               modelz.IDZadania = Convert.ToInt32(TaskDataGridView1.CurrentRow.Cells["IDZadania"].Value);
-                using (EntitiesModel2 db = new EntitiesModel2())
+                var a = TaskDataGridView1.CurrentRow.Index.ToString();
+
+                if (TaskDataGridView1.CurrentRow.Index != -1)
                 {
-                    modelz = db.Zadania.Where(x => x.IDZadania == modelz.IDZadania).FirstOrDefault();
-                    TaskNameTextBox.Text = modelz.Nazwa;
-                    CategoryTextBox.Text = modelz.Kategoria;
-                    DescriptionTextBox.Text = modelz.Opis;
+                    modelz.IDZadania = Convert.ToInt32(TaskDataGridView1.CurrentRow.Cells["IDZadania"].Value);
+                    using (EntitiesModel2 db = new EntitiesModel2())
+                    {
+                        modelz = db.Zadania.Where(x => x.IDZadania == modelz.IDZadania).FirstOrDefault();
+                        TaskNameTextBox.Text = modelz.Nazwa;
+                        CategoryTextBox.Text = modelz.Kategoria;
+                        DescriptionTextBox.Text = modelz.Opis;
+                    }
+                    SaveButton.Text = "Zaaktualizuj";
+
                 }
-                SaveButton.Text = "Zaaktualizuj";
-                              
             }
+            catch (NullReferenceException) { }
+
         }
-       
-        
+
         // Clearing texts
-       private void Clear ()
+        private void Clear()
         {
             TaskNameTextBox.Text = CategoryTextBox.Text = DescriptionTextBox.Text = "";
-            SaveButton.Text = "Zapisz";          
+            SaveButton.Text = "Zapisz";
             modelz.IDZadania = 0;
         }
         // CRUD's methods
@@ -89,7 +92,7 @@ namespace LearningPlanner_1._0._0
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            
+
             modelz.Nazwa = TaskNameTextBox.Text.Trim();
             modelz.Kategoria = CategoryTextBox.Text.Trim();
             modelz.Opis = DescriptionTextBox.Text.Trim();
@@ -105,7 +108,7 @@ namespace LearningPlanner_1._0._0
                 {
                     db.Entry(modelz).State = System.Data.Entity.EntityState.Modified;
                 }
-                db.SaveChanges(); 
+                db.SaveChanges();
             }
             RefreshGrid();
             Clear();
@@ -118,10 +121,10 @@ namespace LearningPlanner_1._0._0
         {
             if (Size.Width <= 799)
             {
-                TaskNameTextBox.Size = new Size(220,35);
+                TaskNameTextBox.Size = new Size(220, 35);
                 CategoryTextBox.Size = new Size(220, 35);
                 DescriptionTextBox.Size = new Size(220, 85);
-                TaskDataGridView1.Size = new Size(344,500);
+                TaskDataGridView1.Size = new Size(344, 500);
                 SaveButton.Size = new Size(108, 50);
                 SaveButton.Location = new Point(11, 392);
                 DeleteButton.Size = new Size(108, 50);
@@ -143,11 +146,11 @@ namespace LearningPlanner_1._0._0
                 CancelButton.Size = new Size(500, 80);
                 CancelButton.Location = new Point(65, 840);
                 TaskDataGridView1.Size = new Size(900, 500);
-                
+
             }
         }
 
-        void RefreshGrid ()
+       public void RefreshGrid()
         {
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new
             {
@@ -158,14 +161,15 @@ namespace LearningPlanner_1._0._0
                 o.DataUtworzenia,
                 o.CzyZakonczone,
                 o.IDUzytkownika
-            }).Where(o => o.IDUzytkownika == IDUser).ToList();
+            }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == false).ToList();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Czy jesteś pewien, że chcesz usunąć to zadanie?", "USUWANIE REKORDU", MessageBoxButtons.YesNo)==DialogResult.Yes)
+            if (MessageBox.Show("Czy jesteś pewien, że chcesz usunąć to zadanie?", "USUWANIE REKORDU", MessageBoxButtons.YesNo) == DialogResult.Yes)
 
-                try {
+                try
+                {
                     using (EntitiesModel2 db = new EntitiesModel2())
                     {
 
@@ -189,45 +193,66 @@ namespace LearningPlanner_1._0._0
                     Timer exceptionTimer = new Timer
                     {
                         Interval = 7000
-                    
+
                     };
                     exceptionTimer.Tick += ExceptionTimer_Tick;
                     exceptionTimer.Start();
-                 
-                    
+
+
                 }
-                
-                
+
+
         }
 
-             
+        public DataGridViewRow SelectedRow { get; private set; }
 
-        private void TaskDataGridView1_DoubleClick(object sender, EventArgs e)
+        
+      
+       
+        public  bool Status { get; set; }
+
+        public static int Id { get; set; }
+
+      
+
+
+        public void TaskDataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            
+
             if (TaskDataGridView1.SelectedCells.Count > 0)
             {
                 int selectedrowindex = TaskDataGridView1.SelectedCells[0].RowIndex;
 
-                DataGridViewRow selectedRow = TaskDataGridView1.Rows[selectedrowindex];
-
-                string name = Convert.ToString(selectedRow.Cells["Nazwa"].Value);
-                string category = Convert.ToString(selectedRow.Cells["Kategoria"].Value);
-                string description = Convert.ToString(selectedRow.Cells["Opis"].Value);
-                DateTime creationDate = Convert.ToDateTime(selectedRow.Cells["DataUtworzenia"].Value);
-                string status = Convert.ToString(selectedRow.Cells["CzyZakonczone"].Value);
-
-
-                TaskInfoForm frm = new TaskInfoForm();
-                frm.SetDoubleClickInfo(name, category, description, creationDate, status);
-                frm.Show();
+                SelectedRow = TaskDataGridView1.Rows[selectedrowindex];
               
 
+                var creationDate = DateTime.Now;
+                Id = Convert.ToInt32(SelectedRow.Cells["IDZadania"].Value);
+                string name = Convert.ToString(SelectedRow.Cells["Nazwa"].Value);
+                string category = Convert.ToString(SelectedRow.Cells["Kategoria"].Value);
+                string description = Convert.ToString(SelectedRow.Cells["Opis"].Value);
+                creationDate = Convert.ToDateTime(SelectedRow.Cells["DataUtworzenia"].Value);
+                Status = Convert.ToBoolean(SelectedRow.Cells["CzyZakonczone"].Value);
+
+                TaskInfoForm frm = new TaskInfoForm();
+
+                frm.SetDoubleClickInfo(name, category, description, creationDate);
+                frm.Show();
+
+                if (Status == false)
+                {
+                    frm.statusInfoLbl1.Text = "Nie zakończono";
+                }
+                else
+                    frm.statusInfoLbl1.Text = "Zakończono";
+
+                
             }
-
+            
         }
+        
+   
 
-       
 
         private void Save()
         {
@@ -250,10 +275,10 @@ namespace LearningPlanner_1._0._0
                     {
                         write.WriteLine("Liczba zadan: " +
                            tasksNumber + ", " + actualDate);
-                        
+
                     }
             }
-            catch(IOException exc)
+            catch (IOException exc)
             {
                 string logError = exc.Message;
                 errorLabel.Visible = true;
@@ -267,12 +292,17 @@ namespace LearningPlanner_1._0._0
 
             }
 
-       }
+        }
 
         private void ExceptionTimer_Tick(object sender, EventArgs e)
         {
             errorLabel.Visible = false;
             errorLabel.Text = "";
         }
+
+       
     }
+
+   
+
 }

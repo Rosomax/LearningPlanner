@@ -25,12 +25,17 @@ namespace LearningPlanner_1._0._0
 
         private void CompletedTaskControl2_Paint(object sender, PaintEventArgs e)
         {
-            SolidBrush zadz = new SolidBrush(Color.White);
-            Graphics g = this.CreateGraphics();
-            FontFamily zadza = new FontFamily("Century Gothic");
-            Font zfont = new Font(zadza, 16);
-            g.DrawString("Zakończone\n       Zadania", zfont, zadz, new PointF(52, 20));
-            
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            SolidBrush zad = new SolidBrush(Color.White);
+            FontFamily zadf = new FontFamily("Century Gothic");
+            Font zfont = new Font(zadf, 16);
+            e.Graphics.DrawString("Zakończone\n       Zadania", zfont, zad, new PointF(52, 20));
+
         }
+
+
+      
+
+        
     }
 }

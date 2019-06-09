@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TaskNameTextBox = new System.Windows.Forms.TextBox();
             this.NazwaZadaniaLabel = new System.Windows.Forms.Label();
             this.KategoriaLabel = new System.Windows.Forms.Label();
@@ -132,14 +132,14 @@
             this.TaskDataGridView1.BackgroundColor = System.Drawing.Color.DarkRed;
             this.TaskDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.TaskDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaskDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TaskDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TaskDataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TaskDataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -229,9 +229,9 @@
         private System.Windows.Forms.Label OpisLabel;
         private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.DataGridView TaskDataGridView1;
         private System.Windows.Forms.Button DeleteButton;
         private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label errorLabel;
+        public System.Windows.Forms.DataGridView TaskDataGridView1;
     }
 }

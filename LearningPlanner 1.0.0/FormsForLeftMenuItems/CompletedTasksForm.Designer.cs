@@ -28,22 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.CompletedTaskDataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.CompletedTaskDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ZakonczoneZadaniaForm
+            // CompletedTaskDataGridView1
+            // 
+            this.CompletedTaskDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CompletedTaskDataGridView1.BackgroundColor = System.Drawing.Color.DarkRed;
+            this.CompletedTaskDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CompletedTaskDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CompletedTaskDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.CompletedTaskDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CompletedTaskDataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CompletedTaskDataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CompletedTaskDataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.CompletedTaskDataGridView1.Location = new System.Drawing.Point(232, 0);
+            this.CompletedTaskDataGridView1.Name = "CompletedTaskDataGridView1";
+            this.CompletedTaskDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CompletedTaskDataGridView1.Size = new System.Drawing.Size(518, 500);
+            this.CompletedTaskDataGridView1.TabIndex = 8;
+            // 
+            // CompletedTasksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 442);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(750, 500);
+            this.Controls.Add(this.CompletedTaskDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "ZakonczoneZadaniaForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "CompletedTasksForm";
             this.Text = "ZakonczoneZadaniaForm";
             this.Load += new System.EventHandler(this.CompletedTasksForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CompletedTaskDataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        public System.Windows.Forms.DataGridView CompletedTaskDataGridView1;
     }
 }

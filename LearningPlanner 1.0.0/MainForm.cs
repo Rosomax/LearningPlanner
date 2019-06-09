@@ -2,7 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-using System.Threading;
+
+
 namespace LearningPlanner_1._0._0
 {
 
@@ -227,7 +228,7 @@ namespace LearningPlanner_1._0._0
             {
                 this.WindowState = FormWindowState.Normal;
                 maximilaziPictureBox.Load("WariantyOkna\\maximize-window.png");
-
+                
             }
             else if (this.WindowState == FormWindowState.Normal)
             {
@@ -235,6 +236,10 @@ namespace LearningPlanner_1._0._0
 
                 maximilaziPictureBox.Load("WariantyOkna\\restore-window.png");
             }
+
+
+
+
         }
 
         private void MinimalizePictureBox_Click(object sender, EventArgs e)
@@ -258,8 +263,9 @@ namespace LearningPlanner_1._0._0
             DataBaseLogging();
 
         }
-
-        
+      
+        // Id zalogowanego uzytkownika
+        public static int UserID { get; private set; }
 
 
         private void DataBaseLogging()
@@ -277,11 +283,10 @@ namespace LearningPlanner_1._0._0
                     if (user.Haslo == password)
                     {
                         MessageBox.Show("Zalogowano");
-                        userID = user.IDosoby;                      
+                        UserID = user.IDosoby;                      
                         panel1.Hide();
                         panel1.Enabled = false;
-                        
-
+                        ShowLeftMenu();
                     }
 
                     else
@@ -296,8 +301,31 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        public static int userID;
-        
+
+        private void ShowLeftMenu()
+        {
+          
+            categoryControl31.Enabled = true;          
+            completedTaskControl21.Enabled = true;           
+            findTaskControl41.Enabled = true;          
+            itnewsControl51.Enabled = true;          
+            settingsControl61.Enabled = true;          
+            taskControl11.Enabled = true;
+            maximilaziPictureBox.Enabled = true;
+        }
+
+        private void RegisterLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterForm rf = new RegisterForm();
+            rf.Show();
+
+          
+            
+        }
+
+
+
+
     }
 
   

@@ -92,6 +92,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlsLeftMenu\ITNewsControl5.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,7 +204,6 @@
     <Compile Include="FormsForLeftMenuItems\FindTaskForm.Designer.cs">
       <DependentUpon>FindTaskForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserLogging.cs" />
     <Compile Include="Uzytkownicy.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -216,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataGridTasksInfoControl.resx">
       <DependentUpon>DataGridTasksInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsLeftMenu\ITNewsControl5.resx">
       <DependentUpon>ITNewsControl5.cs</DependentUpon>
@@ -347,6 +355,7 @@
   <ItemGroup>
     <Content Include="Hand.cur" />
     <Content Include="HandZad.cur" />
+    <None Include="Ikony\close icon.png" />
     <Content Include="Logi\LocalLogs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

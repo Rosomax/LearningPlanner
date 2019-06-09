@@ -24,11 +24,11 @@ namespace LearningPlanner_1._0._0
 
         private void SettingsControl6_Paint(object sender, PaintEventArgs e)
         {
-            SolidBrush zad = new SolidBrush(Color.White);
-            Graphics g = this.CreateGraphics();
-            FontFamily zadf = new FontFamily("Century Gothic");
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            SolidBrush zad = new SolidBrush(Color.White);           
+            FontFamily zadf = new FontFamily("Century Gothic");           
             Font zfont = new Font(zadf, 16);
-            g.DrawString("Ustawienia", zfont, zad, new PointF(68, 35));
+            e.Graphics.DrawString("Ustawienia", zfont, zad, new PointF(68, 35));
         }
     }
 }
