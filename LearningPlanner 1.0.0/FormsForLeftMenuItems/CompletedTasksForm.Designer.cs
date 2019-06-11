@@ -56,6 +56,7 @@
             this.CompletedTaskDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CompletedTaskDataGridView1.Size = new System.Drawing.Size(518, 500);
             this.CompletedTaskDataGridView1.TabIndex = 8;
+            this.CompletedTaskDataGridView1.DoubleClick += new System.EventHandler(this.CompletedTaskDataGridView1_DoubleClick);
             // 
             // CompletedTasksForm
             // 
@@ -68,6 +69,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CompletedTasksForm";
             this.Text = "ZakonczoneZadaniaForm";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.CompletedTasksForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CompletedTaskDataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -142,23 +142,33 @@
             // 
             // FinishTask
             // 
-            this.FinishTask.Location = new System.Drawing.Point(575, 66);
+            this.FinishTask.BackColor = System.Drawing.Color.RosyBrown;
+            this.FinishTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FinishTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinishTask.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinishTask.Location = new System.Drawing.Point(538, 67);
             this.FinishTask.Name = "FinishTask";
-            this.FinishTask.Size = new System.Drawing.Size(110, 42);
+            this.FinishTask.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.FinishTask.Size = new System.Drawing.Size(147, 42);
             this.FinishTask.TabIndex = 10;
             this.FinishTask.Text = "Zakończ zadanie";
-            this.FinishTask.UseVisualStyleBackColor = true;
+            this.FinishTask.UseVisualStyleBackColor = false;
             this.FinishTask.Click += new System.EventHandler(this.FinishTask_Click);
             // 
             // EditTask
             // 
-            this.EditTask.Location = new System.Drawing.Point(575, 12);
+            this.EditTask.BackColor = System.Drawing.Color.RosyBrown;
+            this.EditTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditTask.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditTask.Location = new System.Drawing.Point(538, 12);
             this.EditTask.Name = "EditTask";
-            this.EditTask.Size = new System.Drawing.Size(110, 44);
+            this.EditTask.Size = new System.Drawing.Size(147, 44);
             this.EditTask.TabIndex = 11;
             this.EditTask.Text = "Edytuj";
-            this.EditTask.UseVisualStyleBackColor = true;
+            this.EditTask.UseVisualStyleBackColor = false;
             this.EditTask.Visible = false;
+            this.EditTask.Click += new System.EventHandler(this.EditTask_Click);
             // 
             // TaskInfoForm
             // 
@@ -200,7 +210,7 @@
         private System.Windows.Forms.Label categoryInfoLbl1;
         private System.Windows.Forms.Label creationDateInfoLbl1;
         private System.Windows.Forms.Button FinishTask;
-        private System.Windows.Forms.Button EditTask;
         public System.Windows.Forms.Label statusInfoLbl1;
+        public System.Windows.Forms.Button EditTask;
     }
 }

@@ -22,8 +22,10 @@ namespace LearningPlanner_1._0._0
 
         private void FindTaskForm_Load(object sender, EventArgs e)
         {
+
             this.Cursor = new Cursor("Resources\\Kursor.cur");
             this.BackColor = Color.FromArgb(138, 197, 222);
+            FindTaskDataGrid.DefaultCellStyle.ForeColor = Color.FromArgb(178, 8, 55);
 
             findmodel = new EntitiesModel2();
             FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new

@@ -49,8 +49,10 @@
             this.FindTaskDataGrid.BackgroundColor = System.Drawing.Color.DarkRed;
             this.FindTaskDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FindTaskDataGrid.Dock = System.Windows.Forms.DockStyle.Right;
+            this.FindTaskDataGrid.GridColor = System.Drawing.SystemColors.HotTrack;
             this.FindTaskDataGrid.Location = new System.Drawing.Point(262, 0);
             this.FindTaskDataGrid.Name = "FindTaskDataGrid";
+            this.FindTaskDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FindTaskDataGrid.Size = new System.Drawing.Size(488, 500);
             this.FindTaskDataGrid.TabIndex = 1;
             // 
