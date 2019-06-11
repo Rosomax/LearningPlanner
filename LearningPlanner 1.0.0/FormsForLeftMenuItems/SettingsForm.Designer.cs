@@ -37,15 +37,15 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // UstawieniaForm
+            // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 404);
+            this.ClientSize = new System.Drawing.Size(750, 500);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "UstawieniaForm";
+            this.Name = "SettingsForm";
             this.Text = "UstawieniaForm";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.SettingsForm_Paint);

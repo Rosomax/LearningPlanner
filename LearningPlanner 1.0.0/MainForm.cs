@@ -17,6 +17,7 @@ namespace LearningPlanner_1._0._0
 
         }
 
+        
         #region metodyObslugiMyszy
         // Mouse methods 
         public void MouseEnterMechanics(Control control)
