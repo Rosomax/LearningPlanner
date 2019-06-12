@@ -262,9 +262,13 @@ namespace LearningPlanner_1._0._0
         private void Button1_Click(object sender, EventArgs e)
         {
             DataBaseLogging();
-
+           
         }
+
       
+
+
+
         // Id zalogowanego uzytkownika
         public static int UserID { get; private set; }
 
@@ -302,7 +306,6 @@ namespace LearningPlanner_1._0._0
 
         }
 
-
         private void ShowLeftMenu()
         {
           
@@ -319,14 +322,17 @@ namespace LearningPlanner_1._0._0
         {
             RegisterForm rf = new RegisterForm();
             rf.Show();
-
-          
+     
             
         }
 
-
-
-
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter))
+                DataBaseLogging();
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
+        }
     }
 
   

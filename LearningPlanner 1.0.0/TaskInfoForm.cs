@@ -65,7 +65,7 @@ namespace LearningPlanner_1._0._0
                 GetFinishData = DateTime.Now.ToString();
 
                 currentForm.RefreshGrid();
-
+                this.Close();
             }
          
                

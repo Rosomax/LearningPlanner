@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,7 +24,7 @@ namespace LearningPlanner_1._0._0
 
         private void FindTaskForm_Load(object sender, EventArgs e)
         {
-           
+
 
             this.BackColor = Color.FromArgb(138, 197, 222);
             FindTaskDataGrid.DefaultCellStyle.ForeColor = Color.FromArgb(178, 8, 55);
@@ -44,7 +46,7 @@ namespace LearningPlanner_1._0._0
             FindTaskDataGrid.Columns["IDZadania"].Visible = false;
             FindTaskDataGrid.Columns["IDuzytkownika"].Visible = false;
 
-  
+
 
 
         }
@@ -72,7 +74,7 @@ namespace LearningPlanner_1._0._0
         {
             string FindText = FindTaskTextBox.Text;
 
-                   
+
 
 
             findmodel = new EntitiesModel2();
@@ -88,10 +90,12 @@ namespace LearningPlanner_1._0._0
                     h.CzyZakonczone,
                     h.IDUzytkownika
                 }).
-                Where(h => h.IDUzytkownika == IDUser).Where(h => h.Nazwa.StartsWith(FindText)).ToList();
-               
+                Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
+                .Where(h => h.Nazwa.StartsWith(FindText)).ToList();
 
-                
+
+
 
 
             }
@@ -107,7 +111,9 @@ namespace LearningPlanner_1._0._0
                     h.CzyZakonczone,
                     h.IDUzytkownika
                 }).
-               Where(h => h.IDUzytkownika == IDUser).Where(h => h.Opis.StartsWith(FindText)).ToList();
+               Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
+                .Where(h => h.Opis.StartsWith(FindText)).ToList();
             }
             else if (filterComboBox.SelectedIndex == 2)
             {
@@ -121,11 +127,13 @@ namespace LearningPlanner_1._0._0
                     h.CzyZakonczone,
                     h.IDUzytkownika
                 }).
-               Where(h => h.IDUzytkownika == IDUser).Where(h => h.Kategoria.StartsWith(FindText)).ToList();
-                
+               Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
+                .Where(h => h.Kategoria.StartsWith(FindText)).ToList();
+
             }
-        
-            
+
+
             else
                 FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new
                 {
@@ -137,8 +145,10 @@ namespace LearningPlanner_1._0._0
                     h.CzyZakonczone,
                     h.IDUzytkownika
                 }).
-                Where(h => h.IDUzytkownika == IDUser).Where(h => h.Nazwa.StartsWith(FindText)).ToList();
-              }
+                Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
+                .Where(h => h.Nazwa.StartsWith(FindText)).ToList();
+        }
 
         public void RefreshGrid()
         {
@@ -173,16 +183,14 @@ namespace LearningPlanner_1._0._0
                 FindTaskDataGrid.Size = new Size(700, 404);
             }
         }
-   
-
 
     }
 
 }
 
-  
 
 
-    
+
+
 
 
