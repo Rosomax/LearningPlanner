@@ -295,7 +295,6 @@ namespace LearningPlanner_1._0._0
             }
 
         }
-
         
 
         private void ExceptionTimer_Tick(object sender, EventArgs e)

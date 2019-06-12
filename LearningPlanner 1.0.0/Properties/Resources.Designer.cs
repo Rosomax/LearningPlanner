@@ -83,6 +83,16 @@ namespace LearningPlanner_1._0._0.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FindPicture {
+            get {
+                object obj = ResourceManager.GetObject("FindPicture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap info_icon {
             get {
                 object obj = ResourceManager.GetObject("info icon", resourceCulture);

@@ -17,11 +17,11 @@ namespace LearningPlanner_1._0._0
 
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {
-            this.Cursor = new Cursor("Resources\\Kursor.cur");
+            
             this.BackColor = Color.FromArgb(138, 197, 222);
             CompletedTaskDataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(178, 8, 55);
 
-
+            
 
             CompletedTaskDataGridView1.DataSource = model2.Zadania.Select(o => new
             {
@@ -60,6 +60,7 @@ namespace LearningPlanner_1._0._0
                 o.IDUzytkownika
             }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == true).ToList();
         }
+
         
 
         public static int Id { get; set; }

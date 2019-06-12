@@ -30,7 +30,7 @@ namespace LearningPlanner_1._0._0
 
         private void ITNews_Load(object sender, EventArgs e)
         {
-            this.Cursor= new Cursor("Resources\\Kursor.cur");
+            
             this.BackColor = Color.FromArgb(138, 197, 222);
                        
             string s0t = "GRY ONLINE";

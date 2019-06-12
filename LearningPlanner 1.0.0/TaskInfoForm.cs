@@ -47,13 +47,14 @@ namespace LearningPlanner_1._0._0
             return currentForm2;
         }
 
+        public string GetFinishData { get; set; }
+
         private void FinishTask_Click(object sender, EventArgs e)
         {
           if  (MessageBox.Show("Czy napewno chcesz zakończyć to zadanie?","Koniec zadania", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 var y = TaskForm.Id;
             
-
                 using (EntitiesModel2 mod = new EntitiesModel2())
                 {
                     var x = mod.Zadania.Single(z => z.IDZadania == y);
@@ -61,9 +62,14 @@ namespace LearningPlanner_1._0._0
                     mod.SaveChanges();
                  
                 }
+                GetFinishData = DateTime.Now.ToString();
+
                 currentForm.RefreshGrid();
 
             }
+         
+               
+
         }
         
         public void HideButton()
