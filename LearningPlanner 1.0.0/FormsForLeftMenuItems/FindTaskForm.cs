@@ -175,12 +175,65 @@ namespace LearningPlanner_1._0._0
             if (Size.Width <= 799)
             {
                 FindTaskDataGrid.Size = new Size(450, 500);
-
+               // FindTaskDataGrid.DefaultCellStyle.Font = new Font("century schoolbook", 9);
+                FIndTaskLabel.Size = new Size(186,19);
+                FIndTaskLabel.Location = new Point(24,39);
+                FIndTaskLabel.Font = new Font("Century Gothic", 12);
+                FindTaskTextBox.Size =  new Size(192, 200);
+                FindTaskTextBox.Location=new Point(28, 61);
+                FindTaskTextBox.Font = new Font("Century Gothic", 8);
+                filtrLabel.Size = new Size(38, 19);
+                filtrLabel.Location = new Point(24, 113);
+                filtrLabel.Font= new Font("Century Gothic", 12);
+                filterComboBox.Size = new Size(192, 21);
+                filterComboBox.Location = new Point(28, 135);
+                filterComboBox.Font= new Font("Century Gothic", 8);
+                filterFromLabel.Size = new Size(77,19);
+                filterFromLabel.Location = new Point(8,188);
+                filterFromLabel.Font= new Font("Century Gothic", 12);
+                filterFrom.Size = new Size(232,22);
+                filterFrom.Location = new Point(12,210);
+                filterFrom.Font= new Font("Century Gothic", 9);
+                filterToLabel.Size = new Size(77,19);
+                filterToLabel.Location = new Point(8,243);
+                filterToLabel.Font= new Font("Century Gothic", 12);
+                filterTo.Size = new Size(232,22);
+                filterTo.Location = new Point(12,265);
+                filterTo.Font = new Font("Century Gothic", 9);
+                findPictureBox.Size = new Size(176,99);
+                findPictureBox.Location = new Point(44,358);
             }
             else if (Size.Width >= 800)
             {
 
                 FindTaskDataGrid.Size = new Size(700, 404);
+                //FindTaskDataGrid.DefaultCellStyle.Font = new Font("century schoolbook", 26);
+                FIndTaskLabel.Size = new Size(286, 29);
+                FIndTaskLabel.Location = new Point(200, 39);
+                FIndTaskLabel.Font = new Font("Century Gothic", 32);
+                FindTaskTextBox.Size = new Size(520, 300);
+                FindTaskTextBox.Location = new Point(200, 100);
+                FindTaskTextBox.Font= new Font("Century Gothic", 22);
+                filtrLabel.Size = new Size(38, 19);
+                filtrLabel.Location = new Point(200, 150);
+                filtrLabel.Font= new Font("Century Gothic", 32);
+                filterComboBox.Size = new Size(520, 21);
+                filterComboBox.Location = new Point(200,210);
+                filterComboBox.Font= new Font("Century Gothic", 22);
+                filterFromLabel.Size = new Size(77, 19);
+                filterFromLabel.Location = new Point(200, 260);
+                filterFromLabel.Font= new Font("Century Gothic", 32);
+                filterFrom.Size = new Size(520, 22);
+                filterFrom.Location = new Point(200, 320);
+                filterFrom.Font= new Font("Century Gothic", 22);
+                filterToLabel.Size = new Size(77, 19);
+                filterToLabel.Location = new Point(200, 370);
+                filterToLabel.Font= new Font("Century Gothic", 32);
+                filterTo.Size = new Size(520, 22);
+                filterTo.Location = new Point(200, 430);
+                filterTo.Font=new Font("Century Gothic", 22);
+                findPictureBox.Size = new Size(576, 429);
+                findPictureBox.Location = new Point(170, 550);
             }
         }
 
