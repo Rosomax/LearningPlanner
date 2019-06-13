@@ -303,7 +303,6 @@ namespace LearningPlanner_1._0._0
 
             }
 
-
         }
 
         private void ShowLeftMenu()

@@ -13,9 +13,7 @@ namespace LearningPlanner_1._0._0
     {
         public TaskForm()
         {
-            InitializeComponent();
-            TaskDataGridView1.BackgroundColor = Color.FromArgb(178, 8, 55);
-            TaskDataGridView1.ForeColor = Color.FromArgb(178, 8, 55);
+            InitializeComponent();            
             Clear();
             
         }
@@ -26,9 +24,7 @@ namespace LearningPlanner_1._0._0
 
         private void TaskForm_Load(object sender, EventArgs e)
         {
-            
             this.BackColor = Color.FromArgb(138, 197, 222);
-
 
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new
             {

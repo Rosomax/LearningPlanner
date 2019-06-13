@@ -111,7 +111,7 @@
             this.WWWtextbox.Size = new System.Drawing.Size(175, 13);
             this.WWWtextbox.TabIndex = 9;
             // 
-            // ZaladujWWWbutton
+            // LoadWWWbutton
             // 
             this.LoadWWWbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.LoadWWWbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
@@ -124,7 +124,7 @@
             this.LoadWWWbutton.Location = new System.Drawing.Point(13, 389);
             this.LoadWWWbutton.Margin = new System.Windows.Forms.Padding(8);
             this.LoadWWWbutton.MaximumSize = new System.Drawing.Size(300, 100);
-            this.LoadWWWbutton.Name = "ZaladujWWWbutton";
+            this.LoadWWWbutton.Name = "LoadWWWbutton";
             this.LoadWWWbutton.Padding = new System.Windows.Forms.Padding(2);
             this.LoadWWWbutton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LoadWWWbutton.Size = new System.Drawing.Size(175, 40);
@@ -134,19 +134,19 @@
             this.LoadWWWbutton.UseVisualStyleBackColor = false;
             this.LoadWWWbutton.Click += new System.EventHandler(this.LoadWWWbutton_Click);
             // 
-            // PolecaneStronyListBox
+            // FavoriteSitesListBox
             // 
             this.FavoriteSitesListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
             this.FavoriteSitesListBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FavoriteSitesListBox.FormattingEnabled = true;
             this.FavoriteSitesListBox.ItemHeight = 16;
             this.FavoriteSitesListBox.Location = new System.Drawing.Point(13, 293);
-            this.FavoriteSitesListBox.Name = "PolecaneStronyListBox";
+            this.FavoriteSitesListBox.Name = "FavoriteSitesListBox";
             this.FavoriteSitesListBox.Size = new System.Drawing.Size(175, 84);
             this.FavoriteSitesListBox.TabIndex = 7;
             this.FavoriteSitesListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FavoriteSitesListBox_MouseClick);
             // 
-            // StronyLabel
+            // SitesLabel
             // 
             this.SitesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.SitesLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -154,7 +154,7 @@
             this.SitesLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SitesLabel.Location = new System.Drawing.Point(13, 236);
             this.SitesLabel.MaximumSize = new System.Drawing.Size(300, 100);
-            this.SitesLabel.Name = "StronyLabel";
+            this.SitesLabel.Name = "SitesLabel";
             this.SitesLabel.Padding = new System.Windows.Forms.Padding(5);
             this.SitesLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SitesLabel.Size = new System.Drawing.Size(175, 50);
@@ -231,15 +231,16 @@
             this.WebBrowserForXml.TabIndex = 5;
             this.WebBrowserForXml.Url = new System.Uri("", System.UriKind.Relative);
             // 
-            // ZeSwiataIt
+            // ITNews
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(723, 544);
             this.Controls.Add(this.WebBrowserForXml);
             this.Controls.Add(this.displayForNewsTabControl);
             this.Controls.Add(this.urlGroupBox);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ZeSwiataIt";
+            this.Name = "ITNews";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ZeSwiataIt";
             this.Load += new System.EventHandler(this.ITNews_Load);

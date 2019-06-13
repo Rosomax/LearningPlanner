@@ -17,9 +17,9 @@ namespace LearningPlanner_1._0._0
 
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {
-            
+           
             this.BackColor = Color.FromArgb(138, 197, 222);
-            CompletedTaskDataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(178, 8, 55);
+           
 
             
 
@@ -31,7 +31,8 @@ namespace LearningPlanner_1._0._0
                 o.Opis,
                 o.DataUtworzenia,
                 o.CzyZakonczone,
-                o.IDUzytkownika
+                o.IDUzytkownika,
+                
             }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == true).ToList();
 
             // Ukrycie kolumn
@@ -57,7 +58,8 @@ namespace LearningPlanner_1._0._0
                 o.Opis,
                 o.DataUtworzenia,
                 o.CzyZakonczone,
-                o.IDUzytkownika
+                o.IDUzytkownika,
+                
             }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == true).ToList();
         }
 

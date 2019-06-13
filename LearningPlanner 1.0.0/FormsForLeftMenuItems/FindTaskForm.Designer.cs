@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.FindTaskTextBox = new System.Windows.Forms.TextBox();
             this.FindTaskDataGrid = new System.Windows.Forms.DataGridView();
             this.FIndTaskLabel = new System.Windows.Forms.Label();
@@ -52,14 +55,40 @@
             // 
             // FindTaskDataGrid
             // 
+            this.FindTaskDataGrid.AllowUserToResizeColumns = false;
+            this.FindTaskDataGrid.AllowUserToResizeRows = false;
             this.FindTaskDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.FindTaskDataGrid.BackgroundColor = System.Drawing.Color.DarkRed;
+            this.FindTaskDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.FindTaskDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FindTaskDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.FindTaskDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FindTaskDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.FindTaskDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FindTaskDataGrid.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.FindTaskDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.FindTaskDataGrid.Dock = System.Windows.Forms.DockStyle.Right;
+            this.FindTaskDataGrid.EnableHeadersVisualStyles = false;
             this.FindTaskDataGrid.GridColor = System.Drawing.SystemColors.HotTrack;
             this.FindTaskDataGrid.Location = new System.Drawing.Point(262, 0);
             this.FindTaskDataGrid.Name = "FindTaskDataGrid";
+            this.FindTaskDataGrid.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SteelBlue;
+            this.FindTaskDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.FindTaskDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FindTaskDataGrid.Size = new System.Drawing.Size(488, 500);
             this.FindTaskDataGrid.TabIndex = 1;
