@@ -33,5 +33,41 @@ namespace LearningPlanner_1._0._0.Properties {
                 return ((string)(this["Polaczenie_z_baza"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int track1 {
+            get {
+                return ((int)(this["track1"]));
+            }
+            set {
+                this["track1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int track2 {
+            get {
+                return ((int)(this["track2"]));
+            }
+            set {
+                this["track2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int track3 {
+            get {
+                return ((int)(this["track3"]));
+            }
+            set {
+                this["track3"] = value;
+            }
+        }
     }
 }

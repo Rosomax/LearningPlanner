@@ -30,6 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftMainPanel = new System.Windows.Forms.Panel();
+            this.completedTaskControl21 = new LearningPlanner_1._0._0.CompletedTaskControl2();
+            this.leftActiveControl6 = new LearningPlanner_1._0._0.LeftActiveControl();
+            this.leftActiveControl5 = new LearningPlanner_1._0._0.LeftActiveControl();
+            this.leftActiveControl4 = new LearningPlanner_1._0._0.LeftActiveControl();
+            this.leftActiveControl3 = new LearningPlanner_1._0._0.LeftActiveControl();
+            this.leftActiveControl2 = new LearningPlanner_1._0._0.LeftActiveControl();
+            this.leftActiveControl1 = new LearningPlanner_1._0._0.LeftActiveControl();
+            this.taskControl11 = new LearningPlanner_1._0._0.TaskControl1();
+            this.settingsControl61 = new LearningPlanner_1._0._0.SettingsControl6();
+            this.itnewsControl51 = new LearningPlanner_1._0._0.ITNewsControl5();
+            this.findTaskControl41 = new LearningPlanner_1._0._0.FindTaskControl4();
+            this.categoryControl31 = new LearningPlanner_1._0._0.categoryControl3();
             this.TopMainPanel = new System.Windows.Forms.Panel();
             this.minimalizePictureBox = new System.Windows.Forms.PictureBox();
             this.maximilaziPictureBox = new System.Windows.Forms.PictureBox();
@@ -45,18 +57,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.completedTaskControl21 = new LearningPlanner_1._0._0.CompletedTaskControl2();
-            this.leftActiveControl6 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl5 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl4 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl3 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl2 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl1 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.taskControl11 = new LearningPlanner_1._0._0.TaskControl1();
-            this.settingsControl61 = new LearningPlanner_1._0._0.SettingsControl6();
-            this.itnewsControl51 = new LearningPlanner_1._0._0.ITNewsControl5();
-            this.findTaskControl41 = new LearningPlanner_1._0._0.FindTaskControl4();
-            this.categoryControl31 = new LearningPlanner_1._0._0.categoryControl3();
             this.LeftMainPanel.SuspendLayout();
             this.TopMainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimalizePictureBox)).BeginInit();
@@ -87,6 +87,140 @@
             this.LeftMainPanel.Name = "LeftMainPanel";
             this.LeftMainPanel.Size = new System.Drawing.Size(197, 586);
             this.LeftMainPanel.TabIndex = 0;
+            // 
+            // completedTaskControl21
+            // 
+            this.completedTaskControl21.AutoSize = true;
+            this.completedTaskControl21.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.completedTaskControl21.BackColor = System.Drawing.Color.Transparent;
+            this.completedTaskControl21.Enabled = false;
+            this.completedTaskControl21.Location = new System.Drawing.Point(12, 97);
+            this.completedTaskControl21.Margin = new System.Windows.Forms.Padding(4);
+            this.completedTaskControl21.Name = "completedTaskControl21";
+            this.completedTaskControl21.Size = new System.Drawing.Size(185, 97);
+            this.completedTaskControl21.TabIndex = 1;
+            this.completedTaskControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CompletedTasksControl21_MouseClick);
+            this.completedTaskControl21.MouseEnter += new System.EventHandler(this.CompletedTaskControl21_MouseEnter);
+            this.completedTaskControl21.MouseLeave += new System.EventHandler(this.CompletedTaskControl21_MouseLeave);
+            // 
+            // leftActiveControl6
+            // 
+            this.leftActiveControl6.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl6.Location = new System.Drawing.Point(0, 485);
+            this.leftActiveControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl6.Name = "leftActiveControl6";
+            this.leftActiveControl6.Size = new System.Drawing.Size(12, 101);
+            this.leftActiveControl6.TabIndex = 13;
+            // 
+            // leftActiveControl5
+            // 
+            this.leftActiveControl5.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl5.Location = new System.Drawing.Point(0, 388);
+            this.leftActiveControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl5.Name = "leftActiveControl5";
+            this.leftActiveControl5.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl5.TabIndex = 12;
+            // 
+            // leftActiveControl4
+            // 
+            this.leftActiveControl4.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl4.Location = new System.Drawing.Point(0, 291);
+            this.leftActiveControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl4.Name = "leftActiveControl4";
+            this.leftActiveControl4.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl4.TabIndex = 11;
+            // 
+            // leftActiveControl3
+            // 
+            this.leftActiveControl3.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl3.Location = new System.Drawing.Point(0, 194);
+            this.leftActiveControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl3.Name = "leftActiveControl3";
+            this.leftActiveControl3.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl3.TabIndex = 10;
+            // 
+            // leftActiveControl2
+            // 
+            this.leftActiveControl2.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl2.Location = new System.Drawing.Point(0, 97);
+            this.leftActiveControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl2.Name = "leftActiveControl2";
+            this.leftActiveControl2.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl2.TabIndex = 9;
+            // 
+            // leftActiveControl1
+            // 
+            this.leftActiveControl1.BackColor = System.Drawing.Color.Transparent;
+            this.leftActiveControl1.Location = new System.Drawing.Point(0, 0);
+            this.leftActiveControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.leftActiveControl1.Name = "leftActiveControl1";
+            this.leftActiveControl1.Size = new System.Drawing.Size(12, 97);
+            this.leftActiveControl1.TabIndex = 8;
+            // 
+            // taskControl11
+            // 
+            this.taskControl11.BackColor = System.Drawing.Color.Transparent;
+            this.taskControl11.Enabled = false;
+            this.taskControl11.Location = new System.Drawing.Point(12, 0);
+            this.taskControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.taskControl11.Name = "taskControl11";
+            this.taskControl11.Size = new System.Drawing.Size(185, 97);
+            this.taskControl11.TabIndex = 7;
+            this.taskControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TaskControl11_MouseClick);
+            this.taskControl11.MouseEnter += new System.EventHandler(this.TaskControl11_MouseEnter_1);
+            this.taskControl11.MouseLeave += new System.EventHandler(this.TaskControl11_MouseLeave);
+            // 
+            // settingsControl61
+            // 
+            this.settingsControl61.BackColor = System.Drawing.Color.Transparent;
+            this.settingsControl61.Enabled = false;
+            this.settingsControl61.Location = new System.Drawing.Point(12, 485);
+            this.settingsControl61.Margin = new System.Windows.Forms.Padding(4);
+            this.settingsControl61.Name = "settingsControl61";
+            this.settingsControl61.Size = new System.Drawing.Size(185, 101);
+            this.settingsControl61.TabIndex = 5;
+            this.settingsControl61.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SettingsControl61_MouseClick);
+            this.settingsControl61.MouseEnter += new System.EventHandler(this.SettingsControl61_MouseEnter);
+            this.settingsControl61.MouseLeave += new System.EventHandler(this.SettingsControl61_MouseLeave);
+            // 
+            // itnewsControl51
+            // 
+            this.itnewsControl51.BackColor = System.Drawing.Color.Transparent;
+            this.itnewsControl51.Enabled = false;
+            this.itnewsControl51.Location = new System.Drawing.Point(12, 388);
+            this.itnewsControl51.Margin = new System.Windows.Forms.Padding(4);
+            this.itnewsControl51.Name = "itnewsControl51";
+            this.itnewsControl51.Size = new System.Drawing.Size(185, 97);
+            this.itnewsControl51.TabIndex = 4;
+            this.itnewsControl51.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ITNewsControl51_MouseClick);
+            this.itnewsControl51.MouseEnter += new System.EventHandler(this.ITNewsControl51_MouseEnter);
+            this.itnewsControl51.MouseLeave += new System.EventHandler(this.ITNewsControl51_MouseLeave);
+            // 
+            // findTaskControl41
+            // 
+            this.findTaskControl41.BackColor = System.Drawing.Color.Transparent;
+            this.findTaskControl41.Enabled = false;
+            this.findTaskControl41.Location = new System.Drawing.Point(12, 291);
+            this.findTaskControl41.Margin = new System.Windows.Forms.Padding(4);
+            this.findTaskControl41.Name = "findTaskControl41";
+            this.findTaskControl41.Size = new System.Drawing.Size(185, 97);
+            this.findTaskControl41.TabIndex = 3;
+            this.findTaskControl41.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FindTaskControl41_MouseClick);
+            this.findTaskControl41.MouseEnter += new System.EventHandler(this.FindTaskControl41_MouseEnter);
+            this.findTaskControl41.MouseLeave += new System.EventHandler(this.FindTaskControl41_MouseLeave);
+            // 
+            // categoryControl31
+            // 
+            this.categoryControl31.BackColor = System.Drawing.Color.Transparent;
+            this.categoryControl31.Enabled = false;
+            this.categoryControl31.Location = new System.Drawing.Point(12, 194);
+            this.categoryControl31.Margin = new System.Windows.Forms.Padding(4);
+            this.categoryControl31.Name = "categoryControl31";
+            this.categoryControl31.Size = new System.Drawing.Size(185, 97);
+            this.categoryControl31.TabIndex = 2;
+            this.categoryControl31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CategoryControl31_MouseClick);
+            this.categoryControl31.MouseEnter += new System.EventHandler(this.CategoryControl31_MouseEnter);
+            this.categoryControl31.MouseLeave += new System.EventHandler(this.CategoryControl31_MouseLeave);
             // 
             // TopMainPanel
             // 
@@ -277,140 +411,6 @@
             this.label1.Text = ":Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // completedTaskControl21
-            // 
-            this.completedTaskControl21.AutoSize = true;
-            this.completedTaskControl21.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.completedTaskControl21.BackColor = System.Drawing.Color.Transparent;
-            this.completedTaskControl21.Enabled = false;
-            this.completedTaskControl21.Location = new System.Drawing.Point(12, 97);
-            this.completedTaskControl21.Margin = new System.Windows.Forms.Padding(4);
-            this.completedTaskControl21.Name = "completedTaskControl21";
-            this.completedTaskControl21.Size = new System.Drawing.Size(185, 97);
-            this.completedTaskControl21.TabIndex = 1;
-            this.completedTaskControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CompletedTasksControl21_MouseClick);
-            this.completedTaskControl21.MouseEnter += new System.EventHandler(this.CompletedTaskControl21_MouseEnter);
-            this.completedTaskControl21.MouseLeave += new System.EventHandler(this.CompletedTaskControl21_MouseLeave);
-            // 
-            // leftActiveControl6
-            // 
-            this.leftActiveControl6.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl6.Location = new System.Drawing.Point(0, 485);
-            this.leftActiveControl6.Margin = new System.Windows.Forms.Padding(4);
-            this.leftActiveControl6.Name = "leftActiveControl6";
-            this.leftActiveControl6.Size = new System.Drawing.Size(12, 101);
-            this.leftActiveControl6.TabIndex = 13;
-            // 
-            // leftActiveControl5
-            // 
-            this.leftActiveControl5.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl5.Location = new System.Drawing.Point(0, 388);
-            this.leftActiveControl5.Margin = new System.Windows.Forms.Padding(4);
-            this.leftActiveControl5.Name = "leftActiveControl5";
-            this.leftActiveControl5.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl5.TabIndex = 12;
-            // 
-            // leftActiveControl4
-            // 
-            this.leftActiveControl4.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl4.Location = new System.Drawing.Point(0, 291);
-            this.leftActiveControl4.Margin = new System.Windows.Forms.Padding(4);
-            this.leftActiveControl4.Name = "leftActiveControl4";
-            this.leftActiveControl4.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl4.TabIndex = 11;
-            // 
-            // leftActiveControl3
-            // 
-            this.leftActiveControl3.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl3.Location = new System.Drawing.Point(0, 194);
-            this.leftActiveControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.leftActiveControl3.Name = "leftActiveControl3";
-            this.leftActiveControl3.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl3.TabIndex = 10;
-            // 
-            // leftActiveControl2
-            // 
-            this.leftActiveControl2.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl2.Location = new System.Drawing.Point(0, 97);
-            this.leftActiveControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.leftActiveControl2.Name = "leftActiveControl2";
-            this.leftActiveControl2.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl2.TabIndex = 9;
-            // 
-            // leftActiveControl1
-            // 
-            this.leftActiveControl1.BackColor = System.Drawing.Color.Transparent;
-            this.leftActiveControl1.Location = new System.Drawing.Point(0, 0);
-            this.leftActiveControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.leftActiveControl1.Name = "leftActiveControl1";
-            this.leftActiveControl1.Size = new System.Drawing.Size(12, 97);
-            this.leftActiveControl1.TabIndex = 8;
-            // 
-            // taskControl11
-            // 
-            this.taskControl11.BackColor = System.Drawing.Color.Transparent;
-            this.taskControl11.Enabled = false;
-            this.taskControl11.Location = new System.Drawing.Point(12, 0);
-            this.taskControl11.Margin = new System.Windows.Forms.Padding(4);
-            this.taskControl11.Name = "taskControl11";
-            this.taskControl11.Size = new System.Drawing.Size(185, 97);
-            this.taskControl11.TabIndex = 7;
-            this.taskControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TaskControl11_MouseClick);
-            this.taskControl11.MouseEnter += new System.EventHandler(this.TaskControl11_MouseEnter_1);
-            this.taskControl11.MouseLeave += new System.EventHandler(this.TaskControl11_MouseLeave);
-            // 
-            // settingsControl61
-            // 
-            this.settingsControl61.BackColor = System.Drawing.Color.Transparent;
-            this.settingsControl61.Enabled = false;
-            this.settingsControl61.Location = new System.Drawing.Point(12, 485);
-            this.settingsControl61.Margin = new System.Windows.Forms.Padding(4);
-            this.settingsControl61.Name = "settingsControl61";
-            this.settingsControl61.Size = new System.Drawing.Size(185, 101);
-            this.settingsControl61.TabIndex = 5;
-            this.settingsControl61.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SettingsControl61_MouseClick);
-            this.settingsControl61.MouseEnter += new System.EventHandler(this.SettingsControl61_MouseEnter);
-            this.settingsControl61.MouseLeave += new System.EventHandler(this.SettingsControl61_MouseLeave);
-            // 
-            // itnewsControl51
-            // 
-            this.itnewsControl51.BackColor = System.Drawing.Color.Transparent;
-            this.itnewsControl51.Enabled = false;
-            this.itnewsControl51.Location = new System.Drawing.Point(12, 388);
-            this.itnewsControl51.Margin = new System.Windows.Forms.Padding(4);
-            this.itnewsControl51.Name = "itnewsControl51";
-            this.itnewsControl51.Size = new System.Drawing.Size(185, 97);
-            this.itnewsControl51.TabIndex = 4;
-            this.itnewsControl51.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ITNewsControl51_MouseClick);
-            this.itnewsControl51.MouseEnter += new System.EventHandler(this.ITNewsControl51_MouseEnter);
-            this.itnewsControl51.MouseLeave += new System.EventHandler(this.ITNewsControl51_MouseLeave);
-            // 
-            // findTaskControl41
-            // 
-            this.findTaskControl41.BackColor = System.Drawing.Color.Transparent;
-            this.findTaskControl41.Enabled = false;
-            this.findTaskControl41.Location = new System.Drawing.Point(12, 291);
-            this.findTaskControl41.Margin = new System.Windows.Forms.Padding(4);
-            this.findTaskControl41.Name = "findTaskControl41";
-            this.findTaskControl41.Size = new System.Drawing.Size(185, 97);
-            this.findTaskControl41.TabIndex = 3;
-            this.findTaskControl41.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FindTaskControl41_MouseClick);
-            this.findTaskControl41.MouseEnter += new System.EventHandler(this.FindTaskControl41_MouseEnter);
-            this.findTaskControl41.MouseLeave += new System.EventHandler(this.FindTaskControl41_MouseLeave);
-            // 
-            // categoryControl31
-            // 
-            this.categoryControl31.BackColor = System.Drawing.Color.Transparent;
-            this.categoryControl31.Enabled = false;
-            this.categoryControl31.Location = new System.Drawing.Point(12, 194);
-            this.categoryControl31.Margin = new System.Windows.Forms.Padding(4);
-            this.categoryControl31.Name = "categoryControl31";
-            this.categoryControl31.Size = new System.Drawing.Size(185, 97);
-            this.categoryControl31.TabIndex = 2;
-            this.categoryControl31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CategoryControl31_MouseClick);
-            this.categoryControl31.MouseEnter += new System.EventHandler(this.CategoryControl31_MouseEnter);
-            this.categoryControl31.MouseLeave += new System.EventHandler(this.CategoryControl31_MouseLeave);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -428,7 +428,7 @@
             this.KeyPreview = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LearningPlanner";
+            this.Text = "LearningPlanner";            
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.LeftMainPanel.ResumeLayout(false);
             this.LeftMainPanel.PerformLayout();
@@ -447,7 +447,6 @@
         #endregion
 
         private System.Windows.Forms.Panel LeftMainPanel;
-        private System.Windows.Forms.Panel TopMainPanel;
         private CompletedTaskControl2 completedTaskControl21;
         private categoryControl3 categoryControl31;
         private FindTaskControl4 findTaskControl41;
@@ -474,6 +473,7 @@
         private System.Windows.Forms.TextBox passwordtextBox1;
         private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
         private System.Windows.Forms.LinkLabel registerLinkLabel;
+        public System.Windows.Forms.Panel TopMainPanel;
     }
 }
 

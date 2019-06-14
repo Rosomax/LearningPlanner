@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
-
+using LearningPlanner_1._0._0.Properties;
 
 namespace LearningPlanner_1._0._0
 {
@@ -12,10 +12,10 @@ namespace LearningPlanner_1._0._0
     public partial class TaskForm : Form
     {
         public TaskForm()
-        {
+        {           
             InitializeComponent();            
             Clear();
-            
+
         }
         
         int IDUser = MainForm.UserID;
@@ -24,7 +24,12 @@ namespace LearningPlanner_1._0._0
 
         private void TaskForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(138, 197, 222);
+           
+                // this.BackColor = Color.FromArgb(138, 197, 222);
+             this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
+            
+
+
 
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new
             {
@@ -47,6 +52,7 @@ namespace LearningPlanner_1._0._0
             
         }
 
+      
 
         Zadania modelz = new Zadania();
         private void TaskDataGridView1_Click(object sender, EventArgs e)
@@ -299,9 +305,7 @@ namespace LearningPlanner_1._0._0
             errorLabel.Text = "";
         }
 
-     
-
-
+      
     }
    
 

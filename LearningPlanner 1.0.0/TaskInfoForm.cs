@@ -78,6 +78,13 @@ namespace LearningPlanner_1._0._0
             EditTask.Show();
         }
 
+        public void HideAllButtons()
+        {
+            FinishTask.Hide();
+            EditTask.Hide();
+        }
+
+
         private void EditTask_Click(object sender, EventArgs e)
         {
 

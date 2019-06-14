@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-
+using LearningPlanner_1._0._0.Properties;
 
 namespace LearningPlanner_1._0._0
 {
@@ -92,7 +92,7 @@ namespace LearningPlanner_1._0._0
 
         SetColorHandler colorHandler;
 
-
+        
 
         private void TaskControl11_MouseClick(object sender, MouseEventArgs e)
         {
@@ -104,9 +104,10 @@ namespace LearningPlanner_1._0._0
             // wywolanie delegata                   
             colorHandler(leftActiveControl1);
             colorHandler -= leftActiveControl1.SetBackColorMethod;
+           
             taskControl11.OpenFormTask();
-        }
 
+        }
 
         private void CompletedTasksControl21_MouseClick(object sender, MouseEventArgs e)
         {
@@ -332,6 +333,8 @@ namespace LearningPlanner_1._0._0
             if (e.KeyCode == Keys.Escape)
                 this.Close();
         }
+
+       
     }
 
   

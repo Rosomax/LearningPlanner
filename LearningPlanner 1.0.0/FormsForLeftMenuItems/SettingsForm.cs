@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO;
-
+using LearningPlanner_1._0._0.Properties;
 namespace LearningPlanner_1._0._0
 {
     public partial class SettingsForm : Form
@@ -21,9 +21,9 @@ namespace LearningPlanner_1._0._0
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            
-            this.BackColor = Color.FromArgb(138, 197, 222);
 
+            SaveColorToSettings();
+            defaultColorButton.ForeColor = Color.Black;
         }
 
         private void SettingsForm_Paint(object sender, PaintEventArgs e)
@@ -46,13 +46,13 @@ namespace LearningPlanner_1._0._0
             //wskazowka minutowa
             e.Graphics.Transform = m;
             e.Graphics.TranslateTransform(125, 125);
-            e.Graphics.RotateTransform(DateTime.Now.Minute*6);
+            e.Graphics.RotateTransform(DateTime.Now.Minute * 6);
             Pen minuta = new Pen(Color.Green, 2);
             e.Graphics.DrawLine(minuta, 0, 0, 0, -25);
             // wskazowka godzinowa
             e.Graphics.Transform = m;
             e.Graphics.TranslateTransform(125, 125);
-            e.Graphics.RotateTransform(DateTime.Now.Hour*24);
+            e.Graphics.RotateTransform(DateTime.Now.Hour * 24);
             Pen godzina = new Pen(Color.Black, 3);
             e.Graphics.DrawLine(godzina, 0, 0, 0, -20);
 
@@ -62,7 +62,7 @@ namespace LearningPlanner_1._0._0
             e.Graphics.DrawLine(Pens.Black, 0, 0, 0, 23);
 
             e.Graphics.Transform = m;
-            e.Graphics.TranslateTransform(125,200);
+            e.Graphics.TranslateTransform(125, 200);
             e.Graphics.DrawLine(Pens.Black, 0, 0, 0, -23);
 
             e.Graphics.Transform = m;
@@ -136,15 +136,75 @@ namespace LearningPlanner_1._0._0
             //e.Graphics.TranslateTransform(337, 260); 
             //e.Graphics.RotateTransform(30);
             //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);      
-            
+
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             Invalidate();
+            
         }
 
-        
+
+
+        private void ChangeColorTimer_Tick(object sender, EventArgs e)
+        {
+            RtextBox.Text = Convert.ToString(RtrackBar.Value);
+            GtextBox.Text = Convert.ToString(GtrackBar.Value);
+            BtextBox.Text = Convert.ToString(BtrackBar.Value);
+
+            var red = Convert.ToInt32(RtextBox.Text);
+            var green = Convert.ToInt32(GtextBox.Text);
+            var blue = Convert.ToInt32(BtextBox.Text);
+
+            this.BackColor = Color.FromArgb(red, green, blue);
+            
+        }
+
+        private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ChangeBackColorSave();
+            SaveColorToSettings();
+           
+        }
+
+        private void SettingsForm_Deactivate(object sender, EventArgs e)
+        {
+            ChangeBackColorSave();
+            SaveColorToSettings();
+         
+        }
+
+
+       private void ChangeBackColorSave()
+        {
+            Settings.Default.track1 = RtrackBar.Value;
+            Settings.Default.track2 = GtrackBar.Value;
+            Settings.Default.track3 = BtrackBar.Value;
+            Settings.Default.Save();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            RtrackBar.Value = 138;
+            GtrackBar.Value = 197;
+            BtrackBar.Value = 222;
+            ChangeBackColorSave();
+           
+        }
+
+        private void SaveColorToSettings()
+        {
+            RtrackBar.Value = Settings.Default.track1;
+            GtrackBar.Value = Settings.Default.track2;
+            BtrackBar.Value = Settings.Default.track3;
+           
+        }
+
+      
     }
     
+
 }

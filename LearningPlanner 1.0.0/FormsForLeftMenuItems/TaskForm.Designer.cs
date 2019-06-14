@@ -226,6 +226,7 @@
             this.Controls.Add(this.KategoriaLabel);
             this.Controls.Add(this.NazwaZadaniaLabel);
             this.Controls.Add(this.TaskNameTextBox);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TaskForm";

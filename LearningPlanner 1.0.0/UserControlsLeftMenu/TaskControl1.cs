@@ -9,16 +9,20 @@ namespace LearningPlanner_1._0._0
         {
             InitializeComponent();         
         }
-        
+
         public void OpenFormTask()
         {
             TaskForm Childform = new TaskForm
             {
+
                 MdiParent = this.ParentForm,
                 Dock = DockStyle.Fill
+
             };
-            Childform.Show();          
+            Childform.Show();
+
         }
+           
             
         // Rysowanie napisu na kontrolce
         private void TaskControl1_Paint(object sender, PaintEventArgs e)

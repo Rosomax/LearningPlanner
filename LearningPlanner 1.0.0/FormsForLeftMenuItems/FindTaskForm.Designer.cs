@@ -92,6 +92,7 @@
             this.FindTaskDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FindTaskDataGrid.Size = new System.Drawing.Size(488, 500);
             this.FindTaskDataGrid.TabIndex = 1;
+            this.FindTaskDataGrid.DoubleClick += new System.EventHandler(this.FindTaskDataGrid_DoubleClick);
             // 
             // FIndTaskLabel
             // 
