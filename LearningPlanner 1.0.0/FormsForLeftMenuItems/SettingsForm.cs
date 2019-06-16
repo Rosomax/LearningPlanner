@@ -17,12 +17,20 @@ namespace LearningPlanner_1._0._0
         public SettingsForm()
         {
             InitializeComponent();
+            
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
-        {           
+        {
             SaveColorToSettings();
+
+
+
             defaultColorButton.ForeColor = Color.Black;
+            RLabel.ForeColor = Color.Black;
+            GLabel.ForeColor = Color.Black;
+            BLabel.ForeColor = Color.Black;
+            
         }
 
         private void SettingsForm_Paint(object sender, PaintEventArgs e)
@@ -158,19 +166,10 @@ namespace LearningPlanner_1._0._0
 
             this.BackColor = Color.FromArgb(red, green, blue);
             
+
         }
 
-        private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            ChangeBackColorSave();
-                   
-        }
-
-        private void SettingsForm_Deactivate(object sender, EventArgs e)
-        {
-            ChangeBackColorSave();
-                 
-        }
+      
 
 
        private void ChangeBackColorSave()
@@ -179,7 +178,7 @@ namespace LearningPlanner_1._0._0
             Settings.Default.track2 = GtrackBar.Value;
             Settings.Default.track3 = BtrackBar.Value;
             Settings.Default.Save();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -200,7 +199,16 @@ namespace LearningPlanner_1._0._0
            
         }
 
-      
+        private void saveColorChangesButton_Click(object sender, EventArgs e)
+        {
+            ChangeBackColorSave();
+            MessageBox.Show("Zapisano");
+        }
+
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        
+
+        
     }
     
 

@@ -69,5 +69,17 @@ namespace LearningPlanner_1._0._0.Properties {
                 this["track3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Ustawienie {
+            get {
+                return ((string)(this["Ustawienie"]));
+            }
+            set {
+                this["Ustawienie"] = value;
+            }
+        }
     }
 }

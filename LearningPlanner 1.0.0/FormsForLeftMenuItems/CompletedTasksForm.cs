@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
+using LearningPlanner_1._0._0.Properties;
 namespace LearningPlanner_1._0._0
 {
     public partial class CompletedTasksForm : Form
@@ -17,11 +18,11 @@ namespace LearningPlanner_1._0._0
 
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {
-           
-            this.BackColor = Color.FromArgb(138, 197, 222);
-           
 
-            
+            this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
+
+
+
 
             CompletedTaskDataGridView1.DataSource = model2.Zadania.Select(o => new
             {

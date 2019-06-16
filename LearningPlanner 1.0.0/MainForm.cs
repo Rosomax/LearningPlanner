@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-using LearningPlanner_1._0._0.Properties;
+
 
 namespace LearningPlanner_1._0._0
 {
@@ -14,7 +14,7 @@ namespace LearningPlanner_1._0._0
         public MainForm()
         {
             InitializeComponent();
-
+            
         }
 
         
@@ -48,6 +48,7 @@ namespace LearningPlanner_1._0._0
             foreach (Form c in this.MdiChildren)
             {
                 c.Close();
+               
             }
         }
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -259,14 +260,16 @@ namespace LearningPlanner_1._0._0
         }
 
 
-
+        
         private void Button1_Click(object sender, EventArgs e)
         {
             DataBaseLogging();
-           
+  
         }
 
-      
+     
+
+
 
 
 
@@ -291,8 +294,10 @@ namespace LearningPlanner_1._0._0
                         MessageBox.Show("Zalogowano");
                         UserID = user.IDosoby;                      
                         panel1.Hide();
-                        panel1.Enabled = false;
+                        panel1.Enabled = false;                        
                         ShowLeftMenu();
+                        
+
                     }
 
                     else
@@ -329,7 +334,10 @@ namespace LearningPlanner_1._0._0
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if ((e.KeyCode == Keys.Enter))
-                DataBaseLogging();
+                if (panel1.Visible == true)
+                {
+                    DataBaseLogging();
+                }           
             if (e.KeyCode == Keys.Escape)
                 this.Close();
         }
