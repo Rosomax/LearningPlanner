@@ -36,7 +36,7 @@ namespace LearningPlanner_1._0._0.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("138")]
         public int track1 {
             get {
                 return ((int)(this["track1"]));
@@ -48,7 +48,7 @@ namespace LearningPlanner_1._0._0.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("197")]
         public int track2 {
             get {
                 return ((int)(this["track2"]));
@@ -60,7 +60,7 @@ namespace LearningPlanner_1._0._0.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("222")]
         public int track3 {
             get {
                 return ((int)(this["track3"]));

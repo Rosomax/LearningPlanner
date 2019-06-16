@@ -11,13 +11,13 @@
       <Value Profile="(Default)">Data Source=NT-27.WWSI.EDU.PL,1601;Initial Catalog=KASETY_406_01;Persist Security Info=True;User ID=Z406_01;Password=Z406_01</Value>
     </Setting>
     <Setting Name="track1" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">138</Value>
     </Setting>
     <Setting Name="track2" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">197</Value>
     </Setting>
     <Setting Name="track3" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">222</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -20,8 +20,7 @@ namespace LearningPlanner_1._0._0
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
-        {
-
+        {           
             SaveColorToSettings();
             defaultColorButton.ForeColor = Color.Black;
         }
@@ -164,15 +163,13 @@ namespace LearningPlanner_1._0._0
         private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             ChangeBackColorSave();
-            SaveColorToSettings();
-           
+                   
         }
 
         private void SettingsForm_Deactivate(object sender, EventArgs e)
         {
             ChangeBackColorSave();
-            SaveColorToSettings();
-         
+                 
         }
 
 
