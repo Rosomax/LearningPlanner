@@ -46,8 +46,6 @@ namespace LearningPlanner_1._0._0
         public DataGridViewRow SelectedRow { get; private set; }
 
 
-       
-
 
         public void RefreshGrid()
         {
