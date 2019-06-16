@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
 using System.ServiceModel.Syndication;
-
+using LearningPlanner_1._0._0.Properties;
 namespace LearningPlanner_1._0._0
 {
     public partial class ITNews : Form
@@ -30,9 +30,9 @@ namespace LearningPlanner_1._0._0
 
         private void ITNews_Load(object sender, EventArgs e)
         {
-            
-            this.BackColor = Color.FromArgb(138, 197, 222);
-                       
+
+            this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
+
             string s0t = "GRY ONLINE";
             string s1t = "PC-LAB";
             string s2t = "SPORT";
