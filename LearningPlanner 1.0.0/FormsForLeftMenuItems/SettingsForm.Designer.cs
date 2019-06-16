@@ -31,21 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.settingChangeColorLabel = new System.Windows.Forms.Label();
+            this.RtrackBar = new System.Windows.Forms.TrackBar();
+            this.GtrackBar = new System.Windows.Forms.TrackBar();
+            this.BtrackBar = new System.Windows.Forms.TrackBar();
+            this.RtextBox = new System.Windows.Forms.TextBox();
+            this.GtextBox = new System.Windows.Forms.TextBox();
+            this.BtextBox = new System.Windows.Forms.TextBox();
+            this.RLabel = new System.Windows.Forms.Label();
+            this.GLabel = new System.Windows.Forms.Label();
+            this.BLabel = new System.Windows.Forms.Label();
             this.ChangeColorTimer = new System.Windows.Forms.Timer(this.components);
             this.defaultColorButton = new System.Windows.Forms.Button();
-            this.saveColorChangesButton = new System.Windows.Forms.Button();
-            this.RtextBox = new System.Windows.Forms.TextBox();
-            this.RtrackBar = new System.Windows.Forms.TrackBar();
-            this.GtextBox = new System.Windows.Forms.TextBox();
-            this.GtrackBar = new System.Windows.Forms.TrackBar();
-            this.BtextBox = new System.Windows.Forms.TextBox();
-            this.BtrackBar = new System.Windows.Forms.TrackBar();
-            this.BLabel = new System.Windows.Forms.Label();
-            this.GLabel = new System.Windows.Forms.Label();
-            this.RLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtrackBar)).BeginInit();
@@ -68,6 +64,90 @@
             this.settingChangeColorLabel.TabIndex = 3;
             this.settingChangeColorLabel.Text = "Zmiana koloru:";
             // 
+            // RtrackBar
+            // 
+            this.RtrackBar.Location = new System.Drawing.Point(497, 59);
+            this.RtrackBar.Maximum = 255;
+            this.RtrackBar.Name = "RtrackBar";
+            this.RtrackBar.Size = new System.Drawing.Size(125, 45);
+            this.RtrackBar.TabIndex = 4;
+            this.RtrackBar.TickFrequency = 10;
+            this.RtrackBar.Value = 138;
+            // 
+            // GtrackBar
+            // 
+            this.GtrackBar.Location = new System.Drawing.Point(497, 98);
+            this.GtrackBar.Maximum = 255;
+            this.GtrackBar.Name = "GtrackBar";
+            this.GtrackBar.Size = new System.Drawing.Size(125, 45);
+            this.GtrackBar.TabIndex = 5;
+            this.GtrackBar.TickFrequency = 10;
+            this.GtrackBar.Value = 197;
+            // 
+            // BtrackBar
+            // 
+            this.BtrackBar.Location = new System.Drawing.Point(497, 140);
+            this.BtrackBar.Maximum = 255;
+            this.BtrackBar.Name = "BtrackBar";
+            this.BtrackBar.Size = new System.Drawing.Size(125, 45);
+            this.BtrackBar.TabIndex = 6;
+            this.BtrackBar.TickFrequency = 10;
+            this.BtrackBar.Value = 222;
+            // 
+            // RtextBox
+            // 
+            this.RtextBox.Location = new System.Drawing.Point(628, 59);
+            this.RtextBox.Name = "RtextBox";
+            this.RtextBox.Size = new System.Drawing.Size(58, 20);
+            this.RtextBox.TabIndex = 7;
+            this.RtextBox.Text = "138";
+            // 
+            // GtextBox
+            // 
+            this.GtextBox.Location = new System.Drawing.Point(628, 98);
+            this.GtextBox.Name = "GtextBox";
+            this.GtextBox.Size = new System.Drawing.Size(58, 20);
+            this.GtextBox.TabIndex = 8;
+            this.GtextBox.Text = "197";
+            // 
+            // BtextBox
+            // 
+            this.BtextBox.Location = new System.Drawing.Point(628, 140);
+            this.BtextBox.Name = "BtextBox";
+            this.BtextBox.Size = new System.Drawing.Size(58, 20);
+            this.BtextBox.TabIndex = 9;
+            this.BtextBox.Text = "222";
+            // 
+            // RLabel
+            // 
+            this.RLabel.AutoSize = true;
+            this.RLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RLabel.Location = new System.Drawing.Point(702, 59);
+            this.RLabel.Name = "RLabel";
+            this.RLabel.Size = new System.Drawing.Size(21, 20);
+            this.RLabel.TabIndex = 10;
+            this.RLabel.Text = "R";
+            // 
+            // GLabel
+            // 
+            this.GLabel.AutoSize = true;
+            this.GLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GLabel.Location = new System.Drawing.Point(702, 98);
+            this.GLabel.Name = "GLabel";
+            this.GLabel.Size = new System.Drawing.Size(22, 20);
+            this.GLabel.TabIndex = 11;
+            this.GLabel.Text = "G";
+            // 
+            // BLabel
+            // 
+            this.BLabel.AutoSize = true;
+            this.BLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BLabel.Location = new System.Drawing.Point(704, 140);
+            this.BLabel.Name = "BLabel";
+            this.BLabel.Size = new System.Drawing.Size(20, 20);
+            this.BLabel.TabIndex = 12;
+            this.BLabel.Text = "B";
+            // 
             // ChangeColorTimer
             // 
             this.ChangeColorTimer.Enabled = true;
@@ -76,140 +156,15 @@
             // 
             // defaultColorButton
             // 
-            this.defaultColorButton.BackColor = System.Drawing.Color.RosyBrown;
-            this.defaultColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.defaultColorButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defaultColorButton.ForeColor = System.Drawing.Color.Black;
-            this.defaultColorButton.Location = new System.Drawing.Point(630, 217);
+            this.defaultColorButton.Location = new System.Drawing.Point(617, 182);
             this.defaultColorButton.Name = "defaultColorButton";
-            this.defaultColorButton.Size = new System.Drawing.Size(95, 35);
+            this.defaultColorButton.Size = new System.Drawing.Size(95, 36);
             this.defaultColorButton.TabIndex = 13;
             this.defaultColorButton.Text = "Domyślny";
-            this.defaultColorButton.UseVisualStyleBackColor = false;
+            this.defaultColorButton.UseVisualStyleBackColor = true;
             this.defaultColorButton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // saveColorChangesButton
-            // 
-            this.saveColorChangesButton.BackColor = System.Drawing.Color.RosyBrown;
-            this.saveColorChangesButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveColorChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveColorChangesButton.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.saveColorChangesButton.ForeColor = System.Drawing.Color.Black;
-            this.saveColorChangesButton.Location = new System.Drawing.Point(499, 217);
-            this.saveColorChangesButton.Name = "saveColorChangesButton";
-            this.saveColorChangesButton.Size = new System.Drawing.Size(95, 35);
-            this.saveColorChangesButton.TabIndex = 14;
-            this.saveColorChangesButton.Text = "Zapisz";
-            this.saveColorChangesButton.UseVisualStyleBackColor = false;
-            this.saveColorChangesButton.Click += new System.EventHandler(this.saveColorChangesButton_Click);
-            // 
-            // RtextBox
-            // 
-            this.RtextBox.Location = new System.Drawing.Point(619, 49);
-            this.RtextBox.Name = "RtextBox";
-            this.RtextBox.Size = new System.Drawing.Size(58, 20);
-            this.RtextBox.TabIndex = 7;
-            this.RtextBox.Text = "138";
-            // 
-            // RtrackBar
-            // 
-            this.RtrackBar.Location = new System.Drawing.Point(488, 49);
-            this.RtrackBar.Maximum = 255;
-            this.RtrackBar.Name = "RtrackBar";
-            this.RtrackBar.Size = new System.Drawing.Size(125, 45);
-            this.RtrackBar.TabIndex = 4;
-            this.RtrackBar.TickFrequency = 10;
-            this.RtrackBar.Value = 138;
-            // 
-            // GtextBox
-            // 
-            this.GtextBox.Location = new System.Drawing.Point(619, 87);
-            this.GtextBox.Name = "GtextBox";
-            this.GtextBox.Size = new System.Drawing.Size(58, 20);
-            this.GtextBox.TabIndex = 8;
-            this.GtextBox.Text = "197";
-            // 
-            // GtrackBar
-            // 
-            this.GtrackBar.Location = new System.Drawing.Point(488, 87);
-            this.GtrackBar.Maximum = 255;
-            this.GtrackBar.Name = "GtrackBar";
-            this.GtrackBar.Size = new System.Drawing.Size(125, 45);
-            this.GtrackBar.TabIndex = 5;
-            this.GtrackBar.TickFrequency = 10;
-            this.GtrackBar.Value = 197;
-            // 
-            // BtextBox
-            // 
-            this.BtextBox.Location = new System.Drawing.Point(619, 131);
-            this.BtextBox.Name = "BtextBox";
-            this.BtextBox.Size = new System.Drawing.Size(58, 20);
-            this.BtextBox.TabIndex = 9;
-            this.BtextBox.Text = "222";
-            // 
-            // BtrackBar
-            // 
-            this.BtrackBar.Location = new System.Drawing.Point(488, 131);
-            this.BtrackBar.Maximum = 255;
-            this.BtrackBar.Name = "BtrackBar";
-            this.BtrackBar.Size = new System.Drawing.Size(125, 45);
-            this.BtrackBar.TabIndex = 6;
-            this.BtrackBar.TickFrequency = 10;
-            this.BtrackBar.Value = 222;
-            // 
-            // BLabel
-            // 
-            this.BLabel.AutoSize = true;
-            this.BLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BLabel.Location = new System.Drawing.Point(692, 131);
-            this.BLabel.Name = "BLabel";
-            this.BLabel.Size = new System.Drawing.Size(20, 20);
-            this.BLabel.TabIndex = 12;
-            this.BLabel.Text = "B";
-            // 
-            // GLabel
-            // 
-            this.GLabel.AutoSize = true;
-            this.GLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GLabel.Location = new System.Drawing.Point(690, 87);
-            this.GLabel.Name = "GLabel";
-            this.GLabel.Size = new System.Drawing.Size(22, 20);
-            this.GLabel.TabIndex = 11;
-            this.GLabel.Text = "G";
-            // 
-            // RLabel
-            // 
-            this.RLabel.AutoSize = true;
-            this.RLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RLabel.Location = new System.Drawing.Point(690, 49);
-            this.RLabel.Name = "RLabel";
-            this.RLabel.Size = new System.Drawing.Size(21, 20);
-            this.RLabel.TabIndex = 10;
-            this.RLabel.Text = "R";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(481, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3, 260);
-            this.panel1.TabIndex = 15;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(481, 258);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 3);
-            this.panel2.TabIndex = 16;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(748, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 260);
-            this.panel3.TabIndex = 16;
             // 
             // SettingsForm
             // 
@@ -217,26 +172,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(750, 500);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.defaultColorButton);
             this.Controls.Add(this.BLabel);
             this.Controls.Add(this.GLabel);
             this.Controls.Add(this.RLabel);
-            this.Controls.Add(this.saveColorChangesButton);
-            this.Controls.Add(this.defaultColorButton);
             this.Controls.Add(this.BtextBox);
-            this.Controls.Add(this.BtrackBar);
             this.Controls.Add(this.GtextBox);
-            this.Controls.Add(this.settingChangeColorLabel);
             this.Controls.Add(this.RtextBox);
-            this.Controls.Add(this.RtrackBar);
+            this.Controls.Add(this.BtrackBar);
             this.Controls.Add(this.GtrackBar);
+            this.Controls.Add(this.RtrackBar);
+            this.Controls.Add(this.settingChangeColorLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingsForm";
             this.Text = "UstawieniaForm";
+            this.Deactivate += new System.EventHandler(this.SettingsForm_Deactivate);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingsForm_FormClosed);
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.SettingsForm_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).EndInit();
@@ -251,20 +204,16 @@
 
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label settingChangeColorLabel;
-        private System.Windows.Forms.Timer ChangeColorTimer;
-        private System.Windows.Forms.Button defaultColorButton;
-        private System.Windows.Forms.Button saveColorChangesButton;
-        private System.Windows.Forms.TextBox RtextBox;
-        private System.Windows.Forms.TrackBar RtrackBar;
-        private System.Windows.Forms.TextBox GtextBox;
         private System.Windows.Forms.TrackBar GtrackBar;
-        private System.Windows.Forms.TextBox BtextBox;
         private System.Windows.Forms.TrackBar BtrackBar;
-        private System.Windows.Forms.Label BLabel;
-        private System.Windows.Forms.Label GLabel;
+        private System.Windows.Forms.TextBox RtextBox;
+        private System.Windows.Forms.TextBox GtextBox;
+        private System.Windows.Forms.TextBox BtextBox;
         private System.Windows.Forms.Label RLabel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label GLabel;
+        private System.Windows.Forms.Label BLabel;
+        private System.Windows.Forms.Timer ChangeColorTimer;
+        private System.Windows.Forms.TrackBar RtrackBar;
+        private System.Windows.Forms.Button defaultColorButton;
     }
 }

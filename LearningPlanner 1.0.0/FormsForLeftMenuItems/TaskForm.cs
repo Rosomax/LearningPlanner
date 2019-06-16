@@ -15,7 +15,7 @@ namespace LearningPlanner_1._0._0
         {           
             InitializeComponent();            
             Clear();
-            
+
         }
         
         int IDUser = MainForm.UserID;
@@ -23,7 +23,9 @@ namespace LearningPlanner_1._0._0
          EntitiesModel2 model = new EntitiesModel2();
 
         private void TaskForm_Load(object sender, EventArgs e)
-        { 
+        {
+           
+                // this.BackColor = Color.FromArgb(138, 197, 222);
              this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
             
 
@@ -303,11 +305,9 @@ namespace LearningPlanner_1._0._0
             errorLabel.Text = "";
         }
 
-
-     
+      
     }
    
-
 
 
 }
