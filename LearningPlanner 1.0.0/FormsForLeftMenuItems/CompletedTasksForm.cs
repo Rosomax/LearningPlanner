@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
 using LearningPlanner_1._0._0.Properties;
+using System.Text;
 namespace LearningPlanner_1._0._0
 {
     public partial class CompletedTasksForm : Form
@@ -40,6 +41,11 @@ namespace LearningPlanner_1._0._0
             CompletedTaskDataGridView1.Columns["IDZadania"].Visible = false;
             CompletedTaskDataGridView1.Columns["CzyZakonczone"].Visible = false;
             CompletedTaskDataGridView1.Columns["IDUzytkownika"].Visible = false;
+
+
+            var settings = new SettingsForm();
+            settings.LoadOrders(this);
+
 
 
         }
@@ -95,6 +101,27 @@ namespace LearningPlanner_1._0._0
                 
 
             }
+
+
+        }
+
+      
+
+        private void CSVExportButton_Click(object sender, EventArgs e)
+        {
+            var sb = new StringBuilder();
+            // Przechowanie kolumn 
+            var headers = CompletedTaskDataGridView1.Columns.Cast<DataGridViewColumn>();
+            sb.AppendLine(string.Join(",", headers.Select(column => column.HeaderText).ToArray()));
+
+            foreach (DataGridViewRow row in CompletedTaskDataGridView1.Rows)
+            {
+
+                var cells = row.Cells.Cast<DataGridViewCell>();
+                sb.AppendLine(string.Join(",", cells.Select(cell => cell.Value).ToArray()));
+            }
+
+            System.IO.File.WriteAllText("Export\\test.csv", sb.ToString());
         }
     }
 }

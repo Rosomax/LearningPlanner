@@ -205,10 +205,14 @@ namespace LearningPlanner_1._0._0
             MessageBox.Show("Zapisano");
         }
 
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-        
+        CompletedTasksForm currentForm2;
+        internal CompletedTasksForm LoadOrders(CompletedTasksForm task)
+        {
+            currentForm2 = task;
+            return currentForm2;
+        }
 
-        
+
     }
     
 

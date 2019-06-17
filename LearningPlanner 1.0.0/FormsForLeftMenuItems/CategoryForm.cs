@@ -31,20 +31,29 @@ namespace LearningPlanner_1._0._0
 
             
         }
+        
 
         private void chooseCategoryDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
+            string activeCell = chooseCategoryDataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
             
             chooseTaskLabel.Visible = true;
             chooseTaskDataGrid.Visible = true;
-            
+
             chooseTaskDataGrid.DataSource = categoryModel.Zadania.Select(t => new
             {
                 t.Nazwa,
-                t.Kategoria
-            }).Where(t => t.Kategoria == "SQL").ToList();
+                t.Kategoria,
+                t.IDUzytkownika
+            }).Where(t => t.Kategoria == activeCell).Distinct().Where(t => t.IDUzytkownika == IDUser).ToList();
+
+            
+
+
             chooseTaskDataGrid.Columns["Kategoria"].Visible = false;
+            chooseTaskDataGrid.Columns["IDUzytkownika"].Visible = false;
         }
     }
 }
