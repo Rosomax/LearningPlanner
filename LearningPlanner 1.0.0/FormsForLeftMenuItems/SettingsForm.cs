@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO;
 using LearningPlanner_1._0._0.Properties;
+using System.Media;
 namespace LearningPlanner_1._0._0
 {
     public partial class SettingsForm : Form
@@ -203,16 +204,13 @@ namespace LearningPlanner_1._0._0
         {
             ChangeBackColorSave();
             MessageBox.Show("Zapisano");
+
         }
+ 
 
-        CompletedTasksForm currentForm2;
-        internal CompletedTasksForm LoadOrders(CompletedTasksForm task)
-        {
-            currentForm2 = task;
-            return currentForm2;
-        }
+       
 
-
+     
     }
     
 

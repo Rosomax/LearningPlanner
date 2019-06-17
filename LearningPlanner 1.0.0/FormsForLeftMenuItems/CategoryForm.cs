@@ -26,9 +26,8 @@ namespace LearningPlanner_1._0._0
                 c.Kategoria,
                 c.IDUzytkownika
 
-            }).Where(c => c.IDUzytkownika == IDUser).ToList();
+            }).Where(c => c.IDUzytkownika == IDUser).Distinct().ToList();
             chooseCategoryDataGrid.Columns["IDUzytkownika"].Visible = false;
-
             
         }
         
@@ -47,7 +46,7 @@ namespace LearningPlanner_1._0._0
                 t.Nazwa,
                 t.Kategoria,
                 t.IDUzytkownika
-            }).Where(t => t.Kategoria == activeCell).Distinct().Where(t => t.IDUzytkownika == IDUser).ToList();
+            }).Where(t => t.Kategoria == activeCell).Where(t => t.IDUzytkownika == IDUser).ToList();
 
             
 
