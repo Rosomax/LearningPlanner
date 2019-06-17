@@ -87,5 +87,52 @@ namespace LearningPlanner_1._0._0
             }
             catch { }
         }
+
+        private void CategoryForm_SizeChanged(object sender, EventArgs e)
+        {
+            if (Size.Width <= 799)
+            {
+                chooseCategoryLabel.Size = new Size(184,23);
+                chooseCategoryLabel.Location = new Point(12,9);
+                chooseCategoryLabel.Font = new Font("Centhury Gothic", 14);
+                chooseTaskLabel.Size = new Size(170,23);
+                chooseTaskLabel.Location = new Point(248,9);
+                chooseTaskLabel.Font = new Font("Centhury Gothic", 14);
+                describeTaskLabel.Size = new Size(140,23);
+                describeTaskLabel.Location = new Point(498,9);
+                describeTaskLabel.Font = new Font("Centhury Gothic", 14);
+                chooseCategoryDataGrid.Size = new Size(180,453);
+                chooseCategoryDataGrid.Location = new Point(16,35);
+                chooseCategoryDataGrid.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+                chooseTaskDataGrid.Size = new Size(180, 453);
+                chooseTaskDataGrid.Location = new Point(252,35);
+                chooseTaskDataGrid.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+                describeTaskRichTextBox.Size = new Size(166,453);
+                describeTaskRichTextBox.Location = new Point(502,35);
+                describeTaskRichTextBox.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+            }
+            else if (Size.Width >= 800)
+            {
+                chooseCategoryLabel.Size = new Size(384, 63);
+                chooseCategoryLabel.Location = new Point(112, 9);
+                chooseCategoryLabel.Font = new Font("Centhury Gothic", 22);
+                chooseTaskLabel.Size = new Size(384, 63);
+                chooseTaskLabel.Location = new Point(648, 9);
+                chooseTaskLabel.Font = new Font("Centhury Gothic", 22);
+                describeTaskLabel.Size = new Size(384, 63);
+                describeTaskLabel.Location = new Point(1198, 9);
+                describeTaskLabel.Font = new Font("Centhury Gothic", 22);
+                chooseCategoryDataGrid.Size = new Size(384, 853);
+                chooseCategoryDataGrid.Location = new Point(116, 75);
+                chooseCategoryDataGrid.Font = new Font("Century Gothic", 20, FontStyle.Bold);
+               // chooseCategoryDataGrid.RowsDefaultCellStyle.Font= new Font("Century Gothic", 20, FontStyle.Bold);
+                chooseTaskDataGrid.Size = new Size(384, 853);
+                chooseTaskDataGrid.Location = new Point(648, 75);
+                chooseTaskDataGrid.Font = new Font("Century Gothic", 20, FontStyle.Bold);
+                describeTaskRichTextBox.Size = new Size(384, 853);
+                describeTaskRichTextBox.Location = new Point(1198,75);
+                describeTaskRichTextBox.Font = new Font("Century Gothic", 20, FontStyle.Bold);
+            }
+        }
     }
 }
