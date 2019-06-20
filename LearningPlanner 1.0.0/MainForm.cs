@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-
+using LearningPlanner_1._0._0.Properties;
 
 namespace LearningPlanner_1._0._0
 {
@@ -39,13 +39,13 @@ namespace LearningPlanner_1._0._0
         private void ClosePictureBox_Click(object sender, EventArgs e)
         {
 
-            this.Close();
+            Close();
 
         }
         private void PictureBox2_Click(object sender, EventArgs e)
         {
 
-            foreach (Form c in this.MdiChildren)
+            foreach (Form c in MdiChildren)
             {
                 c.Close();
                
@@ -81,7 +81,7 @@ namespace LearningPlanner_1._0._0
                 this.Location = new Point(
                     (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
 
-                this.Update();
+                Update();
             }
         }
         #endregion
@@ -91,21 +91,16 @@ namespace LearningPlanner_1._0._0
         #region Delegat zaznaczajacy prostokat oraz obsluga kontrolek pod klik (z lewego  paska)
         // Utworzenie delegata 
 
-        SetColorHandler colorHandler;
+       private SetColorHandler colorHandler;
 
         
 
         private void TaskControl11_MouseClick(object sender, MouseEventArgs e)
         {
-
-            // Resetowanie koloru dla nieaktywnej karty
-            ResetColor();
-            // Przypisanie do delegata metody
-            colorHandler += leftActiveControl1.SetBackColorMethod;
-            // wywolanie delegata                   
-            colorHandler(leftActiveControl1);
-            colorHandler -= leftActiveControl1.SetBackColorMethod;
-           
+         
+            //Resetowanie koloru dla nieaktywnej karty
+            ResetColor();           
+             leftActiveControl1.SetBackColorMethod(leftActiveControl1);
             taskControl11.OpenFormTask();
 
         }
@@ -226,16 +221,17 @@ namespace LearningPlanner_1._0._0
 
         private void MaximilaziPictureBox_Click(object sender, EventArgs e)
         {
+            //this.WindowState = 2 - this.WindowState;
 
-            if (this.WindowState == FormWindowState.Maximized)
+            if (WindowState == FormWindowState.Maximized)
             {
-                this.WindowState = FormWindowState.Normal;
+                WindowState = FormWindowState.Normal;
                 maximilaziPictureBox.Load("WariantyOkna\\maximize-window.png");
                 
             }
-            else if (this.WindowState == FormWindowState.Normal)
+            else if (WindowState == FormWindowState.Normal)
             {
-                this.WindowState = FormWindowState.Maximized;
+                WindowState = FormWindowState.Maximized;
 
                 maximilaziPictureBox.Load("WariantyOkna\\restore-window.png");
             }
@@ -253,10 +249,14 @@ namespace LearningPlanner_1._0._0
         // Zmiana widocznosci wpisywanego hasla
         private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (ShowPasswordCheckBox.Checked)
-                passwordtextBox1.UseSystemPasswordChar = false;
-            else
-                passwordtextBox1.UseSystemPasswordChar = true;
+
+            PasswordtextBox1.UseSystemPasswordChar = !ShowPasswordCheckBox.Checked;
+            
+            
+            ////if (ShowPasswordCheckBox.Checked)
+            //    passwordtextBox1.UseSystemPasswordChar = false;
+            //else
+            //    passwordtextBox1.UseSystemPasswordChar = true;
         }
 
 
@@ -264,7 +264,10 @@ namespace LearningPlanner_1._0._0
         private void Button1_Click(object sender, EventArgs e)
         {
             DataBaseLogging();
-  
+            SettingsForm sf = new SettingsForm();
+
+            if (Settings.Default.Music)
+            sf.BackgroundMusic();
         }
 
      
@@ -281,7 +284,7 @@ namespace LearningPlanner_1._0._0
         {
 
             var login = LogintextBox1.Text;
-            var password = passwordtextBox1.Text;
+            var password = PasswordtextBox1.Text;
 
             using (EntitiesModel2 x = new EntitiesModel2())
             {
@@ -296,8 +299,8 @@ namespace LearningPlanner_1._0._0
                         panel1.Hide();
                         panel1.Enabled = false;                        
                         ShowLeftMenu();
+                        RememberCredentials();
                         
-
                     }
 
                     else
@@ -310,6 +313,23 @@ namespace LearningPlanner_1._0._0
             }
 
         }
+
+        private void RememberCredentials()
+        {
+          if(RememberMeCheckBox.Checked) 
+            Settings.Default.Login = LogintextBox1.Text;
+            Settings.Default.Password = PasswordtextBox1.Text;
+            Settings.Default.Save();
+            
+	                 
+        }
+         private void SetCredentials()
+        {
+            
+            LogintextBox1.Text = Settings.Default.Login;
+            PasswordtextBox1.Text = Settings.Default.Password;
+        }
+
 
         private void ShowLeftMenu()
         {
@@ -333,8 +353,7 @@ namespace LearningPlanner_1._0._0
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.Enter))
-                if (panel1.Visible == true)
+            if ((e.KeyCode == Keys.Enter)&&(panel1.Visible))
                 {
                     DataBaseLogging();
                 }           
@@ -342,12 +361,18 @@ namespace LearningPlanner_1._0._0
                 this.Close();
         }
 
-       
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            SetCredentials();
+        }
+        
+
+
+
     }
 
-  
+    
 
-   
 }
    
 

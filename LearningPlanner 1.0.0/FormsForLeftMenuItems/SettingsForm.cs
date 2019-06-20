@@ -1,37 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using System.IO;
 using LearningPlanner_1._0._0.Properties;
 using System.Media;
 namespace LearningPlanner_1._0._0
 {
+
+
     public partial class SettingsForm : Form
     {
         public SettingsForm()
         {
             InitializeComponent();
-            
+
         }
+
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             SaveColorToSettings();
+            SetMusic();
 
+       
+           
 
+            //defaultColorButton.ForeColor = Color.Black;
+            //RLabel.ForeColor = Color.Black;
+            //GLabel.ForeColor = Color.Black;
+            //BLabel.ForeColor = Color.Black;
 
-            defaultColorButton.ForeColor = Color.Black;
-            RLabel.ForeColor = Color.Black;
-            GLabel.ForeColor = Color.Black;
-            BLabel.ForeColor = Color.Black;
-            
         }
 
         private void SettingsForm_Paint(object sender, PaintEventArgs e)
@@ -150,7 +148,7 @@ namespace LearningPlanner_1._0._0
         private void Timer1_Tick(object sender, EventArgs e)
         {
             Invalidate();
-            
+
         }
 
 
@@ -166,18 +164,18 @@ namespace LearningPlanner_1._0._0
             var blue = Convert.ToInt32(BtextBox.Text);
 
             this.BackColor = Color.FromArgb(red, green, blue);
-            
+
 
         }
 
-      
+       
 
 
-       private void ChangeBackColorSave()
+        private void ChangeBackColorSave()
         {
-            Settings.Default.track1 = RtrackBar.Value;
-            Settings.Default.track2 = GtrackBar.Value;
-            Settings.Default.track3 = BtrackBar.Value;
+            Settings.Default.RValue = RtrackBar.Value;
+            Settings.Default.GValue = GtrackBar.Value;
+            Settings.Default.BValue = BtrackBar.Value;
             Settings.Default.Save();
 
         }
@@ -189,15 +187,15 @@ namespace LearningPlanner_1._0._0
             GtrackBar.Value = 197;
             BtrackBar.Value = 222;
             ChangeBackColorSave();
-           
+
         }
 
         private void SaveColorToSettings()
         {
-            RtrackBar.Value = Settings.Default.track1;
-            GtrackBar.Value = Settings.Default.track2;
-            BtrackBar.Value = Settings.Default.track3;
-           
+            RtrackBar.Value = Settings.Default.RValue;
+            GtrackBar.Value = Settings.Default.GValue;
+            BtrackBar.Value = Settings.Default.BValue;
+
         }
 
         private void saveColorChangesButton_Click(object sender, EventArgs e)
@@ -206,12 +204,70 @@ namespace LearningPlanner_1._0._0
             MessageBox.Show("Zapisano");
 
         }
- 
 
-       
+        // Definicja playera
+        SoundPlayer player = new SoundPlayer();
 
-     
+        // Metoda ktora odtwarza muzyka, odpala sie w nowym watku
+        private void PlayMusic(object music)
+        {
+            player.SoundLocation = "Music\\muz.wav";
+            player.PlayLooping();
+        }
+
+        // Metoda przyjmuje wczesniej zdefiniowany player i zatrzymuje muzyke
+        private void StopMusic(object music)
+        {
+            player.Stop();
+        }
+
+        
+
+        // Delegat przechowujacyc granie muzyki
+        WaitCallback z;
+
+        // Dodanie play music do watka tla
+        public void BackgroundMusic()
+        {
+            z = new WaitCallback(PlayMusic);
+            ThreadPool.QueueUserWorkItem(z);
+            
+        }
+        private void StopBackgroundMusic()
+        {
+            z = StopMusic;
+            
+        }
+
+        
+        // Ustawienie muzyki
+        private void SetMusic()
+        {                  
+           BackgroundMusicCheckBox.Checked = Settings.Default.Music;            
+        }
+
+        // Zapamietanie stanu checkboxa
+        private void RememberMusic()
+        {
+            Settings.Default.Music = BackgroundMusicCheckBox.Checked;
+            Settings.Default.Save();
+        }
+
+        private void BackgroundMusicCheckBox_Click(object sender, EventArgs e)
+        {
+            if (BackgroundMusicCheckBox.CheckState == CheckState.Checked)
+            { 
+              //  BackgroundMusicCheckBox.Checked = true;
+                BackgroundMusic();
+                RememberMusic();
+            }
+
+            if (BackgroundMusicCheckBox.CheckState == CheckState.Unchecked)
+            { StopMusic(player);
+                RememberMusic();
+            }
+                    
+
+        }
     }
-    
-
 }

@@ -24,7 +24,7 @@ namespace LearningPlanner_1._0._0
 
         private void TaskForm_Load(object sender, EventArgs e)
         { 
-             this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
+             this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             
 
 

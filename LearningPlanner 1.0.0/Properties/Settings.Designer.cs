@@ -37,48 +37,72 @@ namespace LearningPlanner_1._0._0.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("138")]
-        public int track1 {
+        public int RValue {
             get {
-                return ((int)(this["track1"]));
+                return ((int)(this["RValue"]));
             }
             set {
-                this["track1"] = value;
+                this["RValue"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("197")]
-        public int track2 {
+        public int GValue {
             get {
-                return ((int)(this["track2"]));
+                return ((int)(this["GValue"]));
             }
             set {
-                this["track2"] = value;
+                this["GValue"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("222")]
-        public int track3 {
+        public int BValue {
             get {
-                return ((int)(this["track3"]));
+                return ((int)(this["BValue"]));
             }
             set {
-                this["track3"] = value;
+                this["BValue"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Ustawienie {
+        public string Login {
             get {
-                return ((string)(this["Ustawienie"]));
+                return ((string)(this["Login"]));
             }
             set {
-                this["Ustawienie"] = value;
+                this["Login"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Password {
+            get {
+                return ((string)(this["Password"]));
+            }
+            set {
+                this["Password"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Music {
+            get {
+                return ((bool)(this["Music"]));
+            }
+            set {
+                this["Music"] = value;
             }
         }
     }

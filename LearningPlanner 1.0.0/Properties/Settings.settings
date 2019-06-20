@@ -10,14 +10,23 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=NT-27.WWSI.EDU.PL,1601;Initial Catalog=KASETY_406_01;Persist Security Info=True;User ID=Z406_01;Password=Z406_01</Value>
     </Setting>
-    <Setting Name="track1" Type="System.Int32" Scope="User">
+    <Setting Name="RValue" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">138</Value>
     </Setting>
-    <Setting Name="track2" Type="System.Int32" Scope="User">
+    <Setting Name="GValue" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">197</Value>
     </Setting>
-    <Setting Name="track3" Type="System.Int32" Scope="User">
+    <Setting Name="BValue" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">222</Value>
+    </Setting>
+    <Setting Name="Login" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Music" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -21,8 +21,7 @@ namespace LearningPlanner_1._0._0
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {
 
-            this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
-
+            BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
 
 
 
@@ -35,8 +34,8 @@ namespace LearningPlanner_1._0._0
                 o.DataUtworzenia,
                 o.CzyZakonczone,
                 o.IDUzytkownika,
-                
-            }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == true).ToList();
+
+            }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone).ToList();
 
             // Ukrycie kolumn
             CompletedTaskDataGridView1.Columns["IDZadania"].Visible = false;
@@ -44,7 +43,6 @@ namespace LearningPlanner_1._0._0
             CompletedTaskDataGridView1.Columns["IDUzytkownika"].Visible = false;
 
 
-            
 
 
 
@@ -64,11 +62,11 @@ namespace LearningPlanner_1._0._0
                 o.DataUtworzenia,
                 o.CzyZakonczone,
                 o.IDUzytkownika,
-                
-            }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == true).ToList();
+
+            }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone).ToList();
         }
 
-        
+
 
         public static int Id { get; set; }
 
@@ -87,29 +85,29 @@ namespace LearningPlanner_1._0._0
                 string category = Convert.ToString(SelectedRow.Cells["Kategoria"].Value);
                 string description = Convert.ToString(SelectedRow.Cells["Opis"].Value);
                 creationDate = Convert.ToDateTime(SelectedRow.Cells["DataUtworzenia"].Value);
-                
+
 
                 TaskInfoForm frm = new TaskInfoForm();
 
                 frm.SetDoubleClickInfo(name, category, description, creationDate);
                 frm.HideButton();
-               
+
                 frm.statusInfoLbl1.Text = "Zakończono";
 
                 frm.LoadOrders(this);
                 frm.Show();
-                
+
 
             }
 
 
         }
 
-        private StringBuilder sb = new StringBuilder();
+         StringBuilder sb = new StringBuilder();
 
-        private void CSVExportMethod()
+        private void CSVExport()
         {
-           
+
             // Przechowanie kolumn 
 
             CompletedTaskDataGridView1.Columns.Remove("IDUzytkownika");
@@ -128,15 +126,16 @@ namespace LearningPlanner_1._0._0
                 sb.AppendLine(string.Join(",", cells.Select(cell => cell.Value).ToArray()));
             }
 
-           
+
         }
 
         private void CSVExportFileDialog()
         {
 
-                saveFileDialog1.FileName = "export.csv";
-              
-                saveFileDialog1.Filter = "CSV files (*.csv)|*.csv";
+            saveFileDialog1.FileName = "export.csv";
+
+
+            saveFileDialog1.Filter = "CSV files (*.csv)|*.csv";
 
             try
             {
@@ -147,7 +146,7 @@ namespace LearningPlanner_1._0._0
                         sw.WriteLine(sb.ToString());
                 }
             }
-            catch(IOException)
+            catch (IOException)
             {
                 MessageBox.Show("UPS, cos poszlo nie tak!");
             }
@@ -157,7 +156,7 @@ namespace LearningPlanner_1._0._0
 
         private void CSVExportButton_Click(object sender, EventArgs e)
         {
-            CSVExportMethod();
+            CSVExport();
             CSVExportFileDialog();
 
         }

@@ -47,8 +47,9 @@ namespace LearningPlanner_1._0._0
             }
 
         }
-      
 
+        public const int MinValue = 3;
+        public const int MaxValue = 15;
 
         private string password;
 

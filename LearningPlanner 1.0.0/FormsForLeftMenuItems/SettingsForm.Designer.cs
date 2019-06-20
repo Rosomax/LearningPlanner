@@ -46,6 +46,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.PlayMusicLabel = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.BackgroundMusicCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtrackBar)).BeginInit();
@@ -80,7 +85,7 @@
             this.defaultColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.defaultColorButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defaultColorButton.ForeColor = System.Drawing.Color.Black;
-            this.defaultColorButton.Location = new System.Drawing.Point(630, 217);
+            this.defaultColorButton.Location = new System.Drawing.Point(499, 208);
             this.defaultColorButton.Name = "defaultColorButton";
             this.defaultColorButton.Size = new System.Drawing.Size(95, 35);
             this.defaultColorButton.TabIndex = 13;
@@ -95,7 +100,7 @@
             this.saveColorChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveColorChangesButton.Font = new System.Drawing.Font("Arial", 9.75F);
             this.saveColorChangesButton.ForeColor = System.Drawing.Color.Black;
-            this.saveColorChangesButton.Location = new System.Drawing.Point(499, 217);
+            this.saveColorChangesButton.Location = new System.Drawing.Point(631, 208);
             this.saveColorChangesButton.Name = "saveColorChangesButton";
             this.saveColorChangesButton.Size = new System.Drawing.Size(95, 35);
             this.saveColorChangesButton.TabIndex = 14;
@@ -161,6 +166,7 @@
             // 
             this.BLabel.AutoSize = true;
             this.BLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BLabel.ForeColor = System.Drawing.Color.Black;
             this.BLabel.Location = new System.Drawing.Point(692, 131);
             this.BLabel.Name = "BLabel";
             this.BLabel.Size = new System.Drawing.Size(20, 20);
@@ -171,6 +177,7 @@
             // 
             this.GLabel.AutoSize = true;
             this.GLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GLabel.ForeColor = System.Drawing.Color.Black;
             this.GLabel.Location = new System.Drawing.Point(690, 87);
             this.GLabel.Name = "GLabel";
             this.GLabel.Size = new System.Drawing.Size(22, 20);
@@ -181,6 +188,7 @@
             // 
             this.RLabel.AutoSize = true;
             this.RLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RLabel.ForeColor = System.Drawing.Color.Black;
             this.RLabel.Location = new System.Drawing.Point(690, 49);
             this.RLabel.Name = "RLabel";
             this.RLabel.Size = new System.Drawing.Size(21, 20);
@@ -211,12 +219,64 @@
             this.panel3.Size = new System.Drawing.Size(3, 260);
             this.panel3.TabIndex = 16;
             // 
+            // PlayMusicLabel
+            // 
+            this.PlayMusicLabel.AutoSize = true;
+            this.PlayMusicLabel.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayMusicLabel.ForeColor = System.Drawing.Color.Black;
+            this.PlayMusicLabel.Location = new System.Drawing.Point(564, 275);
+            this.PlayMusicLabel.Name = "PlayMusicLabel";
+            this.PlayMusicLabel.Size = new System.Drawing.Size(96, 23);
+            this.PlayMusicLabel.TabIndex = 17;
+            this.PlayMusicLabel.Text = "Dzwięki:";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(481, 261);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(3, 240);
+            this.panel4.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(484, 498);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(270, 3);
+            this.panel5.TabIndex = 17;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(748, 267);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(3, 240);
+            this.panel6.TabIndex = 17;
+            // 
+            // BackgroundMusicCheckBox
+            // 
+            this.BackgroundMusicCheckBox.AutoSize = true;
+            this.BackgroundMusicCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.BackgroundMusicCheckBox.Location = new System.Drawing.Point(499, 311);
+            this.BackgroundMusicCheckBox.Name = "BackgroundMusicCheckBox";
+            this.BackgroundMusicCheckBox.Size = new System.Drawing.Size(88, 17);
+            this.BackgroundMusicCheckBox.TabIndex = 18;
+            this.BackgroundMusicCheckBox.Text = "Muzyka w tle";
+            this.BackgroundMusicCheckBox.UseVisualStyleBackColor = true;
+            this.BackgroundMusicCheckBox.Click += new System.EventHandler(this.BackgroundMusicCheckBox_Click);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(750, 500);
+            this.ClientSize = new System.Drawing.Size(750, 513);
+            this.Controls.Add(this.BackgroundMusicCheckBox);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.PlayMusicLabel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -266,5 +326,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label PlayMusicLabel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.CheckBox BackgroundMusicCheckBox;
     }
 }

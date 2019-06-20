@@ -18,7 +18,7 @@ namespace LearningPlanner_1._0._0
 
         private void Category_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
+            BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             chooseTaskLabel.Visible = false;
             chooseTaskDataGrid.Visible = false;
             describeTaskLabel.Visible = false;
@@ -88,8 +88,13 @@ namespace LearningPlanner_1._0._0
             catch { }
         }
 
+       
+
+
         private void CategoryForm_SizeChanged(object sender, EventArgs e)
         {
+            
+
             if (Size.Width <= 799)
             {
                 chooseCategoryLabel.Size = new Size(184,23);
@@ -111,7 +116,7 @@ namespace LearningPlanner_1._0._0
                 describeTaskRichTextBox.Location = new Point(502,35);
                 describeTaskRichTextBox.Font = new Font("Century Gothic", 12, FontStyle.Bold);
             }
-            else if (Size.Width >= 800)
+            else  
             {
                 chooseCategoryLabel.Size = new Size(384, 63);
                 chooseCategoryLabel.Location = new Point(112, 9);

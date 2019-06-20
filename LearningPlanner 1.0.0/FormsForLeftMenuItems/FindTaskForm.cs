@@ -26,7 +26,7 @@ namespace LearningPlanner_1._0._0
         {
 
 
-            this.BackColor = Color.FromArgb(Settings.Default.track1, Settings.Default.track2, Settings.Default.track3);
+            this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             FindTaskDataGrid.DefaultCellStyle.ForeColor = Color.FromArgb(178, 8, 55);
 
             findmodel = new EntitiesModel2();
