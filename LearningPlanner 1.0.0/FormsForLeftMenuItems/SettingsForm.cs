@@ -269,5 +269,11 @@ namespace LearningPlanner_1._0._0
                     
 
         }
+
+        private void ReportErrorButttom_Click(object sender, EventArgs e)
+        {
+            ReportErrorForm reportErrorForm = new ReportErrorForm();
+            reportErrorForm.Show();
+        }
     }
 }

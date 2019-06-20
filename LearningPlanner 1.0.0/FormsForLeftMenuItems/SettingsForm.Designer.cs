@@ -51,6 +51,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.BackgroundMusicCheckBox = new System.Windows.Forms.CheckBox();
+            this.ReportErrorButttom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtrackBar)).BeginInit();
@@ -266,12 +267,27 @@
             this.BackgroundMusicCheckBox.UseVisualStyleBackColor = true;
             this.BackgroundMusicCheckBox.Click += new System.EventHandler(this.BackgroundMusicCheckBox_Click);
             // 
+            // ReportErrorButttom
+            // 
+            this.ReportErrorButttom.BackColor = System.Drawing.Color.RosyBrown;
+            this.ReportErrorButttom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReportErrorButttom.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportErrorButttom.ForeColor = System.Drawing.Color.Black;
+            this.ReportErrorButttom.Location = new System.Drawing.Point(324, 466);
+            this.ReportErrorButttom.Name = "ReportErrorButttom";
+            this.ReportErrorButttom.Size = new System.Drawing.Size(95, 35);
+            this.ReportErrorButttom.TabIndex = 19;
+            this.ReportErrorButttom.Text = "Zgłoś Błąd";
+            this.ReportErrorButttom.UseVisualStyleBackColor = false;
+            this.ReportErrorButttom.Click += new System.EventHandler(this.ReportErrorButttom_Click);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(750, 513);
+            this.Controls.Add(this.ReportErrorButttom);
             this.Controls.Add(this.BackgroundMusicCheckBox);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -331,5 +347,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.CheckBox BackgroundMusicCheckBox;
+        private System.Windows.Forms.Button ReportErrorButttom;
     }
 }

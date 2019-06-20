@@ -78,6 +78,12 @@
     <Compile Include="DataGridTasksInfoControl.Designer.cs">
       <DependentUpon>DataGridTasksInfoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportErrorForm.Designer.cs">
+      <DependentUpon>ReportErrorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataGridTasksInfoControl.resx">
       <DependentUpon>DataGridTasksInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportErrorForm.resx">
+      <DependentUpon>ReportErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
