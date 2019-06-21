@@ -194,12 +194,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label chooseCategoryLabel;
         public System.Windows.Forms.DataGridView chooseCategoryDataGrid;
         public System.Windows.Forms.DataGridView chooseTaskDataGrid;
-        private System.Windows.Forms.Label chooseTaskLabel;
-        private System.Windows.Forms.Label describeTaskLabel;
-        private System.Windows.Forms.RichTextBox describeTaskRichTextBox;
+        public System.Windows.Forms.Label chooseCategoryLabel;
+        public System.Windows.Forms.Label chooseTaskLabel;
+        public System.Windows.Forms.Label describeTaskLabel;
+        public System.Windows.Forms.RichTextBox describeTaskRichTextBox;
     }
 }
