@@ -261,7 +261,6 @@ namespace LearningPlanner_1._0._0
                 BackgroundMusic();
                 RememberMusic();
             }
-
             if (BackgroundMusicCheckBox.CheckState == CheckState.Unchecked)
             { StopMusic(player);
                 RememberMusic();

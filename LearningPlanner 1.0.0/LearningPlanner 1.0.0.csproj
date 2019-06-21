@@ -113,6 +113,7 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Responsiveness.cs" />
     <Compile Include="UserControlsLeftMenu\ITNewsControl5.cs">
       <SubType>UserControl</SubType>
     </Compile>

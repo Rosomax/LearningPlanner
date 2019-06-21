@@ -273,11 +273,11 @@
             this.ReportErrorButttom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportErrorButttom.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReportErrorButttom.ForeColor = System.Drawing.Color.Black;
-            this.ReportErrorButttom.Location = new System.Drawing.Point(324, 466);
+            this.ReportErrorButttom.Location = new System.Drawing.Point(2, 498);
             this.ReportErrorButttom.Name = "ReportErrorButttom";
             this.ReportErrorButttom.Size = new System.Drawing.Size(95, 35);
             this.ReportErrorButttom.TabIndex = 19;
-            this.ReportErrorButttom.Text = "Zgłoś Błąd";
+            this.ReportErrorButttom.Text = "Zgłoś błąd";
             this.ReportErrorButttom.UseVisualStyleBackColor = false;
             this.ReportErrorButttom.Click += new System.EventHandler(this.ReportErrorButttom_Click);
             // 
@@ -286,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(750, 513);
+            this.ClientSize = new System.Drawing.Size(750, 540);
             this.Controls.Add(this.ReportErrorButttom);
             this.Controls.Add(this.BackgroundMusicCheckBox);
             this.Controls.Add(this.panel6);

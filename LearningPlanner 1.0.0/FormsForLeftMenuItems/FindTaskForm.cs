@@ -174,34 +174,37 @@ namespace LearningPlanner_1._0._0
         {
             if (Size.Width <= 799)
             {
-                FindTaskDataGrid.Size = new Size(450, 500);
-                FindTaskDataGrid.RowsDefaultCellStyle.Font = new Font("Century Gothic", 12, FontStyle.Bold);
-                FIndTaskLabel.Size = new Size(186, 19);
-                FIndTaskLabel.Location = new Point(24, 39);
-                FIndTaskLabel.Font = new Font("Century Gothic", 12);
-                FindTaskTextBox.Size = new Size(192, 200);
-                FindTaskTextBox.Location = new Point(28, 61);
-                FindTaskTextBox.Font = new Font("Century Gothic", 8);
-                filtrLabel.Size = new Size(38, 19);
-                filtrLabel.Location = new Point(24, 113);
-                filtrLabel.Font = new Font("Century Gothic", 12);
-                filterComboBox.Size = new Size(192, 21);
-                filterComboBox.Location = new Point(28, 135);
-                filterComboBox.Font = new Font("Century Gothic", 8);
-                filterFromLabel.Size = new Size(77, 19);
-                filterFromLabel.Location = new Point(8, 188);
-                filterFromLabel.Font = new Font("Century Gothic", 12);
-                filterFrom.Size = new Size(232, 22);
-                filterFrom.Location = new Point(12, 210);
-                filterFrom.Font = new Font("Century Gothic", 9);
-                filterToLabel.Size = new Size(77, 19);
-                filterToLabel.Location = new Point(8, 243);
-                filterToLabel.Font = new Font("Century Gothic", 12);
-                filterTo.Size = new Size(232, 22);
-                filterTo.Location = new Point(12, 265);
-                filterTo.Font = new Font("Century Gothic", 9);
-                findPictureBox.Size = new Size(176, 99);
-                findPictureBox.Location = new Point(44, 358);
+              
+                
+                
+                //FindTaskDataGrid.Size = new Size(450, 500);
+                //FindTaskDataGrid.RowsDefaultCellStyle.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+                //FIndTaskLabel.Size = new Size(186, 19);
+                //FIndTaskLabel.Location = new Point(24, 39);
+                //FIndTaskLabel.Font = new Font("Century Gothic", 12);
+                //FindTaskTextBox.Size = new Size(192, 200);
+                //FindTaskTextBox.Location = new Point(28, 61);
+                //FindTaskTextBox.Font = new Font("Century Gothic", 8);
+                //filtrLabel.Size = new Size(38, 19);
+                //filtrLabel.Location = new Point(24, 113);
+                //filtrLabel.Font = new Font("Century Gothic", 12);
+                //filterComboBox.Size = new Size(192, 21);
+                //filterComboBox.Location = new Point(28, 135);
+                //filterComboBox.Font = new Font("Century Gothic", 8);
+                //filterFromLabel.Size = new Size(77, 19);
+                //filterFromLabel.Location = new Point(8, 188);
+                //filterFromLabel.Font = new Font("Century Gothic", 12);
+                //filterFrom.Size = new Size(232, 22);
+                //filterFrom.Location = new Point(12, 210);
+                //filterFrom.Font = new Font("Century Gothic", 9);
+                //filterToLabel.Size = new Size(77, 19);
+                //filterToLabel.Location = new Point(8, 243);
+                //filterToLabel.Font = new Font("Century Gothic", 12);
+                //filterTo.Size = new Size(232, 22);
+                //filterTo.Location = new Point(12, 265);
+                //filterTo.Font = new Font("Century Gothic", 9);
+                //findPictureBox.Size = new Size(176, 99);
+                //findPictureBox.Location = new Point(44, 358);
             }
             else if (Size.Width >= 800)
             {

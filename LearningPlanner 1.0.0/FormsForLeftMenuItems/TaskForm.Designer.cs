@@ -233,6 +233,7 @@
             this.Text = "ZadanieForm";
             this.Load += new System.EventHandler(this.TaskForm_Load);
             this.SizeChanged += new System.EventHandler(this.TaskForm_SizeChanged);
+            this.Resize += new System.EventHandler(this.TaskForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,17 +241,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TaskNameTextBox;
         private System.Windows.Forms.Label NazwaZadaniaLabel;
         private System.Windows.Forms.Label KategoriaLabel;
-        private System.Windows.Forms.TextBox CategoryTextBox;
         private System.Windows.Forms.Label OpisLabel;
-        private System.Windows.Forms.TextBox DescriptionTextBox;
-        private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button DeleteButton;
-        private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label errorLabel;
         public System.Windows.Forms.DataGridView TaskDataGridView1;
+        public System.Windows.Forms.TextBox TaskNameTextBox;
+        public System.Windows.Forms.TextBox CategoryTextBox;
+        public System.Windows.Forms.TextBox DescriptionTextBox;
+        public System.Windows.Forms.Button SaveButton;
+        public System.Windows.Forms.Button DeleteButton;
+        public System.Windows.Forms.Button CancelButton;
     }
 }

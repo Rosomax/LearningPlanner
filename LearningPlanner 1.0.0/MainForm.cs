@@ -88,67 +88,49 @@ namespace LearningPlanner_1._0._0
 
 
 
-        #region Delegat zaznaczajacy prostokat oraz obsluga kontrolek pod klik (z lewego  paska)
-        // Utworzenie delegata 
-
-       private SetColorHandler colorHandler;
-
-        
+        #region Zaznaczenie aktywnej kontrolki (z lewego  paska)
+            
 
         private void TaskControl11_MouseClick(object sender, MouseEventArgs e)
-        {
-         
-            //Resetowanie koloru dla nieaktywnej karty
+        {                   
             ResetColor();           
-             leftActiveControl1.SetBackColorMethod(leftActiveControl1);
+            leftActiveControl1.SetBackColorMethod(leftActiveControl1);
             taskControl11.OpenFormTask();
-
         }
 
         private void CompletedTasksControl21_MouseClick(object sender, MouseEventArgs e)
         {
-
-            ResetColor();
-            colorHandler += leftActiveControl2.SetBackColorMethod;
-            colorHandler(leftActiveControl2);
-            colorHandler -= leftActiveControl2.SetBackColorMethod;
+            ResetColor();          
+            leftActiveControl2.SetBackColorMethod(leftActiveControl2);
             completedTaskControl21.OpenFormCompletedTask();
-
+            
         }
         private void CategoryControl31_MouseClick(object sender, MouseEventArgs e)
         {
             ResetColor();
-            colorHandler += leftActiveControl3.SetBackColorMethod;
-            colorHandler(leftActiveControl3);
-            colorHandler -= leftActiveControl3.SetBackColorMethod;
+            leftActiveControl3.SetBackColorMethod(leftActiveControl3);
             categoryControl31.OpenFormCategory();
         }
         private void FindTaskControl41_MouseClick(object sender, MouseEventArgs e)
         {
             ResetColor();
-            colorHandler += leftActiveControl4.SetBackColorMethod;
-            colorHandler(leftActiveControl4);
-            colorHandler -= leftActiveControl4.SetBackColorMethod;
+            leftActiveControl4.SetBackColorMethod(leftActiveControl4);
             findTaskControl41.OpenFormFindTask();
         }
         private void ITNewsControl51_MouseClick(object sender, MouseEventArgs e)
         {
             ResetColor();
-            colorHandler += leftActiveControl5.SetBackColorMethod;
-            colorHandler(leftActiveControl5);
-            colorHandler -= leftActiveControl5.SetBackColorMethod;
+            leftActiveControl5.SetBackColorMethod(leftActiveControl5);
             itnewsControl51.OpenFormITNews();
         }
         private void SettingsControl61_MouseClick(object sender, MouseEventArgs e)
         {
             ResetColor();
-            colorHandler += leftActiveControl6.SetBackColorMethod;
-            colorHandler(leftActiveControl6);
-            colorHandler -= leftActiveControl6.SetBackColorMethod;
+            leftActiveControl6.SetBackColorMethod(leftActiveControl6);
             settingsControl61.OpenFormSettings();
         }
         // Metoda do resetu koloru
-        public void ResetColor()
+        private void ResetColor()
         {
             foreach (var tmp in LeftActiveControl.controlList)
             {

@@ -12,8 +12,8 @@ namespace LearningPlanner_1._0._0
             InitializeComponent();
         }
 
-        string programMail = "testekplanner@gmail.com";
-        string programMailPassword = "testekplanner321";
+        string programMail = "plannerteaminfo@gmail.com";
+        string programMailPassword = "kubamichal123";
         string authorsMailK = "benzef@tlen.pl";
         string authorsMailM = "m.biaek91@gmail.com";
         string name;
@@ -21,24 +21,20 @@ namespace LearningPlanner_1._0._0
         string categoryError;
         string describeError;
 
-        //private void GetUserInfo()
-        //{
-        //  name = nameTextbox.Text;
-        //  emailAddress = emailTextBox.Text;
-        //  categoryError = categoryErrorComboBox.SelectedItem.ToString();
-        //  describeError = describeErrorRichTextBox.Text;
-        //}
+        
 
 
         private void SendErrorMessage()
         {
-            try
-            {
+                        
                 name = nameTextbox.Text;
                 emailAddress = emailTextBox.Text;
                 categoryError = categoryErrorComboBox.SelectedItem.ToString();
                 describeError = describeErrorRichTextBox.Text;
-                MailMessage message = new MailMessage();
+
+
+
+            MailMessage message = new MailMessage();
                 message.To.Add(authorsMailK);
                 message.To.Add(authorsMailM);
                 message.Subject = ($"Wysłano z learning planner: {categoryError}");
@@ -48,15 +44,11 @@ namespace LearningPlanner_1._0._0
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                 smtpClient.EnableSsl = true;
                 smtpClient.Credentials = new NetworkCredential(programMail, programMailPassword);
-                smtpClient.Send(message);
-                MessageBox.Show("Pomyślnie wysłano wiadomość");
+                smtpClient.Send(message);                
                 Close();
-            }
-            catch
-            {
-                if(nameTextbox.Text==string.Empty|| emailTextBox.Text== string.Empty || describeErrorRichTextBox.Text== string.Empty)
-                MessageBox.Show("Upsss coś poszło nie tak :(");
-            }
+            
+           
+          
         }
 
         private void ReportErrorForm_Load(object sender, EventArgs e)
@@ -66,8 +58,13 @@ namespace LearningPlanner_1._0._0
 
         private void SendErrorButton_Click(object sender, EventArgs e)
         {
-            //GetUserInfo();
-            SendErrorMessage();
+            if (nameTextbox.Text == string.Empty || emailTextBox.Text == string.Empty || categoryErrorComboBox.SelectedItem == null)
+                MessageBox.Show("upssss, cos poszlo nie tak!");
+            else
+            {
+                SendErrorMessage();
+                MessageBox.Show("Wyslano wiadomosc!");
+            }
         }
     }
 }

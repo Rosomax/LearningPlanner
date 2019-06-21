@@ -119,7 +119,7 @@ namespace LearningPlanner_1._0._0
         // Change size
         private void TaskForm_SizeChanged(object sender, EventArgs e)
         {
-            if (Size.Width <= 799)
+            if (Size.Width<799)
             {
                 TaskNameTextBox.Size = new Size(220, 35);
                 CategoryTextBox.Size = new Size(220, 35);
@@ -133,20 +133,10 @@ namespace LearningPlanner_1._0._0
                 CancelButton.Location = new Point(239, 392);
 
             }
-            else if (Size.Width >= 800)
+            else
             {
-                TaskNameTextBox.Size = new Size(500, 35);
-                CategoryTextBox.Size = new Size(500, 35);
-                DescriptionTextBox.Size = new Size(500, 350);
-                DescriptionTextBox.Multiline = true;
-                SaveButton.Size = new Size(500, 80);
-                SaveButton.Location = new Point(65, 660);
-                DeleteButton.Size = new Size(500, 80);
-                DeleteButton.Location = new Point(65, 750);
-                CancelButton.Size = new Size(500, 80);
-                CancelButton.Location = new Point(65, 840);
-                TaskDataGridView1.Size = new Size(900, 500);
-
+                Responsiveness resp = new Responsiveness();
+                resp.TaskFormRespons(this);
             }
         }
 
@@ -303,8 +293,10 @@ namespace LearningPlanner_1._0._0
             errorLabel.Text = "";
         }
 
-
-     
+        private void TaskForm_Resize(object sender, EventArgs e)
+        {
+         
+        }
     }
    
 
