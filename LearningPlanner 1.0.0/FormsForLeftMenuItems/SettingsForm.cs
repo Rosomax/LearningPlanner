@@ -4,6 +4,9 @@ using System.Windows.Forms;
 using System.Threading;
 using LearningPlanner_1._0._0.Properties;
 using System.Media;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace LearningPlanner_1._0._0
 {
 
@@ -13,24 +16,27 @@ namespace LearningPlanner_1._0._0
         public SettingsForm()
         {
             InitializeComponent();
-
+          
         }
+       
 
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
+            
             SaveColorToSettings();
             SetMusic();
-
-       
+            GetSelectedFont();
+            SettingsFormChangeFont();
            
+            
 
-            //defaultColorButton.ForeColor = Color.Black;
-            //RLabel.ForeColor = Color.Black;
-            //GLabel.ForeColor = Color.Black;
-            //BLabel.ForeColor = Color.Black;
 
         }
+
+      
+
+
 
         private void SettingsForm_Paint(object sender, PaintEventArgs e)
         {
@@ -188,6 +194,8 @@ namespace LearningPlanner_1._0._0
             BtrackBar.Value = 222;
             ChangeBackColorSave();
 
+            
+
         }
 
         private void SaveColorToSettings()
@@ -210,8 +218,20 @@ namespace LearningPlanner_1._0._0
 
         // Metoda ktora odtwarza muzyka, odpala sie w nowym watku
         private void PlayMusic(object music)
-        {
-            player.SoundLocation = "Music\\muz.wav";
+        {        
+                if (Settings.Default.CalmMusic)
+                {
+                    player.SoundLocation = "Music\\muz.wav";
+                }
+                else if (Settings.Default.ClassicMusic)
+                {
+                    player.SoundLocation = "Music\\classic.wav";
+                }
+                else if (Settings.Default.RelaxMusic)
+                {
+                    player.SoundLocation = "Music\\relax.wav";
+                }
+           
             player.PlayLooping();
         }
 
@@ -242,37 +262,273 @@ namespace LearningPlanner_1._0._0
         
         // Ustawienie muzyki
         private void SetMusic()
-        {                  
-           BackgroundMusicCheckBox.Checked = Settings.Default.Music;            
+        {
+            if (BackgroundMusicCheckBox.Checked = Settings.Default.Music)
+            {
+                CalmMusicRadioButton.Checked = Settings.Default.CalmMusic;
+                ClassicMusicRadioButton.Checked = Settings.Default.ClassicMusic;
+                RelaxMusicRadioButton.Checked = Settings.Default.RelaxMusic;
+            }
+
+
+            if (BackgroundMusicCheckBox.Checked)
+            {
+                VisibleOn();
+            }
+
         }
 
         // Zapamietanie stanu checkboxa
         private void RememberMusic()
         {
-            Settings.Default.Music = BackgroundMusicCheckBox.Checked;
+                Settings.Default.Music = BackgroundMusicCheckBox.Checked;
+            
+                Settings.Default.CalmMusic = CalmMusicRadioButton.Checked;
+                Settings.Default.ClassicMusic = ClassicMusicRadioButton.Checked;
+                Settings.Default.RelaxMusic = RelaxMusicRadioButton.Checked;
+            
+
             Settings.Default.Save();
         }
+
+
+
+
+
+      private void VisibleOn()
+        {
+            CalmMusicRadioButton.Visible = true;
+            ClassicMusicRadioButton.Visible = true;
+            RelaxMusicRadioButton.Visible = true;
+        }
+        private void VisibleOff()
+        {
+            CalmMusicRadioButton.Visible = false;
+            ClassicMusicRadioButton.Visible = false;
+            RelaxMusicRadioButton.Visible = false;
+        }
+
 
         private void BackgroundMusicCheckBox_Click(object sender, EventArgs e)
         {
             if (BackgroundMusicCheckBox.CheckState == CheckState.Checked)
-            { 
-              //  BackgroundMusicCheckBox.Checked = true;
-                BackgroundMusic();
+            {
+                VisibleOn();
+                
                 RememberMusic();
             }
             if (BackgroundMusicCheckBox.CheckState == CheckState.Unchecked)
-            { StopMusic(player);
+            {
+                VisibleOff();
+                StopMusic(player);
                 RememberMusic();
+             
             }
                     
 
         }
+
+
+        private void CalmMusicRadioButton_Click(object sender, EventArgs e)
+        {
+            if (CalmMusicRadioButton.Checked)
+            {
+           
+                
+                RememberMusic();
+                BackgroundMusic();
+            }
+
+        }
+
+        private void ClassicMusicRadioButton_Click(object sender, EventArgs e)
+        {
+            if (ClassicMusicRadioButton.Checked)
+            {
+                RememberMusic();
+                BackgroundMusic();
+            }
+        }
+
+        private void RelaxMusicRadioButton_Click(object sender, EventArgs e)
+        {
+            if (RelaxMusicRadioButton.Checked)
+            {
+            
+               
+                RememberMusic();
+                BackgroundMusic();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
 
         private void ReportErrorButttom_Click(object sender, EventArgs e)
         {
             ReportErrorForm reportErrorForm = new ReportErrorForm();
             reportErrorForm.Show();
         }
+
+
+        // Zmiana czcionki w aplikacji
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+
+      
+        
+        
+        
+        
+        
+        
+        
+        // Przechowywanie wybranego fonta
+        string fontName;
+
+
+        // Ustawienie fonta po wybraniu radio buttona
+        public void SetFont()
+       {
+            if (ArialBlackRadioButton.Checked)
+            {
+                fontName = "Arial Black";              
+            }
+            else if (CalibriRadioButton.Checked)
+            {
+                fontName = "Calibri";                
+            }
+            else if (CourierRadioButton.Checked)
+            {
+                fontName = "Courier New";               
+            }
+                
+            else if (TimesNewRomanRadioButton.Checked)
+            {
+                fontName = "Times New Roman";             
+            }
+              
+            else if (VerdanaRadioButton.Checked)
+            {
+                fontName = "Verdana";               
+            }
+ 
+
+           
+        }
+
+
+        // 1
+        public void RememberFont()
+        {
+            Settings.Default.RememberFont = fontName;
+            Settings.Default.ArialBlackFont = ArialBlackRadioButton.Checked;
+            Settings.Default.CalibriFont = CalibriRadioButton.Checked;
+            Settings.Default.CourierFont = CourierRadioButton.Checked;
+            Settings.Default.TimesNewRomanFont = TimesNewRomanRadioButton.Checked;
+            Settings.Default.VerdanaFont = VerdanaRadioButton.Checked;
+
+
+            Settings.Default.Save();
+        }
+
+        public void GetSelectedFont()
+        {
+            fontName = Settings.Default.RememberFont;
+            ArialBlackRadioButton.Checked = Settings.Default.ArialBlackFont;
+            CalibriRadioButton.Checked = Settings.Default.CalibriFont;
+            CourierRadioButton.Checked = Settings.Default.CourierFont;
+            TimesNewRomanRadioButton.Checked = Settings.Default.TimesNewRomanFont;
+            VerdanaRadioButton.Checked = Settings.Default.VerdanaFont;
+
+
+        }
+
+
+        // Task form
+        public void SettingsFormChangeFont()
+        {
+
+            foreach (var lbl in GetAll(this, typeof(Label)))
+            {
+                (lbl as Label).Font = new Font(fontName, 14, FontStyle.Bold);
+            }
+
+
+            foreach (var btn in GetAll(this, typeof(Button)))
+            {
+                (btn as Button).Font = new Font(fontName, 10);
+            }
+          
+
+        }
+        private void ArialBlackRadioButton_Click(object sender, EventArgs e)
+        {
+            if (ArialBlackRadioButton.Checked)
+            {
+                SetFont();
+                SettingsFormChangeFont();
+                RememberFont();
+            }
+        }
+
+
+        private void CalibriRadioButton_Click(object sender, EventArgs e)
+        {
+            if (CalibriRadioButton.Checked)
+            {
+                SetFont();
+                SettingsFormChangeFont();
+                RememberFont();
+            }
+        }
+
+        private void CourierRadioButton_Click(object sender, EventArgs e)
+        {
+            if (CourierRadioButton.Checked)
+            {
+                SetFont();
+                SettingsFormChangeFont();
+                RememberFont();
+            }
+        }
+
+        private void TimesNewRomanRadioButton_Click(object sender, EventArgs e)
+        {
+            if (TimesNewRomanRadioButton.Checked)
+            {
+                SetFont();
+                SettingsFormChangeFont();
+                RememberFont();
+            }
+        }
+
+        private void VerdanaRadioButton_Click(object sender, EventArgs e)
+        {
+            if (VerdanaRadioButton.Checked)
+            {
+                SetFont();
+                SettingsFormChangeFont();
+                RememberFont();
+            }
+        }
+
+     
+
+        
     }
 }

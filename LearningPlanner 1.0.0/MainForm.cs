@@ -3,21 +3,17 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
 using LearningPlanner_1._0._0.Properties;
-
+using System.Collections.Generic;
 namespace LearningPlanner_1._0._0
 {
-
-
     public partial class MainForm : Form
     {
-
         public MainForm()
         {
             InitializeComponent();
-            
+
         }
 
-        
         #region metodyObslugiMyszy
         // Mouse methods 
         public void MouseEnterMechanics(Control control)
@@ -44,11 +40,9 @@ namespace LearningPlanner_1._0._0
         }
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-
             foreach (Form c in MdiChildren)
             {
                 c.Close();
-               
             }
         }
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -89,42 +83,48 @@ namespace LearningPlanner_1._0._0
 
 
         #region Zaznaczenie aktywnej kontrolki (z lewego  paska)
-            
+
 
         private void TaskControl11_MouseClick(object sender, MouseEventArgs e)
-        {                   
-            ResetColor();           
+        {
+            ResetColor();
             leftActiveControl1.SetBackColorMethod(leftActiveControl1);
             taskControl11.OpenFormTask();
         }
 
         private void CompletedTasksControl21_MouseClick(object sender, MouseEventArgs e)
         {
-            ResetColor();          
+
+            ResetColor();
             leftActiveControl2.SetBackColorMethod(leftActiveControl2);
             completedTaskControl21.OpenFormCompletedTask();
-            
+
         }
         private void CategoryControl31_MouseClick(object sender, MouseEventArgs e)
         {
+
             ResetColor();
             leftActiveControl3.SetBackColorMethod(leftActiveControl3);
             categoryControl31.OpenFormCategory();
+
         }
         private void FindTaskControl41_MouseClick(object sender, MouseEventArgs e)
         {
+
             ResetColor();
             leftActiveControl4.SetBackColorMethod(leftActiveControl4);
             findTaskControl41.OpenFormFindTask();
         }
         private void ITNewsControl51_MouseClick(object sender, MouseEventArgs e)
         {
+
             ResetColor();
             leftActiveControl5.SetBackColorMethod(leftActiveControl5);
             itnewsControl51.OpenFormITNews();
         }
         private void SettingsControl61_MouseClick(object sender, MouseEventArgs e)
         {
+
             ResetColor();
             leftActiveControl6.SetBackColorMethod(leftActiveControl6);
             settingsControl61.OpenFormSettings();
@@ -209,7 +209,7 @@ namespace LearningPlanner_1._0._0
             {
                 WindowState = FormWindowState.Normal;
                 maximilaziPictureBox.Load("WariantyOkna\\maximize-window.png");
-                
+
             }
             else if (WindowState == FormWindowState.Normal)
             {
@@ -231,28 +231,23 @@ namespace LearningPlanner_1._0._0
         // Zmiana widocznosci wpisywanego hasla
         private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-
             PasswordtextBox1.UseSystemPasswordChar = !ShowPasswordCheckBox.Checked;
-            
-            
-            ////if (ShowPasswordCheckBox.Checked)
-            //    passwordtextBox1.UseSystemPasswordChar = false;
-            //else
-            //    passwordtextBox1.UseSystemPasswordChar = true;
         }
 
 
-        
+
         private void Button1_Click(object sender, EventArgs e)
         {
             DataBaseLogging();
             SettingsForm sf = new SettingsForm();
 
-            if (Settings.Default.Music)
-            sf.BackgroundMusic();
+
+            if ((Settings.Default.Music) && (Settings.Default.CalmMusic == true ||
+                Settings.Default.ClassicMusic == true || Settings.Default.RelaxMusic == true))
+                sf.BackgroundMusic();
         }
 
-     
+
 
 
 
@@ -277,12 +272,12 @@ namespace LearningPlanner_1._0._0
                     if (user.Haslo == password)
                     {
                         MessageBox.Show("Zalogowano");
-                        UserID = user.IDosoby;                      
+                        UserID = user.IDosoby;
                         panel1.Hide();
-                        panel1.Enabled = false;                        
+                        panel1.Enabled = false;
                         ShowLeftMenu();
                         RememberCredentials();
-                        
+
                     }
 
                     else
@@ -290,7 +285,7 @@ namespace LearningPlanner_1._0._0
                 }
                 else
                     MessageBox.Show($"Nie znaleziono użytkownika '{login}' ");
-               
+
 
             }
 
@@ -298,16 +293,16 @@ namespace LearningPlanner_1._0._0
 
         private void RememberCredentials()
         {
-          if(RememberMeCheckBox.Checked) 
-            Settings.Default.Login = LogintextBox1.Text;
+            if (RememberMeCheckBox.Checked)
+                Settings.Default.Login = LogintextBox1.Text;
             Settings.Default.Password = PasswordtextBox1.Text;
             Settings.Default.Save();
-            
-	                 
+
+
         }
-         private void SetCredentials()
+        private void SetCredentials()
         {
-            
+
             LogintextBox1.Text = Settings.Default.Login;
             PasswordtextBox1.Text = Settings.Default.Password;
         }
@@ -315,12 +310,12 @@ namespace LearningPlanner_1._0._0
 
         private void ShowLeftMenu()
         {
-          
-            categoryControl31.Enabled = true;          
-            completedTaskControl21.Enabled = true;           
-            findTaskControl41.Enabled = true;          
-            itnewsControl51.Enabled = true;          
-            settingsControl61.Enabled = true;          
+
+            categoryControl31.Enabled = true;
+            completedTaskControl21.Enabled = true;
+            findTaskControl41.Enabled = true;
+            itnewsControl51.Enabled = true;
+            settingsControl61.Enabled = true;
             taskControl11.Enabled = true;
             maximilaziPictureBox.Enabled = true;
         }
@@ -329,16 +324,16 @@ namespace LearningPlanner_1._0._0
         {
             RegisterForm rf = new RegisterForm();
             rf.Show();
-     
-            
+
+
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.Enter)&&(panel1.Visible))
-                {
-                    DataBaseLogging();
-                }           
+            if ((e.KeyCode == Keys.Enter) && (panel1.Visible))
+            {
+                DataBaseLogging();
+            }
             if (e.KeyCode == Keys.Escape)
                 this.Close();
         }
@@ -346,16 +341,16 @@ namespace LearningPlanner_1._0._0
         private void MainForm_Load(object sender, EventArgs e)
         {
             SetCredentials();
+            
         }
-        
 
 
+     
 
     }
 
-    
 
-}
+    }
    
 
 

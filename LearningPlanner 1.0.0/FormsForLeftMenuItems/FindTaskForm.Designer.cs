@@ -207,16 +207,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox FindTaskTextBox;
-        private System.Windows.Forms.DataGridView FindTaskDataGrid;
-        private System.Windows.Forms.Label FIndTaskLabel;
-        private System.Windows.Forms.ComboBox filterComboBox;
-        private System.Windows.Forms.Label filtrLabel;
-        private System.Windows.Forms.DateTimePicker filterFrom;
-        private System.Windows.Forms.DateTimePicker filterTo;
-        private System.Windows.Forms.Label filterFromLabel;
-        private System.Windows.Forms.Label filterToLabel;
-        private System.Windows.Forms.PictureBox findPictureBox;
+        public System.Windows.Forms.PictureBox findPictureBox;
+        public System.Windows.Forms.TextBox FindTaskTextBox;
+        public System.Windows.Forms.Label FIndTaskLabel;
+        public System.Windows.Forms.ComboBox filterComboBox;
+        public System.Windows.Forms.Label filtrLabel;
+        public System.Windows.Forms.DateTimePicker filterFrom;
+        public System.Windows.Forms.DateTimePicker filterTo;
+        public System.Windows.Forms.Label filterFromLabel;
+        public System.Windows.Forms.Label filterToLabel;
+        public System.Windows.Forms.DataGridView FindTaskDataGrid;
     }
 }

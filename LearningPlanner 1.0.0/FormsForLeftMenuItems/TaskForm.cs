@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.IO;
 using LearningPlanner_1._0._0.Properties;
+using System.Collections.Generic;
 
 namespace LearningPlanner_1._0._0
 {
@@ -14,7 +15,7 @@ namespace LearningPlanner_1._0._0
         public TaskForm()
         {           
             InitializeComponent();            
-            Clear();
+           // Clear();
             
         }
         
@@ -22,11 +23,30 @@ namespace LearningPlanner_1._0._0
 
          EntitiesModel2 model = new EntitiesModel2();
 
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+
+
+
+
         private void TaskForm_Load(object sender, EventArgs e)
-        { 
-             this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
+            {
+
+            SettingsForm sf = new SettingsForm();
+            sf.SettingsFormChangeFont();
+            sf.GetSelectedFont();
             
 
+
+            this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
+
+           
 
 
             TaskDataGridView1.DataSource = model.Zadania.Select(o => new

@@ -5,6 +5,7 @@ using System.Linq;
 using LearningPlanner_1._0._0.Properties;
 using System.Text;
 using System.IO;
+using System.Collections.Generic;
 namespace LearningPlanner_1._0._0
 {
     public partial class CompletedTasksForm : Form
@@ -18,8 +19,43 @@ namespace LearningPlanner_1._0._0
 
         private int IDUser = MainForm.UserID;
 
+
+        //public IEnumerable<Control> GetAll(Control control, Type type)
+        //{
+        //    var controls = control.Controls.Cast<Control>();
+
+        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
+        //                              .Concat(controls)
+        //                              .Where(c => c.GetType() == type);
+        //}
+
+        //public void ChangeFontMethod()
+        //{
+        //    foreach (var lbl in GetAll(this, typeof(Label)))
+        //    {
+        //        (lbl as Label).Font = new Font("Verdana", 16, FontStyle.Bold);
+
+        //    }
+
+        //    foreach (var btn in GetAll(this, typeof(Button)))
+        //    {
+        //        (btn as Button).Font = new Font("Verdana", 10);
+        //    }
+
+        //    foreach (var clm in GetAll(this, typeof(DataGridView)))
+        //    {
+        //        (clm as DataGridView).Font = new Font("Verdana", 10);
+             
+        //    }
+
+        //}
+
+
+
+
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {
+            
 
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
 

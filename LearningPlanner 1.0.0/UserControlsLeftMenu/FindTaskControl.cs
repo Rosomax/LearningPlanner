@@ -17,13 +17,15 @@ namespace LearningPlanner_1._0._0
             InitializeComponent();
         }
         public void OpenFormFindTask()
-        {
+        {            
             FindTaskForm Childform = new FindTaskForm
             {
                 MdiParent = this.ParentForm,
                 Dock = DockStyle.Fill
             };
             Childform.Show();
+
+            
         }
  
         private void FindTaskControl4_Paint(object sender, PaintEventArgs e)

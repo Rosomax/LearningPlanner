@@ -14,7 +14,6 @@ namespace LearningPlanner_1._0._0
         {
             TaskForm Childform = new TaskForm
             {
-
                 MdiParent = this.ParentForm,
                 Dock = DockStyle.Fill
 

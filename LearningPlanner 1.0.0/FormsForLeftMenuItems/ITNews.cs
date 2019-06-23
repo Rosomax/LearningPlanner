@@ -183,7 +183,7 @@ namespace LearningPlanner_1._0._0
                         }
 
                     }
-
+                   
                     // Dodanie tytulu wiadomosci z kanalu rss
                     feedList.Items.Add(feedItem.Title.Text);
                     // dodanie textu wiadomosci z kanalu rss

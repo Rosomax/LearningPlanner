@@ -29,14 +29,16 @@ namespace LearningPlanner_1._0._0
                 {
                     write.WriteLine($"start: {dateStart} username: {loggedUserName} NetBIOS: {netBIOS} physical memory:" +
                         $" {physicalMemory}  ");
-
+                    
                 }
             else
                 using (StreamWriter write = new StreamWriter(path, false))
                 {
                     write.WriteLine();
-
+                   
                 }
+
+            
 
         }
 
