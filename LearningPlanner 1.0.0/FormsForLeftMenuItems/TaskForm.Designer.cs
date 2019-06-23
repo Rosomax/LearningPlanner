@@ -233,7 +233,7 @@
             this.Text = "ZadanieForm";
             this.Load += new System.EventHandler(this.TaskForm_Load);
             this.SizeChanged += new System.EventHandler(this.TaskForm_SizeChanged);
-            this.Resize += new System.EventHandler(this.TaskForm_Resize);
+           
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

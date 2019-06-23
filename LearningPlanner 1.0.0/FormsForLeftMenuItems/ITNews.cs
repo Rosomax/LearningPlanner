@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
 using System.ServiceModel.Syndication;
+using System.Collections.Generic;
+using System.Linq;
 using LearningPlanner_1._0._0.Properties;
 namespace LearningPlanner_1._0._0
 {
@@ -30,6 +32,7 @@ namespace LearningPlanner_1._0._0
 
         private void ITNews_Load(object sender, EventArgs e)
         {
+         
 
             this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
 
@@ -52,7 +55,9 @@ namespace LearningPlanner_1._0._0
 
             FavoriteSitesListBox.Items.Add(wst0);
             FavoriteSitesListBox.Items.Add(wst1);
-            
+
+
+            ITNewsFormChangeFont();
         }
 
         #region Change strings to URL and transfer to textbox for xmls
@@ -279,11 +284,67 @@ namespace LearningPlanner_1._0._0
             }
             
             catch { MessageBox.Show("Nie dodano żadengo adresu URL strony WWW", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-           
-            
+     
            
         }
 
-       
+
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+
+
+        public void ITNewsFormChangeFont()
+        {
+
+            foreach (var lbl in GetAll(this, typeof(Label)))
+            {
+                if (Settings.Default.BoldFont)
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
+                else
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12);
+
+            }
+
+            foreach (var btn in GetAll(this, typeof(Button)))
+            {
+                if (Settings.Default.BoldFont)
+                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 14, FontStyle.Bold);
+                else
+                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 14);
+            }
+
+            foreach (var tb in GetAll(this, typeof(TextBox)))
+            {
+                if (Settings.Default.BoldFont)
+                    (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
+                else
+                    (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8);
+            }
+
+            foreach (var lb in GetAll(this, typeof(ListBox)))
+            {
+                try
+                {
+                    if (Settings.Default.BoldFont)
+                        (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
+                    else
+                        (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8);
+
+                }
+
+                catch { }
+                
+                }
+
+
+        }
+
+
     }
 }

@@ -63,6 +63,7 @@
             this.BackgroundMusicCheckBox = new System.Windows.Forms.CheckBox();
             this.SoundsPanel = new System.Windows.Forms.Panel();
             this.ChangeFontPanel = new System.Windows.Forms.Panel();
+            this.GeneralSettingsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtrackBar)).BeginInit();
@@ -106,7 +107,7 @@
             this.defaultColorButton.TabIndex = 13;
             this.defaultColorButton.Text = "Ustawienia domyślne";
             this.defaultColorButton.UseVisualStyleBackColor = false;
-            this.defaultColorButton.Click += new System.EventHandler(this.button1_Click);
+            this.defaultColorButton.Click += new System.EventHandler(this.defaultColorButton_Click);
             // 
             // saveColorChangesButton
             // 
@@ -115,7 +116,7 @@
             this.saveColorChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveColorChangesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.saveColorChangesButton.ForeColor = System.Drawing.Color.Black;
-            this.saveColorChangesButton.Location = new System.Drawing.Point(519, 191);
+            this.saveColorChangesButton.Location = new System.Drawing.Point(504, 191);
             this.saveColorChangesButton.Name = "saveColorChangesButton";
             this.saveColorChangesButton.Size = new System.Drawing.Size(191, 46);
             this.saveColorChangesButton.TabIndex = 14;
@@ -223,7 +224,7 @@
             this.PlayMusicLabel.AutoSize = true;
             this.PlayMusicLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlayMusicLabel.ForeColor = System.Drawing.Color.Black;
-            this.PlayMusicLabel.Location = new System.Drawing.Point(94, 7);
+            this.PlayMusicLabel.Location = new System.Drawing.Point(80, 7);
             this.PlayMusicLabel.Name = "PlayMusicLabel";
             this.PlayMusicLabel.Size = new System.Drawing.Size(85, 23);
             this.PlayMusicLabel.TabIndex = 17;
@@ -355,13 +356,12 @@
             this.ArialBlackRadioButton.ForeColor = System.Drawing.Color.Black;
             this.ArialBlackRadioButton.Location = new System.Drawing.Point(3, 54);
             this.ArialBlackRadioButton.Name = "ArialBlackRadioButton";
-            this.ArialBlackRadioButton.Size = new System.Drawing.Size(92, 21);
+            this.ArialBlackRadioButton.Size = new System.Drawing.Size(54, 21);
             this.ArialBlackRadioButton.TabIndex = 29;
             this.ArialBlackRadioButton.TabStop = true;
-            this.ArialBlackRadioButton.Text = "Arial Black";
+            this.ArialBlackRadioButton.Text = "Arial";
             this.ArialBlackRadioButton.UseVisualStyleBackColor = true;
-           
-         
+            this.ArialBlackRadioButton.Click += new System.EventHandler(this.ArialBlackRadioButton_Click);
             // 
             // BoldCheckBox
             // 
@@ -374,6 +374,7 @@
             this.BoldCheckBox.TabIndex = 30;
             this.BoldCheckBox.Text = "Pogrubiona";
             this.BoldCheckBox.UseVisualStyleBackColor = true;
+            this.BoldCheckBox.Click += new System.EventHandler(this.BoldCheckBox_Click);
             // 
             // RelaxMusicRadioButton
             // 
@@ -417,7 +418,7 @@
             this.CalmMusicRadioButton.TabStop = true;
             this.CalmMusicRadioButton.Text = "Spokojna";
             this.CalmMusicRadioButton.UseVisualStyleBackColor = true;
-            this.CalmMusicRadioButton.Visible = false;         
+            this.CalmMusicRadioButton.Visible = false;
             this.CalmMusicRadioButton.Click += new System.EventHandler(this.CalmMusicRadioButton_Click);
             // 
             // BackgroundMusicCheckBox
@@ -459,12 +460,24 @@
             this.ChangeFontPanel.Size = new System.Drawing.Size(231, 266);
             this.ChangeFontPanel.TabIndex = 33;
             // 
+            // GeneralSettingsLabel
+            // 
+            this.GeneralSettingsLabel.AutoSize = true;
+            this.GeneralSettingsLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GeneralSettingsLabel.ForeColor = System.Drawing.Color.Black;
+            this.GeneralSettingsLabel.Location = new System.Drawing.Point(75, 285);
+            this.GeneralSettingsLabel.Name = "GeneralSettingsLabel";
+            this.GeneralSettingsLabel.Size = new System.Drawing.Size(84, 23);
+            this.GeneralSettingsLabel.TabIndex = 23;
+            this.GeneralSettingsLabel.Text = "Ogólne:";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(750, 540);
+            this.Controls.Add(this.GeneralSettingsLabel);
             this.Controls.Add(this.ChangeFontPanel);
             this.Controls.Add(this.SoundsPanel);
             this.Controls.Add(this.AuthorsButton);
@@ -540,5 +553,6 @@
         private System.Windows.Forms.CheckBox BackgroundMusicCheckBox;
         public System.Windows.Forms.Panel SoundsPanel;
         private System.Windows.Forms.Panel ChangeFontPanel;
+        private System.Windows.Forms.Label GeneralSettingsLabel;
     }
 }

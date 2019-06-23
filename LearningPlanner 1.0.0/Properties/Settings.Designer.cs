@@ -225,5 +225,17 @@ namespace LearningPlanner_1._0._0.Properties {
                 this["DefaultFont"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool BoldFont {
+            get {
+                return ((bool)(this["BoldFont"]));
+            }
+            set {
+                this["BoldFont"] = value;
+            }
+        }
     }
 }

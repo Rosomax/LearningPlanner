@@ -2,7 +2,9 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 using LearningPlanner_1._0._0.Properties;
+
 namespace LearningPlanner_1._0._0
 {
     public partial class CategoryForm : Form
@@ -18,6 +20,9 @@ namespace LearningPlanner_1._0._0
 
         private void Category_Load(object sender, EventArgs e)
         {
+            CategoryFormChangeFont();
+
+
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             chooseTaskLabel.Visible = false;
             chooseTaskDataGrid.Visible = false;
@@ -119,27 +124,46 @@ namespace LearningPlanner_1._0._0
             else  
             {
                 Responsiveness resp = new Responsiveness();
-                resp.CategoryResponse(this);
-                //chooseCategoryLabel.Size = new Size(384, 63);
-                //chooseCategoryLabel.Location = new Point(112, 9);
-                //chooseCategoryLabel.Font = new Font("Centhury Gothic", 22);
-                //chooseTaskLabel.Size = new Size(384, 63);
-                //chooseTaskLabel.Location = new Point(648, 9);
-                //chooseTaskLabel.Font = new Font("Centhury Gothic", 22);
-                //describeTaskLabel.Size = new Size(384, 63);
-                //describeTaskLabel.Location = new Point(1198, 9);
-                //describeTaskLabel.Font = new Font("Centhury Gothic", 22);
-                //chooseCategoryDataGrid.Size = new Size(384, 853);
-                //chooseCategoryDataGrid.Location = new Point(116, 75);
-                //chooseCategoryDataGrid.Font = new Font("Century Gothic", 20, FontStyle.Bold);
-                //chooseCategoryDataGrid.RowsDefaultCellStyle.Font = new Font("Century Gothic", 20, FontStyle.Bold);
-                //chooseTaskDataGrid.Size = new Size(384, 853);
-                //chooseTaskDataGrid.Location = new Point(648, 75);
-                //chooseTaskDataGrid.Font = new Font("Century Gothic", 20, FontStyle.Bold);
-                //describeTaskRichTextBox.Size = new Size(384, 853);
-                //describeTaskRichTextBox.Location = new Point(1198,75);
-                //describeTaskRichTextBox.Font = new Font("Century Gothic", 20, FontStyle.Bold);
+                resp.CategoryResponse(this);          
             }
+
         }
+
+
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+
+
+        public void CategoryFormChangeFont()
+        {
+
+            foreach (var lbl in GetAll(this, typeof(Label)))
+            {
+                if (Settings.Default.BoldFont)
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 14, FontStyle.Bold);
+                else
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 14);
+
+            }
+
+            foreach (var rtb in GetAll(this, typeof(RichTextBox)))
+            {
+                if (Settings.Default.BoldFont)
+                    (rtb as RichTextBox).Font = new Font(Settings.Default.RememberFont, 11, FontStyle.Bold);
+                else
+                    (rtb as RichTextBox).Font = new Font(Settings.Default.RememberFont, 11);
+
+            }
+
+        }
+
+
+
     }
 }

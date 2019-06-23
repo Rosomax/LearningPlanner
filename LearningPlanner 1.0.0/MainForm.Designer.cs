@@ -335,14 +335,14 @@
             // RememberMeCheckBox
             // 
             this.RememberMeCheckBox.AutoSize = true;
+            this.RememberMeCheckBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RememberMeCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.RememberMeCheckBox.Location = new System.Drawing.Point(185, 189);
             this.RememberMeCheckBox.Name = "RememberMeCheckBox";
-            this.RememberMeCheckBox.Size = new System.Drawing.Size(103, 17);
+            this.RememberMeCheckBox.Size = new System.Drawing.Size(119, 20);
             this.RememberMeCheckBox.TabIndex = 5;
             this.RememberMeCheckBox.Text = "Zapamietaj mnie";
             this.RememberMeCheckBox.UseVisualStyleBackColor = true;
-           
             // 
             // registerLinkLabel
             // 
@@ -361,10 +361,11 @@
             // ShowPasswordCheckBox
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
+            this.ShowPasswordCheckBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowPasswordCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ShowPasswordCheckBox.Location = new System.Drawing.Point(77, 190);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
-            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(86, 17);
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(91, 20);
             this.ShowPasswordCheckBox.TabIndex = 2;
             this.ShowPasswordCheckBox.Text = "Pokaż hasło";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = true;
@@ -389,7 +390,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(132, 213);
             this.button1.Name = "button1";

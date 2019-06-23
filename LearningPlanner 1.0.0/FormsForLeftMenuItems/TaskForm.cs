@@ -23,24 +23,13 @@ namespace LearningPlanner_1._0._0
 
          EntitiesModel2 model = new EntitiesModel2();
 
-        public IEnumerable<Control> GetAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
+      
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
-        }
-
-
-
-
+      
         private void TaskForm_Load(object sender, EventArgs e)
             {
 
-            SettingsForm sf = new SettingsForm();
-            sf.SettingsFormChangeFont();
-            sf.GetSelectedFont();
+            TaskFormChangeFont();
             
 
 
@@ -313,12 +302,55 @@ namespace LearningPlanner_1._0._0
             errorLabel.Text = "";
         }
 
-        private void TaskForm_Resize(object sender, EventArgs e)
+      
+
+
+
+        public IEnumerable<Control> GetAll(Control control, Type type)
         {
-         
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
         }
+
+
+        public void TaskFormChangeFont()
+        {
+
+            foreach (var lbl in GetAll(this, typeof(Label)))
+            {
+                if (Settings.Default.BoldFont)
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 14, FontStyle.Bold);
+                else
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 14);
+
+            }
+
+            foreach (var btn in GetAll(this, typeof(Button)))
+            {
+                if (Settings.Default.BoldFont)
+                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 10, FontStyle.Bold);
+                else
+                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 10);
+            }
+
+            foreach (var grid in GetAll(this, typeof(DataGridView)))
+            {
+                if (Settings.Default.BoldFont)
+                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
+                else
+                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 12);
+            }
+
+        }
+
+
+
+
     }
-   
+
 
 
 

@@ -23,7 +23,7 @@ namespace LearningPlanner_1._0._0
 
         private void FindTaskForm_Load(object sender, EventArgs e)
         {
-
+            FindTaskFormChangeFont();
 
             this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             FindTaskDataGrid.DefaultCellStyle.ForeColor = Color.FromArgb(178, 8, 55);
@@ -250,12 +250,47 @@ namespace LearningPlanner_1._0._0
                 else
                     frm.statusInfoLbl1.Text = "Zakończono";
 
+            }
 
 
 
+        }
+
+
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+
+
+        public void FindTaskFormChangeFont()
+        {
+
+            foreach (var lbl in GetAll(this, typeof(Label)))
+            {
+                if (Settings.Default.BoldFont)
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
+                else
+                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12);
 
             }
+
+            foreach (var grid in GetAll(this, typeof(DataGridView)))
+            {
+                if (Settings.Default.BoldFont)
+                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
+                else
+                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 8);
+            }
+
         }
+
+
+
     }
 
 }

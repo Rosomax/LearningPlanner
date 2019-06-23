@@ -29,8 +29,6 @@ namespace LearningPlanner_1._0._0
             GetSelectedFont();
             SettingsFormChangeFont();
            
-            
-
 
         }
 
@@ -186,17 +184,7 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            RtrackBar.Value = 138;
-            GtrackBar.Value = 197;
-            BtrackBar.Value = 222;
-            ChangeBackColorSave();
-
-            
-
-        }
+     
 
         private void SaveColorToSettings()
         {
@@ -238,28 +226,22 @@ namespace LearningPlanner_1._0._0
         // Metoda przyjmuje wczesniej zdefiniowany player i zatrzymuje muzyke
         private void StopMusic(object music)
         {
-            player.Stop();
+         player.Stop();
         }
 
         
 
         // Delegat przechowujacyc granie muzyki
-        WaitCallback z;
+      
 
         // Dodanie play music do watka tla
         public void BackgroundMusic()
-        {
-            z = new WaitCallback(PlayMusic);
-            ThreadPool.QueueUserWorkItem(z);
-            
+        {            
+           WaitCallback z = new WaitCallback(PlayMusic);
+            ThreadPool.QueueUserWorkItem(z);            
         }
-        private void StopBackgroundMusic()
-        {
-            z = StopMusic;
-            
-        }
-
-        
+       
+    
         // Ustawienie muzyki
         private void SetMusic()
         {
@@ -291,7 +273,14 @@ namespace LearningPlanner_1._0._0
             Settings.Default.Save();
         }
 
+        private void DefaultMusicSettings()
+        {
+            Settings.Default.Music = BackgroundMusicCheckBox.Checked = false;
 
+            Settings.Default.CalmMusic = CalmMusicRadioButton.Checked = false;
+            Settings.Default.ClassicMusic = ClassicMusicRadioButton.Checked = false;
+            Settings.Default.RelaxMusic = RelaxMusicRadioButton.Checked = false;
+        }
 
 
 
@@ -332,9 +321,7 @@ namespace LearningPlanner_1._0._0
         private void CalmMusicRadioButton_Click(object sender, EventArgs e)
         {
             if (CalmMusicRadioButton.Checked)
-            {
-           
-                
+            {          
                 RememberMusic();
                 BackgroundMusic();
             }
@@ -355,7 +342,6 @@ namespace LearningPlanner_1._0._0
             if (RelaxMusicRadioButton.Checked)
             {
             
-               
                 RememberMusic();
                 BackgroundMusic();
             }
@@ -379,24 +365,10 @@ namespace LearningPlanner_1._0._0
         }
 
 
-        // Zmiana czcionki w aplikacji
-        public IEnumerable<Control> GetAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
-        }
+    
 
-      
-        
-        
-        
-        
-        
-        
-        
+
         // Przechowywanie wybranego fonta
         string fontName;
 
@@ -406,7 +378,7 @@ namespace LearningPlanner_1._0._0
        {
             if (ArialBlackRadioButton.Checked)
             {
-                fontName = "Arial Black";              
+                fontName = "Arial";              
             }
             else if (CalibriRadioButton.Checked)
             {
@@ -441,8 +413,8 @@ namespace LearningPlanner_1._0._0
             Settings.Default.CourierFont = CourierRadioButton.Checked;
             Settings.Default.TimesNewRomanFont = TimesNewRomanRadioButton.Checked;
             Settings.Default.VerdanaFont = VerdanaRadioButton.Checked;
-
-
+            Settings.Default.BoldFont = BoldCheckBox.Checked;
+            
             Settings.Default.Save();
         }
 
@@ -454,28 +426,48 @@ namespace LearningPlanner_1._0._0
             CourierRadioButton.Checked = Settings.Default.CourierFont;
             TimesNewRomanRadioButton.Checked = Settings.Default.TimesNewRomanFont;
             VerdanaRadioButton.Checked = Settings.Default.VerdanaFont;
-
+            BoldCheckBox.Checked = Settings.Default.BoldFont;
 
         }
 
+        // Zmiana czcionki w aplikacji
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
 
-        // Task form
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+
+
+       
+        
+
+        // SettingsForm
         public void SettingsFormChangeFont()
         {
 
             foreach (var lbl in GetAll(this, typeof(Label)))
             {
-                (lbl as Label).Font = new Font(fontName, 14, FontStyle.Bold);
+                if(BoldCheckBox.CheckState==CheckState.Unchecked)
+                (lbl as Label).Font = new Font(fontName, 14);
+                if(BoldCheckBox.CheckState == CheckState.Checked)
+                    (lbl as Label).Font = new Font(fontName, 14,FontStyle.Bold);
             }
 
 
             foreach (var btn in GetAll(this, typeof(Button)))
             {
-                (btn as Button).Font = new Font(fontName, 10);
+                if (BoldCheckBox.CheckState == CheckState.Unchecked)
+                    (btn as Button).Font = new Font(fontName, 10);
+               if (BoldCheckBox.CheckState == CheckState.Checked)
+                    (btn as Button).Font = new Font(fontName, 10,FontStyle.Bold);
             }
           
 
         }
+
         private void ArialBlackRadioButton_Click(object sender, EventArgs e)
         {
             if (ArialBlackRadioButton.Checked)
@@ -485,7 +477,6 @@ namespace LearningPlanner_1._0._0
                 RememberFont();
             }
         }
-
 
         private void CalibriRadioButton_Click(object sender, EventArgs e)
         {
@@ -527,8 +518,56 @@ namespace LearningPlanner_1._0._0
             }
         }
 
-     
+        private void BoldCheckBox_Click(object sender, EventArgs e)
+        {
+            if (BoldCheckBox.CheckState == CheckState.Checked)
+                SetFont();
+            SettingsFormChangeFont();
+            RememberFont();
+        }
 
-        
+        public void DefaultFontSettings()
+        {
+            foreach (var lbl in GetAll(this, typeof(Label)))
+            {
+                (lbl as Label).Font = new Font("Century Gothic", 14);
+            }
+
+            foreach (var btn in GetAll(this, typeof(Button)))
+            {            
+                    (btn as Button).Font = new Font("Century Gothic", 10);                              
+            }
+
+            Settings.Default.RememberFont = "Century Gothic";
+            Settings.Default.ArialBlackFont = ArialBlackRadioButton.Checked = false;
+            Settings.Default.CalibriFont = CalibriRadioButton.Checked = false;
+            Settings.Default.CourierFont = CourierRadioButton.Checked = false;
+            Settings.Default.TimesNewRomanFont = TimesNewRomanRadioButton.Checked = false;
+            Settings.Default.VerdanaFont = VerdanaRadioButton.Checked = false;
+            Settings.Default.BoldFont = BoldCheckBox.Checked = false;
+
+
+
+        }
+
+
+
+
+        private void defaultColorButton_Click(object sender, EventArgs e)
+        {
+
+            RtrackBar.Value = 138;
+            GtrackBar.Value = 197;
+            BtrackBar.Value = 222;           
+            ChangeBackColorSave();
+
+            DefaultFontSettings();
+            DefaultMusicSettings();
+            StopMusic(0);
+            Settings.Default.Save();
+
+
+
+        }
     }
 }
