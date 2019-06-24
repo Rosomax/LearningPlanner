@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class ReportErrorForm
     {
@@ -158,8 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ReportErrorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Zgłoś Błąd";
-            this.Load += new System.EventHandler(this.ReportErrorForm_Load);
+            this.Text = "Zgłoś Błąd";           
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -2,12 +2,12 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
-using LearningPlanner_1._0._0.Properties;
+using LearningPlanner.Properties;
 using System.Media;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
 
 
@@ -20,22 +20,16 @@ namespace LearningPlanner_1._0._0
         }
        
 
-
         private void SettingsForm_Load(object sender, EventArgs e)
-        {
-            
-            SaveColorToSettings();
-            SetMusic();
-            GetSelectedFont();
-            SettingsFormChangeFont();
-           
-
+        {           
+            SetColorFromSettings();
+            SetMusicFromSettings();
+            SetFontFromSettings();
+            SettingsFormChangeFont();         
         }
 
-      
-
-
-
+     
+        
         private void SettingsForm_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -83,76 +77,15 @@ namespace LearningPlanner_1._0._0
             e.Graphics.TranslateTransform(200, 125);
             e.Graphics.DrawLine(Pens.Black, 0, 0, -23, 0);
 
-            //////// gorna lewa cwiartka 1 mala z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(140, 63); 
-            //e.Graphics.RotateTransform(60);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, 17, 0);
-            //// gorna lewa cwiartka 2 (srodkowa) mala z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(95, 95);
-            //e.Graphics.RotateTransform(45);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, 17, 0);
-            //// gorna lewa cwiartka 3 z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(63, 140);
-            //e.Graphics.RotateTransform(30);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, 17, 0);
-
-            ////gorna prawa cwiartka 1 mala z lewej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(260, 63); //
-            //e.Graphics.RotateTransform(120);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, 17, 0);
-            ////gorna prawa cwiartka 2 (srodkowa) z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(305, 95);
-            //e.Graphics.RotateTransform(-45);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);
-            //// gorna prawa cwiartka 3 z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(63, 260);
-            //e.Graphics.RotateTransform(-30);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, 17, 0);
-
-            //////// dolna lewa cwiartka pierwsza mala z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(140, 337); //
-            //e.Graphics.RotateTransform(120);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0,-17, 0);
-            ////dolna lewa cwiartka 2 (srodkowa) mala z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(95, 305);
-            //e.Graphics.RotateTransform(-45);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, 17, 0);
-            //////// dolna lewa cwiartka trzecia mala z prawej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(337, 140); //
-            //e.Graphics.RotateTransform(-30);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);
-
-            ///////dolna prawa cwiartka pierwsza z lewej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(260, 337); 
-            //e.Graphics.RotateTransform(60);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);
-            //// dolna prawa cwiartka 2 (srodkowa) z lewej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(305, 305);
-            //e.Graphics.RotateTransform(45);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);
-            ///////dolna prawa cwiartka trzecia z lewej
-            //e.Graphics.Transform = m;
-            //e.Graphics.TranslateTransform(337, 260); 
-            //e.Graphics.RotateTransform(30);
-            //e.Graphics.DrawLine(Pens.DarkCyan, 0, 0, -17, 0);      
-
+         
         }
+
+
+        #region ColorMethods
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             Invalidate();
-
         }
 
 
@@ -167,15 +100,13 @@ namespace LearningPlanner_1._0._0
             var green = Convert.ToInt32(GtextBox.Text);
             var blue = Convert.ToInt32(BtextBox.Text);
 
-            this.BackColor = Color.FromArgb(red, green, blue);
+            BackColor = Color.FromArgb(red, green, blue);
 
 
         }
 
-       
 
-
-        private void ChangeBackColorSave()
+        private void SaveBackColorChanges()
         {
             Settings.Default.RValue = RtrackBar.Value;
             Settings.Default.GValue = GtrackBar.Value;
@@ -185,8 +116,7 @@ namespace LearningPlanner_1._0._0
         }
 
      
-
-        private void SaveColorToSettings()
+        private void SetColorFromSettings()
         {
             RtrackBar.Value = Settings.Default.RValue;
             GtrackBar.Value = Settings.Default.GValue;
@@ -194,18 +124,21 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        private void saveColorChangesButton_Click(object sender, EventArgs e)
+        private void SaveColorChangesButton_Click(object sender, EventArgs e)
         {
-            ChangeBackColorSave();
+            SaveBackColorChanges();
             MessageBox.Show("Zapisano");
 
         }
 
-        // Definicja playera
-        SoundPlayer player = new SoundPlayer();
+        #endregion
 
-        // Metoda ktora odtwarza muzyka, odpala sie w nowym watku
-        private void PlayMusic(object music)
+
+        #region MusicMethods
+
+        SoundPlayer player = new SoundPlayer();
+     
+        private void PlayCheckedMusic(object music)
         {        
                 if (Settings.Default.CalmMusic)
                 {
@@ -223,45 +156,36 @@ namespace LearningPlanner_1._0._0
             player.PlayLooping();
         }
 
-        // Metoda przyjmuje wczesniej zdefiniowany player i zatrzymuje muzyke
+      
         private void StopMusic(object music)
         {
-         player.Stop();
+            player.Stop();
         }
+       
 
-        
-
-        // Delegat przechowujacyc granie muzyki
-      
-
-        // Dodanie play music do watka tla
-        public void BackgroundMusic()
+       public void BackgroundMusic()
         {            
-           WaitCallback z = new WaitCallback(PlayMusic);
-            ThreadPool.QueueUserWorkItem(z);            
+           WaitCallback waitCallback = new WaitCallback(PlayCheckedMusic);
+            ThreadPool.QueueUserWorkItem(waitCallback);            
         }
        
     
         // Ustawienie muzyki
-        private void SetMusic()
+        private void SetMusicFromSettings()
         {
             if (BackgroundMusicCheckBox.Checked = Settings.Default.Music)
             {
                 CalmMusicRadioButton.Checked = Settings.Default.CalmMusic;
                 ClassicMusicRadioButton.Checked = Settings.Default.ClassicMusic;
                 RelaxMusicRadioButton.Checked = Settings.Default.RelaxMusic;
+
+                RadioBtnsVisibleOn();
             }
 
-
-            if (BackgroundMusicCheckBox.Checked)
-            {
-                VisibleOn();
-            }
 
         }
-
-        // Zapamietanie stanu checkboxa
-        private void RememberMusic()
+        
+        private void SaveMusicStatusToSettings()
         {
                 Settings.Default.Music = BackgroundMusicCheckBox.Checked;
             
@@ -273,7 +197,8 @@ namespace LearningPlanner_1._0._0
             Settings.Default.Save();
         }
 
-        private void DefaultMusicSettings()
+
+        private void SaveDefaultMusicStatusSettings()
         {
             Settings.Default.Music = BackgroundMusicCheckBox.Checked = false;
 
@@ -284,13 +209,14 @@ namespace LearningPlanner_1._0._0
 
 
 
-      private void VisibleOn()
+        private void RadioBtnsVisibleOn()
         {
             CalmMusicRadioButton.Visible = true;
             ClassicMusicRadioButton.Visible = true;
             RelaxMusicRadioButton.Visible = true;
         }
-        private void VisibleOff()
+
+        private void RadioBtnsVisibleOff()
         {
             CalmMusicRadioButton.Visible = false;
             ClassicMusicRadioButton.Visible = false;
@@ -302,16 +228,15 @@ namespace LearningPlanner_1._0._0
         {
             if (BackgroundMusicCheckBox.CheckState == CheckState.Checked)
             {
-                VisibleOn();
-                
-                RememberMusic();
+                RadioBtnsVisibleOn();
+                SaveMusicStatusToSettings();
             }
+
             if (BackgroundMusicCheckBox.CheckState == CheckState.Unchecked)
             {
-                VisibleOff();
+                RadioBtnsVisibleOff();
                 StopMusic(player);
-                RememberMusic();
-             
+                SaveMusicStatusToSettings();
             }
                     
 
@@ -321,8 +246,8 @@ namespace LearningPlanner_1._0._0
         private void CalmMusicRadioButton_Click(object sender, EventArgs e)
         {
             if (CalmMusicRadioButton.Checked)
-            {          
-                RememberMusic();
+            {
+                SaveMusicStatusToSettings();
                 BackgroundMusic();
             }
 
@@ -332,7 +257,7 @@ namespace LearningPlanner_1._0._0
         {
             if (ClassicMusicRadioButton.Checked)
             {
-                RememberMusic();
+                SaveMusicStatusToSettings();
                 BackgroundMusic();
             }
         }
@@ -341,40 +266,22 @@ namespace LearningPlanner_1._0._0
         {
             if (RelaxMusicRadioButton.Checked)
             {
-            
-                RememberMusic();
+                SaveMusicStatusToSettings();
                 BackgroundMusic();
             }
         }
 
+        #endregion
 
 
 
+        #region FontMethods
 
 
-
-
-
-
-
-
-        private void ReportErrorButttom_Click(object sender, EventArgs e)
-        {
-            ReportErrorForm reportErrorForm = new ReportErrorForm();
-            reportErrorForm.Show();
-        }
-
-
-
-    
-
-
-        // Przechowywanie wybranego fonta
         string fontName;
 
-
-        // Ustawienie fonta po wybraniu radio buttona
-        public void SetFont()
+       
+        private void SetCheckedFont()
        {
             if (ArialBlackRadioButton.Checked)
             {
@@ -399,13 +306,11 @@ namespace LearningPlanner_1._0._0
                 fontName = "Verdana";               
             }
  
-
            
         }
 
-
-        // 1
-        public void RememberFont()
+       
+        public void SaveFontStatusToSettings()
         {
             Settings.Default.RememberFont = fontName;
             Settings.Default.ArialBlackFont = ArialBlackRadioButton.Checked;
@@ -418,7 +323,7 @@ namespace LearningPlanner_1._0._0
             Settings.Default.Save();
         }
 
-        public void GetSelectedFont()
+        public void SetFontFromSettings()
         {
             fontName = Settings.Default.RememberFont;
             ArialBlackRadioButton.Checked = Settings.Default.ArialBlackFont;
@@ -430,7 +335,72 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        // Zmiana czcionki w aplikacji
+        
+
+
+
+
+            private void ArialBlackRadioButton_Click(object sender, EventArgs e)
+            {
+                if (ArialBlackRadioButton.Checked)
+                {
+                    SetCheckedFont();
+                    SettingsFormChangeFont();
+                    SaveFontStatusToSettings();
+                }
+            }
+
+            private void CalibriRadioButton_Click(object sender, EventArgs e)
+            {
+                if (CalibriRadioButton.Checked)
+                {
+                    SetCheckedFont();
+                    SettingsFormChangeFont();
+                    SaveFontStatusToSettings();
+                }
+            }
+
+            private void CourierRadioButton_Click(object sender, EventArgs e)
+            {
+                if (CourierRadioButton.Checked)
+                {
+                    SetCheckedFont();
+                    SettingsFormChangeFont();
+                    SaveFontStatusToSettings();
+                }
+            }
+
+            private void TimesNewRomanRadioButton_Click(object sender, EventArgs e)
+            {
+                if (TimesNewRomanRadioButton.Checked)
+                {
+                    SetCheckedFont();
+                    SettingsFormChangeFont();
+                    SaveFontStatusToSettings();
+                }
+            }
+
+            private void VerdanaRadioButton_Click(object sender, EventArgs e)
+            {
+                if (VerdanaRadioButton.Checked)
+                {
+                    SetCheckedFont();
+                    SettingsFormChangeFont();
+                    SaveFontStatusToSettings();
+                }
+            }
+
+
+        private void BoldCheckBox_Click(object sender, EventArgs e)
+        {
+            if (BoldCheckBox.CheckState == CheckState.Checked)
+                SetCheckedFont();
+            SettingsFormChangeFont();
+            SaveFontStatusToSettings();
+        }
+
+
+
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
@@ -441,19 +411,15 @@ namespace LearningPlanner_1._0._0
         }
 
 
-       
-        
-
-        // SettingsForm
         public void SettingsFormChangeFont()
         {
 
             foreach (var lbl in GetAll(this, typeof(Label)))
             {
-                if(BoldCheckBox.CheckState==CheckState.Unchecked)
-                (lbl as Label).Font = new Font(fontName, 14);
-                if(BoldCheckBox.CheckState == CheckState.Checked)
-                    (lbl as Label).Font = new Font(fontName, 14,FontStyle.Bold);
+                if (BoldCheckBox.CheckState == CheckState.Unchecked)
+                    (lbl as Label).Font = new Font(fontName, 14);
+                if (BoldCheckBox.CheckState == CheckState.Checked)
+                    (lbl as Label).Font = new Font(fontName, 14, FontStyle.Bold);
             }
 
 
@@ -461,72 +427,17 @@ namespace LearningPlanner_1._0._0
             {
                 if (BoldCheckBox.CheckState == CheckState.Unchecked)
                     (btn as Button).Font = new Font(fontName, 10);
-               if (BoldCheckBox.CheckState == CheckState.Checked)
-                    (btn as Button).Font = new Font(fontName, 10,FontStyle.Bold);
+                if (BoldCheckBox.CheckState == CheckState.Checked)
+                    (btn as Button).Font = new Font(fontName, 10, FontStyle.Bold);
             }
-          
+
 
         }
 
-        private void ArialBlackRadioButton_Click(object sender, EventArgs e)
-        {
-            if (ArialBlackRadioButton.Checked)
-            {
-                SetFont();
-                SettingsFormChangeFont();
-                RememberFont();
-            }
-        }
 
-        private void CalibriRadioButton_Click(object sender, EventArgs e)
-        {
-            if (CalibriRadioButton.Checked)
-            {
-                SetFont();
-                SettingsFormChangeFont();
-                RememberFont();
-            }
-        }
 
-        private void CourierRadioButton_Click(object sender, EventArgs e)
-        {
-            if (CourierRadioButton.Checked)
-            {
-                SetFont();
-                SettingsFormChangeFont();
-                RememberFont();
-            }
-        }
 
-        private void TimesNewRomanRadioButton_Click(object sender, EventArgs e)
-        {
-            if (TimesNewRomanRadioButton.Checked)
-            {
-                SetFont();
-                SettingsFormChangeFont();
-                RememberFont();
-            }
-        }
-
-        private void VerdanaRadioButton_Click(object sender, EventArgs e)
-        {
-            if (VerdanaRadioButton.Checked)
-            {
-                SetFont();
-                SettingsFormChangeFont();
-                RememberFont();
-            }
-        }
-
-        private void BoldCheckBox_Click(object sender, EventArgs e)
-        {
-            if (BoldCheckBox.CheckState == CheckState.Checked)
-                SetFont();
-            SettingsFormChangeFont();
-            RememberFont();
-        }
-
-        public void DefaultFontSettings()
+        public void SetDefaultFontSettings()
         {
             foreach (var lbl in GetAll(this, typeof(Label)))
             {
@@ -534,8 +445,8 @@ namespace LearningPlanner_1._0._0
             }
 
             foreach (var btn in GetAll(this, typeof(Button)))
-            {            
-                    (btn as Button).Font = new Font("Century Gothic", 10);                              
+            {
+                (btn as Button).Font = new Font("Century Gothic", 10);
             }
 
             Settings.Default.RememberFont = "Century Gothic";
@@ -546,28 +457,41 @@ namespace LearningPlanner_1._0._0
             Settings.Default.VerdanaFont = VerdanaRadioButton.Checked = false;
             Settings.Default.BoldFont = BoldCheckBox.Checked = false;
 
+            foreach (var btn in GetAll(this, typeof(RadioButton)))
+            {
+                (btn as RadioButton).Checked = false;
 
-
+            }
+         
         }
 
+        #endregion
 
 
 
-        private void defaultColorButton_Click(object sender, EventArgs e)
+
+
+        private void RestoreDefaultButton_Click(object sender, EventArgs e)
         {
 
             RtrackBar.Value = 138;
             GtrackBar.Value = 197;
-            BtrackBar.Value = 222;           
-            ChangeBackColorSave();
-
-            DefaultFontSettings();
-            DefaultMusicSettings();
+            BtrackBar.Value = 222;
+            SaveBackColorChanges();
+            SetDefaultFontSettings();
+            SaveDefaultMusicStatusSettings();
             StopMusic(0);
             Settings.Default.Save();
 
-
-
         }
+
+        private void ReportErrorButton_Click(object sender, EventArgs e)
+        {
+            ReportErrorForm reportErrorForm = new ReportErrorForm();
+            reportErrorForm.Show();
+        }
+
+
+
     }
 }

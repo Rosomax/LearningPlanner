@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class SettingsForm
     {
@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.settingChangeColorLabel = new System.Windows.Forms.Label();
+            this.SettingsChangeColorLabel = new System.Windows.Forms.Label();
             this.ChangeColorTimer = new System.Windows.Forms.Timer(this.components);
-            this.defaultColorButton = new System.Windows.Forms.Button();
-            this.saveColorChangesButton = new System.Windows.Forms.Button();
+            this.DefaultColorButton = new System.Windows.Forms.Button();
+            this.SaveColorChangesButton = new System.Windows.Forms.Button();
             this.RtextBox = new System.Windows.Forms.TextBox();
             this.RtrackBar = new System.Windows.Forms.TrackBar();
             this.GtextBox = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.ReportErrorButttom = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ChangeFontLabel = new System.Windows.Forms.Label();
             this.AuthorsButton = new System.Windows.Forms.Button();
             this.VerdanaRadioButton = new System.Windows.Forms.RadioButton();
             this.CourierRadioButton = new System.Windows.Forms.RadioButton();
@@ -78,16 +78,16 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // settingChangeColorLabel
+            // SettingsChangeColorLabel
             // 
-            this.settingChangeColorLabel.AutoSize = true;
-            this.settingChangeColorLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingChangeColorLabel.ForeColor = System.Drawing.Color.Black;
-            this.settingChangeColorLabel.Location = new System.Drawing.Point(533, 9);
-            this.settingChangeColorLabel.Name = "settingChangeColorLabel";
-            this.settingChangeColorLabel.Size = new System.Drawing.Size(147, 23);
-            this.settingChangeColorLabel.TabIndex = 3;
-            this.settingChangeColorLabel.Text = "Zmiana koloru:";
+            this.SettingsChangeColorLabel.AutoSize = true;
+            this.SettingsChangeColorLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsChangeColorLabel.ForeColor = System.Drawing.Color.Black;
+            this.SettingsChangeColorLabel.Location = new System.Drawing.Point(533, 9);
+            this.SettingsChangeColorLabel.Name = "SettingsChangeColorLabel";
+            this.SettingsChangeColorLabel.Size = new System.Drawing.Size(147, 23);
+            this.SettingsChangeColorLabel.TabIndex = 3;
+            this.SettingsChangeColorLabel.Text = "Zmiana koloru:";
             // 
             // ChangeColorTimer
             // 
@@ -95,34 +95,34 @@
             this.ChangeColorTimer.Interval = 1;
             this.ChangeColorTimer.Tick += new System.EventHandler(this.ChangeColorTimer_Tick);
             // 
-            // defaultColorButton
+            // DefaultColorButton
             // 
-            this.defaultColorButton.BackColor = System.Drawing.Color.RosyBrown;
-            this.defaultColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.defaultColorButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.defaultColorButton.ForeColor = System.Drawing.Color.Black;
-            this.defaultColorButton.Location = new System.Drawing.Point(51, 382);
-            this.defaultColorButton.Name = "defaultColorButton";
-            this.defaultColorButton.Size = new System.Drawing.Size(136, 62);
-            this.defaultColorButton.TabIndex = 13;
-            this.defaultColorButton.Text = "Ustawienia domyślne";
-            this.defaultColorButton.UseVisualStyleBackColor = false;
-            this.defaultColorButton.Click += new System.EventHandler(this.defaultColorButton_Click);
+            this.DefaultColorButton.BackColor = System.Drawing.Color.RosyBrown;
+            this.DefaultColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DefaultColorButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DefaultColorButton.ForeColor = System.Drawing.Color.Black;
+            this.DefaultColorButton.Location = new System.Drawing.Point(51, 382);
+            this.DefaultColorButton.Name = "DefaultColorButton";
+            this.DefaultColorButton.Size = new System.Drawing.Size(136, 62);
+            this.DefaultColorButton.TabIndex = 13;
+            this.DefaultColorButton.Text = "Ustawienia domyślne";
+            this.DefaultColorButton.UseVisualStyleBackColor = false;
+            this.DefaultColorButton.Click += new System.EventHandler(this.RestoreDefaultButton_Click);
             // 
-            // saveColorChangesButton
+            // SaveColorChangesButton
             // 
-            this.saveColorChangesButton.BackColor = System.Drawing.Color.RosyBrown;
-            this.saveColorChangesButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveColorChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveColorChangesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.saveColorChangesButton.ForeColor = System.Drawing.Color.Black;
-            this.saveColorChangesButton.Location = new System.Drawing.Point(504, 191);
-            this.saveColorChangesButton.Name = "saveColorChangesButton";
-            this.saveColorChangesButton.Size = new System.Drawing.Size(191, 46);
-            this.saveColorChangesButton.TabIndex = 14;
-            this.saveColorChangesButton.Text = "Zapisz";
-            this.saveColorChangesButton.UseVisualStyleBackColor = false;
-            this.saveColorChangesButton.Click += new System.EventHandler(this.saveColorChangesButton_Click);
+            this.SaveColorChangesButton.BackColor = System.Drawing.Color.RosyBrown;
+            this.SaveColorChangesButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.SaveColorChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveColorChangesButton.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.SaveColorChangesButton.ForeColor = System.Drawing.Color.Black;
+            this.SaveColorChangesButton.Location = new System.Drawing.Point(504, 191);
+            this.SaveColorChangesButton.Name = "SaveColorChangesButton";
+            this.SaveColorChangesButton.Size = new System.Drawing.Size(191, 46);
+            this.SaveColorChangesButton.TabIndex = 14;
+            this.SaveColorChangesButton.Text = "Zapisz";
+            this.SaveColorChangesButton.UseVisualStyleBackColor = false;
+            this.SaveColorChangesButton.Click += new System.EventHandler(this.SaveColorChangesButton_Click);
             // 
             // RtextBox
             // 
@@ -258,7 +258,7 @@
             this.ReportErrorButttom.TabIndex = 19;
             this.ReportErrorButttom.Text = "Zgłoś błąd";
             this.ReportErrorButttom.UseVisualStyleBackColor = false;
-            this.ReportErrorButttom.Click += new System.EventHandler(this.ReportErrorButttom_Click);
+            this.ReportErrorButttom.Click += new System.EventHandler(this.ReportErrorButton_Click);
             // 
             // panel3
             // 
@@ -269,16 +269,16 @@
             this.panel3.Size = new System.Drawing.Size(3, 540);
             this.panel3.TabIndex = 16;
             // 
-            // label1
+            // ChangeFontLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(31, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 23);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Zmiana czcionki:";
+            this.ChangeFontLabel.AutoSize = true;
+            this.ChangeFontLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangeFontLabel.ForeColor = System.Drawing.Color.Black;
+            this.ChangeFontLabel.Location = new System.Drawing.Point(31, 10);
+            this.ChangeFontLabel.Name = "ChangeFontLabel";
+            this.ChangeFontLabel.Size = new System.Drawing.Size(167, 23);
+            this.ChangeFontLabel.TabIndex = 23;
+            this.ChangeFontLabel.Text = "Zmiana czcionki:";
             // 
             // AuthorsButton
             // 
@@ -449,7 +449,7 @@
             // ChangeFontPanel
             // 
             this.ChangeFontPanel.Controls.Add(this.BoldCheckBox);
-            this.ChangeFontPanel.Controls.Add(this.label1);
+            this.ChangeFontPanel.Controls.Add(this.ChangeFontLabel);
             this.ChangeFontPanel.Controls.Add(this.VerdanaRadioButton);
             this.ChangeFontPanel.Controls.Add(this.CalibriRadioButton);
             this.ChangeFontPanel.Controls.Add(this.TimesNewRomanRadioButton);
@@ -488,12 +488,12 @@
             this.Controls.Add(this.BLabel);
             this.Controls.Add(this.GLabel);
             this.Controls.Add(this.RLabel);
-            this.Controls.Add(this.saveColorChangesButton);
-            this.Controls.Add(this.defaultColorButton);
+            this.Controls.Add(this.SaveColorChangesButton);
+            this.Controls.Add(this.DefaultColorButton);
             this.Controls.Add(this.BtextBox);
             this.Controls.Add(this.BtrackBar);
             this.Controls.Add(this.GtextBox);
-            this.Controls.Add(this.settingChangeColorLabel);
+            this.Controls.Add(this.SettingsChangeColorLabel);
             this.Controls.Add(this.RtextBox);
             this.Controls.Add(this.RtrackBar);
             this.Controls.Add(this.GtrackBar);
@@ -520,10 +520,10 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label settingChangeColorLabel;
+        private System.Windows.Forms.Label SettingsChangeColorLabel;
         private System.Windows.Forms.Timer ChangeColorTimer;
-        private System.Windows.Forms.Button defaultColorButton;
-        private System.Windows.Forms.Button saveColorChangesButton;
+        private System.Windows.Forms.Button DefaultColorButton;
+        private System.Windows.Forms.Button SaveColorChangesButton;
         private System.Windows.Forms.TextBox RtextBox;
         private System.Windows.Forms.TrackBar RtrackBar;
         private System.Windows.Forms.TextBox GtextBox;
@@ -539,7 +539,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button ReportErrorButttom;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ChangeFontLabel;
         private System.Windows.Forms.Button AuthorsButton;
         private System.Windows.Forms.RadioButton VerdanaRadioButton;
         private System.Windows.Forms.RadioButton CourierRadioButton;

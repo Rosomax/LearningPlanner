@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
-using System.Windows.Forms;
-namespace LearningPlanner_1._0._0
+﻿using System.Drawing;
+
+namespace LearningPlanner
 {
     class Responsiveness
     {
@@ -42,8 +37,8 @@ namespace LearningPlanner_1._0._0
                 new Point(x.TaskNameTextBox.Location.X, x.DeleteButton.Location.Y + x.DeleteButton.Size.Height + 20);
 
             // Lokalizacja oraz rozmiar datagrida
-            x.TaskDataGridView1.Location = new Point(widthSize - x.TaskNameTextBox.Size.Width - 120, 0);
-            x.TaskDataGridView1.Size = new Size((int)controlWidthSize * 2 - 120, heightSize);
+            x.TaskDataGridView.Location = new Point(widthSize - x.TaskNameTextBox.Size.Width - 120, 0);
+            x.TaskDataGridView.Size = new Size((int)controlWidthSize * 2 - 120, heightSize);
 
         }
 
@@ -116,14 +111,14 @@ namespace LearningPlanner_1._0._0
             int findPictureBoxWidthSize = (int)(widthSize / 3.33);
             int findPictureHeightSize = (int)(heightSize / 2.58);
             // Ustawienie rozmairu dla wszystkich kontrolek
-            x.FIndTaskLabel.Size = new Size(findTasklabelWidthSize, findTasklabelHeightSize);
+            x.FindTaskLabel.Size = new Size(findTasklabelWidthSize, findTasklabelHeightSize);
             x.FindTaskTextBox.Size = new Size(textBoxWidthSize, findTaskTextBoxHeightSize);
-            x.filtrLabel.Size = new Size(filtrLabelWidthSize, filtrLabelsHeightSize);
-            x.filterComboBox.Size = new Size(textBoxWidthSize, filterComboBoxHeightSize);
-            x.filterFromLabel.Size = new Size(filterFromLabelWidthSize, filtrLabelsHeightSize);
-            x.filterFrom.Size = new Size(textBoxWidthSize, filterFromHightSize);
-            x.filterToLabel.Size = new Size(filterFromLabelWidthSize, filtrLabelsHeightSize);
-            x.filterTo.Size = new Size(textBoxWidthSize, filterFromHightSize);
+            x.FilterLabel.Size = new Size(filtrLabelWidthSize, filtrLabelsHeightSize);
+            x.FilterComboBox.Size = new Size(textBoxWidthSize, filterComboBoxHeightSize);
+            x.FilterFromLabel.Size = new Size(filterFromLabelWidthSize, filtrLabelsHeightSize);
+            x.FilterFrom.Size = new Size(textBoxWidthSize, filterFromHightSize);
+            x.FilterToLabel.Size = new Size(filterFromLabelWidthSize, filtrLabelsHeightSize);
+            x.FilterTo.Size = new Size(textBoxWidthSize, filterFromHightSize);
             x.findPictureBox.Size = new Size(findPictureBoxWidthSize, findPictureHeightSize);
             x.FindTaskDataGrid.Size = new Size(findTaskDataGridWidth, findTaskDataGridHeight);
             // zmienne przechowujace skalowanie dla wlasciowsci location kontrolek
@@ -134,29 +129,29 @@ namespace LearningPlanner_1._0._0
             int findPictureBoxLocationWidth = (int)(widthSize / 9.6);
             int findPictureBoxLocationHeight = (int)(heightSize / 1.96);
             // Ustawienie lokalizacji dla wszystkich kontrolek
-            x.FIndTaskLabel.Location = new Point(controlWidthLocation, findTaskLabelLocationHeight);
+            x.FindTaskLabel.Location = new Point(controlWidthLocation, findTaskLabelLocationHeight);
             x.FindTaskTextBox.Location = new Point(controlWidthLocation, findTaskTextBoxLocationHeight);
-            x.filtrLabel.Location = new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne);
-            x.filterComboBox.Location =
+            x.FilterLabel.Location = new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne);
+            x.FilterComboBox.Location =
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne + moveDownTwo);
-            x.filterFromLabel.Location =
+            x.FilterFromLabel.Location =
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne * 2 + moveDownTwo);
-            x.filterFrom.Location =
+            x.FilterFrom.Location =
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne * 2 + moveDownTwo * 2);
-            x.filterToLabel.Location =
+            x.FilterToLabel.Location =
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne * 3 + moveDownTwo * 2);
-            x.filterTo.Location =
+            x.FilterTo.Location =
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne * 3 + moveDownTwo * 3);
             x.findPictureBox.Location = new Point(findPictureBoxLocationWidth, findPictureBoxLocationHeight);
             // Ustawienie czcionek dla wszystkich kontrolek
-            x.FIndTaskLabel.Font = new Font(fontName, labelFontSize);
+            x.FindTaskLabel.Font = new Font(fontName, labelFontSize);
             x.FindTaskTextBox.Font = new Font(fontName, textBoxFontSize);
-            x.filtrLabel.Font = new Font(fontName, labelFontSize);
-            x.filterComboBox.Font = new Font(fontName, textBoxFontSize);
-            x.filterFromLabel.Font = new Font(fontName, labelFontSize);
-            x.filterFrom.Font = new Font(fontName, textBoxFontSize);
-            x.filterToLabel.Font = new Font(fontName, labelFontSize);
-            x.filterTo.Font = new Font(fontName, textBoxFontSize);
+            x.FilterLabel.Font = new Font(fontName, labelFontSize);
+            x.FilterComboBox.Font = new Font(fontName, textBoxFontSize);
+            x.FilterFromLabel.Font = new Font(fontName, labelFontSize);
+            x.FilterFrom.Font = new Font(fontName, textBoxFontSize);
+            x.FilterToLabel.Font = new Font(fontName, labelFontSize);
+            x.FilterTo.Font = new Font(fontName, textBoxFontSize);
         }
 
 

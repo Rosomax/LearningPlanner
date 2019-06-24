@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     public partial class CompletedTaskControl2 : UserControl
     {

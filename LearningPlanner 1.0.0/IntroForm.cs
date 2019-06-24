@@ -4,18 +4,18 @@ using System.Windows.Forms;
 using System.IO;
 using Timer = System.Windows.Forms.Timer;
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
-    public partial class IntroForm1 : Form
+    public partial class IntroForm : Form
     {
-        public IntroForm1()
+        public IntroForm()
         {
             InitializeComponent();
            
             CreateTimer();
         }
 
-        private void Statistics()
+        private void SystemLog()
         {
             var dateStart = DateTime.Now.ToString();
             var netBIOS = System.Environment.MachineName.ToString();
@@ -42,13 +42,13 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void OkButton_Click(object sender, EventArgs e)
         {
        
-            Thread t = new Thread(new ThreadStart(Statistics));
+            Thread t = new Thread(new ThreadStart(SystemLog));
             t.Start();
 
-            this.Close();           
+            Close();           
         }
 
        private void CreateTimer()
@@ -58,14 +58,14 @@ namespace LearningPlanner_1._0._0
                 Interval = 500
             };
             t1.Tick += T1_Tick;
-            this.Invalidate();
+            Invalidate();
             t1.Start();
         }
 
         private void T1_Tick(object sender, EventArgs e)
         {
-            button1.Visible = true;
-            this.Invalidate();
+            OkButton.Visible = true;
+            Invalidate();
             
         }
     }

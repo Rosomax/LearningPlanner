@@ -2,9 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-using LearningPlanner_1._0._0.Properties;
-using System.Collections.Generic;
-namespace LearningPlanner_1._0._0
+using LearningPlanner.Properties;
+
+namespace LearningPlanner
 {
     public partial class MainForm : Form
     {
@@ -14,43 +14,48 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        #region metodyObslugiMyszy
-        // Mouse methods 
-        public void MouseEnterMechanics(Control control)
+        #region EventsForTopPanelIcons
+        private void MinimalizePictureBox_Click(object sender, EventArgs e)
         {
-            control.BackColor = Color.FromArgb(178, 8, 55);
-            control.ForeColor = Color.Black;
-            control.Cursor = new Cursor("Resources\\Hand-kursor.cur");
+            this.WindowState = FormWindowState.Minimized;
         }
-
-        public void MouseLeaveMechanics(Control control)
+        private void MaximilaziPictureBox_Click(object sender, EventArgs e)
         {
-            control.BackColor = Color.Transparent;
-            control.ForeColor = Color.White;
+
+
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+                MaximalizePictureBox.Load("WindowIcons\\maximize-window.png");
+
+            }
+            else if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+
+                MaximalizePictureBox.Load("WindowIcons\\restore-window.png");
+            }
+
+
+
+
         }
-
-        #endregion
-
-        #region obsluga ikon na gornym pasku
         private void ClosePictureBox_Click(object sender, EventArgs e)
         {
-
             Close();
-
         }
-        private void PictureBox2_Click(object sender, EventArgs e)
+        private void HomePictureBox_Click(object sender, EventArgs e)
         {
             foreach (Form c in MdiChildren)
             {
                 c.Close();
             }
         }
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-            //AboutLearningPlanner aboutLearningPlanner = new AboutLearningPlanner();
-            //aboutLearningPlanner.Show();
-        }
+
+
+
         #endregion
+
         #region PanelMove
 
         private bool mouseDown;
@@ -81,15 +86,14 @@ namespace LearningPlanner_1._0._0
         #endregion
 
 
-
-        #region Zaznaczenie aktywnej kontrolki (z lewego  paska)
+        #region ActiveControlChecked
 
 
         private void TaskControl11_MouseClick(object sender, MouseEventArgs e)
         {
             ResetColor();
             leftActiveControl1.SetBackColorMethod(leftActiveControl1);
-            taskControl11.OpenFormTask();
+            TaskControl.OpenFormTask();
         }
 
         private void CompletedTasksControl21_MouseClick(object sender, MouseEventArgs e)
@@ -97,7 +101,7 @@ namespace LearningPlanner_1._0._0
 
             ResetColor();
             leftActiveControl2.SetBackColorMethod(leftActiveControl2);
-            completedTaskControl21.OpenFormCompletedTask();
+            CompletedTaskControl.OpenFormCompletedTask();
 
         }
         private void CategoryControl31_MouseClick(object sender, MouseEventArgs e)
@@ -105,7 +109,7 @@ namespace LearningPlanner_1._0._0
 
             ResetColor();
             leftActiveControl3.SetBackColorMethod(leftActiveControl3);
-            categoryControl31.OpenFormCategory();
+            CategoryControl.OpenFormCategory();
 
         }
         private void FindTaskControl41_MouseClick(object sender, MouseEventArgs e)
@@ -113,21 +117,21 @@ namespace LearningPlanner_1._0._0
 
             ResetColor();
             leftActiveControl4.SetBackColorMethod(leftActiveControl4);
-            findTaskControl41.OpenFormFindTask();
+            FindTaskControl.OpenFormFindTask();
         }
         private void ITNewsControl51_MouseClick(object sender, MouseEventArgs e)
         {
 
             ResetColor();
             leftActiveControl5.SetBackColorMethod(leftActiveControl5);
-            itnewsControl51.OpenFormITNews();
+            ITNewsControl.OpenFormITNews();
         }
         private void SettingsControl61_MouseClick(object sender, MouseEventArgs e)
         {
 
             ResetColor();
             leftActiveControl6.SetBackColorMethod(leftActiveControl6);
-            settingsControl61.OpenFormSettings();
+            SettingsControl.OpenFormSettings();
         }
         // Metoda do resetu koloru
         private void ResetColor()
@@ -141,129 +145,95 @@ namespace LearningPlanner_1._0._0
         }
         #endregion
 
-        #region Obsluga wejscia i wyjscia myszy na kontrolki - zdarzenia
+        #region ChangeActiveControlView
+
+        public void MouseEnterMechanics(Control control)
+        {
+            control.BackColor = Color.FromArgb(178, 8, 55);
+            control.ForeColor = Color.Black;
+            control.Cursor = new Cursor("Resources\\Hand-kursor.cur");
+        }
+
+        public void MouseLeaveMechanics(Control control)
+        {
+            control.BackColor = Color.Transparent;
+            control.ForeColor = Color.White;
+        }
+
+
         private void TaskControl11_MouseEnter_1(object sender, EventArgs e)
         {
-            MouseEnterMechanics(taskControl11);
+            MouseEnterMechanics(TaskControl);
         }
 
         private void TaskControl11_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeaveMechanics(taskControl11);
+            MouseLeaveMechanics(TaskControl);
         }
 
         private void CompletedTaskControl21_MouseEnter(object sender, EventArgs e)
         {
-            MouseEnterMechanics(completedTaskControl21);
+            MouseEnterMechanics(CompletedTaskControl);
 
         }
 
         private void CompletedTaskControl21_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeaveMechanics(completedTaskControl21);
+            MouseLeaveMechanics(CompletedTaskControl);
         }
         private void CategoryControl31_MouseEnter(object sender, EventArgs e)
         {
-            MouseEnterMechanics(categoryControl31);
+            MouseEnterMechanics(CategoryControl);
         }
 
         private void CategoryControl31_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeaveMechanics(categoryControl31);
+            MouseLeaveMechanics(CategoryControl);
         }
         private void FindTaskControl41_MouseEnter(object sender, EventArgs e)
         {
-            MouseEnterMechanics(findTaskControl41);
+            MouseEnterMechanics(FindTaskControl);
         }
         private void FindTaskControl41_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeaveMechanics(findTaskControl41);
+            MouseLeaveMechanics(FindTaskControl);
         }
         private void ITNewsControl51_MouseEnter(object sender, EventArgs e)
         {
-            MouseEnterMechanics(itnewsControl51);
+            MouseEnterMechanics(ITNewsControl);
         }
 
         private void ITNewsControl51_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeaveMechanics(itnewsControl51);
+            MouseLeaveMechanics(ITNewsControl);
         }
 
         private void SettingsControl61_MouseEnter(object sender, EventArgs e)
         {
-            MouseEnterMechanics(settingsControl61);
+            MouseEnterMechanics(SettingsControl);
         }
         private void SettingsControl61_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeaveMechanics(settingsControl61);
+            MouseLeaveMechanics(SettingsControl);
         }
 
 
         #endregion
 
-        private void MaximilaziPictureBox_Click(object sender, EventArgs e)
-        {
-            //this.WindowState = 2 - this.WindowState;
-
-            if (WindowState == FormWindowState.Maximized)
-            {
-                WindowState = FormWindowState.Normal;
-                maximilaziPictureBox.Load("WariantyOkna\\maximize-window.png");
-
-            }
-            else if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-
-                maximilaziPictureBox.Load("WariantyOkna\\restore-window.png");
-            }
 
 
 
+        #region LoginToApplication
 
-        }
-
-        private void MinimalizePictureBox_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        // Zmiana widocznosci wpisywanego hasla
-        private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            PasswordtextBox1.UseSystemPasswordChar = !ShowPasswordCheckBox.Checked;
-        }
-
-
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            DataBaseLogging();
-            SettingsForm sf = new SettingsForm();
-
-
-            if ((Settings.Default.Music) && (Settings.Default.CalmMusic == true ||
-                Settings.Default.ClassicMusic == true || Settings.Default.RelaxMusic == true))
-                sf.BackgroundMusic();
-        }
-
-
-
-
-
-
-
-        // Id zalogowanego uzytkownika
         public static int UserID { get; private set; }
-
 
         private void DataBaseLogging()
         {
 
             var login = LogintextBox1.Text;
-            var password = PasswordtextBox1.Text;
+            var password = PasswordTextBox.Text;
 
-            using (EntitiesModel2 x = new EntitiesModel2())
+            using (EntitiesModel x = new EntitiesModel())
             {
 
                 var user = x.Uzytkownicy.FirstOrDefault(e => e.Login == login);
@@ -291,42 +261,37 @@ namespace LearningPlanner_1._0._0
 
         }
 
-        private void RememberCredentials()
-        {
-            if (RememberMeCheckBox.Checked)
-                Settings.Default.Login = LogintextBox1.Text;
-            Settings.Default.Password = PasswordtextBox1.Text;
-            Settings.Default.Save();
-
-
-        }
-        private void SetCredentials()
-        {
-
-            LogintextBox1.Text = Settings.Default.Login;
-            PasswordtextBox1.Text = Settings.Default.Password;
-        }
 
 
         private void ShowLeftMenu()
         {
 
-            categoryControl31.Enabled = true;
-            completedTaskControl21.Enabled = true;
-            findTaskControl41.Enabled = true;
-            itnewsControl51.Enabled = true;
-            settingsControl61.Enabled = true;
-            taskControl11.Enabled = true;
-            maximilaziPictureBox.Enabled = true;
+            CategoryControl.Enabled = true;
+            CompletedTaskControl.Enabled = true;
+            FindTaskControl.Enabled = true;
+            ITNewsControl.Enabled = true;
+            SettingsControl.Enabled = true;
+            TaskControl.Enabled = true;
+            MaximalizePictureBox.Enabled = true;
         }
 
-        private void RegisterLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            RegisterForm rf = new RegisterForm();
-            rf.Show();
-
-
+            PasswordTextBox.UseSystemPasswordChar = !ShowPasswordCheckBox.Checked;
         }
+
+
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            DataBaseLogging();
+            SettingsForm sf = new SettingsForm();
+
+            if ((Settings.Default.Music) && (Settings.Default.CalmMusic == true ||
+                Settings.Default.ClassicMusic == true || Settings.Default.RelaxMusic == true))
+                sf.BackgroundMusic();
+        }
+
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
@@ -338,10 +303,40 @@ namespace LearningPlanner_1._0._0
                 this.Close();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+
+        private void RememberCredentials()
         {
-            SetCredentials();
-            
+            if (RememberMeCheckBox.Checked)
+                Settings.Default.Login = LogintextBox1.Text;
+            Settings.Default.Password = PasswordTextBox.Text;
+            Settings.Default.Save();
+
+
+        }
+        private void SetCredentials()
+        {
+
+            LogintextBox1.Text = Settings.Default.Login;
+            PasswordTextBox.Text = Settings.Default.Password;
+        }
+
+
+
+        #endregion
+
+
+
+       private void RegisterLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterForm rf = new RegisterForm();
+            rf.Show();
+        }
+
+       
+
+       private void MainForm_Load(object sender, EventArgs e)
+        {
+            SetCredentials();        
         }
 
        

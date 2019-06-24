@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     using System;
     using System.Collections.Generic;

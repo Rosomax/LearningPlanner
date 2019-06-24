@@ -2,11 +2,11 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-using LearningPlanner_1._0._0.Properties;
+using LearningPlanner.Properties;
 using System.Text;
 using System.IO;
 using System.Collections.Generic;
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     public partial class CompletedTasksForm : Form
     {
@@ -14,16 +14,10 @@ namespace LearningPlanner_1._0._0
         {
             InitializeComponent();
         }
+       
+        private readonly int IDUser = MainForm.UserID;
 
-        EntitiesModel2 model2 = new EntitiesModel2();
-
-        private int IDUser = MainForm.UserID;
-
-
-
-
-
-
+        EntitiesModel model = new EntitiesModel();
 
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {
@@ -34,7 +28,7 @@ namespace LearningPlanner_1._0._0
 
 
 
-            CompletedTaskDataGridView1.DataSource = model2.Zadania.Select(o => new
+            CompletedTaskDataGridView1.DataSource = model.Zadania.Select(o => new
             {
                 o.IDZadania,
                 o.Nazwa,
@@ -56,13 +50,12 @@ namespace LearningPlanner_1._0._0
 
 
         }
-        public DataGridViewRow SelectedRow { get; private set; }
+       
 
 
-
-        public void RefreshGrid()
+        public void FillGrid()
         {
-            CompletedTaskDataGridView1.DataSource = model2.Zadania.Select(o => new
+            CompletedTaskDataGridView1.DataSource = model.Zadania.Select(o => new
             {
                 o.IDZadania,
                 o.Nazwa,
@@ -77,7 +70,8 @@ namespace LearningPlanner_1._0._0
 
 
 
-        public static int Id { get; set; }
+        public static int Id { get; private set; }
+        public DataGridViewRow SelectedRow { get; private set; }
 
         private void CompletedTaskDataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -99,9 +93,9 @@ namespace LearningPlanner_1._0._0
                 TaskInfoForm frm = new TaskInfoForm();
 
                 frm.SetDoubleClickInfo(name, category, description, creationDate);
-                frm.HideButton();
+                frm.HideFinishTaskButton();
 
-                frm.statusInfoLbl1.Text = "Zakończono";
+                frm.StatusInfoLabel1.Text = "Zakończono";
 
                 frm.LoadOrders(this);
                 frm.Show();
@@ -112,13 +106,13 @@ namespace LearningPlanner_1._0._0
 
         }
 
-         StringBuilder sb = new StringBuilder();
+
+        #region ExportToCSV
+        StringBuilder sb = new StringBuilder();
 
         private void CSVExport()
         {
-
-            // Przechowanie kolumn 
-
+          
             CompletedTaskDataGridView1.Columns.Remove("IDUzytkownika");
             CompletedTaskDataGridView1.Columns.Remove("IDZadania");
             CompletedTaskDataGridView1.Columns.Remove("CzyZakonczone");
@@ -130,7 +124,6 @@ namespace LearningPlanner_1._0._0
 
             foreach (DataGridViewRow row in CompletedTaskDataGridView1.Rows)
             {
-
                 var cells = row.Cells.Cast<DataGridViewCell>();
                 sb.AppendLine(string.Join(",", cells.Select(cell => cell.Value).ToArray()));
             }
@@ -167,10 +160,12 @@ namespace LearningPlanner_1._0._0
         {
             CSVExport();
             CSVExportFileDialog();
-
         }
 
+        #endregion
 
+
+        #region ChangeFontFromSettings
 
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
@@ -182,28 +177,30 @@ namespace LearningPlanner_1._0._0
         }
 
 
+
         public void CompletedTaskFormChangeFont()
         {
-
+            string font = Settings.Default.RememberFont;
+            bool boldFont = Settings.Default.BoldFont;
 
             foreach (var btn in GetAll(this, typeof(Button)))
             {
-                if (Settings.Default.BoldFont)
-                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 10, FontStyle.Bold);
+                if (boldFont)
+                    (btn as Button).Font = new Font(font, 10, FontStyle.Bold);
                 else
-                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 10);
+                    (btn as Button).Font = new Font(font, 10);
             }
 
             foreach (var grid in GetAll(this, typeof(DataGridView)))
             {
-                if (Settings.Default.BoldFont)
-                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
+                if (boldFont)
+                    (grid as DataGridView).Font = new Font(font, 12, FontStyle.Bold);
                 else
-                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 12);
+                    (grid as DataGridView).Font = new Font(font, 12);
             }
 
         }
 
-
+        #endregion
     }
 }

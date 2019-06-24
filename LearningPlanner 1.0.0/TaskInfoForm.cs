@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using System.Linq;
 
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     public partial class TaskInfoForm : Form
     {
@@ -12,24 +12,21 @@ namespace LearningPlanner_1._0._0
         {
             InitializeComponent();         
         }
-
       
         public void SetDoubleClickInfo(string nazw, string kat, string opis, DateTime dataUtw)
         {          
-            nameInfoLbl1.Text = nazw;
-            categoryInfoLbl1.Text = kat;
-            descriptionInfoRichTextBox.Text = opis;
-            creationDateInfoLbl1.Text = dataUtw.ToString();
+            NameInfoLabel1.Text = nazw;
+            CategoryInfoLabel1.Text = kat;
+            DescriptionInfoRichTextBox.Text = opis;
+            CreatedInfoLabel1.Text = dataUtw.ToString();
         }
 
         private void TaskInfoForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(138, 197, 222);
-            this.MinimizeBox = false;
-            this.MaximizeBox = false;
+            BackColor = Color.FromArgb(138, 197, 222);
+            MinimizeBox = false;
+            MaximizeBox = false;
             middlePanelInfo.BackColor = Color.FromArgb(178, 8, 55);
-
-
 
         }
 
@@ -47,41 +44,42 @@ namespace LearningPlanner_1._0._0
             return currentForm2;
         }
 
-        public string GetFinishData { get; set; }
+        public string GetFinishData { get; private set; }
 
         private void FinishTask_Click(object sender, EventArgs e)
         {
           if  (MessageBox.Show("Czy napewno chcesz zakończyć to zadanie?","Koniec zadania", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                var y = TaskForm.Id;
+                var selectedRowId = TaskForm.Id;
             
-                using (EntitiesModel2 mod = new EntitiesModel2())
+                using (EntitiesModel mod = new EntitiesModel())
                 {
-                    var x = mod.Zadania.Single(z => z.IDZadania == y);
-                    x.CzyZakonczone = true;
+                    var selectedTask = mod.Zadania.Single(z => z.IDZadania == selectedRowId);
+                    selectedTask.CzyZakonczone = true;
                     mod.SaveChanges();
                  
                 }
+
                 GetFinishData = DateTime.Now.ToString();
 
-                currentForm.RefreshGrid();
-                this.Close();
+                currentForm.FillGrid();
+                Close();
             }
          
                
 
         }
         
-        public void HideButton()
+        public void HideFinishTaskButton()
         {
-            FinishTask.Hide();
-            EditTask.Show();
+            FinishTaskButton.Hide();
+            EditTaskButton.Show();
         }
 
         public void HideAllButtons()
         {
-            FinishTask.Hide();
-            EditTask.Hide();
+            FinishTaskButton.Hide();
+            EditTaskButton.Hide();
         }
 
 
@@ -89,35 +87,34 @@ namespace LearningPlanner_1._0._0
         {
 
 
-            descriptionInfoRichTextBox.ReadOnly = false;
-            using (EntitiesModel2 mod = new EntitiesModel2())
+            DescriptionInfoRichTextBox.ReadOnly = false;
+            using (EntitiesModel mod = new EntitiesModel())
             {
-                descriptionInfoRichTextBox.TextChanged += DescriptionInfoRichTextBox_TextChanged;
-                var x = descriptionInfoRichTextBox.Text;
-              var y = mod.Zadania.Single(u => u.IDZadania == CompletedTasksForm.Id);
-                y.Opis = descriptionInfoRichTextBox.Text;
+                DescriptionInfoRichTextBox.TextChanged += DescriptionInfoRichTextBox_TextChanged;
 
-                
+                var selectedRowId = mod.Zadania.Single(u => u.IDZadania == CompletedTasksForm.Id);
+                selectedRowId.Opis = DescriptionInfoRichTextBox.Text;
+              
                 mod.SaveChanges();
                 
             }
-            EditTask.Click += EditTask_Click1;
+            EditTaskButton.Click += EditTask_Click1;
             this.Text = ("Szczególy zadania [Tryb edytowania]");
         }
 
         private void EditTask_Click1(object sender, EventArgs e)
         {
-            descriptionInfoRichTextBox.ReadOnly = true;                      
+            DescriptionInfoRichTextBox.ReadOnly = true;                      
             MessageBox.Show("Zaktualizowano opis");
-            EditTask.Click -= EditTask_Click1;
-            EditTask.Text = "Edytuj";
-            this.Text = ("Szczególy zadania");
-            currentForm2.RefreshGrid();
+            EditTaskButton.Click -= EditTask_Click1;
+            EditTaskButton.Text = "Edytuj";
+            Text = ("Szczególy zadania");
+            currentForm2.FillGrid();
         }
 
         private void DescriptionInfoRichTextBox_TextChanged(object sender, EventArgs e)
         {
-            EditTask.Text = "Zapisz";
+            EditTaskButton.Text = "Zapisz";
         }
     }
 }

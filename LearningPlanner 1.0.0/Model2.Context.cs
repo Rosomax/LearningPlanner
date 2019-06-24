@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EntitiesModel2 : DbContext
+    public partial class EntitiesModel : DbContext
     {
-        public EntitiesModel2()
+        public EntitiesModel()
             : base("name=EntitiesModel2")
         {
         }

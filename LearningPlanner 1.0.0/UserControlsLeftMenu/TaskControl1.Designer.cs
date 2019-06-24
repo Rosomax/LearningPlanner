@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class TaskControl1
     {
@@ -36,7 +36,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.Zadanie_icon;
+            this.pictureBox1.Image = global::LearningPlanner.Properties.Resources.Zadanie_icon;
             this.pictureBox1.Location = new System.Drawing.Point(5, 37);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.pictureBox1.Name = "pictureBox1";

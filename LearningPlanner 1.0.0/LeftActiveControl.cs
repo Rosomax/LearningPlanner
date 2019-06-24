@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace LearningPlanner_1._0._0
-{    
+namespace LearningPlanner
+{
 
     public partial class LeftActiveControl : UserControl
     {

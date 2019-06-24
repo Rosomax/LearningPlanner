@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class TaskForm
     {
@@ -38,11 +38,11 @@
             this.OpisLabel = new System.Windows.Forms.Label();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.TaskDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TaskDataGridView = new System.Windows.Forms.DataGridView();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // TaskNameTextBox
@@ -128,15 +128,15 @@
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // TaskDataGridView1
+            // TaskDataGridView
             // 
-            this.TaskDataGridView1.AllowUserToResizeColumns = false;
-            this.TaskDataGridView1.AllowUserToResizeRows = false;
-            this.TaskDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TaskDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.TaskDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TaskDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.TaskDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.TaskDataGridView.AllowUserToResizeColumns = false;
+            this.TaskDataGridView.AllowUserToResizeRows = false;
+            this.TaskDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TaskDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.TaskDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TaskDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.TaskDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.75F, System.Drawing.FontStyle.Bold);
@@ -144,9 +144,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.TaskDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TaskDataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.TaskDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TaskDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,21 +154,21 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TaskDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TaskDataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.TaskDataGridView1.EnableHeadersVisualStyles = false;
-            this.TaskDataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.TaskDataGridView1.Location = new System.Drawing.Point(406, 0);
-            this.TaskDataGridView1.Name = "TaskDataGridView1";
-            this.TaskDataGridView1.RowHeadersVisible = false;
+            this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TaskDataGridView.Dock = System.Windows.Forms.DockStyle.Right;
+            this.TaskDataGridView.EnableHeadersVisualStyles = false;
+            this.TaskDataGridView.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.TaskDataGridView.Location = new System.Drawing.Point(406, 0);
+            this.TaskDataGridView.Name = "TaskDataGridView";
+            this.TaskDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.TaskDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.TaskDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TaskDataGridView1.Size = new System.Drawing.Size(344, 500);
-            this.TaskDataGridView1.TabIndex = 7;
-            this.TaskDataGridView1.Click += new System.EventHandler(this.TaskDataGridView1_Click);
-            this.TaskDataGridView1.DoubleClick += new System.EventHandler(this.TaskDataGridView1_DoubleClick);
+            this.TaskDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.TaskDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TaskDataGridView.Size = new System.Drawing.Size(344, 500);
+            this.TaskDataGridView.TabIndex = 7;
+            this.TaskDataGridView.Click += new System.EventHandler(this.TaskDataGridView_Click);
+            this.TaskDataGridView.DoubleClick += new System.EventHandler(this.TaskDataGridView_DoubleClick);
             // 
             // DeleteButton
             // 
@@ -198,11 +198,11 @@
             // 
             // errorLabel
             // 
-            this.errorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.errorLabel.AutoSize = true;
+            this.errorLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(-2, 480);
+            this.errorLabel.Location = new System.Drawing.Point(0, 476);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(40, 24);
             this.errorLabel.TabIndex = 10;
@@ -218,7 +218,7 @@
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.TaskDataGridView1);
+            this.Controls.Add(this.TaskDataGridView);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DescriptionTextBox);
             this.Controls.Add(this.OpisLabel);
@@ -233,8 +233,7 @@
             this.Text = "ZadanieForm";
             this.Load += new System.EventHandler(this.TaskForm_Load);
             this.SizeChanged += new System.EventHandler(this.TaskForm_SizeChanged);
-           
-            ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +244,7 @@
         private System.Windows.Forms.Label KategoriaLabel;
         private System.Windows.Forms.Label OpisLabel;
         private System.Windows.Forms.Label errorLabel;
-        public System.Windows.Forms.DataGridView TaskDataGridView1;
+        public System.Windows.Forms.DataGridView TaskDataGridView;
         public System.Windows.Forms.TextBox TaskNameTextBox;
         public System.Windows.Forms.TextBox CategoryTextBox;
         public System.Windows.Forms.TextBox DescriptionTextBox;

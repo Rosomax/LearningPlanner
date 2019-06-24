@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     static class Program
     {
@@ -13,7 +13,7 @@ namespace LearningPlanner_1._0._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
-            Application.Run(new IntroForm1());
+            Application.Run(new IntroForm());
             Application.Run(new MainForm());
             
         }

@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class CategoryForm
     {
@@ -93,7 +93,7 @@
             this.chooseCategoryDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.chooseCategoryDataGrid.Size = new System.Drawing.Size(180, 453);
             this.chooseCategoryDataGrid.TabIndex = 8;
-            this.chooseCategoryDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.chooseCategoryDataGrid_CellClick);
+            this.chooseCategoryDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ChooseCategoryDataGrid_CellClick);
             // 
             // chooseTaskDataGrid
             // 
@@ -133,7 +133,8 @@
             this.chooseTaskDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.chooseTaskDataGrid.Size = new System.Drawing.Size(180, 453);
             this.chooseTaskDataGrid.TabIndex = 9;
-            this.chooseTaskDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.chooseTaskDataGrid_CellClick);
+            this.chooseTaskDataGrid.Visible = false;
+            this.chooseTaskDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ChooseTaskDataGrid_CellClick);
             // 
             // chooseTaskLabel
             // 
@@ -145,6 +146,7 @@
             this.chooseTaskLabel.Size = new System.Drawing.Size(170, 23);
             this.chooseTaskLabel.TabIndex = 10;
             this.chooseTaskLabel.Text = "Wybierz Zadanie:";
+            this.chooseTaskLabel.Visible = false;
             // 
             // describeTaskLabel
             // 
@@ -156,6 +158,7 @@
             this.describeTaskLabel.Size = new System.Drawing.Size(140, 23);
             this.describeTaskLabel.TabIndex = 11;
             this.describeTaskLabel.Text = "Opis Zadania:";
+            this.describeTaskLabel.Visible = false;
             // 
             // describeTaskRichTextBox
             // 
@@ -168,6 +171,7 @@
             this.describeTaskRichTextBox.Size = new System.Drawing.Size(166, 453);
             this.describeTaskRichTextBox.TabIndex = 12;
             this.describeTaskRichTextBox.Text = "";
+            this.describeTaskRichTextBox.Visible = false;
             // 
             // CategoryForm
             // 

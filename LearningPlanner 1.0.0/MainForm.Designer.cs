@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class MainForm
     {
@@ -30,79 +30,77 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftMainPanel = new System.Windows.Forms.Panel();
-            this.completedTaskControl21 = new LearningPlanner_1._0._0.CompletedTaskControl2();
-            this.leftActiveControl6 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl5 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl4 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl3 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl2 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.leftActiveControl1 = new LearningPlanner_1._0._0.LeftActiveControl();
-            this.taskControl11 = new LearningPlanner_1._0._0.TaskControl1();
-            this.settingsControl61 = new LearningPlanner_1._0._0.SettingsControl6();
-            this.itnewsControl51 = new LearningPlanner_1._0._0.ITNewsControl5();
-            this.findTaskControl41 = new LearningPlanner_1._0._0.FindTaskControl4();
-            this.categoryControl31 = new LearningPlanner_1._0._0.categoryControl3();
+            this.CompletedTaskControl = new LearningPlanner.CompletedTaskControl2();
+            this.leftActiveControl6 = new LearningPlanner.LeftActiveControl();
+            this.leftActiveControl5 = new LearningPlanner.LeftActiveControl();
+            this.leftActiveControl4 = new LearningPlanner.LeftActiveControl();
+            this.leftActiveControl3 = new LearningPlanner.LeftActiveControl();
+            this.leftActiveControl2 = new LearningPlanner.LeftActiveControl();
+            this.leftActiveControl1 = new LearningPlanner.LeftActiveControl();
+            this.TaskControl = new LearningPlanner.TaskControl1();
+            this.SettingsControl = new LearningPlanner.SettingsControl6();
+            this.ITNewsControl = new LearningPlanner.ITNewsControl5();
+            this.FindTaskControl = new LearningPlanner.FindTaskControl4();
+            this.CategoryControl = new LearningPlanner.categoryControl3();
             this.TopMainPanel = new System.Windows.Forms.Panel();
-            this.minimalizePictureBox = new System.Windows.Forms.PictureBox();
-            this.maximilaziPictureBox = new System.Windows.Forms.PictureBox();
-            this.learningPlannerLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.closePictureBox = new System.Windows.Forms.PictureBox();
+            this.MinimalizePictureBox = new System.Windows.Forms.PictureBox();
+            this.MaximalizePictureBox = new System.Windows.Forms.PictureBox();
+            this.LearningPlannerLabel = new System.Windows.Forms.Label();
+            this.HomePictureBox = new System.Windows.Forms.PictureBox();
+            this.ClosePictureBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RememberMeCheckBox = new System.Windows.Forms.CheckBox();
-            this.registerLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.RegisterLinkLabel = new System.Windows.Forms.LinkLabel();
             this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.PasswordtextBox1 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LogintextBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.LoginLabel = new System.Windows.Forms.Label();
             this.LeftMainPanel.SuspendLayout();
             this.TopMainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.minimalizePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximilaziPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimalizePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaximalizePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClosePictureBox)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMainPanel
             // 
             this.LeftMainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.LeftMainPanel.Controls.Add(this.completedTaskControl21);
+            this.LeftMainPanel.Controls.Add(this.CompletedTaskControl);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl6);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl5);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl4);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl3);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl2);
             this.LeftMainPanel.Controls.Add(this.leftActiveControl1);
-            this.LeftMainPanel.Controls.Add(this.taskControl11);
-            this.LeftMainPanel.Controls.Add(this.settingsControl61);
-            this.LeftMainPanel.Controls.Add(this.itnewsControl51);
-            this.LeftMainPanel.Controls.Add(this.findTaskControl41);
-            this.LeftMainPanel.Controls.Add(this.categoryControl31);
+            this.LeftMainPanel.Controls.Add(this.TaskControl);
+            this.LeftMainPanel.Controls.Add(this.SettingsControl);
+            this.LeftMainPanel.Controls.Add(this.ITNewsControl);
+            this.LeftMainPanel.Controls.Add(this.FindTaskControl);
+            this.LeftMainPanel.Controls.Add(this.CategoryControl);
             this.LeftMainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftMainPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftMainPanel.Name = "LeftMainPanel";
             this.LeftMainPanel.Size = new System.Drawing.Size(197, 586);
             this.LeftMainPanel.TabIndex = 0;
             // 
-            // completedTaskControl21
+            // CompletedTaskControl
             // 
-            this.completedTaskControl21.AutoSize = true;
-            this.completedTaskControl21.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.completedTaskControl21.BackColor = System.Drawing.Color.Transparent;
-            this.completedTaskControl21.Enabled = false;
-            this.completedTaskControl21.Location = new System.Drawing.Point(12, 97);
-            this.completedTaskControl21.Margin = new System.Windows.Forms.Padding(4);
-            this.completedTaskControl21.Name = "completedTaskControl21";
-            this.completedTaskControl21.Size = new System.Drawing.Size(185, 97);
-            this.completedTaskControl21.TabIndex = 1;
-            this.completedTaskControl21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CompletedTasksControl21_MouseClick);
-            this.completedTaskControl21.MouseEnter += new System.EventHandler(this.CompletedTaskControl21_MouseEnter);
-            this.completedTaskControl21.MouseLeave += new System.EventHandler(this.CompletedTaskControl21_MouseLeave);
+            this.CompletedTaskControl.AutoSize = true;
+            this.CompletedTaskControl.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.CompletedTaskControl.BackColor = System.Drawing.Color.Transparent;
+            this.CompletedTaskControl.Enabled = false;
+            this.CompletedTaskControl.Location = new System.Drawing.Point(12, 97);
+            this.CompletedTaskControl.Margin = new System.Windows.Forms.Padding(4);
+            this.CompletedTaskControl.Name = "CompletedTaskControl";
+            this.CompletedTaskControl.Size = new System.Drawing.Size(185, 97);
+            this.CompletedTaskControl.TabIndex = 1;
+            this.CompletedTaskControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CompletedTasksControl21_MouseClick);
+            this.CompletedTaskControl.MouseEnter += new System.EventHandler(this.CompletedTaskControl21_MouseEnter);
+            this.CompletedTaskControl.MouseLeave += new System.EventHandler(this.CompletedTaskControl21_MouseLeave);
             // 
             // leftActiveControl6
             // 
@@ -158,159 +156,146 @@
             this.leftActiveControl1.Size = new System.Drawing.Size(12, 97);
             this.leftActiveControl1.TabIndex = 8;
             // 
-            // taskControl11
+            // TaskControl
             // 
-            this.taskControl11.BackColor = System.Drawing.Color.Transparent;
-            this.taskControl11.Enabled = false;
-            this.taskControl11.Location = new System.Drawing.Point(12, 0);
-            this.taskControl11.Margin = new System.Windows.Forms.Padding(4);
-            this.taskControl11.Name = "taskControl11";
-            this.taskControl11.Size = new System.Drawing.Size(185, 97);
-            this.taskControl11.TabIndex = 7;
-            this.taskControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TaskControl11_MouseClick);
-            this.taskControl11.MouseEnter += new System.EventHandler(this.TaskControl11_MouseEnter_1);
-            this.taskControl11.MouseLeave += new System.EventHandler(this.TaskControl11_MouseLeave);
+            this.TaskControl.BackColor = System.Drawing.Color.Transparent;
+            this.TaskControl.Enabled = false;
+            this.TaskControl.Location = new System.Drawing.Point(12, 0);
+            this.TaskControl.Margin = new System.Windows.Forms.Padding(4);
+            this.TaskControl.Name = "TaskControl";
+            this.TaskControl.Size = new System.Drawing.Size(185, 97);
+            this.TaskControl.TabIndex = 7;
+            this.TaskControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TaskControl11_MouseClick);
+            this.TaskControl.MouseEnter += new System.EventHandler(this.TaskControl11_MouseEnter_1);
+            this.TaskControl.MouseLeave += new System.EventHandler(this.TaskControl11_MouseLeave);
             // 
-            // settingsControl61
+            // SettingsControl
             // 
-            this.settingsControl61.BackColor = System.Drawing.Color.Transparent;
-            this.settingsControl61.Enabled = false;
-            this.settingsControl61.Location = new System.Drawing.Point(12, 485);
-            this.settingsControl61.Margin = new System.Windows.Forms.Padding(4);
-            this.settingsControl61.Name = "settingsControl61";
-            this.settingsControl61.Size = new System.Drawing.Size(185, 101);
-            this.settingsControl61.TabIndex = 5;
-            this.settingsControl61.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SettingsControl61_MouseClick);
-            this.settingsControl61.MouseEnter += new System.EventHandler(this.SettingsControl61_MouseEnter);
-            this.settingsControl61.MouseLeave += new System.EventHandler(this.SettingsControl61_MouseLeave);
+            this.SettingsControl.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsControl.Enabled = false;
+            this.SettingsControl.Location = new System.Drawing.Point(12, 485);
+            this.SettingsControl.Margin = new System.Windows.Forms.Padding(4);
+            this.SettingsControl.Name = "SettingsControl";
+            this.SettingsControl.Size = new System.Drawing.Size(185, 101);
+            this.SettingsControl.TabIndex = 5;
+            this.SettingsControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SettingsControl61_MouseClick);
+            this.SettingsControl.MouseEnter += new System.EventHandler(this.SettingsControl61_MouseEnter);
+            this.SettingsControl.MouseLeave += new System.EventHandler(this.SettingsControl61_MouseLeave);
             // 
-            // itnewsControl51
+            // ITNewsControl
             // 
-            this.itnewsControl51.BackColor = System.Drawing.Color.Transparent;
-            this.itnewsControl51.Enabled = false;
-            this.itnewsControl51.Location = new System.Drawing.Point(12, 388);
-            this.itnewsControl51.Margin = new System.Windows.Forms.Padding(4);
-            this.itnewsControl51.Name = "itnewsControl51";
-            this.itnewsControl51.Size = new System.Drawing.Size(185, 97);
-            this.itnewsControl51.TabIndex = 4;
-            this.itnewsControl51.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ITNewsControl51_MouseClick);
-            this.itnewsControl51.MouseEnter += new System.EventHandler(this.ITNewsControl51_MouseEnter);
-            this.itnewsControl51.MouseLeave += new System.EventHandler(this.ITNewsControl51_MouseLeave);
+            this.ITNewsControl.BackColor = System.Drawing.Color.Transparent;
+            this.ITNewsControl.Enabled = false;
+            this.ITNewsControl.Location = new System.Drawing.Point(12, 388);
+            this.ITNewsControl.Margin = new System.Windows.Forms.Padding(4);
+            this.ITNewsControl.Name = "ITNewsControl";
+            this.ITNewsControl.Size = new System.Drawing.Size(185, 97);
+            this.ITNewsControl.TabIndex = 4;
+            this.ITNewsControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ITNewsControl51_MouseClick);
+            this.ITNewsControl.MouseEnter += new System.EventHandler(this.ITNewsControl51_MouseEnter);
+            this.ITNewsControl.MouseLeave += new System.EventHandler(this.ITNewsControl51_MouseLeave);
             // 
-            // findTaskControl41
+            // FindTaskControl
             // 
-            this.findTaskControl41.BackColor = System.Drawing.Color.Transparent;
-            this.findTaskControl41.Enabled = false;
-            this.findTaskControl41.Location = new System.Drawing.Point(12, 291);
-            this.findTaskControl41.Margin = new System.Windows.Forms.Padding(4);
-            this.findTaskControl41.Name = "findTaskControl41";
-            this.findTaskControl41.Size = new System.Drawing.Size(185, 97);
-            this.findTaskControl41.TabIndex = 3;
-            this.findTaskControl41.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FindTaskControl41_MouseClick);
-            this.findTaskControl41.MouseEnter += new System.EventHandler(this.FindTaskControl41_MouseEnter);
-            this.findTaskControl41.MouseLeave += new System.EventHandler(this.FindTaskControl41_MouseLeave);
+            this.FindTaskControl.BackColor = System.Drawing.Color.Transparent;
+            this.FindTaskControl.Enabled = false;
+            this.FindTaskControl.Location = new System.Drawing.Point(12, 291);
+            this.FindTaskControl.Margin = new System.Windows.Forms.Padding(4);
+            this.FindTaskControl.Name = "FindTaskControl";
+            this.FindTaskControl.Size = new System.Drawing.Size(185, 97);
+            this.FindTaskControl.TabIndex = 3;
+            this.FindTaskControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FindTaskControl41_MouseClick);
+            this.FindTaskControl.MouseEnter += new System.EventHandler(this.FindTaskControl41_MouseEnter);
+            this.FindTaskControl.MouseLeave += new System.EventHandler(this.FindTaskControl41_MouseLeave);
             // 
-            // categoryControl31
+            // CategoryControl
             // 
-            this.categoryControl31.BackColor = System.Drawing.Color.Transparent;
-            this.categoryControl31.Enabled = false;
-            this.categoryControl31.Location = new System.Drawing.Point(12, 194);
-            this.categoryControl31.Margin = new System.Windows.Forms.Padding(4);
-            this.categoryControl31.Name = "categoryControl31";
-            this.categoryControl31.Size = new System.Drawing.Size(185, 97);
-            this.categoryControl31.TabIndex = 2;
-            this.categoryControl31.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CategoryControl31_MouseClick);
-            this.categoryControl31.MouseEnter += new System.EventHandler(this.CategoryControl31_MouseEnter);
-            this.categoryControl31.MouseLeave += new System.EventHandler(this.CategoryControl31_MouseLeave);
+            this.CategoryControl.BackColor = System.Drawing.Color.Transparent;
+            this.CategoryControl.Enabled = false;
+            this.CategoryControl.Location = new System.Drawing.Point(12, 194);
+            this.CategoryControl.Margin = new System.Windows.Forms.Padding(4);
+            this.CategoryControl.Name = "CategoryControl";
+            this.CategoryControl.Size = new System.Drawing.Size(185, 97);
+            this.CategoryControl.TabIndex = 2;
+            this.CategoryControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CategoryControl31_MouseClick);
+            this.CategoryControl.MouseEnter += new System.EventHandler(this.CategoryControl31_MouseEnter);
+            this.CategoryControl.MouseLeave += new System.EventHandler(this.CategoryControl31_MouseLeave);
             // 
             // TopMainPanel
             // 
             this.TopMainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.TopMainPanel.Controls.Add(this.minimalizePictureBox);
-            this.TopMainPanel.Controls.Add(this.maximilaziPictureBox);
-            this.TopMainPanel.Controls.Add(this.learningPlannerLabel);
-            this.TopMainPanel.Controls.Add(this.pictureBox2);
-            this.TopMainPanel.Controls.Add(this.pictureBox1);
-            this.TopMainPanel.Controls.Add(this.closePictureBox);
+            this.TopMainPanel.Controls.Add(this.MinimalizePictureBox);
+            this.TopMainPanel.Controls.Add(this.MaximalizePictureBox);
+            this.TopMainPanel.Controls.Add(this.LearningPlannerLabel);
+            this.TopMainPanel.Controls.Add(this.HomePictureBox);
+            this.TopMainPanel.Controls.Add(this.ClosePictureBox);
             this.TopMainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopMainPanel.Location = new System.Drawing.Point(197, 0);
             this.TopMainPanel.Name = "TopMainPanel";
             this.TopMainPanel.Size = new System.Drawing.Size(723, 42);
             this.TopMainPanel.TabIndex = 1;
             // 
-            // minimalizePictureBox
+            // MinimalizePictureBox
             // 
-            this.minimalizePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.minimalizePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("minimalizePictureBox.Image")));
-            this.minimalizePictureBox.Location = new System.Drawing.Point(509, 0);
-            this.minimalizePictureBox.Name = "minimalizePictureBox";
-            this.minimalizePictureBox.Size = new System.Drawing.Size(45, 42);
-            this.minimalizePictureBox.TabIndex = 6;
-            this.minimalizePictureBox.TabStop = false;
-            this.minimalizePictureBox.Click += new System.EventHandler(this.MinimalizePictureBox_Click);
+            this.MinimalizePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MinimalizePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("MinimalizePictureBox.Image")));
+            this.MinimalizePictureBox.Location = new System.Drawing.Point(556, 0);
+            this.MinimalizePictureBox.Name = "MinimalizePictureBox";
+            this.MinimalizePictureBox.Size = new System.Drawing.Size(42, 42);
+            this.MinimalizePictureBox.TabIndex = 6;
+            this.MinimalizePictureBox.TabStop = false;
+            this.MinimalizePictureBox.Click += new System.EventHandler(this.MinimalizePictureBox_Click);
             // 
-            // maximilaziPictureBox
+            // MaximalizePictureBox
             // 
-            this.maximilaziPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.maximilaziPictureBox.Enabled = false;
-            this.maximilaziPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("maximilaziPictureBox.Image")));
-            this.maximilaziPictureBox.Location = new System.Drawing.Point(554, 0);
-            this.maximilaziPictureBox.Name = "maximilaziPictureBox";
-            this.maximilaziPictureBox.Size = new System.Drawing.Size(46, 42);
-            this.maximilaziPictureBox.TabIndex = 5;
-            this.maximilaziPictureBox.TabStop = false;
-            this.maximilaziPictureBox.Click += new System.EventHandler(this.MaximilaziPictureBox_Click);
+            this.MaximalizePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MaximalizePictureBox.Enabled = false;
+            this.MaximalizePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("MaximalizePictureBox.Image")));
+            this.MaximalizePictureBox.Location = new System.Drawing.Point(598, 0);
+            this.MaximalizePictureBox.Name = "MaximalizePictureBox";
+            this.MaximalizePictureBox.Size = new System.Drawing.Size(43, 42);
+            this.MaximalizePictureBox.TabIndex = 5;
+            this.MaximalizePictureBox.TabStop = false;
+            this.MaximalizePictureBox.Click += new System.EventHandler(this.MaximilaziPictureBox_Click);
             // 
-            // learningPlannerLabel
+            // LearningPlannerLabel
             // 
-            this.learningPlannerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.learningPlannerLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.learningPlannerLabel.ForeColor = System.Drawing.Color.Black;
-            this.learningPlannerLabel.Location = new System.Drawing.Point(0, 0);
-            this.learningPlannerLabel.Name = "learningPlannerLabel";
-            this.learningPlannerLabel.Size = new System.Drawing.Size(600, 42);
-            this.learningPlannerLabel.TabIndex = 4;
-            this.learningPlannerLabel.Text = "Learning Planner";
-            this.learningPlannerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.learningPlannerLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LearningPlannerLabel_MouseDown);
-            this.learningPlannerLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LearningPlannerLabel_MouseMove);
-            this.learningPlannerLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LearningPlannerLabel_MouseUp);
+            this.LearningPlannerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LearningPlannerLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LearningPlannerLabel.ForeColor = System.Drawing.Color.Black;
+            this.LearningPlannerLabel.Location = new System.Drawing.Point(0, 0);
+            this.LearningPlannerLabel.Name = "LearningPlannerLabel";
+            this.LearningPlannerLabel.Size = new System.Drawing.Size(641, 42);
+            this.LearningPlannerLabel.TabIndex = 4;
+            this.LearningPlannerLabel.Text = "Learning Planner";
+            this.LearningPlannerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LearningPlannerLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LearningPlannerLabel_MouseDown);
+            this.LearningPlannerLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LearningPlannerLabel_MouseMove);
+            this.LearningPlannerLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LearningPlannerLabel_MouseUp);
             // 
-            // pictureBox2
+            // HomePictureBox
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(600, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 42);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            this.HomePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.HomePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("HomePictureBox.Image")));
+            this.HomePictureBox.Location = new System.Drawing.Point(641, 0);
+            this.HomePictureBox.Margin = new System.Windows.Forms.Padding(5);
+            this.HomePictureBox.Name = "HomePictureBox";
+            this.HomePictureBox.Size = new System.Drawing.Size(41, 42);
+            this.HomePictureBox.TabIndex = 3;
+            this.HomePictureBox.TabStop = false;
+            this.HomePictureBox.Click += new System.EventHandler(this.HomePictureBox_Click);
             // 
-            // pictureBox1
+            // ClosePictureBox
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(641, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 42);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
-            // closePictureBox
-            // 
-            this.closePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("closePictureBox.Image")));
-            this.closePictureBox.Location = new System.Drawing.Point(682, 0);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(5);
-            this.closePictureBox.Name = "closePictureBox";
-            this.closePictureBox.Size = new System.Drawing.Size(41, 42);
-            this.closePictureBox.TabIndex = 0;
-            this.closePictureBox.TabStop = false;
-            this.closePictureBox.Click += new System.EventHandler(this.ClosePictureBox_Click);
+            this.ClosePictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ClosePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ClosePictureBox.Image")));
+            this.ClosePictureBox.Location = new System.Drawing.Point(682, 0);
+            this.ClosePictureBox.Margin = new System.Windows.Forms.Padding(5);
+            this.ClosePictureBox.Name = "ClosePictureBox";
+            this.ClosePictureBox.Size = new System.Drawing.Size(41, 42);
+            this.ClosePictureBox.TabIndex = 0;
+            this.ClosePictureBox.TabStop = false;
+            this.ClosePictureBox.Click += new System.EventHandler(this.ClosePictureBox_Click);
             // 
             // panel1
             // 
@@ -320,13 +305,13 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.RememberMeCheckBox);
-            this.panel1.Controls.Add(this.registerLinkLabel);
+            this.panel1.Controls.Add(this.RegisterLinkLabel);
             this.panel1.Controls.Add(this.ShowPasswordCheckBox);
-            this.panel1.Controls.Add(this.PasswordtextBox1);
+            this.panel1.Controls.Add(this.PasswordTextBox);
             this.panel1.Controls.Add(this.LogintextBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.LoginButton);
+            this.panel1.Controls.Add(this.PasswordLabel);
+            this.panel1.Controls.Add(this.LoginLabel);
             this.panel1.Location = new System.Drawing.Point(385, 161);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 276);
@@ -344,19 +329,19 @@
             this.RememberMeCheckBox.Text = "Zapamietaj mnie";
             this.RememberMeCheckBox.UseVisualStyleBackColor = true;
             // 
-            // registerLinkLabel
+            // RegisterLinkLabel
             // 
-            this.registerLinkLabel.AutoSize = true;
-            this.registerLinkLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerLinkLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.registerLinkLabel.LinkColor = System.Drawing.Color.Black;
-            this.registerLinkLabel.Location = new System.Drawing.Point(3, 246);
-            this.registerLinkLabel.Name = "registerLinkLabel";
-            this.registerLinkLabel.Size = new System.Drawing.Size(89, 16);
-            this.registerLinkLabel.TabIndex = 4;
-            this.registerLinkLabel.TabStop = true;
-            this.registerLinkLabel.Text = "Utwórz konto";
-            this.registerLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegisterLinkLabel_LinkClicked);
+            this.RegisterLinkLabel.AutoSize = true;
+            this.RegisterLinkLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterLinkLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RegisterLinkLabel.LinkColor = System.Drawing.Color.Black;
+            this.RegisterLinkLabel.Location = new System.Drawing.Point(3, 246);
+            this.RegisterLinkLabel.Name = "RegisterLinkLabel";
+            this.RegisterLinkLabel.Size = new System.Drawing.Size(89, 16);
+            this.RegisterLinkLabel.TabIndex = 4;
+            this.RegisterLinkLabel.TabStop = true;
+            this.RegisterLinkLabel.Text = "Utwórz konto";
+            this.RegisterLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegisterLinkLabel_LinkClicked);
             // 
             // ShowPasswordCheckBox
             // 
@@ -371,14 +356,14 @@
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = true;
             this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
             // 
-            // PasswordtextBox1
+            // PasswordTextBox
             // 
-            this.PasswordtextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordtextBox1.Location = new System.Drawing.Point(77, 152);
-            this.PasswordtextBox1.Name = "PasswordtextBox1";
-            this.PasswordtextBox1.Size = new System.Drawing.Size(213, 31);
-            this.PasswordtextBox1.TabIndex = 1;
-            this.PasswordtextBox1.UseSystemPasswordChar = true;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.Location = new System.Drawing.Point(77, 152);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(213, 31);
+            this.PasswordTextBox.TabIndex = 1;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // LogintextBox1
             // 
@@ -388,43 +373,43 @@
             this.LogintextBox1.Size = new System.Drawing.Size(213, 31);
             this.LogintextBox1.TabIndex = 0;
             // 
-            // button1
+            // LoginButton
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(132, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Zaloguj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.LoginButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LoginButton.Location = new System.Drawing.Point(132, 213);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(105, 40);
+            this.LoginButton.TabIndex = 3;
+            this.LoginButton.Text = "Zaloguj";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // label2
+            // PasswordLabel
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(11, 116);
-            this.label2.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(345, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = ":Hasło";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PasswordLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PasswordLabel.Location = new System.Drawing.Point(11, 116);
+            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.PasswordLabel.Size = new System.Drawing.Size(345, 33);
+            this.PasswordLabel.TabIndex = 1;
+            this.PasswordLabel.Text = ":Hasło";
+            this.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // LoginLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(11, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(345, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = ":Login";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoginLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LoginLabel.Location = new System.Drawing.Point(11, 33);
+            this.LoginLabel.Margin = new System.Windows.Forms.Padding(50, 0, 50, 0);
+            this.LoginLabel.Name = "LoginLabel";
+            this.LoginLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LoginLabel.Size = new System.Drawing.Size(345, 33);
+            this.LoginLabel.TabIndex = 0;
+            this.LoginLabel.Text = ":Login";
+            this.LoginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
@@ -449,11 +434,10 @@
             this.LeftMainPanel.ResumeLayout(false);
             this.LeftMainPanel.PerformLayout();
             this.TopMainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.minimalizePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximilaziPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimalizePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaximalizePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClosePictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -463,32 +447,31 @@
         #endregion
 
         private System.Windows.Forms.Panel LeftMainPanel;
-        private CompletedTaskControl2 completedTaskControl21;
-        private categoryControl3 categoryControl31;
-        private FindTaskControl4 findTaskControl41;
-        private ITNewsControl5 itnewsControl51;
-        private SettingsControl6 settingsControl61;
-        private System.Windows.Forms.PictureBox closePictureBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label learningPlannerLabel;
-        private TaskControl1 taskControl11;
+        private CompletedTaskControl2 CompletedTaskControl;
+        private categoryControl3 CategoryControl;
+        private FindTaskControl4 FindTaskControl;
+        private ITNewsControl5 ITNewsControl;
+        private SettingsControl6 SettingsControl;
+        private System.Windows.Forms.PictureBox ClosePictureBox;
+        private System.Windows.Forms.PictureBox HomePictureBox;
+        private System.Windows.Forms.Label LearningPlannerLabel;
+        private TaskControl1 TaskControl;
         private LeftActiveControl leftActiveControl6;
         private LeftActiveControl leftActiveControl5;
         private LeftActiveControl leftActiveControl4;
         private LeftActiveControl leftActiveControl3;
         private LeftActiveControl leftActiveControl2;
         private LeftActiveControl leftActiveControl1;
-        private System.Windows.Forms.PictureBox maximilaziPictureBox;
-        private System.Windows.Forms.PictureBox minimalizePictureBox;
+        private System.Windows.Forms.PictureBox MaximalizePictureBox;
+        private System.Windows.Forms.PictureBox MinimalizePictureBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.TextBox LogintextBox1;
-        private System.Windows.Forms.TextBox PasswordtextBox1;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
-        private System.Windows.Forms.LinkLabel registerLinkLabel;
+        private System.Windows.Forms.LinkLabel RegisterLinkLabel;
         public System.Windows.Forms.Panel TopMainPanel;
         private System.Windows.Forms.CheckBox RememberMeCheckBox;
     }

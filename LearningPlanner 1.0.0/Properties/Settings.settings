@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LearningPlanner_1._0._0.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LearningPlanner.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="Polaczenie_z_baza" Type="(Connection string)" Scope="Application">

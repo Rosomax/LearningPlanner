@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BCE8A5DE-26E3-432C-90CF-A9F1A6EF2471}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LearningPlanner_1._0._0</RootNamespace>
-    <AssemblyName>LearningPlanner 1.0.0</AssemblyName>
+    <RootNamespace>LearningPlanner</RootNamespace>
+    <AssemblyName>LearningPlanner</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -62,21 +62,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cytaty.cs">
       <DependentUpon>Model2.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="DataGridTasksInfoControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DataGridTasksInfoControl.Designer.cs">
-      <DependentUpon>DataGridTasksInfoControl.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ReportErrorForm.cs">
       <SubType>Form</SubType>
@@ -102,11 +95,6 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,11 +114,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IntroForm1.cs">
+    <Compile Include="IntroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IntroForm1.Designer.cs">
-      <DependentUpon>IntroForm1.cs</DependentUpon>
+    <Compile Include="IntroForm.Designer.cs">
+      <DependentUpon>IntroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlsLeftMenu\CategoryControl3.cs">
       <SubType>UserControl</SubType>
@@ -156,11 +144,12 @@
       <DependentUpon>Model2.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="QuotationControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>QuotationControl.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlsLeftMenu\SettingsControl6.cs">
       <SubType>UserControl</SubType>
@@ -230,12 +219,6 @@
     <Compile Include="TaskInfoForm.Designer.cs">
       <DependentUpon>TaskInfoForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataGridTasksInfoControl.resx">
-      <DependentUpon>DataGridTasksInfoControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ReportErrorForm.resx">
       <DependentUpon>ReportErrorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,8 +231,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IntroForm1.resx">
-      <DependentUpon>IntroForm1.cs</DependentUpon>
+    <EmbeddedResource Include="IntroForm.resx">
+      <DependentUpon>IntroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsLeftMenu\CategoryControl3.resx">
       <DependentUpon>CategoryControl3.cs</DependentUpon>
@@ -265,8 +248,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="QuotationControl.resx">
+      <DependentUpon>QuotationControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsLeftMenu\SettingsControl6.resx">
       <DependentUpon>SettingsControl6.cs</DependentUpon>
@@ -328,61 +311,59 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\Zadanie icon.png">
+    <None Include="Icons\Zadanie icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\Zakonczone zadanie icon.png">
+    <None Include="Icons\Zakonczone zadanie icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\Znajdz zadanie icon.png">
+    <None Include="Icons\Znajdz zadanie icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\kategoria icon.png">
+    <None Include="Icons\kategoria icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\ze swiata icon.png">
+    <None Include="Icons\ze swiata icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\Ustawienia icon.png">
+    <None Include="Icons\Ustawienia icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\delete icon.png">
+    <None Include="Icons\delete icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\info icon.png">
+    <None Include="Icons\info icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ikony\stronaGlowna icon.png">
+    <None Include="Icons\stronaGlowna icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Hand.cur" />
-    <Content Include="HandZad.cur" />
-    <None Include="Ikony\close icon.png" />
-    <None Include="Ikony\FindPicture.png">
+    <None Include="Icons\close icon.png" />
+    <None Include="Icons\FindPicture.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Logi\LocalLogs.txt">
+    <Content Include="Logs\LocalLogs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Logi\Log.txt">
+    <Content Include="Logs\Log.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Model2.Context.tt">
@@ -409,13 +390,13 @@
     <Content Include="Resources\Hand-kursor.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="WariantyOkna\restore-window.png">
+    <None Include="WindowIcons\restore-window.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="WariantyOkna\minimize-window.png">
+    <None Include="WindowIcons\minimize-window.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="WariantyOkna\maximize-window.png">
+    <None Include="WindowIcons\maximize-window.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\Tlo.jpg">

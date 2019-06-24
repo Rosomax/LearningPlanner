@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class TaskInfoForm
     {
@@ -29,39 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskInfoForm));
-            this.nazwaInfoLbl = new System.Windows.Forms.Label();
-            this.kategoriaInfoLbl = new System.Windows.Forms.Label();
+            this.NameInfoLabel = new System.Windows.Forms.Label();
+            this.CategoryInfoLabel = new System.Windows.Forms.Label();
             this.middlePanelInfo = new System.Windows.Forms.Panel();
-            this.utworzonoInfoLbl = new System.Windows.Forms.Label();
-            this.statusInfoLbl = new System.Windows.Forms.Label();
-            this.descriptionInfoRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.nameInfoLbl1 = new System.Windows.Forms.Label();
-            this.categoryInfoLbl1 = new System.Windows.Forms.Label();
-            this.statusInfoLbl1 = new System.Windows.Forms.Label();
-            this.creationDateInfoLbl1 = new System.Windows.Forms.Label();
-            this.FinishTask = new System.Windows.Forms.Button();
-            this.EditTask = new System.Windows.Forms.Button();
+            this.CreatedInfoLabel = new System.Windows.Forms.Label();
+            this.StatusInfoLabel = new System.Windows.Forms.Label();
+            this.DescriptionInfoRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.NameInfoLabel1 = new System.Windows.Forms.Label();
+            this.CategoryInfoLabel1 = new System.Windows.Forms.Label();
+            this.StatusInfoLabel1 = new System.Windows.Forms.Label();
+            this.CreatedInfoLabel1 = new System.Windows.Forms.Label();
+            this.FinishTaskButton = new System.Windows.Forms.Button();
+            this.EditTaskButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // nazwaInfoLbl
+            // NameInfoLabel
             // 
-            this.nazwaInfoLbl.AutoSize = true;
-            this.nazwaInfoLbl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazwaInfoLbl.Location = new System.Drawing.Point(30, 18);
-            this.nazwaInfoLbl.Name = "nazwaInfoLbl";
-            this.nazwaInfoLbl.Size = new System.Drawing.Size(89, 25);
-            this.nazwaInfoLbl.TabIndex = 0;
-            this.nazwaInfoLbl.Text = "Nazwa:";
+            this.NameInfoLabel.AutoSize = true;
+            this.NameInfoLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameInfoLabel.Location = new System.Drawing.Point(30, 18);
+            this.NameInfoLabel.Name = "NameInfoLabel";
+            this.NameInfoLabel.Size = new System.Drawing.Size(89, 25);
+            this.NameInfoLabel.TabIndex = 0;
+            this.NameInfoLabel.Text = "Nazwa:";
             // 
-            // kategoriaInfoLbl
+            // CategoryInfoLabel
             // 
-            this.kategoriaInfoLbl.AutoSize = true;
-            this.kategoriaInfoLbl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kategoriaInfoLbl.Location = new System.Drawing.Point(30, 66);
-            this.kategoriaInfoLbl.Name = "kategoriaInfoLbl";
-            this.kategoriaInfoLbl.Size = new System.Drawing.Size(117, 25);
-            this.kategoriaInfoLbl.TabIndex = 1;
-            this.kategoriaInfoLbl.Text = "Kategoria:";
+            this.CategoryInfoLabel.AutoSize = true;
+            this.CategoryInfoLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryInfoLabel.Location = new System.Drawing.Point(30, 66);
+            this.CategoryInfoLabel.Name = "CategoryInfoLabel";
+            this.CategoryInfoLabel.Size = new System.Drawing.Size(117, 25);
+            this.CategoryInfoLabel.TabIndex = 1;
+            this.CategoryInfoLabel.Text = "Kategoria:";
             // 
             // middlePanelInfo
             // 
@@ -70,123 +70,123 @@
             this.middlePanelInfo.Size = new System.Drawing.Size(696, 33);
             this.middlePanelInfo.TabIndex = 2;
             // 
-            // utworzonoInfoLbl
+            // CreatedInfoLabel
             // 
-            this.utworzonoInfoLbl.AutoSize = true;
-            this.utworzonoInfoLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.utworzonoInfoLbl.Location = new System.Drawing.Point(511, 406);
-            this.utworzonoInfoLbl.Name = "utworzonoInfoLbl";
-            this.utworzonoInfoLbl.Size = new System.Drawing.Size(81, 16);
-            this.utworzonoInfoLbl.TabIndex = 3;
-            this.utworzonoInfoLbl.Text = "Utworzono: ";
+            this.CreatedInfoLabel.AutoSize = true;
+            this.CreatedInfoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreatedInfoLabel.Location = new System.Drawing.Point(511, 406);
+            this.CreatedInfoLabel.Name = "CreatedInfoLabel";
+            this.CreatedInfoLabel.Size = new System.Drawing.Size(81, 16);
+            this.CreatedInfoLabel.TabIndex = 3;
+            this.CreatedInfoLabel.Text = "Utworzono: ";
             // 
-            // statusInfoLbl
+            // StatusInfoLabel
             // 
-            this.statusInfoLbl.AutoSize = true;
-            this.statusInfoLbl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusInfoLbl.Location = new System.Drawing.Point(12, 404);
-            this.statusInfoLbl.Name = "statusInfoLbl";
-            this.statusInfoLbl.Size = new System.Drawing.Size(50, 16);
-            this.statusInfoLbl.TabIndex = 4;
-            this.statusInfoLbl.Text = "Status:";
+            this.StatusInfoLabel.AutoSize = true;
+            this.StatusInfoLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusInfoLabel.Location = new System.Drawing.Point(12, 404);
+            this.StatusInfoLabel.Name = "StatusInfoLabel";
+            this.StatusInfoLabel.Size = new System.Drawing.Size(50, 16);
+            this.StatusInfoLabel.TabIndex = 4;
+            this.StatusInfoLabel.Text = "Status:";
             // 
-            // descriptionInfoRichTextBox
+            // DescriptionInfoRichTextBox
             // 
-            this.descriptionInfoRichTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.descriptionInfoRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionInfoRichTextBox.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.descriptionInfoRichTextBox.Location = new System.Drawing.Point(1, 152);
-            this.descriptionInfoRichTextBox.Name = "descriptionInfoRichTextBox";
-            this.descriptionInfoRichTextBox.ReadOnly = true;
-            this.descriptionInfoRichTextBox.Size = new System.Drawing.Size(696, 249);
-            this.descriptionInfoRichTextBox.TabIndex = 5;
-            this.descriptionInfoRichTextBox.Text = "";
+            this.DescriptionInfoRichTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DescriptionInfoRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescriptionInfoRichTextBox.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.DescriptionInfoRichTextBox.Location = new System.Drawing.Point(1, 152);
+            this.DescriptionInfoRichTextBox.Name = "DescriptionInfoRichTextBox";
+            this.DescriptionInfoRichTextBox.ReadOnly = true;
+            this.DescriptionInfoRichTextBox.Size = new System.Drawing.Size(696, 249);
+            this.DescriptionInfoRichTextBox.TabIndex = 5;
+            this.DescriptionInfoRichTextBox.Text = "";
             // 
-            // nameInfoLbl1
+            // NameInfoLabel1
             // 
-            this.nameInfoLbl1.AutoSize = true;
-            this.nameInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameInfoLbl1.Location = new System.Drawing.Point(125, 19);
-            this.nameInfoLbl1.Name = "nameInfoLbl1";
-            this.nameInfoLbl1.Size = new System.Drawing.Size(40, 24);
-            this.nameInfoLbl1.TabIndex = 6;
-            this.nameInfoLbl1.Text = "xxx";
+            this.NameInfoLabel1.AutoSize = true;
+            this.NameInfoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameInfoLabel1.Location = new System.Drawing.Point(125, 19);
+            this.NameInfoLabel1.Name = "NameInfoLabel1";
+            this.NameInfoLabel1.Size = new System.Drawing.Size(40, 24);
+            this.NameInfoLabel1.TabIndex = 6;
+            this.NameInfoLabel1.Text = "xxx";
             // 
-            // categoryInfoLbl1
+            // CategoryInfoLabel1
             // 
-            this.categoryInfoLbl1.AutoSize = true;
-            this.categoryInfoLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryInfoLbl1.Location = new System.Drawing.Point(153, 67);
-            this.categoryInfoLbl1.Name = "categoryInfoLbl1";
-            this.categoryInfoLbl1.Size = new System.Drawing.Size(40, 24);
-            this.categoryInfoLbl1.TabIndex = 7;
-            this.categoryInfoLbl1.Text = "xxx";
+            this.CategoryInfoLabel1.AutoSize = true;
+            this.CategoryInfoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryInfoLabel1.Location = new System.Drawing.Point(153, 67);
+            this.CategoryInfoLabel1.Name = "CategoryInfoLabel1";
+            this.CategoryInfoLabel1.Size = new System.Drawing.Size(40, 24);
+            this.CategoryInfoLabel1.TabIndex = 7;
+            this.CategoryInfoLabel1.Text = "xxx";
             // 
-            // statusInfoLbl1
+            // StatusInfoLabel1
             // 
-            this.statusInfoLbl1.AutoSize = true;
-            this.statusInfoLbl1.Location = new System.Drawing.Point(68, 406);
-            this.statusInfoLbl1.Name = "statusInfoLbl1";
-            this.statusInfoLbl1.Size = new System.Drawing.Size(35, 13);
-            this.statusInfoLbl1.TabIndex = 8;
-            this.statusInfoLbl1.Text = "label1";
+            this.StatusInfoLabel1.AutoSize = true;
+            this.StatusInfoLabel1.Location = new System.Drawing.Point(68, 406);
+            this.StatusInfoLabel1.Name = "StatusInfoLabel1";
+            this.StatusInfoLabel1.Size = new System.Drawing.Size(35, 13);
+            this.StatusInfoLabel1.TabIndex = 8;
+            this.StatusInfoLabel1.Text = "label1";
             // 
-            // creationDateInfoLbl1
+            // CreatedInfoLabel1
             // 
-            this.creationDateInfoLbl1.AutoSize = true;
-            this.creationDateInfoLbl1.Location = new System.Drawing.Point(588, 408);
-            this.creationDateInfoLbl1.Name = "creationDateInfoLbl1";
-            this.creationDateInfoLbl1.Size = new System.Drawing.Size(35, 13);
-            this.creationDateInfoLbl1.TabIndex = 9;
-            this.creationDateInfoLbl1.Text = "label2";
+            this.CreatedInfoLabel1.AutoSize = true;
+            this.CreatedInfoLabel1.Location = new System.Drawing.Point(588, 408);
+            this.CreatedInfoLabel1.Name = "CreatedInfoLabel1";
+            this.CreatedInfoLabel1.Size = new System.Drawing.Size(35, 13);
+            this.CreatedInfoLabel1.TabIndex = 9;
+            this.CreatedInfoLabel1.Text = "label2";
             // 
-            // FinishTask
+            // FinishTaskButton
             // 
-            this.FinishTask.BackColor = System.Drawing.Color.RosyBrown;
-            this.FinishTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FinishTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinishTask.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinishTask.Location = new System.Drawing.Point(538, 67);
-            this.FinishTask.Name = "FinishTask";
-            this.FinishTask.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FinishTask.Size = new System.Drawing.Size(147, 42);
-            this.FinishTask.TabIndex = 10;
-            this.FinishTask.Text = "Zakończ zadanie";
-            this.FinishTask.UseVisualStyleBackColor = false;
-            this.FinishTask.Click += new System.EventHandler(this.FinishTask_Click);
+            this.FinishTaskButton.BackColor = System.Drawing.Color.RosyBrown;
+            this.FinishTaskButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FinishTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinishTaskButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinishTaskButton.Location = new System.Drawing.Point(538, 67);
+            this.FinishTaskButton.Name = "FinishTaskButton";
+            this.FinishTaskButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.FinishTaskButton.Size = new System.Drawing.Size(147, 42);
+            this.FinishTaskButton.TabIndex = 10;
+            this.FinishTaskButton.Text = "Zakończ zadanie";
+            this.FinishTaskButton.UseVisualStyleBackColor = false;
+            this.FinishTaskButton.Click += new System.EventHandler(this.FinishTask_Click);
             // 
-            // EditTask
+            // EditTaskButton
             // 
-            this.EditTask.BackColor = System.Drawing.Color.RosyBrown;
-            this.EditTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EditTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditTask.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditTask.Location = new System.Drawing.Point(538, 12);
-            this.EditTask.Name = "EditTask";
-            this.EditTask.Size = new System.Drawing.Size(147, 44);
-            this.EditTask.TabIndex = 11;
-            this.EditTask.Text = "Edytuj";
-            this.EditTask.UseVisualStyleBackColor = false;
-            this.EditTask.Visible = false;
-            this.EditTask.Click += new System.EventHandler(this.EditTask_Click);
+            this.EditTaskButton.BackColor = System.Drawing.Color.RosyBrown;
+            this.EditTaskButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditTaskButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditTaskButton.Location = new System.Drawing.Point(538, 12);
+            this.EditTaskButton.Name = "EditTaskButton";
+            this.EditTaskButton.Size = new System.Drawing.Size(147, 44);
+            this.EditTaskButton.TabIndex = 11;
+            this.EditTaskButton.Text = "Edytuj";
+            this.EditTaskButton.UseVisualStyleBackColor = false;
+            this.EditTaskButton.Visible = false;
+            this.EditTaskButton.Click += new System.EventHandler(this.EditTask_Click);
             // 
             // TaskInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 430);
-            this.Controls.Add(this.EditTask);
-            this.Controls.Add(this.FinishTask);
-            this.Controls.Add(this.creationDateInfoLbl1);
-            this.Controls.Add(this.statusInfoLbl1);
-            this.Controls.Add(this.categoryInfoLbl1);
-            this.Controls.Add(this.nameInfoLbl1);
-            this.Controls.Add(this.descriptionInfoRichTextBox);
-            this.Controls.Add(this.statusInfoLbl);
-            this.Controls.Add(this.utworzonoInfoLbl);
+            this.Controls.Add(this.EditTaskButton);
+            this.Controls.Add(this.FinishTaskButton);
+            this.Controls.Add(this.CreatedInfoLabel1);
+            this.Controls.Add(this.StatusInfoLabel1);
+            this.Controls.Add(this.CategoryInfoLabel1);
+            this.Controls.Add(this.NameInfoLabel1);
+            this.Controls.Add(this.DescriptionInfoRichTextBox);
+            this.Controls.Add(this.StatusInfoLabel);
+            this.Controls.Add(this.CreatedInfoLabel);
             this.Controls.Add(this.middlePanelInfo);
-            this.Controls.Add(this.kategoriaInfoLbl);
-            this.Controls.Add(this.nazwaInfoLbl);
+            this.Controls.Add(this.CategoryInfoLabel);
+            this.Controls.Add(this.NameInfoLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TaskInfoForm";
@@ -200,17 +200,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label nazwaInfoLbl;
-        private System.Windows.Forms.Label kategoriaInfoLbl;
+        private System.Windows.Forms.Label NameInfoLabel;
+        private System.Windows.Forms.Label CategoryInfoLabel;
         private System.Windows.Forms.Panel middlePanelInfo;
-        private System.Windows.Forms.Label utworzonoInfoLbl;
-        private System.Windows.Forms.Label statusInfoLbl;
-        private System.Windows.Forms.RichTextBox descriptionInfoRichTextBox;
-        private System.Windows.Forms.Label nameInfoLbl1;
-        private System.Windows.Forms.Label categoryInfoLbl1;
-        private System.Windows.Forms.Label creationDateInfoLbl1;
-        private System.Windows.Forms.Button FinishTask;
-        public System.Windows.Forms.Label statusInfoLbl1;
-        public System.Windows.Forms.Button EditTask;
+        private System.Windows.Forms.Label CreatedInfoLabel;
+        private System.Windows.Forms.Label StatusInfoLabel;
+        private System.Windows.Forms.RichTextBox DescriptionInfoRichTextBox;
+        private System.Windows.Forms.Label NameInfoLabel1;
+        private System.Windows.Forms.Label CategoryInfoLabel1;
+        private System.Windows.Forms.Label CreatedInfoLabel1;
+        private System.Windows.Forms.Button FinishTaskButton;
+        public System.Windows.Forms.Label StatusInfoLabel1;
+        public System.Windows.Forms.Button EditTaskButton;
     }
 }

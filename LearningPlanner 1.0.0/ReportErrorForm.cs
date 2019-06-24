@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     public partial class ReportErrorForm : Form
     {
@@ -12,25 +12,20 @@ namespace LearningPlanner_1._0._0
             InitializeComponent();
         }
 
-        string programMail = "plannerteaminfo@gmail.com";
-        string programMailPassword = "kubamichal123";
-        string authorsMailK = "benzef@tlen.pl";
-        string authorsMailM = "m.biaek91@gmail.com";
-        string name;
-        string emailAddress;
-        string categoryError;
-        string describeError;
-
+     const string programMail = "plannerteaminfo@gmail.com";
+     const string programMailPassword = "kubamichal123";
+     const string authorsMailK = "benzef@tlen.pl";
+     const string authorsMailM = "m.biaek91@gmail.com";
         
 
 
         private void SendErrorMessage()
         {
-                        
-                name = nameTextbox.Text;
-                emailAddress = emailTextBox.Text;
-                categoryError = categoryErrorComboBox.SelectedItem.ToString();
-                describeError = describeErrorRichTextBox.Text;
+
+              string  name = nameTextbox.Text;
+              string  emailAddress = emailTextBox.Text;
+              string  categoryError = categoryErrorComboBox.SelectedItem.ToString();
+              string  describeError = describeErrorRichTextBox.Text;
 
 
 
@@ -47,14 +42,10 @@ namespace LearningPlanner_1._0._0
                 smtpClient.Send(message);                
                 Close();
             
-           
-          
+     
         }
 
-        private void ReportErrorForm_Load(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void SendErrorButton_Click(object sender, EventArgs e)
         {

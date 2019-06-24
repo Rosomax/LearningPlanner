@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using LearningPlanner_1._0._0.Properties;
-namespace LearningPlanner_1._0._0
+using LearningPlanner.Properties;
+namespace LearningPlanner
 {
     public partial class FindTaskForm : Form
     {
@@ -17,19 +14,19 @@ namespace LearningPlanner_1._0._0
         {           
             InitializeComponent();
         }
-        int IDUser = MainForm.UserID;
-        EntitiesModel2 findmodel = new EntitiesModel2();
+       private readonly int IDUser = MainForm.UserID;
+
+        EntitiesModel model = new EntitiesModel();
 
 
         private void FindTaskForm_Load(object sender, EventArgs e)
         {
             FindTaskFormChangeFont();
 
-            this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
-            FindTaskDataGrid.DefaultCellStyle.ForeColor = Color.FromArgb(178, 8, 55);
+            BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
+            
 
-
-            FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new
+            FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
             {
                 h.IDZadania,
                 h.Nazwa,
@@ -49,107 +46,51 @@ namespace LearningPlanner_1._0._0
            
         }
 
-        private void FindTaskButton_Click(object sender, EventArgs e)
+        private void FindTaskForm_SizeChanged(object sender, EventArgs e)
         {
-            string FindText = FindTaskTextBox.Text;
-
-            FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new
+            if (Size.Width <= 799)
             {
-                h.IDZadania,
-                h.Nazwa,
-                h.Kategoria,
-                h.Opis,
-                h.DataUtworzenia,
-                h.CzyZakonczone,
-                h.IDUzytkownika
-            }).
-            Where(h => h.IDUzytkownika == IDUser).Where(h => h.Nazwa.StartsWith(FindText)).ToList();
-          
-        }
 
-        private void FindTaskTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string FindText = FindTaskTextBox.Text;
-
-
-            if (filterComboBox.SelectedIndex == 0)
-            {
-                FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new
-                {
-                    h.IDZadania,
-                    h.Nazwa,
-                    h.Kategoria,
-                    h.Opis,
-                    h.DataUtworzenia,
-                    h.CzyZakonczone,
-                    h.IDUzytkownika
-                }).
-                Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
-                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
-                .Where(h => h.Nazwa.StartsWith(FindText)).ToList();
-
-
-                
+                FindTaskDataGrid.Size = new Size(450, 500);
+                FindTaskDataGrid.RowsDefaultCellStyle.Font = new Font("Century Gothic", 12, FontStyle.Bold);
+                FindTaskLabel.Size = new Size(186, 19);
+                FindTaskLabel.Location = new Point(24, 39);
+                FindTaskLabel.Font = new Font("Century Gothic", 12);
+                FindTaskTextBox.Size = new Size(192, 200);
+                FindTaskTextBox.Location = new Point(28, 61);
+                FindTaskTextBox.Font = new Font("Century Gothic", 8);
+                FilterLabel.Size = new Size(38, 19);
+                FilterLabel.Location = new Point(24, 113);
+                FilterLabel.Font = new Font("Century Gothic", 12);
+                FilterComboBox.Size = new Size(192, 21);
+                FilterComboBox.Location = new Point(28, 135);
+                FilterComboBox.Font = new Font("Century Gothic", 8);
+                FilterFromLabel.Size = new Size(77, 19);
+                FilterFromLabel.Location = new Point(8, 188);
+                FilterFromLabel.Font = new Font("Century Gothic", 12);
+                FilterFrom.Size = new Size(232, 22);
+                FilterFrom.Location = new Point(12, 210);
+                FilterFrom.Font = new Font("Century Gothic", 9);
+                FilterToLabel.Size = new Size(77, 19);
+                FilterToLabel.Location = new Point(8, 243);
+                FilterToLabel.Font = new Font("Century Gothic", 12);
+                FilterTo.Size = new Size(232, 22);
+                FilterTo.Location = new Point(12, 265);
+                FilterTo.Font = new Font("Century Gothic", 9);
+                findPictureBox.Size = new Size(176, 99);
+                findPictureBox.Location = new Point(44, 358);
             }
-            else if (filterComboBox.SelectedIndex == 1)
-            {
-                FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new
-                {
-                    h.IDZadania,
-                    h.Nazwa,
-                    h.Kategoria,
-                    h.Opis,
-                    h.DataUtworzenia,
-                    h.CzyZakonczone,
-                    h.IDUzytkownika
-                }).
-               Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
-                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
-                .Where(h => h.Opis.StartsWith(FindText)).ToList();
-              
-
-            }
-            else if (filterComboBox.SelectedIndex == 2)
-            {
-                FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new
-                {
-                    h.IDZadania,
-                    h.Nazwa,
-                    h.Kategoria,
-                    h.Opis,
-                    h.DataUtworzenia,
-                    h.CzyZakonczone,
-                    h.IDUzytkownika
-                }).
-               Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
-                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
-                .Where(h => h.Kategoria.StartsWith(FindText)).ToList();
-
-               
-            }
-
-
             else
-                FindTaskDataGrid.DataSource = findmodel.Zadania.Select(h => new
-                {
-                    h.IDZadania,
-                    h.Nazwa,
-                    h.Kategoria,
-                    h.Opis,
-                    h.DataUtworzenia,
-                    h.CzyZakonczone,
-                    h.IDUzytkownika
-                }).
-                Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
-                >= filterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= filterTo.Value.Date)
-                .Where(h => h.Nazwa.StartsWith(FindText)).ToList();
-         
+            {
+                Responsiveness resp = new Responsiveness();
+                resp.FindTaskResponse(this);
 
+            }
         }
 
-        public void RefreshGrid()
+        public void FillGrid()
         {
-            FindTaskDataGrid.DataSource = findmodel.Zadania.Select(o => new
+            FindTaskDataGrid.DataSource = model.Zadania.Select(o => new
             {
                 o.IDZadania,
                 o.Nazwa,
@@ -159,64 +100,104 @@ namespace LearningPlanner_1._0._0
                 o.CzyZakonczone,
                 o.IDUzytkownika
             }).Where(o => o.IDUzytkownika == IDUser).ToList();
-          
+
 
         }
 
+     
+
+        private void FindTaskTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string findText = FindTaskTextBox.Text;
+
+
+            if (FilterComboBox.SelectedIndex == 0)
+            {
+                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                {
+                    h.IDZadania,
+                    h.Nazwa,
+                    h.Kategoria,
+                    h.Opis,
+                    h.DataUtworzenia,
+                    h.CzyZakonczone,
+                    h.IDUzytkownika
+                }).
+                Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= FilterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= FilterTo.Value.Date)
+                .Where(h => h.Nazwa.StartsWith(findText)).ToList();
+
+
+                
+            }
+            else if (FilterComboBox.SelectedIndex == 1)
+            {
+                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                {
+                    h.IDZadania,
+                    h.Nazwa,
+                    h.Kategoria,
+                    h.Opis,
+                    h.DataUtworzenia,
+                    h.CzyZakonczone,
+                    h.IDUzytkownika
+                }).
+               Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= FilterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= FilterTo.Value.Date)
+                .Where(h => h.Opis.StartsWith(findText)).ToList();
+              
+
+            }
+            else if (FilterComboBox.SelectedIndex == 2)
+            {
+                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                {
+                    h.IDZadania,
+                    h.Nazwa,
+                    h.Kategoria,
+                    h.Opis,
+                    h.DataUtworzenia,
+                    h.CzyZakonczone,
+                    h.IDUzytkownika
+                }).
+               Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= FilterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= FilterTo.Value.Date)
+                .Where(h => h.Kategoria.StartsWith(findText)).ToList();
+
+               
+            }
+
+
+            else
+                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                {
+                    h.IDZadania,
+                    h.Nazwa,
+                    h.Kategoria,
+                    h.Opis,
+                    h.DataUtworzenia,
+                    h.CzyZakonczone,
+                    h.IDUzytkownika
+                }).
+                Where(h => h.IDUzytkownika == IDUser).Where(h => DbFunctions.TruncateTime(h.DataUtworzenia)
+                >= FilterFrom.Value.Date && DbFunctions.TruncateTime(h.DataUtworzenia) <= FilterTo.Value.Date)
+                .Where(h => h.Nazwa.StartsWith(findText)).ToList();
+         
+
+        }
+       
 
         private void FilterFrom_ValueChanged(object sender, EventArgs e)
         {
-            RefreshGrid();
+            FillGrid();
         }
 
-        private void FindTaskForm_SizeChanged(object sender, EventArgs e)
-        {
-            if (Size.Width <= 799)
-            {
-
-                FindTaskDataGrid.Size = new Size(450, 500);
-                FindTaskDataGrid.RowsDefaultCellStyle.Font = new Font("Century Gothic", 12, FontStyle.Bold);
-                FIndTaskLabel.Size = new Size(186, 19);
-                FIndTaskLabel.Location = new Point(24, 39);
-                FIndTaskLabel.Font = new Font("Century Gothic", 12);
-                FindTaskTextBox.Size = new Size(192, 200);
-                FindTaskTextBox.Location = new Point(28, 61);
-                FindTaskTextBox.Font = new Font("Century Gothic", 8);
-                filtrLabel.Size = new Size(38, 19);
-                filtrLabel.Location = new Point(24, 113);
-                filtrLabel.Font = new Font("Century Gothic", 12);
-                filterComboBox.Size = new Size(192, 21);
-                filterComboBox.Location = new Point(28, 135);
-                filterComboBox.Font = new Font("Century Gothic", 8);
-                filterFromLabel.Size = new Size(77, 19);
-                filterFromLabel.Location = new Point(8, 188);
-                filterFromLabel.Font = new Font("Century Gothic", 12);
-                filterFrom.Size = new Size(232, 22);
-                filterFrom.Location = new Point(12, 210);
-                filterFrom.Font = new Font("Century Gothic", 9);
-                filterToLabel.Size = new Size(77, 19);
-                filterToLabel.Location = new Point(8, 243);
-                filterToLabel.Font = new Font("Century Gothic", 12);
-                filterTo.Size = new Size(232, 22);
-                filterTo.Location = new Point(12, 265);
-                filterTo.Font = new Font("Century Gothic", 9);
-                findPictureBox.Size = new Size(176, 99);
-                findPictureBox.Location = new Point(44, 358);
-            }
-            else
-            {
-                Responsiveness resp = new Responsiveness();
-                resp.FindTaskResponse(this);
-              
-            }
-        }
-
+      
         public DataGridViewRow SelectedRow { get; private set; }
 
-        public bool Status { get; set; }
+        public bool Status { get; private set; }
 
-        public static int Id { get; set; }
-
+        public static int Id { get; private set; }
 
 
         private void FindTaskDataGrid_DoubleClick(object sender, EventArgs e)
@@ -243,19 +224,19 @@ namespace LearningPlanner_1._0._0
                 frm.SetDoubleClickInfo(name, category, description, creationDate);
                 frm.Show();
 
-                if (Status == false)
-                {
-                    frm.statusInfoLbl1.Text = "Nie zakończono";
-                }
+
+                if (Status)               
+                    frm.StatusInfoLabel1.Text = "Zakończono";                          
                 else
-                    frm.statusInfoLbl1.Text = "Zakończono";
+                    frm.StatusInfoLabel1.Text = "Nie zakończono";
 
             }
 
 
-
         }
-
+       
+        #region ChangeFontFromSettings
+     
 
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
@@ -265,31 +246,34 @@ namespace LearningPlanner_1._0._0
                                       .Concat(controls)
                                       .Where(c => c.GetType() == type);
         }
-
+       
 
         public void FindTaskFormChangeFont()
         {
 
+            string font = Settings.Default.RememberFont;
+            bool boldFont = Settings.Default.BoldFont;
+
             foreach (var lbl in GetAll(this, typeof(Label)))
             {
-                if (Settings.Default.BoldFont)
-                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
+                if (boldFont)
+                    (lbl as Label).Font = new Font(font, 12, FontStyle.Bold);
                 else
-                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12);
+                    (lbl as Label).Font = new Font(font, 12);
 
             }
 
             foreach (var grid in GetAll(this, typeof(DataGridView)))
             {
-                if (Settings.Default.BoldFont)
-                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
+                if (boldFont)
+                    (grid as DataGridView).Font = new Font(font, 8, FontStyle.Bold);
                 else
-                    (grid as DataGridView).Font = new Font(Settings.Default.RememberFont, 8);
+                    (grid as DataGridView).Font = new Font(font, 8);
             }
 
         }
 
-
+        #endregion
 
     }
 

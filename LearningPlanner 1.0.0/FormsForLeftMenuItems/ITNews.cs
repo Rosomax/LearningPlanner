@@ -5,27 +5,26 @@ using System.Xml;
 using System.ServiceModel.Syndication;
 using System.Collections.Generic;
 using System.Linq;
-using LearningPlanner_1._0._0.Properties;
-namespace LearningPlanner_1._0._0
+using LearningPlanner.Properties;
+namespace LearningPlanner
 {
     public partial class ITNews : Form
     {
 
-        // RSS Links
-        string s0 = "https://www.gry-online.pl/rss/news.xml"; // gryonline
-        string s1 = "http://pclab.pl/xml/rss.xml"; //pclab
-        string s2 = "http://www.gazeta.pl/pub/rss/sport.xml"; // Sport
-        string s3 = "http://kanaly.rss.interia.pl/fakty.xml"; // Newses interia
-        string s4 = "http://vitalia.pl/artykuly.xml"; // Dietetics
-
        
-        // WWW links
-        string ws0 = "https://www.itnews.com/";//itnews
-        string ws1 = "https://stackoverflow.com/"; //stackoverflow
+        string s0 = "http://technow.pl/feed"; 
+        string s1 = "https://pclab.pl/xml/rss.xml"; 
+        string s2 = "https://itreseller.com.pl/feed/"; 
+        string s3 = "http://www.itworld.com/news/index.rss"; 
+        string s4 = "http://www.computerworld.com/index.rss"; 
+      
+       
+        string ws0 = "https://www.itnews.com/";
+        string ws1 = "https://stackoverflow.com/"; 
 
 
 
- public ITNews()
+       public ITNews()
         {
             InitializeComponent();
         }
@@ -34,25 +33,22 @@ namespace LearningPlanner_1._0._0
         {
          
 
-            this.BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
+            BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
 
-            string s0t = "GRY ONLINE";
+            string s0t = "TECHNOW";
             string s1t = "PC-LAB";
-            string s2t = "SPORT";
-            string s3t = "FAKTY - POLSKA";
-            string s4t = "DIETETYKA i FITNESS";
-            channelsListBox.Items.Add(s0t);
-            channelsListBox.Items.Add(s1t);
-            channelsListBox.Items.Add(s2t);
-            channelsListBox.Items.Add(s3t);
-            channelsListBox.Items.Add(s4t);
-           
-          
-
+            string s2t = "ITRESELLER";
+            string s3t = "ITWORLD";
+            string s4t = "COMPUTERWORLD";
+            ChannelsListBox.Items.Add(s0t);
+            ChannelsListBox.Items.Add(s1t);
+            ChannelsListBox.Items.Add(s2t);
+            ChannelsListBox.Items.Add(s3t);
+            ChannelsListBox.Items.Add(s4t);
+                     
             string wst0 = "IT NEWS IDG";
             string wst1 = "STACKOVERFLOW";
                                                        
-
             FavoriteSitesListBox.Items.Add(wst0);
             FavoriteSitesListBox.Items.Add(wst1);
 
@@ -60,42 +56,100 @@ namespace LearningPlanner_1._0._0
             ITNewsFormChangeFont();
         }
 
-        #region Change strings to URL and transfer to textbox for xmls
-        // For XML - change string to URL
-        private void transferToUrlTextBox()
+        private void ITNews_SizeChanged(object sender, EventArgs e)
         {
-            if (channelsListBox.SelectedItem != null)
+            if (this.Size.Width <= 799)
             {
-                string copyUrl;
-                copyUrl = (channelsListBox.SelectedItem as string);
-                if(channelsListBox.SelectedIndex==0)
+                urlGroupBox.Size = new Size(203, 544);
+                UrlTextBox.Size = new Size(175, 13);
+                AddUrlButton.Size = new Size(175, 40);
+                ChannelsTitleLabel.Size = new Size(175, 50);
+                ChannelsTitleLabel.Location = new Point(13, 77);
+                ChannelsListBox.Size = new Size(175, 84);
+                ChannelsListBox.Location = new Point(13, 133);
+                ChannelsListBox.BackColor = Color.FromArgb(138, 197, 222);
+                WebBrowserForXml.Size = new Size(520, 268);
+                SitesLabel.Size = new Size(175, 50);
+                SitesLabel.Location = new Point(13, 236);
+                FavoriteSitesListBox.Size = new Size(175, 95);
+                FavoriteSitesListBox.Location = new Point(13, 293);
+                LoadWWWbutton.Size = new Size(175, 40);
+                LoadWWWbutton.Location = new Point(13, 389);
+                WWWtextbox.Size = new Size(175, 13);
+                WWWtextbox.Location = new Point(13, 434);
+                WebBrowserForXml.Size = new Size(520, 343); // ROZMIAR PRZEGLDARKI
+                DisplayForNewsTabControl.Size = new Size(520, 195); // Rozmiar okna na xml
+                // zmiana fonta
+                FavoriteSitesListBox.Font = new Font("Centhury gothic", 8);
+                ChannelsListBox.Font = new Font("Centhury gothic", 8);
+
+            }
+            else if (Size.Width >= 800)
+            {
+                /// Planuje jeszcze czcionki zwiekszyc odpowiednio do rozmiaru okna
+                urlGroupBox.Size = new Size(320, 544);
+                UrlTextBox.Size = new Size(294, 13);
+                AddUrlButton.Size = new Size(294, 60);
+                ChannelsTitleLabel.Size = new Size(294, 50);
+                ChannelsTitleLabel.Location = new Point(13, 97);
+                ChannelsListBox.BackColor = Color.FromArgb(138, 197, 222);
+                ChannelsListBox.Size = new Size(294, 280);
+                ChannelsListBox.Location = new Point(13, 156);
+
+
+                SitesLabel.Size = new Size(294, 50);
+                SitesLabel.Location = new Point(13, 461);
+                FavoriteSitesListBox.Size = new Size(294, 280);
+                FavoriteSitesListBox.Location = new Point(13, 520);
+                LoadWWWbutton.Size = new Size(294, 60);
+                LoadWWWbutton.Location = new Point(13, 807);
+                WWWtextbox.Size = new Size(294, 13);
+                WWWtextbox.Location = new Point(13, 872);
+                WebBrowserForXml.Size = new Size(1020, 740); // ROZMIAR PRZEGLDARKI
+                DisplayForNewsTabControl.Size = new Size(1020, 300); // Rozmiar okna na xml
+                // zmiana fonta
+                FavoriteSitesListBox.Font = new Font("Centhury gothic", 14);
+                ChannelsListBox.Font = new Font("Centhury gothic", 14);
+            }
+        }
+
+
+        #region Change strings to URL and transfer to textbox for xmls
+       
+        private void TransferToUrlTextBox()
+        {
+            if (ChannelsListBox.SelectedItem != null)
+            {             
+
+                string copyUrl = (ChannelsListBox.SelectedItem as string);
+                if(ChannelsListBox.SelectedIndex==0)
                 {
                     copyUrl = s0;
                 }
-                else if(channelsListBox.SelectedIndex == 1)
+                else if(ChannelsListBox.SelectedIndex == 1)
                 {
                     copyUrl = s1;
                 }
-                 else if(channelsListBox.SelectedIndex == 2)
+                 else if(ChannelsListBox.SelectedIndex == 2)
                 {
                     copyUrl = s2;
                 }
-                else if (channelsListBox.SelectedIndex == 3)
+                else if (ChannelsListBox.SelectedIndex == 3)
                 {
                     copyUrl = s3;
                 }
-                else if (channelsListBox.SelectedIndex == 4)
+                else if (ChannelsListBox.SelectedIndex == 4)
                 {
                     copyUrl = s4;
                 }
-                urlTextBox.Text = copyUrl;
-                copyUrl = (channelsListBox.SelectedItem as string);  
+                UrlTextBox.Text = copyUrl;
+                //copyUrl = (channelsListBox.SelectedItem as string);  
             }
                 
         }
 
         // Change string to url for WWW
-        private void transferToUrlWWWTextBox()
+        private void TransferToUrlWWWTextBox()
         {
             if (FavoriteSitesListBox.SelectedItem != null)
             {
@@ -129,32 +183,23 @@ namespace LearningPlanner_1._0._0
         #endregion
 
 
-        private void addUrlButton_Click(object sender, EventArgs e)
+        private void AddUrlButton_Click(object sender, EventArgs e)
         {
          try
-            {
-                // pobiera wartość z text boxa ( text) i na jego podstawie tworzy nowy XML reader
-                XmlReader feedReadXML = XmlReader.Create(urlTextBox.Text);
-                //--------------------------------------------
-                SyndicationFeed feedXML = SyndicationFeed.Load(feedReadXML);
-                //przypisanie nazwy , tytulu z kanalu rss do zmiennej typu Tab zakladka
-                TabPage feedTab = new TabPage(feedXML.Title.Text);
-                // przypisanie nazwy do zakladki z naszego contentu rss
-                displayForNewsTabControl.TabPages.Add(feedTab);
-                // utworzenie listboxa do trzymania contentu
-                ListBox feedList = new ListBox();
-                // wypelnienie contentem z kanalu rss
-                feedTab.Controls.Add(feedList);
-                // wypelnienie calego obszaru listboxem
-                feedList.Dock = DockStyle.Fill;
-                // Dodanie scroll bara do lepszego przewijania contentu
+            {              
+                XmlReader feedReadXML = XmlReader.Create(UrlTextBox.Text);              
+                SyndicationFeed feedXML = SyndicationFeed.Load(feedReadXML);    
+                TabPage feedTab = new TabPage(feedXML.Title.Text);            
+                DisplayForNewsTabControl.TabPages.Add(feedTab);             
+                ListBox feedList = new ListBox();             
+                feedTab.Controls.Add(feedList);              
+                feedList.Dock = DockStyle.Fill;               
                 feedList.HorizontalScrollbar = true;
-              
 
                 foreach (SyndicationItem feedItem in feedXML.Items)
                 {
 
-                    //// to do obcinania
+
                     string summary = feedItem.Summary.Text;
                     bool running = true;
 
@@ -175,8 +220,7 @@ namespace LearningPlanner_1._0._0
                     {
                         if (characterdata == '>' && running)
                         {
-                           // string tmp;
-                            //tmp=
+                           
                             if (characterdata == '<' && running)
                             {
                                 link = link + characterdata;
@@ -188,15 +232,13 @@ namespace LearningPlanner_1._0._0
                         }
 
                     }
+
                    
-                    // Dodanie tytulu wiadomosci z kanalu rss
                     feedList.Items.Add(feedItem.Title.Text);
-                    // dodanie textu wiadomosci z kanalu rss
+                   
                     feedList.Items.Add(fix_sum);
-                    //feedList.Items.Add(link);
-               
+                                   
                     
-                    // DOdanie separatora
                     feedList.Items.Add("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
                 }
             }
@@ -204,76 +246,16 @@ namespace LearningPlanner_1._0._0
 
 
         }
-        // Kliknieca w listboxy
-        private void channelsListBox_MouseClick(object sender, MouseEventArgs e)
+      
+        private void ChannelsListBox_MouseClick(object sender, MouseEventArgs e)
         {
-            transferToUrlTextBox();
+            TransferToUrlTextBox();
         }
         private void FavoriteSitesListBox_MouseClick(object sender, MouseEventArgs e)
         {
-            transferToUrlWWWTextBox();
+            TransferToUrlWWWTextBox();
         }
-
-        #region zmianay w responsowynosci, ukladzie i wielkosci formantow przy zmianach wielkosci okna
-
-        private void ITNews_SizeChanged(object sender, EventArgs e)
-        {
-            if ( this.Size.Width <= 799)
-            {
-                urlGroupBox.Size = new Size(203, 544);
-                urlTextBox.Size = new Size(175, 13);
-                addUrlButton.Size = new Size(175, 40);
-                channelsTitleLabel.Size = new Size(175, 50);
-                channelsTitleLabel.Location = new Point(13, 77);
-                channelsListBox.Size = new Size(175, 84);
-                channelsListBox.Location = new Point(13, 133);
-                channelsListBox.BackColor = Color.FromArgb(138, 197, 222);
-                WebBrowserForXml.Size = new Size(520, 268);
-                SitesLabel.Size = new Size(175, 50);
-                SitesLabel.Location = new Point(13, 236);
-                FavoriteSitesListBox.Size = new Size(175, 95);
-                FavoriteSitesListBox.Location = new Point(13, 293);
-                LoadWWWbutton.Size = new Size(175, 40);
-                LoadWWWbutton.Location = new Point(13, 389);
-                WWWtextbox.Size = new Size(175, 13);
-                WWWtextbox.Location = new Point(13, 434);
-                WebBrowserForXml.Size = new Size(520, 343); // ROZMIAR PRZEGLDARKI
-                displayForNewsTabControl.Size = new Size(520, 195); // Rozmiar okna na xml
-                // zmiana fonta
-                FavoriteSitesListBox.Font = new Font("Centhury gothic", 8);
-                channelsListBox.Font = new Font("Centhury gothic", 8);
-
-            }
-            else if ( this.Size.Width >= 800)
-            {
-                /// Planuje jeszcze czcionki zwiekszyc odpowiednio do rozmiaru okna
-                urlGroupBox.Size = new Size(320, 544);
-                urlTextBox.Size = new Size(294, 13);
-                addUrlButton.Size = new Size(294, 60);
-                channelsTitleLabel.Size = new Size(294, 50);
-                channelsTitleLabel.Location = new Point(13, 97);
-                channelsListBox.BackColor = Color.FromArgb(138, 197, 222);
-                channelsListBox.Size = new Size(294, 280);
-                channelsListBox.Location = new Point(13, 156);
-                
-                
-                SitesLabel.Size = new Size(294, 50);
-                SitesLabel.Location = new Point(13, 461);
-                FavoriteSitesListBox.Size = new Size(294, 280);
-                FavoriteSitesListBox.Location = new Point(13, 520);
-                LoadWWWbutton.Size = new Size(294, 60);
-                LoadWWWbutton.Location = new Point(13, 807);
-                WWWtextbox.Size = new Size(294, 13);
-                WWWtextbox.Location = new Point(13, 872);
-                WebBrowserForXml.Size = new Size(1020, 740); // ROZMIAR PRZEGLDARKI
-                displayForNewsTabControl.Size = new Size(1020, 300); // Rozmiar okna na xml
-                // zmiana fonta
-                FavoriteSitesListBox.Font = new Font("Centhury gothic", 14);
-                channelsListBox.Font = new Font("Centhury gothic", 14);
-            }
-        }
-        #endregion
-       
+   
 
         private void LoadWWWbutton_Click(object sender, EventArgs e)
         {
@@ -288,6 +270,10 @@ namespace LearningPlanner_1._0._0
            
         }
 
+
+
+
+        #region ChangeFontFromSettings
 
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
@@ -345,6 +331,6 @@ namespace LearningPlanner_1._0._0
 
         }
 
-
+        #endregion
     }
 }

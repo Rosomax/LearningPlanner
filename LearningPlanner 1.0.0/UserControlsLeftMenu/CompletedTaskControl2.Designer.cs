@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class CompletedTaskControl2
     {
@@ -35,7 +35,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::LearningPlanner_1._0._0.Properties.Resources.Zakonczone_zadanie_icon;
+            this.pictureBox1.Image = global::LearningPlanner.Properties.Resources.Zakonczone_zadanie_icon;
             this.pictureBox1.Location = new System.Drawing.Point(4, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 39);

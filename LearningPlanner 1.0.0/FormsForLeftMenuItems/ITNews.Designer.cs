@@ -1,4 +1,4 @@
-﻿namespace LearningPlanner_1._0._0
+﻿namespace LearningPlanner
 {
     partial class ITNews
     {
@@ -28,54 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addUrlButton = new System.Windows.Forms.Button();
-            this.urlTextBox = new System.Windows.Forms.TextBox();
+            this.AddUrlButton = new System.Windows.Forms.Button();
+            this.UrlTextBox = new System.Windows.Forms.TextBox();
             this.urlGroupBox = new System.Windows.Forms.GroupBox();
             this.WWWtextbox = new System.Windows.Forms.TextBox();
             this.LoadWWWbutton = new System.Windows.Forms.Button();
             this.FavoriteSitesListBox = new System.Windows.Forms.ListBox();
             this.SitesLabel = new System.Windows.Forms.Label();
             this.panelHide = new System.Windows.Forms.Panel();
-            this.channelsTitleLabel = new System.Windows.Forms.Label();
+            this.ChannelsTitleLabel = new System.Windows.Forms.Label();
             this.rssImage = new System.Windows.Forms.PictureBox();
-            this.channelsListBox = new System.Windows.Forms.ListBox();
-            this.displayForNewsTabControl = new System.Windows.Forms.TabControl();
+            this.ChannelsListBox = new System.Windows.Forms.ListBox();
+            this.DisplayForNewsTabControl = new System.Windows.Forms.TabControl();
             this.WebBrowserForXml = new System.Windows.Forms.WebBrowser();
             this.urlGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rssImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // addUrlButton
+            // AddUrlButton
             // 
-            this.addUrlButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.addUrlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
-            this.addUrlButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.addUrlButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.addUrlButton.FlatAppearance.BorderSize = 3;
-            this.addUrlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addUrlButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUrlButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addUrlButton.Location = new System.Drawing.Point(13, 34);
-            this.addUrlButton.Margin = new System.Windows.Forms.Padding(8);
-            this.addUrlButton.MaximumSize = new System.Drawing.Size(300, 100);
-            this.addUrlButton.Name = "addUrlButton";
-            this.addUrlButton.Padding = new System.Windows.Forms.Padding(2);
-            this.addUrlButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.addUrlButton.Size = new System.Drawing.Size(175, 40);
-            this.addUrlButton.TabIndex = 0;
-            this.addUrlButton.Text = "Dodaj";
-            this.addUrlButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.addUrlButton.UseVisualStyleBackColor = false;
-            this.addUrlButton.Click += new System.EventHandler(this.addUrlButton_Click);
+            this.AddUrlButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AddUrlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.AddUrlButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddUrlButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.AddUrlButton.FlatAppearance.BorderSize = 3;
+            this.AddUrlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddUrlButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddUrlButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AddUrlButton.Location = new System.Drawing.Point(13, 34);
+            this.AddUrlButton.Margin = new System.Windows.Forms.Padding(8);
+            this.AddUrlButton.MaximumSize = new System.Drawing.Size(300, 100);
+            this.AddUrlButton.Name = "AddUrlButton";
+            this.AddUrlButton.Padding = new System.Windows.Forms.Padding(2);
+            this.AddUrlButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.AddUrlButton.Size = new System.Drawing.Size(175, 40);
+            this.AddUrlButton.TabIndex = 0;
+            this.AddUrlButton.Text = "Dodaj";
+            this.AddUrlButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.AddUrlButton.UseVisualStyleBackColor = false;
+            this.AddUrlButton.Click += new System.EventHandler(this.AddUrlButton_Click);
             // 
-            // urlTextBox
+            // UrlTextBox
             // 
-            this.urlTextBox.BackColor = System.Drawing.Color.White;
-            this.urlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.urlTextBox.Location = new System.Drawing.Point(13, 13);
-            this.urlTextBox.Name = "urlTextBox";
-            this.urlTextBox.Size = new System.Drawing.Size(175, 13);
-            this.urlTextBox.TabIndex = 1;
+            this.UrlTextBox.BackColor = System.Drawing.Color.White;
+            this.UrlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UrlTextBox.Location = new System.Drawing.Point(13, 13);
+            this.UrlTextBox.Name = "UrlTextBox";
+            this.UrlTextBox.Size = new System.Drawing.Size(175, 13);
+            this.UrlTextBox.TabIndex = 1;
             // 
             // urlGroupBox
             // 
@@ -86,11 +86,11 @@
             this.urlGroupBox.Controls.Add(this.FavoriteSitesListBox);
             this.urlGroupBox.Controls.Add(this.SitesLabel);
             this.urlGroupBox.Controls.Add(this.panelHide);
-            this.urlGroupBox.Controls.Add(this.channelsTitleLabel);
+            this.urlGroupBox.Controls.Add(this.ChannelsTitleLabel);
             this.urlGroupBox.Controls.Add(this.rssImage);
-            this.urlGroupBox.Controls.Add(this.addUrlButton);
-            this.urlGroupBox.Controls.Add(this.urlTextBox);
-            this.urlGroupBox.Controls.Add(this.channelsListBox);
+            this.urlGroupBox.Controls.Add(this.AddUrlButton);
+            this.urlGroupBox.Controls.Add(this.UrlTextBox);
+            this.urlGroupBox.Controls.Add(this.ChannelsListBox);
             this.urlGroupBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.urlGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urlGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -169,27 +169,27 @@
             this.panelHide.Size = new System.Drawing.Size(198, 4);
             this.panelHide.TabIndex = 5;
             // 
-            // channelsTitleLabel
+            // ChannelsTitleLabel
             // 
-            this.channelsTitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.channelsTitleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.channelsTitleLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.channelsTitleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.channelsTitleLabel.Location = new System.Drawing.Point(13, 77);
-            this.channelsTitleLabel.MaximumSize = new System.Drawing.Size(300, 100);
-            this.channelsTitleLabel.Name = "channelsTitleLabel";
-            this.channelsTitleLabel.Padding = new System.Windows.Forms.Padding(5);
-            this.channelsTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.channelsTitleLabel.Size = new System.Drawing.Size(175, 50);
-            this.channelsTitleLabel.TabIndex = 3;
-            this.channelsTitleLabel.Text = "Polecane Kanały";
-            this.channelsTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ChannelsTitleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.ChannelsTitleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChannelsTitleLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ChannelsTitleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ChannelsTitleLabel.Location = new System.Drawing.Point(13, 77);
+            this.ChannelsTitleLabel.MaximumSize = new System.Drawing.Size(300, 100);
+            this.ChannelsTitleLabel.Name = "ChannelsTitleLabel";
+            this.ChannelsTitleLabel.Padding = new System.Windows.Forms.Padding(5);
+            this.ChannelsTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ChannelsTitleLabel.Size = new System.Drawing.Size(175, 50);
+            this.ChannelsTitleLabel.TabIndex = 3;
+            this.ChannelsTitleLabel.Text = "Polecane Kanały";
+            this.ChannelsTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rssImage
             // 
             this.rssImage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.rssImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.rssImage.Image = global::LearningPlanner_1._0._0.Properties.Resources.RssImagePNG;
+            this.rssImage.Image = global::LearningPlanner.Properties.Resources.RssImagePNG;
             this.rssImage.Location = new System.Drawing.Point(13, 452);
             this.rssImage.Name = "rssImage";
             this.rssImage.Size = new System.Drawing.Size(177, 84);
@@ -197,28 +197,28 @@
             this.rssImage.TabIndex = 4;
             this.rssImage.TabStop = false;
             // 
-            // channelsListBox
+            // ChannelsListBox
             // 
-            this.channelsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
-            this.channelsListBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.channelsListBox.FormattingEnabled = true;
-            this.channelsListBox.ItemHeight = 16;
-            this.channelsListBox.Location = new System.Drawing.Point(13, 133);
-            this.channelsListBox.Name = "channelsListBox";
-            this.channelsListBox.Size = new System.Drawing.Size(175, 84);
-            this.channelsListBox.TabIndex = 2;
-            this.channelsListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.channelsListBox_MouseClick);
+            this.ChannelsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.ChannelsListBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ChannelsListBox.FormattingEnabled = true;
+            this.ChannelsListBox.ItemHeight = 16;
+            this.ChannelsListBox.Location = new System.Drawing.Point(13, 133);
+            this.ChannelsListBox.Name = "ChannelsListBox";
+            this.ChannelsListBox.Size = new System.Drawing.Size(175, 84);
+            this.ChannelsListBox.TabIndex = 2;
+            this.ChannelsListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChannelsListBox_MouseClick);
             // 
-            // displayForNewsTabControl
+            // DisplayForNewsTabControl
             // 
-            this.displayForNewsTabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.displayForNewsTabControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.displayForNewsTabControl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.displayForNewsTabControl.Location = new System.Drawing.Point(203, 0);
-            this.displayForNewsTabControl.Name = "displayForNewsTabControl";
-            this.displayForNewsTabControl.SelectedIndex = 0;
-            this.displayForNewsTabControl.Size = new System.Drawing.Size(520, 195);
-            this.displayForNewsTabControl.TabIndex = 4;
+            this.DisplayForNewsTabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.DisplayForNewsTabControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DisplayForNewsTabControl.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DisplayForNewsTabControl.Location = new System.Drawing.Point(203, 0);
+            this.DisplayForNewsTabControl.Name = "DisplayForNewsTabControl";
+            this.DisplayForNewsTabControl.SelectedIndex = 0;
+            this.DisplayForNewsTabControl.Size = new System.Drawing.Size(520, 195);
+            this.DisplayForNewsTabControl.TabIndex = 4;
             // 
             // WebBrowserForXml
             // 
@@ -236,7 +236,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(723, 544);
             this.Controls.Add(this.WebBrowserForXml);
-            this.Controls.Add(this.displayForNewsTabControl);
+            this.Controls.Add(this.DisplayForNewsTabControl);
             this.Controls.Add(this.urlGroupBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -254,13 +254,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button addUrlButton;
-        private System.Windows.Forms.TextBox urlTextBox;
+        private System.Windows.Forms.Button AddUrlButton;
+        private System.Windows.Forms.TextBox UrlTextBox;
         private System.Windows.Forms.GroupBox urlGroupBox;
-        private System.Windows.Forms.TabControl displayForNewsTabControl;
-        private System.Windows.Forms.ListBox channelsListBox;
+        private System.Windows.Forms.TabControl DisplayForNewsTabControl;
+        private System.Windows.Forms.ListBox ChannelsListBox;
         private System.Windows.Forms.PictureBox rssImage;
-        private System.Windows.Forms.Label channelsTitleLabel;
+        private System.Windows.Forms.Label ChannelsTitleLabel;
         private System.Windows.Forms.Panel panelHide;
         private System.Windows.Forms.WebBrowser WebBrowserForXml;
         private System.Windows.Forms.ListBox FavoriteSitesListBox;

@@ -3,7 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace LearningPlanner_1._0._0
+namespace LearningPlanner
 {
     public partial class RegisterForm : Form
     {
@@ -12,16 +12,16 @@ namespace LearningPlanner_1._0._0
             InitializeComponent();
         }
 
-        // Zmienna obslugiwana przez wlasciwosc
-        private string login;
-        // Zmienna pomocnicza
+        
+        string login;
+        
         bool logi = false;
-        // Wlasciwosc obslugujaca wpisywany login
-        public string Login
+        
+       public string Login
         {
             get
-            {        // Jezeli dlugosc loginu miedzy 3 a 15 znakow
-                if ((regLoginTextBox.Text.Length > 3) && (regLoginTextBox.Text.Length < 15))
+            {       
+                if ((regLoginTextBox.Text.Length >= 3) && (regLoginTextBox.Text.Length < 15))
                 {
                     login = regLoginTextBox.Text;
                     logi = true;
@@ -51,7 +51,7 @@ namespace LearningPlanner_1._0._0
         public const int MinValue = 3;
         public const int MaxValue = 15;
 
-        private string password;
+        string password;
 
 
         public string Password
@@ -60,7 +60,7 @@ namespace LearningPlanner_1._0._0
 
             get
             {
-                if ((regPassTextBox.Text.Length > 3) && (regPassTextBox.Text.Length < 15))
+                if ((regPassTextBox.Text.Length >= 3) && (regPassTextBox.Text.Length < 15))
                 {
                     password = regPassTextBox.Text;
                     return password;
@@ -90,18 +90,18 @@ namespace LearningPlanner_1._0._0
         {
 
             string pass = regPassTextBox2.Text;
-            bool samePassValid = String.Equals(Password, pass);
+            bool samePassValid = string.Equals(Password, pass);
             string log = Login;
 
 
-            if ((samePassValid == true) && (logi == true))
+            if ((samePassValid) && (logi))
             {
                 badValueLogin.Visible = false;
                 badValuePassword.Visible = false;
                 AddUserToDataBase();
 
             }
-            else if((regLoginTextBox.Text.Length<3)&&(samePassValid==true))
+            else if((regLoginTextBox.Text.Length<3)&&(samePassValid))
             {
                 badValueLogin.Text = "Login musi się składać z minimum 3 znaków";
                 badValuePassword.Visible = false;
@@ -114,14 +114,17 @@ namespace LearningPlanner_1._0._0
             }
 
         }
-        Uzytkownicy model = new Uzytkownicy();
+      
         
            private void AddUserToDataBase()
-        { 
-            model.Login = Login;
-            model.Haslo = Password;
+           {
+            Uzytkownicy model = new Uzytkownicy
+            {
+                Login = Login,
+                Haslo = Password
+            };
 
-            using (EntitiesModel2 entitiesModel = new EntitiesModel2())
+            using (EntitiesModel entitiesModel = new EntitiesModel())
             {
                 if (entitiesModel.Uzytkownicy.Where(u => u.Login == Login).Any())
                 {
@@ -141,7 +144,6 @@ namespace LearningPlanner_1._0._0
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-
             CreateAccount();
             Refresh();
         }
