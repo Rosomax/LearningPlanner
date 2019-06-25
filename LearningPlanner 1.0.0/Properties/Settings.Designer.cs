@@ -23,17 +23,6 @@ namespace LearningPlanner.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NT-27.WWSI.EDU.PL,1601;Initial Catalog=KASETY_406_01;Persist Security" +
-            " Info=True;User ID=Z406_01;Password=Z406_01")]
-        public string Polaczenie_z_baza {
-            get {
-                return ((string)(this["Polaczenie_z_baza"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("138")]

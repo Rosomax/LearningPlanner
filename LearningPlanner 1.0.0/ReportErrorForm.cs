@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
-
+using System.Linq;
 namespace LearningPlanner
 {
     public partial class ReportErrorForm : Form
@@ -16,54 +16,54 @@ namespace LearningPlanner
      const string programMailPassword = "kubamichal123";
      const string authorsMailK = "benzef@tlen.pl";
      const string authorsMailM = "m.biaek91@gmail.com";
+
         string emailAddress;
 
 
-        private bool SendErrorMessage()
+
+      //  EntitiesModel model = new EntitiesModel();
+       
+
+        private bool SendMessage(string emailAddr)
         {
+          //  var x = model.Uzytkownicy.First(z => z.IDosoby == 4).Haslo;
+
             
-              string  name = nameTextbox.Text;
-            emailAddress = emailTextBox.Text;
-            string  categoryError = categoryErrorComboBox.SelectedItem.ToString();
-              string  describeError = describeErrorRichTextBox.Text;
+         
 
 
-            if (IsValid(emailAddress))
-            {
+
+
+            emailAddress = emailAddr;         
+            string name = nameTextbox.Text;
+            emailAddr = emailTextBox.Text;
+            string categoryError = categoryErrorComboBox.SelectedItem.ToString();
+            string describeError = describeErrorRichTextBox.Text;
+
+            try
+            {                
                 MailMessage message = new MailMessage();
                 message.To.Add(authorsMailK);
                 message.To.Add(authorsMailM);
                 message.Subject = ($"Wysłano z learning planner: {categoryError}");
                 message.Priority = MailPriority.High;
                 message.From = new MailAddress(programMail, "LearningPlannerMail");
-                message.Body = ($"{describeError} \n\n Odpowiedz na  {emailAddress} do użytkownika {name}");
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
-                smtpClient.EnableSsl = true;
-                smtpClient.Credentials = new NetworkCredential(programMail, programMailPassword);
+                message.Body = ($"{describeError} \n\n Odpowiedz na  {emailAddr} do użytkownika {name}");
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587)
+                {
+                    EnableSsl = true,
+                    Credentials = new NetworkCredential(programMail, programMailPassword)
+                };
                 smtpClient.Send(message);
                 MessageBox.Show("Wyslano wiadomosc!");
-                Close();
-                
-                return true;
-            }
-            
 
-            else
-                return false;
-     
-        }
-
-        private bool IsValid(string emailAddress)
-        {
-            try
-            {
-                MailAddress m = new MailAddress(emailAddress);
-                
                 return true;
             }
             catch (FormatException)
             {
+                MessageBox.Show("Nieprawidłowy email");
                 return false;
+              
             }
         }
 
@@ -73,16 +73,10 @@ namespace LearningPlanner
         private void SendErrorButton_Click(object sender, EventArgs e)
         {
             if (nameTextbox.Text == string.Empty || emailTextBox.Text == string.Empty || categoryErrorComboBox.SelectedItem == null )
-                MessageBox.Show("upssss, cos poszlo nie tak!");
-
-            else if (SendErrorMessage()==false)
-            {
-                MessageBox.Show("Nieprawidłowy adres email");
-            }
+                MessageBox.Show("Uzupełnij wszystkie pola!");
             else
             {
-                SendErrorMessage();
-                
+                SendMessage(emailAddress);
             }
         }
     }

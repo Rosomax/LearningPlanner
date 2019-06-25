@@ -16,7 +16,7 @@ namespace LearningPlanner
     public partial class EntitiesModel : DbContext
     {
         public EntitiesModel()
-            : base("name=EntitiesModel2")
+            : base("name=EntitiesModel")
         {
         }
     
