@@ -16,20 +16,21 @@ namespace LearningPlanner
      const string programMailPassword = "kubamichal123";
      const string authorsMailK = "benzef@tlen.pl";
      const string authorsMailM = "m.biaek91@gmail.com";
-        
+        string emailAddress;
 
 
-        private void SendErrorMessage()
+        private bool SendErrorMessage()
         {
-
+            
               string  name = nameTextbox.Text;
-              string  emailAddress = emailTextBox.Text;
-              string  categoryError = categoryErrorComboBox.SelectedItem.ToString();
+            emailAddress = emailTextBox.Text;
+            string  categoryError = categoryErrorComboBox.SelectedItem.ToString();
               string  describeError = describeErrorRichTextBox.Text;
 
 
-
-            MailMessage message = new MailMessage();
+            if (IsValid(emailAddress))
+            {
+                MailMessage message = new MailMessage();
                 message.To.Add(authorsMailK);
                 message.To.Add(authorsMailM);
                 message.Subject = ($"Wysłano z learning planner: {categoryError}");
@@ -39,22 +40,49 @@ namespace LearningPlanner
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
                 smtpClient.EnableSsl = true;
                 smtpClient.Credentials = new NetworkCredential(programMail, programMailPassword);
-                smtpClient.Send(message);                
+                smtpClient.Send(message);
+                MessageBox.Show("Wyslano wiadomosc!");
                 Close();
+                
+                return true;
+            }
             
+
+            else
+                return false;
      
         }
 
-    
+        private bool IsValid(string emailAddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailAddress);
+                
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
+
+
 
         private void SendErrorButton_Click(object sender, EventArgs e)
         {
-            if (nameTextbox.Text == string.Empty || emailTextBox.Text == string.Empty || categoryErrorComboBox.SelectedItem == null)
+            if (nameTextbox.Text == string.Empty || emailTextBox.Text == string.Empty || categoryErrorComboBox.SelectedItem == null )
                 MessageBox.Show("upssss, cos poszlo nie tak!");
+
+            else if (SendErrorMessage()==false)
+            {
+                MessageBox.Show("Nieprawidłowy adres email");
+            }
             else
             {
                 SendErrorMessage();
-                MessageBox.Show("Wyslano wiadomosc!");
+                
             }
         }
     }

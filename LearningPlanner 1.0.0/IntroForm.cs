@@ -22,7 +22,7 @@ namespace LearningPlanner
             var physicalMemory = System.Environment.WorkingSet.ToString();
             var loggedUserName = System.Environment.UserName.ToString();
 
-            string path = "Logi\\LocalLogs.txt";
+            string path = "Logs\\LocalLogs.txt";
 
             if (File.Exists(path))
                 using (StreamWriter write = new StreamWriter(path, true))

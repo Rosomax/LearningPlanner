@@ -77,8 +77,8 @@ namespace LearningPlanner
                 FilterTo.Size = new Size(232, 22);
                 FilterTo.Location = new Point(12, 265);
                 FilterTo.Font = new Font("Century Gothic", 9);
-                findPictureBox.Size = new Size(176, 99);
-                findPictureBox.Location = new Point(44, 358);
+                FindPictureBox.Size = new Size(176, 99);
+                FindPictureBox.Location = new Point(44, 358);
             }
             else
             {

@@ -67,7 +67,6 @@ namespace LearningPlanner
                 ChannelsTitleLabel.Location = new Point(13, 77);
                 ChannelsListBox.Size = new Size(175, 84);
                 ChannelsListBox.Location = new Point(13, 133);
-                ChannelsListBox.BackColor = Color.FromArgb(138, 197, 222);
                 WebBrowserForXml.Size = new Size(520, 268);
                 SitesLabel.Size = new Size(175, 50);
                 SitesLabel.Location = new Point(13, 236);
@@ -84,32 +83,10 @@ namespace LearningPlanner
                 ChannelsListBox.Font = new Font("Centhury gothic", 8);
 
             }
-            else if (Size.Width >= 800)
+            else 
             {
-                /// Planuje jeszcze czcionki zwiekszyc odpowiednio do rozmiaru okna
-                urlGroupBox.Size = new Size(320, 544);
-                UrlTextBox.Size = new Size(294, 13);
-                AddUrlButton.Size = new Size(294, 60);
-                ChannelsTitleLabel.Size = new Size(294, 50);
-                ChannelsTitleLabel.Location = new Point(13, 97);
-                ChannelsListBox.BackColor = Color.FromArgb(138, 197, 222);
-                ChannelsListBox.Size = new Size(294, 280);
-                ChannelsListBox.Location = new Point(13, 156);
-
-
-                SitesLabel.Size = new Size(294, 50);
-                SitesLabel.Location = new Point(13, 461);
-                FavoriteSitesListBox.Size = new Size(294, 280);
-                FavoriteSitesListBox.Location = new Point(13, 520);
-                LoadWWWbutton.Size = new Size(294, 60);
-                LoadWWWbutton.Location = new Point(13, 807);
-                WWWtextbox.Size = new Size(294, 13);
-                WWWtextbox.Location = new Point(13, 872);
-                WebBrowserForXml.Size = new Size(1020, 740); // ROZMIAR PRZEGLDARKI
-                DisplayForNewsTabControl.Size = new Size(1020, 300); // Rozmiar okna na xml
-                // zmiana fonta
-                FavoriteSitesListBox.Font = new Font("Centhury gothic", 14);
-                ChannelsListBox.Font = new Font("Centhury gothic", 14);
+                Responsiveness responsiveness = new Responsiveness();
+                responsiveness.ITNewsResponse(this);
             }
         }
 

@@ -254,18 +254,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button AddUrlButton;
-        private System.Windows.Forms.TextBox UrlTextBox;
-        private System.Windows.Forms.GroupBox urlGroupBox;
-        private System.Windows.Forms.TabControl DisplayForNewsTabControl;
-        private System.Windows.Forms.ListBox ChannelsListBox;
-        private System.Windows.Forms.PictureBox rssImage;
-        private System.Windows.Forms.Label ChannelsTitleLabel;
-        private System.Windows.Forms.Panel panelHide;
-        private System.Windows.Forms.WebBrowser WebBrowserForXml;
-        private System.Windows.Forms.ListBox FavoriteSitesListBox;
-        private System.Windows.Forms.Label SitesLabel;
-        private System.Windows.Forms.Button LoadWWWbutton;
-        private System.Windows.Forms.TextBox WWWtextbox;
+        public System.Windows.Forms.Button AddUrlButton;
+        public System.Windows.Forms.TextBox UrlTextBox;
+        public System.Windows.Forms.GroupBox urlGroupBox;
+        public System.Windows.Forms.TabControl DisplayForNewsTabControl;
+        public System.Windows.Forms.ListBox ChannelsListBox;
+        public System.Windows.Forms.PictureBox rssImage;
+        public System.Windows.Forms.Label ChannelsTitleLabel;
+        public System.Windows.Forms.Panel panelHide;
+        public System.Windows.Forms.WebBrowser WebBrowserForXml;
+        public System.Windows.Forms.ListBox FavoriteSitesListBox;
+        public System.Windows.Forms.Label SitesLabel;
+        public System.Windows.Forms.Button LoadWWWbutton;
+        public System.Windows.Forms.TextBox WWWtextbox;
     }
 }

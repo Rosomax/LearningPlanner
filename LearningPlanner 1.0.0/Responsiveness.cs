@@ -4,6 +4,7 @@ namespace LearningPlanner
 {
     class Responsiveness
     {
+        string fontName = "Century Gothic";
 
         public void TaskFormRespons(TaskForm x)
         {
@@ -48,7 +49,7 @@ namespace LearningPlanner
             int widthSize = x.Width;
             int heightSize = x.Height;
             int FontSize = (int)(x.Width / 87.2);
-            string FontName = "Century Gothic";
+            
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
             int ControlWidthSize = widthSize / 5;
             int ControlLocationWidth = (int)(widthSize / 16.5);
@@ -64,9 +65,9 @@ namespace LearningPlanner
                 new Point(ControlLocationWidth * 2 + ControlWidthSize, LabelHeightLocation);
             x.describeTaskLabel.Location =
                 new Point(ControlLocationWidth * 3 + ControlWidthSize * 2, LabelHeightLocation);
-            x.chooseCategoryLabel.Font = new Font(FontName, FontSize);
-            x.chooseTaskLabel.Font = new Font(FontName, FontSize);
-            x.describeTaskLabel.Font = new Font(FontName, FontSize);
+            x.chooseCategoryLabel.Font = new Font(fontName, FontSize);
+            x.chooseTaskLabel.Font = new Font(fontName, FontSize);
+            x.describeTaskLabel.Font = new Font(fontName, FontSize);
             // zmienne przechowujące skalowalne rozmiary dla Data Grid
             int DataGridHeightSize = (int)(heightSize / 1.2);
             int DataGridLocationHeight = (int)(heightSize / 14.4);
@@ -82,7 +83,7 @@ namespace LearningPlanner
             x.describeTaskRichTextBox.Size = new Size(DescribeRichTextBoxWidth, DataGridHeightSize);
             x.describeTaskRichTextBox.Location =
                 new Point(ControlLocationWidth * 3 + ControlWidthSize * 2, DataGridLocationHeight);
-            x.describeTaskRichTextBox.Font = new Font(FontName, FontSize, FontStyle.Bold);
+            x.describeTaskRichTextBox.Font = new Font(fontName, FontSize, FontStyle.Bold);
 
         }
 
@@ -94,7 +95,6 @@ namespace LearningPlanner
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
             int labelFontSize = widthSize / 60;
             int textBoxFontSize = (int)(widthSize / 87.2);
-            string fontName = "Century Gothic";
             int controlWidthLocation = (int)(widthSize / 9.6); //200
             // zmienne przechowujace skalowanie dla wlasciwosci size kontrolek
             int findTaskDataGridWidth = (int)(widthSize / 2.74);
@@ -119,7 +119,7 @@ namespace LearningPlanner
             x.FilterFrom.Size = new Size(textBoxWidthSize, filterFromHightSize);
             x.FilterToLabel.Size = new Size(filterFromLabelWidthSize, filtrLabelsHeightSize);
             x.FilterTo.Size = new Size(textBoxWidthSize, filterFromHightSize);
-            x.findPictureBox.Size = new Size(findPictureBoxWidthSize, findPictureHeightSize);
+            x.FindPictureBox.Size = new Size(findPictureBoxWidthSize, findPictureHeightSize);
             x.FindTaskDataGrid.Size = new Size(findTaskDataGridWidth, findTaskDataGridHeight);
             // zmienne przechowujace skalowanie dla wlasciowsci location kontrolek
             int findTaskLabelLocationHeight = (int)(heightSize / 27.7);
@@ -142,7 +142,7 @@ namespace LearningPlanner
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne * 3 + moveDownTwo * 2);
             x.FilterTo.Location =
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne * 3 + moveDownTwo * 3);
-            x.findPictureBox.Location = new Point(findPictureBoxLocationWidth, findPictureBoxLocationHeight);
+            x.FindPictureBox.Location = new Point(findPictureBoxLocationWidth, findPictureBoxLocationHeight);
             // Ustawienie czcionek dla wszystkich kontrolek
             x.FindTaskLabel.Font = new Font(fontName, labelFontSize);
             x.FindTaskTextBox.Font = new Font(fontName, textBoxFontSize);
@@ -152,6 +152,61 @@ namespace LearningPlanner
             x.FilterFrom.Font = new Font(fontName, textBoxFontSize);
             x.FilterToLabel.Font = new Font(fontName, labelFontSize);
             x.FilterTo.Font = new Font(fontName, textBoxFontSize);
+        }
+       
+        public void ITNewsResponse (ITNews x)
+        {
+            // Zmienne przechowujace szerokosc oraz wysokosc ekranu
+            int widthSize = x.Width;
+            int heightSize = x.Height;
+            //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
+            
+            int fontSize = (int)(widthSize / 137.14);
+            int controlWidthSize = (int)(widthSize / 6.53);
+            int labelHeightSize = (int)(heightSize / 21.6);
+            int listBoxHeightSize = (int)(heightSize / 3.85);
+            int buttonHeightSize = (heightSize / 18);
+            int webBrowserandXmlWidthSize = (int)(widthSize / 1.88);
+            int controlWidthLocation = (int)(widthSize / 147.69);
+            // zmienne przechowujace skalowanie dla wlasciwosci size kontrolek
+            int groupBoxWidthSize = (widthSize / 6);
+            int groupBoxHeightSize = (int)(heightSize / 1.98);
+            int textBoxHeightSize = (int)(heightSize / 83.07);
+            int webBrowserHeightSize = (int)(heightSize / 1.46);
+            int xmlBrowserHeightSize = (int)(heightSize / 3.6);
+            // Ustawienie rozmairu dla wszystkich kontrolek
+            x.urlGroupBox.Size = new Size(groupBoxWidthSize, groupBoxHeightSize);
+            x.UrlTextBox.Size = new Size(controlWidthSize, textBoxHeightSize);
+            x.AddUrlButton.Size = new Size(controlWidthSize, buttonHeightSize);
+            x.ChannelsTitleLabel.Size = new Size(controlWidthSize, labelHeightSize);
+            x.ChannelsListBox.Size = new Size(controlWidthSize, listBoxHeightSize);
+            x.SitesLabel.Size = new Size(controlWidthSize, labelHeightSize);
+            x.FavoriteSitesListBox.Size = new Size(controlWidthSize, listBoxHeightSize);
+            x.LoadWWWbutton.Size = new Size(controlWidthSize, buttonHeightSize);
+            x.WWWtextbox.Size = new Size(controlWidthSize, textBoxHeightSize);
+            x.WebBrowserForXml.Size = new Size(webBrowserandXmlWidthSize, webBrowserHeightSize );
+            x.DisplayForNewsTabControl.Size = new Size(webBrowserandXmlWidthSize, xmlBrowserHeightSize);
+            // zmienne przechowujace skalowanie dla wlasciowsci location kontrolek
+            int addUrlButtonLocationHeight = (heightSize / 31);
+            int channelTitleLabelLocationHeight = (int)(heightSize /11.13);
+            int channelsListBoxLocationHeight = (int)(heightSize /6.92);
+            int sitesLabelLocationHeigh = (int)(heightSize /2.34 );
+            int favoriteSitesListBoxLocationHeight = (int)(heightSize /2.07);
+            int loadWWWbuttonLocationHeight = (int)(heightSize /1.33);
+            int wWWtextboxLocationHeight = (int)(heightSize /1.24);
+            int displayForNewTabControlLocationWidth = (int)(widthSize / 9.46);
+            // Ustawienie lokalizacji dla wszystkich kontrolek
+            x.AddUrlButton.Location = new Point(controlWidthLocation, addUrlButtonLocationHeight);
+            x.ChannelsTitleLabel.Location = new Point(controlWidthLocation, channelTitleLabelLocationHeight);
+            x.ChannelsListBox.Location = new Point(controlWidthLocation, channelsListBoxLocationHeight);
+            x.SitesLabel.Location = new Point(controlWidthLocation, sitesLabelLocationHeigh);
+            x.FavoriteSitesListBox.Location = new Point(controlWidthLocation, favoriteSitesListBoxLocationHeight);
+            x.LoadWWWbutton.Location = new Point(controlWidthLocation, loadWWWbuttonLocationHeight);
+            x.WWWtextbox.Location = new Point(controlWidthLocation, wWWtextboxLocationHeight);
+            x.DisplayForNewsTabControl.Location = new Point(displayForNewTabControlLocationWidth, 0);
+            // Ustawienie czcionek dla wszystkich kontrolek
+            x.FavoriteSitesListBox.Font = new Font(fontName, fontSize);
+            x.ChannelsListBox.Font = new Font(fontName, fontSize);
         }
 
 

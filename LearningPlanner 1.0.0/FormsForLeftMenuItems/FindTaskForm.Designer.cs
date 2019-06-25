@@ -40,9 +40,9 @@
             this.FilterTo = new System.Windows.Forms.DateTimePicker();
             this.FilterFromLabel = new System.Windows.Forms.Label();
             this.FilterToLabel = new System.Windows.Forms.Label();
-            this.findPictureBox = new System.Windows.Forms.PictureBox();
+            this.FindPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.FindTaskDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.findPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FindPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // FindTaskTextBox
@@ -170,20 +170,20 @@
             // 
             // findPictureBox
             // 
-            this.findPictureBox.Image = global::LearningPlanner.Properties.Resources.FindPicture;
-            this.findPictureBox.Location = new System.Drawing.Point(44, 358);
-            this.findPictureBox.Name = "findPictureBox";
-            this.findPictureBox.Size = new System.Drawing.Size(176, 99);
-            this.findPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.findPictureBox.TabIndex = 0;
-            this.findPictureBox.TabStop = false;
+            this.FindPictureBox.Image = global::LearningPlanner.Properties.Resources.FindPicture;
+            this.FindPictureBox.Location = new System.Drawing.Point(44, 358);
+            this.FindPictureBox.Name = "findPictureBox";
+            this.FindPictureBox.Size = new System.Drawing.Size(176, 99);
+            this.FindPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FindPictureBox.TabIndex = 0;
+            this.FindPictureBox.TabStop = false;
             // 
             // FindTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 500);
-            this.Controls.Add(this.findPictureBox);
+            this.Controls.Add(this.FindPictureBox);
             this.Controls.Add(this.FilterToLabel);
             this.Controls.Add(this.FilterFromLabel);
             this.Controls.Add(this.FilterTo);
@@ -200,14 +200,14 @@
             this.Load += new System.EventHandler(this.FindTaskForm_Load);
             this.SizeChanged += new System.EventHandler(this.FindTaskForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.FindTaskDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.findPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FindPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        public System.Windows.Forms.PictureBox findPictureBox;
+        public System.Windows.Forms.PictureBox FindPictureBox;
         public System.Windows.Forms.TextBox FindTaskTextBox;
         public System.Windows.Forms.Label FindTaskLabel;
         public System.Windows.Forms.ComboBox FilterComboBox;

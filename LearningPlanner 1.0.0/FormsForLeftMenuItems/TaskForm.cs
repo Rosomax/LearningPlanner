@@ -257,7 +257,7 @@ namespace LearningPlanner
             var tasksNumber = TaskDataGridView.Rows.Count.ToString();
             var actualDate = DateTime.Now.ToString();
 
-           const string path = "Logi\\Log.txt";
+           const string path = "Logs\\Log.txt";
 
             try
             {
