@@ -168,7 +168,7 @@
             this.describeTaskRichTextBox.Location = new System.Drawing.Point(502, 35);
             this.describeTaskRichTextBox.Name = "describeTaskRichTextBox";
             this.describeTaskRichTextBox.ReadOnly = true;
-            this.describeTaskRichTextBox.Size = new System.Drawing.Size(166, 453);
+            this.describeTaskRichTextBox.Size = new System.Drawing.Size(210, 453);
             this.describeTaskRichTextBox.TabIndex = 12;
             this.describeTaskRichTextBox.Text = "";
             this.describeTaskRichTextBox.Visible = false;

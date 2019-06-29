@@ -42,17 +42,8 @@ namespace LearningPlanner
         {
             if (Size.Width < 799)
             {
-                TaskNameTextBox.Size = new Size(220, 35);
-                CategoryTextBox.Size = new Size(220, 35);
-                DescriptionTextBox.Size = new Size(220, 85);
-                TaskDataGridView.Size = new Size(344, 500);
-                SaveButton.Size = new Size(108, 50);
-                SaveButton.Location = new Point(11, 392);
-                DeleteButton.Size = new Size(108, 50);
-                DeleteButton.Location = new Point(125, 392);
-                CancelButton.Size = new Size(108, 50);
-                CancelButton.Location = new Point(239, 392);
-
+                DefaultResponsives dresp = new DefaultResponsives();
+                dresp.TaskFormDefaultResponse(this);
             }
             else
             {
@@ -257,7 +248,7 @@ namespace LearningPlanner
             var tasksNumber = TaskDataGridView.Rows.Count.ToString();
             var actualDate = DateTime.Now.ToString();
 
-           const string path = "Logi\\Log.txt";
+           const string path = "Logs\\Log.txt";
 
             try
             {

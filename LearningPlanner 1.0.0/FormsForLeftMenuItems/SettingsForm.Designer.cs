@@ -64,6 +64,7 @@
             this.SoundsPanel = new System.Windows.Forms.Panel();
             this.ChangeFontPanel = new System.Windows.Forms.Panel();
             this.GeneralSettingsLabel = new System.Windows.Forms.Label();
+            this.SettingTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtrackBar)).BeginInit();
@@ -92,7 +93,7 @@
             // ChangeColorTimer
             // 
             this.ChangeColorTimer.Enabled = true;
-            this.ChangeColorTimer.Interval = 1;
+            this.ChangeColorTimer.Interval = 30;
             this.ChangeColorTimer.Tick += new System.EventHandler(this.ChangeColorTimer_Tick);
             // 
             // DefaultColorButton
@@ -471,6 +472,12 @@
             this.GeneralSettingsLabel.TabIndex = 23;
             this.GeneralSettingsLabel.Text = "Ogólne:";
             // 
+            // SettingTimer
+            // 
+            this.SettingTimer.Enabled = true;
+            this.SettingTimer.Interval = 30;
+            this.SettingTimer.Tick += new System.EventHandler(this.SettingTimer_Tick);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,5 +561,6 @@
         public System.Windows.Forms.Panel SoundsPanel;
         private System.Windows.Forms.Panel ChangeFontPanel;
         private System.Windows.Forms.Label GeneralSettingsLabel;
+        private System.Windows.Forms.Timer SettingTimer;
     }
 }

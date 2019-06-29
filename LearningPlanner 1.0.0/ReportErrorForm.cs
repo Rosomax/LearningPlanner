@@ -21,17 +21,10 @@ namespace LearningPlanner
 
 
 
-      //  EntitiesModel model = new EntitiesModel();
        
 
         private bool SendMessage(string emailAddr)
         {
-          //  var x = model.Uzytkownicy.First(z => z.IDosoby == 4).Haslo;
-
-            
-         
-
-
 
 
             emailAddress = emailAddr;         
@@ -41,7 +34,8 @@ namespace LearningPlanner
             string describeError = describeErrorRichTextBox.Text;
 
             try
-            {                
+            {
+                MailAddress ma = new MailAddress(emailAddr);             
                 MailMessage message = new MailMessage();
                 message.To.Add(authorsMailK);
                 message.To.Add(authorsMailM);

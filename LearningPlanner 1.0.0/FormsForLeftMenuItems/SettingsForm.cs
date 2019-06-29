@@ -25,7 +25,8 @@ namespace LearningPlanner
             SetColorFromSettings();
             SetMusicFromSettings();
             SetFontFromSettings();
-            SettingsFormChangeFont();         
+            SettingsFormChangeFont();
+            
         }
 
      
@@ -35,49 +36,63 @@ namespace LearningPlanner
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             var m = e.Graphics.Transform;
             // rysowanie kola glownego - tarcza zegara
-            e.Graphics.FillEllipse(Brushes.AntiqueWhite, 50, 50, 150, 150);
+            e.Graphics.FillEllipse(Brushes.AntiqueWhite, 40, 60, 150, 150);
             Pen obramowanie = new Pen(Color.Black, 7);
-            e.Graphics.DrawEllipse(obramowanie, 50, 50, 150, 150);
+            e.Graphics.DrawEllipse(obramowanie, 40, 60, 150, 150);
 
             //ryssowanie srodkowego kolka na zegarku - mocowanie wskazowek
-            e.Graphics.FillEllipse(Brushes.Yellow, 120, 120, 10, 10);
-            e.Graphics.DrawEllipse(Pens.Black, 120, 120, 10, 10);
+            e.Graphics.FillEllipse(Brushes.Yellow, 110, 130, 10, 10);
+            e.Graphics.DrawEllipse(Pens.Black, 110, 130, 10, 10);
             //wskazowka sekundowa
-            e.Graphics.TranslateTransform(125, 125);
+            e.Graphics.TranslateTransform(115, 135);
             e.Graphics.RotateTransform(DateTime.Now.Second * 6);
             e.Graphics.DrawLine(Pens.Red, 0, 0, 0, -35);
 
             //wskazowka minutowa
             e.Graphics.Transform = m;
-            e.Graphics.TranslateTransform(125, 125);
+            e.Graphics.TranslateTransform(115, 135);
             e.Graphics.RotateTransform(DateTime.Now.Minute * 6);
             Pen minuta = new Pen(Color.Green, 2);
             e.Graphics.DrawLine(minuta, 0, 0, 0, -25);
             // wskazowka godzinowa
             e.Graphics.Transform = m;
-            e.Graphics.TranslateTransform(125, 125);
+            e.Graphics.TranslateTransform(115, 135);
             e.Graphics.RotateTransform(DateTime.Now.Hour * 24);
             Pen godzina = new Pen(Color.Black, 3);
             e.Graphics.DrawLine(godzina, 0, 0, 0, -20);
 
             // Rysowanie czterech glownych kreseczek po kolei polnoc,poludnie,wschod,zachod
             e.Graphics.Transform = m;
-            e.Graphics.TranslateTransform(125, 50);
+            e.Graphics.TranslateTransform(115, 60);
             e.Graphics.DrawLine(Pens.Black, 0, 0, 0, 23);
 
             e.Graphics.Transform = m;
-            e.Graphics.TranslateTransform(125, 200);
+            e.Graphics.TranslateTransform(115, 210);
             e.Graphics.DrawLine(Pens.Black, 0, 0, 0, -23);
 
             e.Graphics.Transform = m;
-            e.Graphics.TranslateTransform(50, 125);
+            e.Graphics.TranslateTransform(40, 135);
             e.Graphics.DrawLine(Pens.Black, 0, 0, 23, 0);
 
             e.Graphics.Transform = m;
-            e.Graphics.TranslateTransform(200, 125);
+            e.Graphics.TranslateTransform(190, 135);
             e.Graphics.DrawLine(Pens.Black, 0, 0, -23, 0);
+            //////////////////////////////////////
+            // Rysowanie napisu settings/////////
+            /////////////////////////////////////
+            string drawString = "Settings";
+            Font drawFont = new Font("Century Gothic", 18, FontStyle.Bold);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);
+            float x = 355.0F;
+            float y = 130.0F;
+            StringFormat drawFormat = new StringFormat();
+            drawFormat.FormatFlags = StringFormatFlags.DirectionRightToLeft;
+            e.Graphics.Transform = m;
+            e.Graphics.TranslateTransform(x, y);
+            e.Graphics.RotateTransform(rotate);
+            e.Graphics.DrawString(drawString, drawFont, drawBrush, 0, 0, drawFormat);
 
-         
+
         }
 
 
@@ -491,7 +506,13 @@ namespace LearningPlanner
             reportErrorForm.Show();
         }
 
+        float rotate = 0;
 
+        private void SettingTimer_Tick(object sender, EventArgs e)
+        {
+                rotate += 1.5f;
+                
 
+        }
     }
 }
