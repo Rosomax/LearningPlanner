@@ -21,7 +21,7 @@ namespace LearningPlanner
 
         private void Category_Load(object sender, EventArgs e)
         {
-            CategoryFormChangeFont();
+           // CategoryFormChangeFont();
 
 
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
@@ -110,35 +110,35 @@ namespace LearningPlanner
         #endregion
 
 
-        #region ChangeFontFromSettings
+        //#region ChangeFontFromSettings
 
-        public IEnumerable<Control> GetAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
+        //public IEnumerable<Control> GetAll(Control control, Type type)
+        //{
+        //    var controls = control.Controls.Cast<Control>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
-        }
+        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
+        //                              .Concat(controls)
+        //                              .Where(c => c.GetType() == type);
+        //}
 
 
-        public void CategoryFormChangeFont()
-        {
-            string font = Settings.Default.RememberFont;
-            bool boldFont = Settings.Default.BoldFont;
+        //public void CategoryFormChangeFont()
+        //{
+        //    string font = Settings.Default.RememberFont;
+        //    bool boldFont = Settings.Default.BoldFont;
 
-            foreach (var lbl in GetAll(this, typeof(Label)))
-            {
-                if (boldFont)
-                    (lbl as Label).Font = new Font(font, 14, FontStyle.Bold);
-                else
-                    (lbl as Label).Font = new Font(font, 14);
+        //    foreach (var lbl in GetAll(this, typeof(Label)))
+        //    {
+        //        if (boldFont)
+        //            (lbl as Label).Font = new Font(font, 14, FontStyle.Bold);
+        //        else
+        //            (lbl as Label).Font = new Font(font, 14);
 
-            }
+        //    }
           
 
-        }
-        #endregion
+        //}
+        //#endregion
 
 
     }

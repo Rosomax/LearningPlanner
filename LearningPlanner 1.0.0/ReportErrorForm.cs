@@ -20,9 +20,6 @@ namespace LearningPlanner
         string emailAddress;
 
 
-
-       
-
         private bool SendMessage(string emailAddr)
         {
 

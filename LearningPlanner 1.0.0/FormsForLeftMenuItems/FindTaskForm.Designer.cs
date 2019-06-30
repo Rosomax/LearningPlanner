@@ -116,7 +116,7 @@
             this.FilterComboBox.Name = "FilterComboBox";
             this.FilterComboBox.Size = new System.Drawing.Size(192, 21);
             this.FilterComboBox.TabIndex = 4;
-            this.FilterComboBox.Text = "                        wybierz...                 ";
+            this.FilterComboBox.Text = "wybierz...";
             // 
             // FilterLabel
             // 
@@ -168,11 +168,11 @@
             this.FilterToLabel.TabIndex = 9;
             this.FilterToLabel.Text = "Filtruj do:";
             // 
-            // findPictureBox
+            // FindPictureBox
             // 
             this.FindPictureBox.Image = global::LearningPlanner.Properties.Resources.FindPicture;
             this.FindPictureBox.Location = new System.Drawing.Point(44, 358);
-            this.FindPictureBox.Name = "findPictureBox";
+            this.FindPictureBox.Name = "FindPictureBox";
             this.FindPictureBox.Size = new System.Drawing.Size(176, 99);
             this.FindPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FindPictureBox.TabIndex = 0;

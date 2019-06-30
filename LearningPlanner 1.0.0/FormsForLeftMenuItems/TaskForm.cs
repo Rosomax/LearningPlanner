@@ -22,7 +22,7 @@ namespace LearningPlanner
 
         private void TaskForm_Load(object sender, EventArgs e)
         {
-            TaskFormChangeFont();
+           // TaskFormChangeFont();
             
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
 
@@ -277,47 +277,47 @@ namespace LearningPlanner
 
         #region ChangeFontFromSettings
 
-        public IEnumerable<Control> GetAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
+        //public IEnumerable<Control> GetAll(Control control, Type type)
+        //{
+        //    var controls = control.Controls.Cast<Control>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
-        }
+        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
+        //                              .Concat(controls)
+        //                              .Where(c => c.GetType() == type);
+        //}
 
-        public void TaskFormChangeFont()
-        {
+        //public void TaskFormChangeFont()
+        //{
 
-            string font = Settings.Default.RememberFont;
-            bool boldFont = Settings.Default.BoldFont;
+        //    string font = Settings.Default.RememberFont;
+        //    bool boldFont = Settings.Default.BoldFont;
 
-            foreach (var lbl in GetAll(this, typeof(Label)))
-            {
-                if (boldFont)
-                    (lbl as Label).Font = new Font(font, 14, FontStyle.Bold);
-                else
-                    (lbl as Label).Font = new Font(font, 14);
+        //    foreach (var lbl in GetAll(this, typeof(Label)))
+        //    {
+        //        if (boldFont)
+        //            (lbl as Label).Font = new Font(font, 14, FontStyle.Bold);
+        //        else
+        //            (lbl as Label).Font = new Font(font, 14);
 
-            }
+        //    }
 
-            foreach (var btn in GetAll(this, typeof(Button)))
-            {
-                if (boldFont)
-                    (btn as Button).Font = new Font(font, 10, FontStyle.Bold);
-                else
-                    (btn as Button).Font = new Font(font, 10);
-            }
+        //    foreach (var btn in GetAll(this, typeof(Button)))
+        //    {
+        //        if (boldFont)
+        //            (btn as Button).Font = new Font(font, 10, FontStyle.Bold);
+        //        else
+        //            (btn as Button).Font = new Font(font, 10);
+        //    }
 
-            foreach (var grid in GetAll(this, typeof(DataGridView)))
-            {
-                if (boldFont)
-                    (grid as DataGridView).Font = new Font(font, 12, FontStyle.Bold);
-                else
-                    (grid as DataGridView).Font = new Font(font, 12);
-            }
+        //    foreach (var grid in GetAll(this, typeof(DataGridView)))
+        //    {
+        //        if (boldFont)
+        //            (grid as DataGridView).Font = new Font(font, 12, FontStyle.Bold);
+        //        else
+        //            (grid as DataGridView).Font = new Font(font, 12);
+        //    }
 
-        }
+        //}
 
         #endregion
 

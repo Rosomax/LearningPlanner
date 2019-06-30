@@ -1,10 +1,11 @@
 ﻿using System.Drawing;
-
+using LearningPlanner.Properties;
 namespace LearningPlanner
 {
     class Responsiveness
     {
-        string fontName = "Century Gothic";
+        readonly string fontName = Settings.Default.RememberFont;
+        readonly FontStyle fontStyle = FontStyle.Bold;
 
         public void TaskFormRespons(TaskForm x)
         {
@@ -48,42 +49,54 @@ namespace LearningPlanner
             // Zmienne przechowujace szerokosc oraz wysokosc ekranu
             int widthSize = x.Width;
             int heightSize = x.Height;
-            int FontSize = (int)(x.Width / 87.2);
+            int fontSize = (int)(x.Width / 87.2);
             
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
-            int ControlWidthSize = widthSize / 5;
-            int ControlLocationWidth = (int)(widthSize / 16.5);
+            int controlWidthSize = widthSize / 5;
+            int controlLocationWidth = (int)(widthSize / 16.5);
             //zmienne przechowujące skalowalne rozmiary dla Labeli
-            int LabelHeightSize = heightSize / 17;
-            int LabelHeightLocation = heightSize / 120;
+            int labelHeightSize = heightSize / 17;
+            int labelHeightLocation = heightSize / 120;
             // Response dla Labeli
-            x.chooseCategoryLabel.Size = new Size(ControlWidthSize, LabelHeightSize);
-            x.chooseTaskLabel.Size = new Size(ControlWidthSize, LabelHeightSize);
-            x.describeTaskLabel.Size = new Size(ControlWidthSize, LabelHeightSize);
-            x.chooseCategoryLabel.Location = new Point(ControlLocationWidth, LabelHeightLocation);
+            x.chooseCategoryLabel.Size = new Size(controlWidthSize, labelHeightSize);
+            x.chooseTaskLabel.Size = new Size(controlWidthSize, labelHeightSize);
+            x.describeTaskLabel.Size = new Size(controlWidthSize, labelHeightSize);
+            x.chooseCategoryLabel.Location = new Point(controlLocationWidth, labelHeightLocation);
             x.chooseTaskLabel.Location =
-                new Point(ControlLocationWidth * 2 + ControlWidthSize, LabelHeightLocation);
+                new Point(controlLocationWidth * 2 + controlWidthSize, labelHeightLocation);
             x.describeTaskLabel.Location =
-                new Point(ControlLocationWidth * 3 + ControlWidthSize * 2, LabelHeightLocation);
-            x.chooseCategoryLabel.Font = new Font(fontName, FontSize);
-            x.chooseTaskLabel.Font = new Font(fontName, FontSize);
-            x.describeTaskLabel.Font = new Font(fontName, FontSize);
+                new Point(controlLocationWidth * 3 + controlWidthSize * 2, labelHeightLocation);
+          
             // zmienne przechowujące skalowalne rozmiary dla Data Grid
-            int DataGridHeightSize = (int)(heightSize / 1.2);
-            int DataGridLocationHeight = (int)(heightSize / 14.4);
+            int dataGridHeightSize = (int)(heightSize / 1.2);
+            int dataGridLocationHeight = (int)(heightSize / 14.4);
             // Response dla Data Gridow
-            x.chooseCategoryDataGrid.Size = new Size(ControlWidthSize, DataGridHeightSize);
-            x.chooseTaskDataGrid.Size = new Size(ControlWidthSize, DataGridHeightSize);
-            x.chooseCategoryDataGrid.Location = new Point(ControlLocationWidth, DataGridLocationHeight);
+            x.chooseCategoryDataGrid.Size = new Size(controlWidthSize, dataGridHeightSize);
+            x.chooseTaskDataGrid.Size = new Size(controlWidthSize, dataGridHeightSize);
+            x.chooseCategoryDataGrid.Location = new Point(controlLocationWidth, dataGridLocationHeight);
             x.chooseTaskDataGrid.Location =
-                new Point(ControlLocationWidth * 2 + ControlWidthSize, DataGridLocationHeight);
+                new Point(controlLocationWidth * 2 + controlWidthSize, dataGridLocationHeight);
             // zmienne przechowujące skalowalność dla richtextBoxa
-            int DescribeRichTextBoxWidth = (int)(ControlWidthSize * 1.8);
+            int describeRichTextBoxWidth = (int)(controlWidthSize * 1.8);
             // Response dla richtexboxa describe
-            x.describeTaskRichTextBox.Size = new Size(DescribeRichTextBoxWidth, DataGridHeightSize);
+            x.describeTaskRichTextBox.Size = new Size(describeRichTextBoxWidth, dataGridHeightSize);
             x.describeTaskRichTextBox.Location =
-                new Point(ControlLocationWidth * 3 + ControlWidthSize * 2, DataGridLocationHeight);
-            x.describeTaskRichTextBox.Font = new Font(fontName, FontSize, FontStyle.Bold);
+                new Point(controlLocationWidth * 3 + controlWidthSize * 2, dataGridLocationHeight);
+
+            if (Settings.Default.BoldFont)
+            {
+                x.describeTaskRichTextBox.Font = new Font(fontName, fontSize);
+                x.chooseCategoryLabel.Font = new Font(fontName, fontSize, fontStyle);
+                x.chooseTaskLabel.Font = new Font(fontName, fontSize, fontStyle);
+                x.describeTaskLabel.Font = new Font(fontName, fontSize, fontStyle);
+            }
+            else
+            {
+                x.describeTaskRichTextBox.Font = new Font(fontName,fontSize);
+                x.chooseCategoryLabel.Font = new Font(fontName, fontSize);
+                x.chooseTaskLabel.Font = new Font(fontName, fontSize);
+                x.describeTaskLabel.Font = new Font(fontName, fontSize);
+            }
 
         }
 
@@ -144,14 +157,31 @@ namespace LearningPlanner
                 new Point(controlWidthLocation, findTaskTextBoxLocationHeight + moveDownOne * 3 + moveDownTwo * 3);
             x.FindPictureBox.Location = new Point(findPictureBoxLocationWidth, findPictureBoxLocationHeight);
             // Ustawienie czcionek dla wszystkich kontrolek
-            x.FindTaskLabel.Font = new Font(fontName, labelFontSize);
-            x.FindTaskTextBox.Font = new Font(fontName, textBoxFontSize);
-            x.FilterLabel.Font = new Font(fontName, labelFontSize);
-            x.FilterComboBox.Font = new Font(fontName, textBoxFontSize);
-            x.FilterFromLabel.Font = new Font(fontName, labelFontSize);
-            x.FilterFrom.Font = new Font(fontName, textBoxFontSize);
-            x.FilterToLabel.Font = new Font(fontName, labelFontSize);
-            x.FilterTo.Font = new Font(fontName, textBoxFontSize);
+
+            if (Settings.Default.BoldFont)
+            {
+                x.FindTaskLabel.Font = new Font(fontName, labelFontSize,fontStyle);
+                x.FindTaskTextBox.Font = new Font(fontName, textBoxFontSize,fontStyle);
+                x.FilterLabel.Font = new Font(fontName, labelFontSize,fontStyle);
+                x.FilterComboBox.Font = new Font(fontName, textBoxFontSize,fontStyle);
+                x.FilterFromLabel.Font = new Font(fontName, labelFontSize,fontStyle);
+                x.FilterFrom.Font = new Font(fontName, textBoxFontSize,fontStyle);
+                x.FilterToLabel.Font = new Font(fontName, labelFontSize,fontStyle);
+                x.FilterTo.Font = new Font(fontName, textBoxFontSize,fontStyle);
+            }
+
+            else
+            {
+                x.FindTaskLabel.Font = new Font(fontName, labelFontSize);
+                x.FindTaskTextBox.Font = new Font(fontName, textBoxFontSize);
+                x.FilterLabel.Font = new Font(fontName, labelFontSize);
+                x.FilterComboBox.Font = new Font(fontName, textBoxFontSize);
+                x.FilterFromLabel.Font = new Font(fontName, labelFontSize);
+                x.FilterFrom.Font = new Font(fontName, textBoxFontSize);
+                x.FilterToLabel.Font = new Font(fontName, labelFontSize);
+                x.FilterTo.Font = new Font(fontName, textBoxFontSize);
+            }
+
         }
        
         public void ITNewsResponse (ITNews x)
@@ -205,8 +235,18 @@ namespace LearningPlanner
             x.WWWtextbox.Location = new Point(controlWidthLocation, wWWtextboxLocationHeight);
             x.DisplayForNewsTabControl.Location = new Point(displayForNewTabControlLocationWidth, 0);
             // Ustawienie czcionek dla wszystkich kontrolek
-            x.FavoriteSitesListBox.Font = new Font(fontName, fontSize);
-            x.ChannelsListBox.Font = new Font(fontName, fontSize);
+            if (Settings.Default.BoldFont)
+            {
+                x.FavoriteSitesListBox.Font = new Font(fontName, fontSize,fontStyle);
+                x.ChannelsListBox.Font = new Font(fontName, fontSize,fontStyle);
+            }
+            else
+            {
+                x.FavoriteSitesListBox.Font = new Font(fontName, fontSize);
+                x.ChannelsListBox.Font = new Font(fontName, fontSize);
+            }
+
+
         }
 
 

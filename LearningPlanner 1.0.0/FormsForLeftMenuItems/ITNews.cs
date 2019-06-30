@@ -53,7 +53,7 @@ namespace LearningPlanner
             FavoriteSitesListBox.Items.Add(wst1);
 
 
-            ITNewsFormChangeFont();
+           // ITNewsFormChangeFont();
         }
 
         private void ITNews_SizeChanged(object sender, EventArgs e)
@@ -252,61 +252,61 @@ namespace LearningPlanner
 
         #region ChangeFontFromSettings
 
-        public IEnumerable<Control> GetAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
+        //public IEnumerable<Control> GetAll(Control control, Type type)
+        //{
+        //    var controls = control.Controls.Cast<Control>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
-        }
+        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
+        //                              .Concat(controls)
+        //                              .Where(c => c.GetType() == type);
+        //}
 
 
-        public void ITNewsFormChangeFont()
-        {
+        //public void ITNewsFormChangeFont()
+        //{
 
-            foreach (var lbl in GetAll(this, typeof(Label)))
-            {
-                if (Settings.Default.BoldFont)
-                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
-                else
-                    (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12);
+        //    foreach (var lbl in GetAll(this, typeof(Label)))
+        //    {
+        //        if (Settings.Default.BoldFont)
+        //            (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
+        //        else
+        //            (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12);
 
-            }
+        //    }
 
-            foreach (var btn in GetAll(this, typeof(Button)))
-            {
-                if (Settings.Default.BoldFont)
-                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 14, FontStyle.Bold);
-                else
-                    (btn as Button).Font = new Font(Settings.Default.RememberFont, 14);
-            }
+        //    foreach (var btn in GetAll(this, typeof(Button)))
+        //    {
+        //        if (Settings.Default.BoldFont)
+        //            (btn as Button).Font = new Font(Settings.Default.RememberFont, 14, FontStyle.Bold);
+        //        else
+        //            (btn as Button).Font = new Font(Settings.Default.RememberFont, 14);
+        //    }
 
-            foreach (var tb in GetAll(this, typeof(TextBox)))
-            {
-                if (Settings.Default.BoldFont)
-                    (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
-                else
-                    (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8);
-            }
+        //    foreach (var tb in GetAll(this, typeof(TextBox)))
+        //    {
+        //        if (Settings.Default.BoldFont)
+        //            (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
+        //        else
+        //            (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8);
+        //    }
 
-            foreach (var lb in GetAll(this, typeof(ListBox)))
-            {
-                try
-                {
-                    if (Settings.Default.BoldFont)
-                        (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
-                    else
-                        (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8);
+        //    foreach (var lb in GetAll(this, typeof(ListBox)))
+        //    {
+        //        try
+        //        {
+        //            if (Settings.Default.BoldFont)
+        //                (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
+        //            else
+        //                (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8);
 
-                }
+        //        }
 
-                catch { }
+        //        catch { }
                 
-                }
+        //        }
 
 
-        }
+        //}
 
         #endregion
     }
