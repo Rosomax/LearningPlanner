@@ -12,36 +12,44 @@ namespace LearningPlanner
             // Zmienne przechowujace szerokosc oraz wysokosc ekranu
             int widthSize = x.Width;
             int heightSize = x.Height;
-
+            int fontSize = (int)(widthSize / 87.27);
             // Zmienne przechowujace skalowalne rozmiary
             int textBoxWidth = widthSize / 9;
             int textBoxHeigh = heightSize / 36;
             double controlWidthSize = widthSize / 3;
-
-
             // Ustawienie rozmiaru textboxow po maksymializacji
             x.TaskNameTextBox.Size = new Size((int)controlWidthSize, textBoxHeigh);
             x.CategoryTextBox.Size = new Size((int)controlWidthSize, textBoxHeigh);
-            x.DescriptionTextBox.Size = new Size((int)controlWidthSize, textBoxHeigh * 12);
+            x.DescriptionTextBox.Size = new Size((int)controlWidthSize, textBoxHeigh * (heightSize/90)); 
             // Ustawienie rozmiaru buttonow po maksymalizacji
-            x.SaveButton.Size = new Size((int)controlWidthSize, x.TaskNameTextBox.Size.Height * 3);
-            x.DeleteButton.Size = new Size((int)controlWidthSize, x.TaskNameTextBox.Size.Height * 3);
-            x.CancelButton.Size = new Size((int)controlWidthSize, x.TaskNameTextBox.Size.Height * 3);
-
+            x.SaveButton.Size = new Size((int)controlWidthSize, x.TaskNameTextBox.Size.Height * (heightSize / 360)); 
+            x.DeleteButton.Size = new Size((int)controlWidthSize, x.TaskNameTextBox.Size.Height * (heightSize / 360));
+            x.CancelButton.Size = new Size((int)controlWidthSize, x.TaskNameTextBox.Size.Height * (heightSize / 360));
             // Zmienna przechowujaca lokalizacje pierwszego elementu do ktorego mozna sie odniesc
-            int defaultButtonYLocation = (x.DescriptionTextBox.Location.Y + x.DescriptionTextBox.Size.Height + 40);
-
+            int defaultButtonYLocation = (x.DescriptionTextBox.Location.Y + x.DescriptionTextBox.Size.Height + (heightSize /27)); 
             // Lokalizacje buttonow po maksymalizacji
             x.SaveButton.Location = new Point(x.TaskNameTextBox.Location.X, defaultButtonYLocation);
             x.DeleteButton.Location =
-                new Point(x.TaskNameTextBox.Location.X, x.SaveButton.Location.Y + x.SaveButton.Size.Height + 20);
+                new Point(x.TaskNameTextBox.Location.X, x.SaveButton.Location.Y + x.SaveButton.Size.Height + (heightSize / 54));
             x.CancelButton.Location =
-                new Point(x.TaskNameTextBox.Location.X, x.DeleteButton.Location.Y + x.DeleteButton.Size.Height + 20);
-
+                new Point(x.TaskNameTextBox.Location.X, x.DeleteButton.Location.Y + x.DeleteButton.Size.Height + (heightSize / 54));
             // Lokalizacja oraz rozmiar datagrida
-            x.TaskDataGridView.Location = new Point(widthSize - x.TaskNameTextBox.Size.Width - 120, 0);
+            x.TaskDataGridView.Location = new Point(widthSize - x.TaskNameTextBox.Size.Width - (heightSize / 9), 0);
             x.TaskDataGridView.Size = new Size((int)controlWidthSize * 2 - 120, heightSize);
+            if (Settings.Default.BoldFont)
+            {
 
+                x.TaskNameLabel.Font = new Font(fontName, fontSize, fontStyle);
+                x.CategoryLabel.Font = new Font(fontName, fontSize, fontStyle);
+                x.DescribeLabel.Font = new Font(fontName, fontSize, fontStyle);
+            }
+            else
+            {
+                x.TaskNameLabel.Font = new Font(fontName, fontSize);
+                x.CategoryLabel.Font = new Font(fontName, fontSize);
+                x.DescribeLabel.Font = new Font(fontName, fontSize);
+
+            }
         }
 
         public void CategoryResponse(CategoryForm x)
@@ -110,7 +118,7 @@ namespace LearningPlanner
             int textBoxFontSize = (int)(widthSize / 87.2);
             int controlWidthLocation = (int)(widthSize / 9.6); //200
             // zmienne przechowujace skalowanie dla wlasciwosci size kontrolek
-            int findTaskDataGridWidth = (int)(widthSize / 2.74);
+            int findTaskDataGridWidth = (int)(widthSize / 1.8); //
             int findTaskDataGridHeight = (int)(heightSize / 2.67);
             int findTasklabelWidthSize = (int)(widthSize / 6.7);
             int findTasklabelHeightSize = (int)(heightSize / 37.24);
@@ -196,13 +204,13 @@ namespace LearningPlanner
             int labelHeightSize = (int)(heightSize / 21.6);
             int listBoxHeightSize = (int)(heightSize / 3.85);
             int buttonHeightSize = (heightSize / 18);
-            int webBrowserandXmlWidthSize = (int)(widthSize / 1.88);
+            int webBrowserandXmlWidthSize = (int)(widthSize / 1.1988); 
             int controlWidthLocation = (int)(widthSize / 147.69);
             // zmienne przechowujace skalowanie dla wlasciwosci size kontrolek
             int groupBoxWidthSize = (widthSize / 6);
             int groupBoxHeightSize = (int)(heightSize / 1.98);
             int textBoxHeightSize = (int)(heightSize / 83.07);
-            int webBrowserHeightSize = (int)(heightSize / 1.46);
+            int webBrowserHeightSize = (int)(heightSize / 1.38);
             int xmlBrowserHeightSize = (int)(heightSize / 3.6);
             // Ustawienie rozmairu dla wszystkich kontrolek
             x.urlGroupBox.Size = new Size(groupBoxWidthSize, groupBoxHeightSize);
@@ -234,6 +242,7 @@ namespace LearningPlanner
             x.LoadWWWbutton.Location = new Point(controlWidthLocation, loadWWWbuttonLocationHeight);
             x.WWWtextbox.Location = new Point(controlWidthLocation, wWWtextboxLocationHeight);
             x.DisplayForNewsTabControl.Location = new Point(displayForNewTabControlLocationWidth, 0);
+            x.WebBrowserForXml.Location = new Point(displayForNewTabControlLocationWidth, xmlBrowserHeightSize);
             // Ustawienie czcionek dla wszystkich kontrolek
             if (Settings.Default.BoldFont)
             {

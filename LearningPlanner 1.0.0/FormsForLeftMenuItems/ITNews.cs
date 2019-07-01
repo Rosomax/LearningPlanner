@@ -60,28 +60,8 @@ namespace LearningPlanner
         {
             if (this.Size.Width <= 799)
             {
-                urlGroupBox.Size = new Size(203, 544);
-                UrlTextBox.Size = new Size(175, 13);
-                AddUrlButton.Size = new Size(175, 40);
-                ChannelsTitleLabel.Size = new Size(175, 50);
-                ChannelsTitleLabel.Location = new Point(13, 77);
-                ChannelsListBox.Size = new Size(175, 84);
-                ChannelsListBox.Location = new Point(13, 133);
-                WebBrowserForXml.Size = new Size(520, 268);
-                SitesLabel.Size = new Size(175, 50);
-                SitesLabel.Location = new Point(13, 236);
-                FavoriteSitesListBox.Size = new Size(175, 95);
-                FavoriteSitesListBox.Location = new Point(13, 293);
-                LoadWWWbutton.Size = new Size(175, 40);
-                LoadWWWbutton.Location = new Point(13, 389);
-                WWWtextbox.Size = new Size(175, 13);
-                WWWtextbox.Location = new Point(13, 434);
-                WebBrowserForXml.Size = new Size(520, 343); // ROZMIAR PRZEGLDARKI
-                DisplayForNewsTabControl.Size = new Size(520, 195); // Rozmiar okna na xml
-                // zmiana fonta
-                FavoriteSitesListBox.Font = new Font("Centhury gothic", 8);
-                ChannelsListBox.Font = new Font("Centhury gothic", 8);
-
+                DefaultResponsives dresp = new DefaultResponsives();
+                dresp.ITNewsDefaultResponse(this);
             }
             else 
             {

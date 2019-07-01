@@ -16,12 +16,13 @@ namespace LearningPlanner
             // Zmienne przechowujace szerokosc oraz wysokosc ekranu
             int widthSize = x.Width;
             int heightSize = x.Height;
-            //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
+            //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek20
+            int fontSize = (int)(widthSize / 36.15);
             int textBoxWidthSize = (int)(widthSize / 3.4);
             int textBoxHeightSize = (int)(heightSize / 14.29);
-            int buttonWidthSize = (int)(widthSize /6.94);
-            int buttonHeightSize = heightSize /10;
-            int buttonHeightLocation = (int)(heightSize / 1.27); 
+            int buttonWidthSize = (int)(widthSize / 6.94);
+            int buttonHeightSize = heightSize / 10;
+            int buttonHeightLocation = (int)(heightSize / 1.27);
             // zmienne przechowujace skalowanie dla wlasciwosci size kontrolek
             int descriptionTextBoxHeightSize = (int)(heightSize / 4.5);
             int taskDataGridViewWidthSize = widthSize / 2;
@@ -29,26 +30,36 @@ namespace LearningPlanner
             // Ustawienie rozmairu dla wszystkich kontrolek
             x.TaskNameTextBox.Size = new Size(textBoxWidthSize, textBoxHeightSize);
             x.CategoryTextBox.Size = new Size(textBoxWidthSize, textBoxHeightSize);
-            x.DescriptionTextBox.Size = new Size(textBoxWidthSize,descriptionTextBoxHeightSize);
+            x.DescriptionTextBox.Size = new Size(textBoxWidthSize, descriptionTextBoxHeightSize);
             x.TaskDataGridView.Size = new Size(taskDataGridViewWidthSize, taskDataGridViewHeightSize);
-            x.SaveButton.Size = new Size(buttonWidthSize,buttonHeightSize);
+            x.SaveButton.Size = new Size(buttonWidthSize, buttonHeightSize);
             x.DeleteButton.Size = new Size(buttonWidthSize, buttonHeightSize);
             x.CancelButton.Size = new Size(buttonWidthSize, buttonHeightSize);
             // zmienne przechowujace skalowanie dla wlasciowsci location kontrolek
-            int saveButtonWidthLocation = (int)(widthSize /68.18);
+            int saveButtonWidthLocation = (int)(widthSize / 68.18);
             int deleteButtonWidthLocation = widthSize / 6;
-            int cancelButtonWidthLocation = (int)(widthSize /3.14);
+            int cancelButtonWidthLocation = (int)(widthSize / 3.14);
             // Ustawienie lokalizacji dla wszystkich kontrolek
             x.SaveButton.Location = new Point(saveButtonWidthLocation, buttonHeightLocation);
             x.DeleteButton.Location = new Point(deleteButtonWidthLocation, buttonHeightLocation);
             x.CancelButton.Location = new Point(cancelButtonWidthLocation, buttonHeightLocation);
+            // Ustawienie czcionek dla wszystkich kontrolek
+            if (Settings.Default.BoldFont)
+            {
 
+                x.TaskNameLabel.Font = new Font(fontName, fontSize, fontStyle);
+                x.CategoryLabel.Font = new Font(fontName, fontSize, fontStyle);
+                x.DescribeLabel.Font = new Font(fontName, fontSize, fontStyle);
+            }
+            else
+            {
+                x.TaskNameLabel.Font = new Font(fontName, fontSize);
+                x.CategoryLabel.Font = new Font(fontName, fontSize);
+                x.DescribeLabel.Font = new Font(fontName, fontSize);
 
-            // Tu trzeba dopisac fonta!!!!
+            }
 
         }
-    
-
         public void CategoryFormDefaultResponse(CategoryForm x)
         {
             // Zmienne przechowujace szerokosc oraz wysokosc ekranu
@@ -202,6 +213,71 @@ namespace LearningPlanner
                 x.FilterToLabel.Font = new Font(fontName, labelFontSize);
             }
 
+        }
+        
+        public void ITNewsDefaultResponse(ITNews x)
+        {
+            // Zmienne przechowujace szerokosc oraz wysokosc ekranu
+            int widthSize = x.Width;
+            int heightSize = x.Height;
+            //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
+            int fontSize = (int)(widthSize / 90.37);
+            int controlWidthSize = (int)(widthSize / 4.13); 
+            int labelHeightSize = (int)(heightSize / 10.88); 
+            int buttonHeightSize =(int)(heightSize / 13.6);
+            int webBrowserandXmlWidthSize = (int)(widthSize / 1.385);
+            int controlWidthLocation = (int)(widthSize / 55.61);
+            // zmienne przechowujace skalowanie dla wlasciwosci size kontrolek
+            int groupBoxWidthSize = (int)(widthSize / 3.56);
+            int groupBoxHeightSize = 1;
+            int textBoxHeightSize = (int)(heightSize / 41.84);
+            int webBrowserHeightSize = (int)(heightSize / 1.5); //2.02
+            int xmlBrowserHeightSize = (int)(heightSize / 2.78);
+            int channelListBoxHeightSize = (int)(heightSize / 6.47); 
+            int favoriteSitesListBoxHeightSize = (int)(heightSize / 5.72);
+            // Ustawienie rozmairu dla wszystkich kontrolek
+            x.urlGroupBox.Size = new Size(groupBoxWidthSize, groupBoxHeightSize);
+            x.UrlTextBox.Size = new Size(controlWidthSize, textBoxHeightSize);
+            x.AddUrlButton.Size = new Size(controlWidthSize, buttonHeightSize);
+            x.ChannelsTitleLabel.Size = new Size(controlWidthSize, labelHeightSize);
+            x.ChannelsListBox.Size = new Size(controlWidthSize, channelListBoxHeightSize);
+            x.SitesLabel.Size = new Size(controlWidthSize, labelHeightSize);
+            x.FavoriteSitesListBox.Size = new Size(controlWidthSize, favoriteSitesListBoxHeightSize);
+            x.LoadWWWbutton.Size = new Size(controlWidthSize, buttonHeightSize);
+            x.WWWtextbox.Size = new Size(controlWidthSize, textBoxHeightSize);
+            x.WebBrowserForXml.Size = new Size(webBrowserandXmlWidthSize, webBrowserHeightSize);
+            x.DisplayForNewsTabControl.Size = new Size(webBrowserandXmlWidthSize, xmlBrowserHeightSize);
+            // zmienne przechowujace skalowanie dla wlasciowsci location kontrolek
+            int addUrlButtonLocationHeight = (heightSize / 16);
+            int channelTitleLabelLocationHeight = (int)(heightSize / 6.88);
+            int channelsListBoxLocationHeight = (int)(heightSize / 3.7);
+            int sitesLabelLocationHeigh = (int)(heightSize / 2.3);
+            int favoriteSitesListBoxLocationHeight = (int)(heightSize /1.85);
+            int loadWWWbuttonLocationHeight = (int)(heightSize / 1.39);
+            int wWWtextboxLocationHeight = (int)(heightSize / 1.25);
+            int displayForNewTabControlLocationWidth = (int)(widthSize /3.24);
+            // Ustawienie lokalizacji dla wszystkich kontrolek
+            x.AddUrlButton.Location = new Point(controlWidthLocation, addUrlButtonLocationHeight);
+            x.ChannelsTitleLabel.Location = new Point(controlWidthLocation, channelTitleLabelLocationHeight);
+            x.ChannelsListBox.Location = new Point(controlWidthLocation, channelsListBoxLocationHeight);
+            x.SitesLabel.Location = new Point(controlWidthLocation, sitesLabelLocationHeigh);
+            x.FavoriteSitesListBox.Location = new Point(controlWidthLocation, favoriteSitesListBoxLocationHeight);
+            x.LoadWWWbutton.Location = new Point(controlWidthLocation, loadWWWbuttonLocationHeight);
+            x.WWWtextbox.Location = new Point(controlWidthLocation, wWWtextboxLocationHeight);
+            x.DisplayForNewsTabControl.Location = new Point(displayForNewTabControlLocationWidth, 0);
+            // Ustawienie czcionek dla wszystkich kontrolek
+            if (Settings.Default.BoldFont)
+            {
+                x.FavoriteSitesListBox.Font = new Font(fontName, fontSize, fontStyle);
+                x.ChannelsListBox.Font = new Font(fontName, fontSize, fontStyle);
+            }
+            else
+            {
+                x.FavoriteSitesListBox.Font = new Font(fontName, fontSize);
+                x.ChannelsListBox.Font = new Font(fontName, fontSize);
+            }
+
+          
         }
     }
 }

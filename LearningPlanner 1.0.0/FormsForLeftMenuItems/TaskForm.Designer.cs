@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TaskNameTextBox = new System.Windows.Forms.TextBox();
-            this.NazwaZadaniaLabel = new System.Windows.Forms.Label();
-            this.KategoriaLabel = new System.Windows.Forms.Label();
+            this.TaskNameLabel = new System.Windows.Forms.Label();
+            this.CategoryLabel = new System.Windows.Forms.Label();
             this.CategoryTextBox = new System.Windows.Forms.TextBox();
-            this.OpisLabel = new System.Windows.Forms.Label();
+            this.DescribeLabel = new System.Windows.Forms.Label();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.TaskDataGridView = new System.Windows.Forms.DataGridView();
@@ -54,33 +54,33 @@
             this.TaskNameTextBox.Size = new System.Drawing.Size(220, 35);
             this.TaskNameTextBox.TabIndex = 0;
             // 
-            // NazwaZadaniaLabel
+            // TaskNameLabel
             // 
-            this.NazwaZadaniaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TaskNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NazwaZadaniaLabel.AutoSize = true;
-            this.NazwaZadaniaLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NazwaZadaniaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NazwaZadaniaLabel.Location = new System.Drawing.Point(59, 32);
-            this.NazwaZadaniaLabel.Name = "NazwaZadaniaLabel";
-            this.NazwaZadaniaLabel.Size = new System.Drawing.Size(226, 33);
-            this.NazwaZadaniaLabel.TabIndex = 1;
-            this.NazwaZadaniaLabel.Text = "Nazwa zadania:";
+            this.TaskNameLabel.AutoSize = true;
+            this.TaskNameLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaskNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TaskNameLabel.Location = new System.Drawing.Point(59, 32);
+            this.TaskNameLabel.Name = "TaskNameLabel";
+            this.TaskNameLabel.Size = new System.Drawing.Size(226, 33);
+            this.TaskNameLabel.TabIndex = 1;
+            this.TaskNameLabel.Text = "Nazwa zadania:";
             // 
-            // KategoriaLabel
+            // CategoryLabel
             // 
-            this.KategoriaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CategoryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.KategoriaLabel.AutoSize = true;
-            this.KategoriaLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KategoriaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.KategoriaLabel.Location = new System.Drawing.Point(59, 117);
-            this.KategoriaLabel.Name = "KategoriaLabel";
-            this.KategoriaLabel.Size = new System.Drawing.Size(152, 33);
-            this.KategoriaLabel.TabIndex = 2;
-            this.KategoriaLabel.Text = "Kategoria:";
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CategoryLabel.Location = new System.Drawing.Point(59, 117);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(152, 33);
+            this.CategoryLabel.TabIndex = 2;
+            this.CategoryLabel.Text = "Kategoria:";
             // 
             // CategoryTextBox
             // 
@@ -91,19 +91,19 @@
             this.CategoryTextBox.Size = new System.Drawing.Size(220, 35);
             this.CategoryTextBox.TabIndex = 3;
             // 
-            // OpisLabel
+            // DescribeLabel
             // 
-            this.OpisLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DescribeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OpisLabel.AutoSize = true;
-            this.OpisLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpisLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.OpisLabel.Location = new System.Drawing.Point(59, 199);
-            this.OpisLabel.Name = "OpisLabel";
-            this.OpisLabel.Size = new System.Drawing.Size(79, 33);
-            this.OpisLabel.TabIndex = 4;
-            this.OpisLabel.Text = "Opis:";
+            this.DescribeLabel.AutoSize = true;
+            this.DescribeLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescribeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DescribeLabel.Location = new System.Drawing.Point(59, 199);
+            this.DescribeLabel.Name = "DescribeLabel";
+            this.DescribeLabel.Size = new System.Drawing.Size(79, 33);
+            this.DescribeLabel.TabIndex = 4;
+            this.DescribeLabel.Text = "Opis:";
             // 
             // DescriptionTextBox
             // 
@@ -137,33 +137,33 @@
             this.TaskDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TaskDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.TaskDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TaskDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TaskDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.TaskDataGridView.Dock = System.Windows.Forms.DockStyle.Right;
             this.TaskDataGridView.EnableHeadersVisualStyles = false;
             this.TaskDataGridView.GridColor = System.Drawing.SystemColors.HotTrack;
             this.TaskDataGridView.Location = new System.Drawing.Point(406, 0);
             this.TaskDataGridView.Name = "TaskDataGridView";
             this.TaskDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.TaskDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SteelBlue;
+            this.TaskDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.TaskDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TaskDataGridView.Size = new System.Drawing.Size(344, 500);
             this.TaskDataGridView.TabIndex = 7;
@@ -221,10 +221,10 @@
             this.Controls.Add(this.TaskDataGridView);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DescriptionTextBox);
-            this.Controls.Add(this.OpisLabel);
+            this.Controls.Add(this.DescribeLabel);
             this.Controls.Add(this.CategoryTextBox);
-            this.Controls.Add(this.KategoriaLabel);
-            this.Controls.Add(this.NazwaZadaniaLabel);
+            this.Controls.Add(this.CategoryLabel);
+            this.Controls.Add(this.TaskNameLabel);
             this.Controls.Add(this.TaskNameTextBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -240,9 +240,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label NazwaZadaniaLabel;
-        private System.Windows.Forms.Label KategoriaLabel;
-        private System.Windows.Forms.Label OpisLabel;
         private System.Windows.Forms.Label errorLabel;
         public System.Windows.Forms.DataGridView TaskDataGridView;
         public System.Windows.Forms.TextBox TaskNameTextBox;
@@ -251,5 +248,8 @@
         public System.Windows.Forms.Button SaveButton;
         public System.Windows.Forms.Button DeleteButton;
         public System.Windows.Forms.Button CancelButton;
+        public System.Windows.Forms.Label TaskNameLabel;
+        public System.Windows.Forms.Label CategoryLabel;
+        public System.Windows.Forms.Label DescribeLabel;
     }
 }
