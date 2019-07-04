@@ -221,7 +221,7 @@ namespace LearningPlanner
             int widthSize = x.Width;
             int heightSize = x.Height;
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
-            int fontSize = (int)(widthSize / 90.37);
+            int fontSize = (int)(widthSize / 85.37);
             int controlWidthSize = (int)(widthSize / 4.13); 
             int labelHeightSize = (int)(heightSize / 10.88); 
             int buttonHeightSize =(int)(heightSize / 13.6);
@@ -278,6 +278,10 @@ namespace LearningPlanner
             }
 
           
+        }
+        public void SettingsDefaultResponse(SettingsForm x)
+        {
+
         }
     }
 }

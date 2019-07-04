@@ -452,33 +452,33 @@ namespace LearningPlanner
 
 
 
-        //public void SetDefaultFontSettings()
-        //{
-        //    foreach (var lbl in GetAll(this, typeof(Label)))
-        //    {
-        //        (lbl as Label).Font = new Font("Century Gothic", 14);
-        //    }
+        public void SetDefaultFontSettings()
+        {
+            foreach (var lbl in GetAll(this, typeof(Label)))
+            {
+                (lbl as Label).Font = new Font("Century Gothic", 14);
+            }
 
-        //    foreach (var btn in GetAll(this, typeof(Button)))
-        //    {
-        //        (btn as Button).Font = new Font("Century Gothic", 10);
-        //    }
+            foreach (var btn in GetAll(this, typeof(Button)))
+            {
+                (btn as Button).Font = new Font("Century Gothic", 10);
+            }
 
-        //    Settings.Default.RememberFont = "Century Gothic";
-        //    Settings.Default.ArialBlackFont = ArialBlackRadioButton.Checked = false;
-        //    Settings.Default.CalibriFont = CalibriRadioButton.Checked = false;
-        //    Settings.Default.CourierFont = CourierRadioButton.Checked = false;
-        //    Settings.Default.TimesNewRomanFont = TimesNewRomanRadioButton.Checked = false;
-        //    Settings.Default.VerdanaFont = VerdanaRadioButton.Checked = false;
-        //    Settings.Default.BoldFont = BoldCheckBox.Checked = false;
+            Settings.Default.RememberFont = "Century Gothic";
+            Settings.Default.ArialBlackFont = ArialBlackRadioButton.Checked = false;
+            Settings.Default.CalibriFont = CalibriRadioButton.Checked = false;
+            Settings.Default.CourierFont = CourierRadioButton.Checked = false;
+            Settings.Default.TimesNewRomanFont = TimesNewRomanRadioButton.Checked = false;
+            Settings.Default.VerdanaFont = VerdanaRadioButton.Checked = false;
+            Settings.Default.BoldFont = BoldCheckBox.Checked = false;
 
-        //    foreach (var btn in GetAll(this, typeof(RadioButton)))
-        //    {
-        //        (btn as RadioButton).Checked = false;
+            foreach (var btn in GetAll(this, typeof(RadioButton)))
+            {
+                (btn as RadioButton).Checked = false;
 
-        //    }
-         
-        //}
+            }
+
+        }
 
         #endregion
 
@@ -493,7 +493,7 @@ namespace LearningPlanner
             GtrackBar.Value = 197;
             BtrackBar.Value = 222;
             SaveBackColorChanges();
-          //  SetDefaultFontSettings();
+            SetDefaultFontSettings();
             SaveDefaultMusicStatusSettings();
             StopMusic(0);
             Settings.Default.Save();
@@ -514,5 +514,12 @@ namespace LearningPlanner
                 
 
         }
+
+        private void AuthorsButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Jakub Benzef\nbenzef@tlen.pl\n\nMichał Białek\nm.biaek91@gmail.com", "Autorzy", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        
     }
 }

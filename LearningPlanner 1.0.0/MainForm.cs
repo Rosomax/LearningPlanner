@@ -21,7 +21,7 @@ namespace LearningPlanner
         }
         private void MaximilaziPictureBox_Click(object sender, EventArgs e)
         {
-
+            
 
             if (WindowState == FormWindowState.Maximized)
             {

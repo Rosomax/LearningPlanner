@@ -74,15 +74,15 @@ namespace LearningPlanner
                     t.Kategoria,
                     t.IDUzytkownika
                 }).Where(t => t.Kategoria == activeCategoryCell).Where(t => t.IDUzytkownika == IDUser).ToList();
+
+                chooseTaskDataGrid.Columns["Kategoria"].Visible = false;
+                chooseTaskDataGrid.Columns["IDUzytkownika"].Visible = false;
             }
             catch
             {
 
             }
 
-
-            chooseTaskDataGrid.Columns["Kategoria"].Visible = false;
-            chooseTaskDataGrid.Columns["IDUzytkownika"].Visible = false;
         }
     
 

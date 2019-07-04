@@ -43,12 +43,12 @@
             this.BLabel = new System.Windows.Forms.Label();
             this.GLabel = new System.Windows.Forms.Label();
             this.RLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.Panel2 = new System.Windows.Forms.Panel();
             this.PlayMusicLabel = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.Panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ReportErrorButttom = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Panel3 = new System.Windows.Forms.Panel();
             this.ChangeFontLabel = new System.Windows.Forms.Label();
             this.AuthorsButton = new System.Windows.Forms.Button();
             this.VerdanaRadioButton = new System.Windows.Forms.RadioButton();
@@ -68,7 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtrackBar)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.Panel3.SuspendLayout();
             this.SoundsPanel.SuspendLayout();
             this.ChangeFontPanel.SuspendLayout();
             this.SuspendLayout();
@@ -184,7 +184,7 @@
             this.BLabel.AutoSize = true;
             this.BLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BLabel.ForeColor = System.Drawing.Color.Black;
-            this.BLabel.Location = new System.Drawing.Point(692, 131);
+            this.BLabel.Location = new System.Drawing.Point(690, 131);
             this.BLabel.Name = "BLabel";
             this.BLabel.Size = new System.Drawing.Size(18, 19);
             this.BLabel.TabIndex = 12;
@@ -212,13 +212,13 @@
             this.RLabel.TabIndex = 10;
             this.RLabel.Text = "R";
             // 
-            // panel2
+            // Panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(3, 269);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 3);
-            this.panel2.TabIndex = 16;
+            this.Panel2.BackColor = System.Drawing.Color.White;
+            this.Panel2.Location = new System.Drawing.Point(3, 269);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(750, 3);
+            this.Panel2.TabIndex = 16;
             // 
             // PlayMusicLabel
             // 
@@ -231,13 +231,13 @@
             this.PlayMusicLabel.TabIndex = 17;
             this.PlayMusicLabel.Text = "Dzwięki:";
             // 
-            // panel4
+            // Panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(479, 1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 540);
-            this.panel4.TabIndex = 16;
+            this.Panel4.BackColor = System.Drawing.Color.White;
+            this.Panel4.Location = new System.Drawing.Point(479, 1);
+            this.Panel4.Name = "Panel4";
+            this.Panel4.Size = new System.Drawing.Size(3, 540);
+            this.Panel4.TabIndex = 16;
             // 
             // panel5
             // 
@@ -261,14 +261,14 @@
             this.ReportErrorButttom.UseVisualStyleBackColor = false;
             this.ReportErrorButttom.Click += new System.EventHandler(this.ReportErrorButton_Click);
             // 
-            // panel3
+            // Panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Location = new System.Drawing.Point(233, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 540);
-            this.panel3.TabIndex = 16;
+            this.Panel3.BackColor = System.Drawing.Color.White;
+            this.Panel3.Controls.Add(this.panel5);
+            this.Panel3.Location = new System.Drawing.Point(233, 1);
+            this.Panel3.Name = "Panel3";
+            this.Panel3.Size = new System.Drawing.Size(3, 540);
+            this.Panel3.TabIndex = 16;
             // 
             // ChangeFontLabel
             // 
@@ -293,6 +293,7 @@
             this.AuthorsButton.TabIndex = 24;
             this.AuthorsButton.Text = "O autorach";
             this.AuthorsButton.UseVisualStyleBackColor = false;
+            this.AuthorsButton.Click += new System.EventHandler(this.AuthorsButton_Click);
             // 
             // VerdanaRadioButton
             // 
@@ -444,7 +445,7 @@
             this.SoundsPanel.Controls.Add(this.PlayMusicLabel);
             this.SoundsPanel.Location = new System.Drawing.Point(488, 278);
             this.SoundsPanel.Name = "SoundsPanel";
-            this.SoundsPanel.Size = new System.Drawing.Size(265, 263);
+            this.SoundsPanel.Size = new System.Drawing.Size(224, 250);
             this.SoundsPanel.TabIndex = 32;
             // 
             // ChangeFontPanel
@@ -456,9 +457,9 @@
             this.ChangeFontPanel.Controls.Add(this.TimesNewRomanRadioButton);
             this.ChangeFontPanel.Controls.Add(this.CourierRadioButton);
             this.ChangeFontPanel.Controls.Add(this.ArialBlackRadioButton);
-            this.ChangeFontPanel.Location = new System.Drawing.Point(242, 275);
+            this.ChangeFontPanel.Location = new System.Drawing.Point(242, 278);
             this.ChangeFontPanel.Name = "ChangeFontPanel";
-            this.ChangeFontPanel.Size = new System.Drawing.Size(231, 266);
+            this.ChangeFontPanel.Size = new System.Drawing.Size(231, 253);
             this.ChangeFontPanel.TabIndex = 33;
             // 
             // GeneralSettingsLabel
@@ -488,10 +489,10 @@
             this.Controls.Add(this.ChangeFontPanel);
             this.Controls.Add(this.SoundsPanel);
             this.Controls.Add(this.AuthorsButton);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.Panel3);
             this.Controls.Add(this.ReportErrorButttom);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.Panel4);
+            this.Controls.Add(this.Panel2);
             this.Controls.Add(this.BLabel);
             this.Controls.Add(this.GLabel);
             this.Controls.Add(this.RLabel);
@@ -514,7 +515,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RtrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GtrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtrackBar)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.Panel3.ResumeLayout(false);
             this.SoundsPanel.ResumeLayout(false);
             this.SoundsPanel.PerformLayout();
             this.ChangeFontPanel.ResumeLayout(false);
@@ -540,12 +541,11 @@
         private System.Windows.Forms.Label BLabel;
         private System.Windows.Forms.Label GLabel;
         private System.Windows.Forms.Label RLabel;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Panel2;
         private System.Windows.Forms.Label PlayMusicLabel;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel Panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button ReportErrorButttom;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label ChangeFontLabel;
         private System.Windows.Forms.Button AuthorsButton;
         private System.Windows.Forms.RadioButton VerdanaRadioButton;
@@ -562,5 +562,6 @@
         private System.Windows.Forms.Panel ChangeFontPanel;
         private System.Windows.Forms.Label GeneralSettingsLabel;
         private System.Windows.Forms.Timer SettingTimer;
+        public System.Windows.Forms.Panel Panel3;
     }
 }

@@ -10,24 +10,42 @@ namespace LearningPlanner
 {
     public partial class ITNews : Form
     {
-
-       
-        string s0 = "http://technow.pl/feed"; 
-        string s1 = "https://pclab.pl/xml/rss.xml"; 
-        string s2 = "https://itreseller.com.pl/feed/"; 
-        string s3 = "http://www.itworld.com/news/index.rss"; 
-        string s4 = "http://www.computerworld.com/index.rss"; 
-      
-       
-        string ws0 = "https://www.itnews.com/";
-        string ws1 = "https://stackoverflow.com/"; 
-
-
-
-       public ITNews()
+        public ITNews()
         {
             InitializeComponent();
         }
+
+        List<string> rssAdresses = new List<string>
+        {
+            "http://technow.pl/feed",
+           "https://pclab.pl/xml/rss.xml",
+           "https://itreseller.com.pl/feed/",
+           "http://www.itworld.com/news/index.rss",
+           "http://www.computerworld.com/index.rss",
+            "http://www.huj.com/index.rss"
+        };
+
+        List<string> rssNames = new List<string>
+        {
+        "TECHNOW",
+        "PC-LAB",
+        "ITRESELLER",
+        "ITWORLD",
+        "COMPUTERWORLD",       
+        };
+
+        List<string> wwwAdresses = new List<string>
+        {
+        "https://www.itnews.com/",
+        "https://stackoverflow.com/"
+        };
+
+        List<string> wwwNames = new List<string>
+        {
+        "IT NEWS IDG",
+        "STACKOVERFLOW"
+        };
+        
 
         private void ITNews_Load(object sender, EventArgs e)
         {
@@ -35,30 +53,32 @@ namespace LearningPlanner
 
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
 
-            string s0t = "TECHNOW";
-            string s1t = "PC-LAB";
-            string s2t = "ITRESELLER";
-            string s3t = "ITWORLD";
-            string s4t = "COMPUTERWORLD";
-            ChannelsListBox.Items.Add(s0t);
-            ChannelsListBox.Items.Add(s1t);
-            ChannelsListBox.Items.Add(s2t);
-            ChannelsListBox.Items.Add(s3t);
-            ChannelsListBox.Items.Add(s4t);
-                     
-            string wst0 = "IT NEWS IDG";
-            string wst1 = "STACKOVERFLOW";
-                                                       
-            FavoriteSitesListBox.Items.Add(wst0);
-            FavoriteSitesListBox.Items.Add(wst1);
 
+            FillChannels();
+            FillSites();
 
-           // ITNewsFormChangeFont();
         }
+
+        private void FillChannels()
+        {
+            foreach (var item in rssNames)
+            {
+                ChannelsListBox.Items.Add(item);
+            }
+        }
+
+        private void FillSites()
+        {
+            foreach (var item in wwwNames)
+            {
+                FavoriteSitesListBox.Items.Add(item);
+            }
+        }
+
 
         private void ITNews_SizeChanged(object sender, EventArgs e)
         {
-            if (this.Size.Width <= 799)
+            if (Size.Width <= 799)
             {
                 DefaultResponsives dresp = new DefaultResponsives();
                 dresp.ITNewsDefaultResponse(this);
@@ -76,82 +96,59 @@ namespace LearningPlanner
         private void TransferToUrlTextBox()
         {
             if (ChannelsListBox.SelectedItem != null)
-            {             
-
+            {
+                int[] capacity = new int[10];
                 string copyUrl = (ChannelsListBox.SelectedItem as string);
-                if(ChannelsListBox.SelectedIndex==0)
+                for (int i = 0; i < ChannelsListBox.Items.Count; i++)
                 {
-                    copyUrl = s0;
-                }
-                else if(ChannelsListBox.SelectedIndex == 1)
-                {
-                    copyUrl = s1;
-                }
-                 else if(ChannelsListBox.SelectedIndex == 2)
-                {
-                    copyUrl = s2;
-                }
-                else if (ChannelsListBox.SelectedIndex == 3)
-                {
-                    copyUrl = s3;
-                }
-                else if (ChannelsListBox.SelectedIndex == 4)
-                {
-                    copyUrl = s4;
+                    capacity[i] = i;
+                    if (ChannelsListBox.SelectedIndex == i)
+                    copyUrl = rssAdresses[i];
                 }
                 UrlTextBox.Text = copyUrl;
-                //copyUrl = (channelsListBox.SelectedItem as string);  
             }
                 
         }
 
-        // Change string to url for WWW
+
         private void TransferToUrlWWWTextBox()
         {
             if (FavoriteSitesListBox.SelectedItem != null)
             {
-                string copyWWWUrl;
-                copyWWWUrl = (FavoriteSitesListBox.SelectedItem as string);
-                if (FavoriteSitesListBox.SelectedIndex == 0)
+                int[] capacity = new int[10];
+                string copyWWWUrl = (FavoriteSitesListBox.SelectedItem as string);
+                for (int i = 0; i < FavoriteSitesListBox.Items.Count; i++)
                 {
-                    copyWWWUrl = ws0;
-                }
-                else if (FavoriteSitesListBox.SelectedIndex == 1)
-                {
-                    copyWWWUrl = ws1;
-                }
-                else if (FavoriteSitesListBox.SelectedIndex == 2)
-                {
-                    copyWWWUrl = s2;
-                }
-                else if (FavoriteSitesListBox.SelectedIndex == 3)
-                {
-                    copyWWWUrl = s3;
-                }
-                else if (FavoriteSitesListBox.SelectedIndex == 4)
-                {
-                    copyWWWUrl = s4;
+                   capacity[i] = i;
+
+                    if (FavoriteSitesListBox.SelectedIndex == i)
+                        copyWWWUrl = wwwAdresses[i];
                 }
                 WWWtextbox.Text = copyWWWUrl;
-                copyWWWUrl = (FavoriteSitesListBox.SelectedItem as string);   
+                //copyWWWUrl = (FavoriteSitesListBox.SelectedItem as string);
             }
 
         }
         #endregion
 
+       
+
+      
+
 
         private void AddUrlButton_Click(object sender, EventArgs e)
         {
          try
-            {              
-                XmlReader feedReadXML = XmlReader.Create(UrlTextBox.Text);              
-                SyndicationFeed feedXML = SyndicationFeed.Load(feedReadXML);    
-                TabPage feedTab = new TabPage(feedXML.Title.Text);            
-                DisplayForNewsTabControl.TabPages.Add(feedTab);             
-                ListBox feedList = new ListBox();             
-                feedTab.Controls.Add(feedList);              
-                feedList.Dock = DockStyle.Fill;               
+            {
+                XmlReader feedReadXML = XmlReader.Create(UrlTextBox.Text);
+                SyndicationFeed feedXML = SyndicationFeed.Load(feedReadXML);
+                TabPage feedTab = new TabPage(feedXML.Title.Text);
+                DisplayForNewsTabControl.TabPages.Add(feedTab);
+                ListBox feedList = new ListBox();
+                feedTab.Controls.Add(feedList);
+                feedList.Dock = DockStyle.Fill;
                 feedList.HorizontalScrollbar = true;
+
 
                 foreach (SyndicationItem feedItem in feedXML.Items)
                 {
@@ -227,67 +224,5 @@ namespace LearningPlanner
            
         }
 
-
-
-
-        #region ChangeFontFromSettings
-
-        //public IEnumerable<Control> GetAll(Control control, Type type)
-        //{
-        //    var controls = control.Controls.Cast<Control>();
-
-        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
-        //                              .Concat(controls)
-        //                              .Where(c => c.GetType() == type);
-        //}
-
-
-        //public void ITNewsFormChangeFont()
-        //{
-
-        //    foreach (var lbl in GetAll(this, typeof(Label)))
-        //    {
-        //        if (Settings.Default.BoldFont)
-        //            (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12, FontStyle.Bold);
-        //        else
-        //            (lbl as Label).Font = new Font(Settings.Default.RememberFont, 12);
-
-        //    }
-
-        //    foreach (var btn in GetAll(this, typeof(Button)))
-        //    {
-        //        if (Settings.Default.BoldFont)
-        //            (btn as Button).Font = new Font(Settings.Default.RememberFont, 14, FontStyle.Bold);
-        //        else
-        //            (btn as Button).Font = new Font(Settings.Default.RememberFont, 14);
-        //    }
-
-        //    foreach (var tb in GetAll(this, typeof(TextBox)))
-        //    {
-        //        if (Settings.Default.BoldFont)
-        //            (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
-        //        else
-        //            (tb as TextBox).Font = new Font(Settings.Default.RememberFont, 8);
-        //    }
-
-        //    foreach (var lb in GetAll(this, typeof(ListBox)))
-        //    {
-        //        try
-        //        {
-        //            if (Settings.Default.BoldFont)
-        //                (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8, FontStyle.Bold);
-        //            else
-        //                (lb as ListBox).Font = new Font(Settings.Default.RememberFont, 8);
-
-        //        }
-
-        //        catch { }
-                
-        //        }
-
-
-        //}
-
-        #endregion
     }
 }

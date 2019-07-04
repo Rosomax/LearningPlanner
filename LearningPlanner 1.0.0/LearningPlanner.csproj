@@ -376,6 +376,19 @@
     <None Include="Icons\FindPicture.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="bin\Debug\Icons\close icon.png" />
+    <None Include="bin\Debug\Icons\delete icon.png" />
+    <None Include="bin\Debug\Icons\FindPicture.png" />
+    <None Include="bin\Debug\Icons\info icon.png" />
+    <None Include="bin\Debug\Icons\kategoria icon.png" />
+    <None Include="bin\Debug\Icons\maximize-window.png" />
+    <None Include="bin\Debug\Icons\minimize-window.png" />
+    <None Include="bin\Debug\Icons\stronaGlowna icon.png" />
+    <None Include="bin\Debug\Icons\Ustawienia icon.png" />
+    <None Include="bin\Debug\Icons\Zadanie icon.png" />
+    <None Include="bin\Debug\Icons\Zakonczone zadanie icon.png" />
+    <None Include="bin\Debug\Icons\ze swiata icon.png" />
+    <None Include="bin\Debug\Icons\Znajdz zadanie icon.png" />
     <Content Include="Logs\LocalLogs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -474,9 +487,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

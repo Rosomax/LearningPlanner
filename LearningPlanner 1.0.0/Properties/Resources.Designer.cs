@@ -65,7 +65,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap close_icon {
             get {
-                object obj = ResourceManager.GetObject("close icon", resourceCulture);
+                object obj = ResourceManager.GetObject("close_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap delete_icon {
             get {
-                object obj = ResourceManager.GetObject("delete icon", resourceCulture);
+                object obj = ResourceManager.GetObject("delete_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap info_icon {
             get {
-                object obj = ResourceManager.GetObject("info icon", resourceCulture);
+                object obj = ResourceManager.GetObject("info_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +105,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap kategoria_icon {
             get {
-                object obj = ResourceManager.GetObject("kategoria icon", resourceCulture);
+                object obj = ResourceManager.GetObject("kategoria_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -115,7 +115,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap maximize_window {
             get {
-                object obj = ResourceManager.GetObject("maximize-window", resourceCulture);
+                object obj = ResourceManager.GetObject("maximize_window", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -125,27 +125,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap minimize_window {
             get {
-                object obj = ResourceManager.GetObject("minimize-window", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap restore_window {
-            get {
-                object obj = ResourceManager.GetObject("restore-window", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap RssImagePNG {
-            get {
-                object obj = ResourceManager.GetObject("RssImagePNG", resourceCulture);
+                object obj = ResourceManager.GetObject("minimize_window", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,7 +135,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap stronaGlowna_icon {
             get {
-                object obj = ResourceManager.GetObject("stronaGlowna icon", resourceCulture);
+                object obj = ResourceManager.GetObject("stronaGlowna_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -185,7 +165,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Ustawienia_icon {
             get {
-                object obj = ResourceManager.GetObject("Ustawienia icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Ustawienia_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,7 +175,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Zadanie_icon {
             get {
-                object obj = ResourceManager.GetObject("Zadanie icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Zadanie_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -205,7 +185,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Zakonczone_zadanie_icon {
             get {
-                object obj = ResourceManager.GetObject("Zakonczone zadanie icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Zakonczone_zadanie_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -215,7 +195,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap ze_swiata_icon {
             get {
-                object obj = ResourceManager.GetObject("ze swiata icon", resourceCulture);
+                object obj = ResourceManager.GetObject("ze_swiata_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -225,7 +205,7 @@ namespace LearningPlanner.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Znajdz_zadanie_icon {
             get {
-                object obj = ResourceManager.GetObject("Znajdz zadanie icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Znajdz_zadanie_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
