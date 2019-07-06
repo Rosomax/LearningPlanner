@@ -64,9 +64,9 @@
             this.TaskNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TaskNameLabel.Location = new System.Drawing.Point(59, 32);
             this.TaskNameLabel.Name = "TaskNameLabel";
-            this.TaskNameLabel.Size = new System.Drawing.Size(226, 33);
+            this.TaskNameLabel.Size = new System.Drawing.Size(228, 33);
             this.TaskNameLabel.TabIndex = 1;
-            this.TaskNameLabel.Text = "Nazwa zadania:";
+            this.TaskNameLabel.Text = "Nazwa Zadania:";
             // 
             // CategoryLabel
             // 

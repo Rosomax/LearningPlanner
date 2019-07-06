@@ -48,13 +48,13 @@ namespace LearningPlanner
 
         private void FinishTask_Click(object sender, EventArgs e)
         {
-          if  (MessageBox.Show("Czy napewno chcesz zakończyć to zadanie?","Koniec zadania", MessageBoxButtons.YesNo) == DialogResult.Yes)
+          if  (MessageBox.Show("Czy napewno chcesz zakończyć to zadanie?","Koniec Tasks", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 var selectedRowId = TaskForm.Id;
             
                 using (EntitiesModel mod = new EntitiesModel())
                 {
-                    var selectedTask = mod.Zadania.Single(z => z.IDZadania == selectedRowId);
+                    var selectedTask = mod.Tasks.Single(z => z.IDZadania == selectedRowId);
                     selectedTask.CzyZakonczone = true;
                     mod.SaveChanges();
                  
@@ -92,14 +92,14 @@ namespace LearningPlanner
             {
                 DescriptionInfoRichTextBox.TextChanged += DescriptionInfoRichTextBox_TextChanged;
 
-                var selectedRowId = mod.Zadania.Single(u => u.IDZadania == CompletedTasksForm.Id);
+                var selectedRowId = mod.Tasks.Single(u => u.IDZadania == CompletedTasksForm.Id);
                 selectedRowId.Opis = DescriptionInfoRichTextBox.Text;
               
                 mod.SaveChanges();
                 
             }
             EditTaskButton.Click += EditTask_Click1;
-            this.Text = ("Szczególy zadania [Tryb edytowania]");
+            this.Text = ("Szczególy Tasks [Tryb edytowania]");
         }
 
         private void EditTask_Click1(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace LearningPlanner
             MessageBox.Show("Zaktualizowano opis");
             EditTaskButton.Click -= EditTask_Click1;
             EditTaskButton.Text = "Edytuj";
-            Text = ("Szczególy zadania");
+            Text = ("Szczególy Tasks");
             currentForm2.FillGrid();
         }
 

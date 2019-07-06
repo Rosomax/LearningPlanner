@@ -508,6 +508,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "SettingsForm";
             this.Text = "UstawieniaForm";
             this.Load += new System.EventHandler(this.SettingsForm_Load);

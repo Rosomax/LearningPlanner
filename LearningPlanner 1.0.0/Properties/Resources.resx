@@ -118,12 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TloCytat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TloCytat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tlo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tlo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="close_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\close icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,31 +130,28 @@
   <data name="info_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\info icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kategoria_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\kategoria icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Category_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Category icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maximize_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\maximize-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Completed_Task_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Completed Task icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimize_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\minimize-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Find_Task_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Find Task icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stronaGlowna_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\stronaGlowna icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Home_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Home icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ustawienia_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\Ustawienia icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ITNews_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\ITNews icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zadanie_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\Zadanie icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Settings_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Settings icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zakonczone_zadanie_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\Zakonczone zadanie icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Task_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Task icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ze_swiata_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\ze swiata icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Znajdz_zadanie_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\Znajdz zadanie icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="QuotationBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuotationBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

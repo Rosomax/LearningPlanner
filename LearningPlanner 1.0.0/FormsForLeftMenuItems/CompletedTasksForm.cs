@@ -28,7 +28,7 @@ namespace LearningPlanner
 
 
 
-            CompletedTaskDataGridView1.DataSource = model.Zadania.Select(o => new
+            CompletedTaskDataGridView1.DataSource = model.Tasks.Select(o => new
             {
                 o.IDZadania,
                 o.Nazwa,
@@ -55,7 +55,7 @@ namespace LearningPlanner
 
         public void FillGrid()
         {
-            CompletedTaskDataGridView1.DataSource = model.Zadania.Select(o => new
+            CompletedTaskDataGridView1.DataSource = model.Tasks.Select(o => new
             {
                 o.IDZadania,
                 o.Nazwa,
@@ -201,6 +201,6 @@ namespace LearningPlanner
 
         }
 
-#endregion
+        #endregion
     }
 }

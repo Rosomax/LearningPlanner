@@ -17,25 +17,26 @@ namespace LearningPlanner
         #region EventsForTopPanelIcons
         private void MinimalizePictureBox_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
         private void MaximilaziPictureBox_Click(object sender, EventArgs e)
         {
-            
+   
+          
 
             if (WindowState == FormWindowState.Maximized)
             {
                 WindowState = FormWindowState.Normal;
-                MaximalizePictureBox.Load("WindowIcons\\maximize-window.png");
+                MaximizePictureBox.Load("WindowIcons\\maximize-window.png");
 
             }
-            else if (WindowState == FormWindowState.Normal)
+            else
+
             {
                 WindowState = FormWindowState.Maximized;
 
-                MaximalizePictureBox.Load("WindowIcons\\restore-window.png");
+                MaximizePictureBox.Load("WindowIcons\\restore-window.png");
             }
-
 
 
 
@@ -50,10 +51,37 @@ namespace LearningPlanner
             {
                 c.Close();
             }
+
+        }
+        
+        private void Something()
+        {
+           
+
+            foreach (Form c in MdiChildren)
+            {
+                if (c.Name == "SettingsForm")
+                {
+                    MaximizePictureBox.Visible = false;
+                    WindowState = FormWindowState.Normal;
+                }
+                else
+                {
+                    MaximizePictureBox.Visible = true;
+                  
+                }
+            }
+
+          
+
+
         }
 
+        private void MainForm_MdiChildActivate(object sender, EventArgs e)
+        {
+           Something();
 
-
+        }
         #endregion
 
         #region PanelMove
@@ -236,7 +264,7 @@ namespace LearningPlanner
             using (EntitiesModel x = new EntitiesModel())
             {
 
-                var user = x.Uzytkownicy.FirstOrDefault(e => e.Login == login);
+                var user = x.Users.FirstOrDefault(e => e.Login == login);
                 if (user != null)
                 {
                     if (user.Haslo == password)
@@ -272,7 +300,7 @@ namespace LearningPlanner
             ITNewsControl.Enabled = true;
             SettingsControl.Enabled = true;
             TaskControl.Enabled = true;
-            MaximalizePictureBox.Enabled = true;
+            MaximizePictureBox.Enabled = true;
         }
 
         private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -336,14 +364,11 @@ namespace LearningPlanner
 
        private void MainForm_Load(object sender, EventArgs e)
         {
-            SetCredentials();        
+            SetCredentials();
+           
         }
 
        
-
-
-
-
     }
 
 }

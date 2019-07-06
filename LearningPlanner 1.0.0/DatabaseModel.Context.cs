@@ -25,9 +25,9 @@ namespace LearningPlanner
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Quotations> Quotations { get; set; }
+        public virtual DbSet<Tasks> Tasks { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Uzytkownicy> Uzytkownicy { get; set; }
-        public virtual DbSet<Zadania> Zadania { get; set; }
-        public virtual DbSet<Cytaty> Cytaty { get; set; }
     }
 }

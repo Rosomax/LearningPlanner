@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CompletedTaskPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.CompletedTaskPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // CompletedTaskPictureBox
             // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::LearningPlanner.Properties.Resources.Zakonczone_zadanie_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 39);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.CompletedTaskPictureBox.Enabled = false;
+            this.CompletedTaskPictureBox.Image = global::LearningPlanner.Properties.Resources.Completed_Task_icon;
+            this.CompletedTaskPictureBox.Location = new System.Drawing.Point(4, 28);
+            this.CompletedTaskPictureBox.Name = "CompletedTaskPictureBox";
+            this.CompletedTaskPictureBox.Size = new System.Drawing.Size(44, 39);
+            this.CompletedTaskPictureBox.TabIndex = 1;
+            this.CompletedTaskPictureBox.TabStop = false;
             // 
-            // zakonczoneZadaniaControl2
+            // CompletedTaskControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "zakonczoneZadaniaControl2";
+            this.Controls.Add(this.CompletedTaskPictureBox);
+            this.Name = "CompletedTaskControl2";
             this.Size = new System.Drawing.Size(185, 97);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.CompletedTaskControl2_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CompletedTaskPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox CompletedTaskPictureBox;
     }
 }

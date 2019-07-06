@@ -128,7 +128,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CompletedTasksForm";
-            this.Text = "ZakonczoneZadaniaForm";
+            this.Text = "ZakonczoneTasksForm";
             this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.CompletedTasksForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CompletedTaskDataGridView1)).EndInit();

@@ -168,14 +168,14 @@ namespace LearningPlanner
 
             if (Settings.Default.BoldFont)
             {
-                x.FindTaskLabel.Font = new Font(fontName, labelFontSize,fontStyle);
-                x.FindTaskTextBox.Font = new Font(fontName, textBoxFontSize,fontStyle);
-                x.FilterLabel.Font = new Font(fontName, labelFontSize,fontStyle);
-                x.FilterComboBox.Font = new Font(fontName, textBoxFontSize,fontStyle);
-                x.FilterFromLabel.Font = new Font(fontName, labelFontSize,fontStyle);
-                x.FilterFrom.Font = new Font(fontName, textBoxFontSize,fontStyle);
-                x.FilterToLabel.Font = new Font(fontName, labelFontSize,fontStyle);
-                x.FilterTo.Font = new Font(fontName, textBoxFontSize,fontStyle);
+                x.FindTaskLabel.Font = new Font(fontName, labelFontSize, fontStyle);
+                x.FindTaskTextBox.Font = new Font(fontName, textBoxFontSize, fontStyle);
+                x.FilterLabel.Font = new Font(fontName, labelFontSize, fontStyle);
+                x.FilterComboBox.Font = new Font(fontName, textBoxFontSize, fontStyle);
+                x.FilterFromLabel.Font = new Font(fontName, labelFontSize, fontStyle);
+                x.FilterFrom.Font = new Font(fontName, textBoxFontSize, fontStyle);
+                x.FilterToLabel.Font = new Font(fontName, labelFontSize, fontStyle);
+                x.FilterTo.Font = new Font(fontName, textBoxFontSize, fontStyle);
             }
 
             else
@@ -191,7 +191,7 @@ namespace LearningPlanner
             }
 
         }
-       
+
         public void ITNewsResponse (ITNews x)
         {
             // Zmienne przechowujace szerokosc oraz wysokosc ekranu

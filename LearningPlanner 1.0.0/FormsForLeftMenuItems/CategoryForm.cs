@@ -27,7 +27,7 @@ namespace LearningPlanner
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             
 
-            chooseCategoryDataGrid.DataSource = categoryModel.Zadania.Select(c => new
+            chooseCategoryDataGrid.DataSource = categoryModel.Tasks.Select(c => new
             {
                 c.Kategoria,
                 c.IDUzytkownika
@@ -43,17 +43,16 @@ namespace LearningPlanner
 
             if (Size.Width <= 799)
             {
-                DefaultResponsives dresp = new DefaultResponsives();
+                DefaultResponsives dresp = new DefaultResponsives();              
                 dresp.CategoryFormDefaultResponse(this);
             }
             else
             {
-                Responsiveness resp = new Responsiveness();
-                resp.CategoryResponse(this);
+                Responsiveness resp = new Responsiveness();          
+                    resp.CategoryResponse(this);
             }
 
         }
-
 
         #region GridHandlers
 
@@ -68,7 +67,7 @@ namespace LearningPlanner
                 chooseTaskDataGrid.Visible = true;
                 describeTaskLabel.Visible = false;
                 describeTaskRichTextBox.Visible = false;
-                chooseTaskDataGrid.DataSource = categoryModel.Zadania.Select(t => new
+                chooseTaskDataGrid.DataSource = categoryModel.Tasks.Select(t => new
                 {
                     t.Nazwa,
                     t.Kategoria,
@@ -102,43 +101,13 @@ namespace LearningPlanner
         public string GetDescribe(string activeCell)
         {
 
-            return (from Zadania in categoryModel.Zadania
-                    where Zadania.Nazwa.Equals(activeCell)
-                    select Zadania.Opis).SingleOrDefault().ToString();
+            return (from Tasks in categoryModel.Tasks
+                    where Tasks.Nazwa.Equals(activeCell)
+                    select Tasks.Opis).SingleOrDefault().ToString();
         }
 
         #endregion
 
-
-        //#region ChangeFontFromSettings
-
-        //public IEnumerable<Control> GetAll(Control control, Type type)
-        //{
-        //    var controls = control.Controls.Cast<Control>();
-
-        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
-        //                              .Concat(controls)
-        //                              .Where(c => c.GetType() == type);
-        //}
-
-
-        //public void CategoryFormChangeFont()
-        //{
-        //    string font = Settings.Default.RememberFont;
-        //    bool boldFont = Settings.Default.BoldFont;
-
-        //    foreach (var lbl in GetAll(this, typeof(Label)))
-        //    {
-        //        if (boldFont)
-        //            (lbl as Label).Font = new Font(font, 14, FontStyle.Bold);
-        //        else
-        //            (lbl as Label).Font = new Font(font, 14);
-
-        //    }
-          
-
-        //}
-        //#endregion
 
 
     }

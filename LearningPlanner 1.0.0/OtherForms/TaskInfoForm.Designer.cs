@@ -191,7 +191,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TaskInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Szczegóły zadania";
+            this.Text = "Szczegóły Tasks";
             this.Load += new System.EventHandler(this.TaskInfoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -18,12 +18,12 @@ namespace LearningPlanner
             
             using (EntitiesModel context = new EntitiesModel())
             {
-                int quotationSum = context.Cytaty.Count();
+                int quotationSum = context.Quotations.Count();
 
                 Random rand = new Random();
                 int randomQuotation = rand.Next(quotationSum) + 1;
 
-                var tmp = context.Cytaty.Single(p => p.IDcytatu == randomQuotation);
+                var tmp = context.Quotations.Single(p => p.IDcytatu == randomQuotation);
                 QuotationLabel.Text = tmp.Tresc;
 
             }

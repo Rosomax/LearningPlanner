@@ -26,7 +26,7 @@ namespace LearningPlanner
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             
 
-            FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+            FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
             {
                 h.IDZadania,
                 h.Nazwa,
@@ -48,40 +48,11 @@ namespace LearningPlanner
 
         private void FindTaskForm_SizeChanged(object sender, EventArgs e)
         {
-            if (Size.Width <= 799)
+            if (Size.Width<=799)
             {
-                DefaultResponsives dresp = new DefaultResponsives();
-                dresp.FindTaskDefaultResponse(this);
-            
-                
-                //   FindTaskDataGrid.Size = new Size(450, 500);
-              //  FindTaskDataGrid.RowsDefaultCellStyle.Font = new Font("Century Gothic", 12, FontStyle.Bold);
-            ////    FindTaskLabel.Size = new Size(186, 19);
-            //  //  FindTaskLabel.Location = new Point(24, 39);
-            //    FindTaskLabel.Font = new Font("Century Gothic", 12);
-            //    FindTaskTextBox.Size = new Size(192, 200);
-            //    FindTaskTextBox.Location = new Point(28, 61);
-            //    FindTaskTextBox.Font = new Font("Century Gothic", 8);
-            //   // FilterLabel.Size = new Size(38, 19);
-             //   FilterLabel.Location = new Point(24, 113);
-           //     FilterLabel.Font = new Font("Century Gothic", 12);
-           //     FilterComboBox.Size = new Size(192, 21);
-             //   FilterComboBox.Location = new Point(28, 135);
-             //   FilterComboBox.Font = new Font("Century Gothic", 8);
-              //  FilterFromLabel.Size = new Size(77, 19);
-            //    FilterFromLabel.Location = new Point(8, 188);
-             //   FilterFromLabel.Font = new Font("Century Gothic", 12);
-             //   FilterFrom.Size = new Size(232, 22);
-            //    FilterFrom.Location = new Point(12, 210);
-           //     FilterFrom.Font = new Font("Century Gothic", 9);
-           //     FilterToLabel.Size = new Size(77, 19);
-           //     FilterToLabel.Location = new Point(8, 243);
-             //   FilterToLabel.Font = new Font("Century Gothic", 12);
-              //  FilterTo.Size = new Size(232, 22);
-             //   FilterTo.Location = new Point(12, 265);
-            //    FilterTo.Font = new Font("Century Gothic", 9);
-             //   FindPictureBox.Size = new Size(176, 99);
-              //  FindPictureBox.Location = new Point(44, 358);
+                DefaultResponsives dresp = new DefaultResponsives();             
+                    dresp.FindTaskDefaultResponse(this);
+                                  
             }
             else
             {
@@ -91,9 +62,11 @@ namespace LearningPlanner
             }
         }
 
+
+
         public void FillGrid()
         {
-            FindTaskDataGrid.DataSource = model.Zadania.Select(o => new
+            FindTaskDataGrid.DataSource = model.Tasks.Select(o => new
             {
                 o.IDZadania,
                 o.Nazwa,
@@ -116,7 +89,7 @@ namespace LearningPlanner
 
             if (FilterComboBox.SelectedIndex == 0)
             {
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,
@@ -135,7 +108,7 @@ namespace LearningPlanner
             }
             else if (FilterComboBox.SelectedIndex == 1)
             {
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,
@@ -153,7 +126,7 @@ namespace LearningPlanner
             }
             else if (FilterComboBox.SelectedIndex == 2)
             {
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,
@@ -172,7 +145,7 @@ namespace LearningPlanner
 
 
             else
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,
@@ -238,45 +211,8 @@ namespace LearningPlanner
 
         }
        
-        #region ChangeFontFromSettings
-     
-
-        //public IEnumerable<Control> GetAll(Control control, Type type)
-        //{
-        //    var controls = control.Controls.Cast<Control>();
-
-        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
-        //                              .Concat(controls)
-        //                              .Where(c => c.GetType() == type);
-        //}
-       
-
-        //public void FindTaskFormChangeFont()
-        //{
-
-        //    string font = Settings.Default.RememberFont;
-        //    bool boldFont = Settings.Default.BoldFont;
-
-        //    foreach (var lbl in GetAll(this, typeof(Label)))
-        //    {
-        //        if (boldFont)
-        //            (lbl as Label).Font = new Font(font, 12, FontStyle.Bold);
-        //        else
-        //            (lbl as Label).Font = new Font(font, 12);
-
-        //    }
-
-        //    foreach (var grid in GetAll(this, typeof(DataGridView)))
-        //    {
-        //        if (boldFont)
-        //            (grid as DataGridView).Font = new Font(font, 8, FontStyle.Bold);
-        //        else
-        //            (grid as DataGridView).Font = new Font(font, 8);
-        //    }
-
-        //}
-
-        #endregion
+      
+        
 
     }
 

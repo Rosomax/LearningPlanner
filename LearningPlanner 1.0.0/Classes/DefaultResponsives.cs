@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using LearningPlanner.Properties;
 namespace LearningPlanner
 {
@@ -17,7 +18,7 @@ namespace LearningPlanner
             int widthSize = x.Width;
             int heightSize = x.Height;
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek20
-            int fontSize = (int)(widthSize / 36.15);
+            int fontSize = 20;
             int textBoxWidthSize = (int)(widthSize / 3.4);
             int textBoxHeightSize = (int)(heightSize / 14.29);
             int buttonWidthSize = (int)(widthSize / 6.94);
@@ -62,13 +63,13 @@ namespace LearningPlanner
         }
         public void CategoryFormDefaultResponse(CategoryForm x)
         {
-            // Zmienne przechowujace szerokosc oraz wysokosc ekranu
+         // Zmienne przechowujace szerokosc oraz wysokosc ekranu
             int widthSize = x.Width;
             int heightSize = x.Height;
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
           
-            int labelFontSize =(int)(widthSize/53.57);
-            int gridFontSize = (int)(widthSize / 62.5);
+            int labelFontSize = 12;
+            int gridFontSize = 11;
             int labelHeightSize = (int)(heightSize / 21.74);
             int labelHeightLocation = (int)(heightSize / 55.55);
             int dataGridWidthSize = (int)(widthSize / 4.16);
@@ -111,7 +112,7 @@ namespace LearningPlanner
                 x.chooseTaskDataGrid.Font = new Font(fontName, gridFontSize, fontStyle);
                 x.describeTaskRichTextBox.Font = new Font(fontName, gridFontSize, fontStyle);
             }
-            else
+            else 
             {
                 x.chooseCategoryLabel.Font = new Font(fontName, labelFontSize);
                 x.chooseTaskLabel.Font = new Font(fontName, labelFontSize);
@@ -120,6 +121,8 @@ namespace LearningPlanner
                 x.chooseTaskDataGrid.Font = new Font(fontName, gridFontSize);
                 x.describeTaskRichTextBox.Font = new Font(fontName, gridFontSize);
             }
+
+       
         }
 
         public void FindTaskDefaultResponse(FindTaskForm x)
@@ -129,10 +132,10 @@ namespace LearningPlanner
             int heightSize = x.Height;
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
             FontStyle fontStyle = FontStyle.Bold;
-            int labelFontSize = (int)(widthSize /55);
+            int labelFontSize = widthSize / 55;
             int labelHeightSize = (int)(heightSize / 26.31);
             int labelHeightLocation = (int)(heightSize / 12.82);
-            int textBoxHeightSize = (int)(heightSize /2.5);
+            int textBoxHeightSize = (int)(heightSize / 2.5);
             int labelFontTextBox = (int)(widthSize / 62.5);
             int textBoxWidthLocation = (int)(widthSize / 26.78);
             int findTaskLabelWidthLocation = (int)(widthSize / 31.25);
@@ -143,10 +146,10 @@ namespace LearningPlanner
             int filterDateTimePickerWidthLocation = (int)(widthSize / 62.5);
             int filterFromDateTimePickerHeight = (int)(heightSize / 2.38);
             int filterLabelWidthSize = (int)(widthSize / 9.74);
-            int filterLabelHeightSize = (int)(heightSize/26.31);
+            int filterLabelHeightSize = (int)(heightSize / 26.31);
             // zmienne przechowujace skalowanie dla wlasciwosci size kontrolek
             int findTaskLabelWidthSize = (int)(widthSize / 4.03);
-            int findTaskTextBoxWidthSize = (int)(widthSize /3.5);
+            int findTaskTextBoxWidthSize = (int)(widthSize / 3.5);
             int findTaskFilterLabelWidthSize = (int)(widthSize / 19.73);
             int findTaskFilterLabelHeightSize = (int)(heightSize / 26.31);
             int filterComboBoxHeightSize = (int)(heightSize / 23.8);
@@ -156,7 +159,7 @@ namespace LearningPlanner
             int findPictureBoxHeightLocation = (int)(heightSize / 1.39);
             int findTaskDataGridWidthSize = (int)(widthSize / 1.66);
             int findTaskDataGridHeightSize = heightSize / 1;
-         
+
             // Ustawienie rozmairu dla wszystkich kontrolek
             x.FindTaskLabel.Size = new Size(findTaskLabelWidthSize, labelHeightSize);
             x.FindTaskTextBox.Size = new Size(findTaskTextBoxWidthSize, textBoxHeightSize);
@@ -168,9 +171,9 @@ namespace LearningPlanner
             x.FilterToLabel.Size = new Size(filterLabelWidthSize, filterLabelHeightSize);
             x.FindPictureBox.Size = new Size(findPictureBoxWidthSize, findPictureBoxHeightSize);
             x.FindTaskDataGrid.Size = new Size(findTaskDataGridWidthSize, findTaskDataGridHeightSize);
-            
 
-            
+
+
             // zmienne przechowujace skalowanie dla wlasciowsci location kontrolek
             int textBoxHeightLocation = (int)(heightSize / 8.19);
             int filterLabelHeightLocation = (int)(heightSize / 4.42);
@@ -178,11 +181,11 @@ namespace LearningPlanner
             int filterFromLabelHeightLocation = (int)(heightSize / 2.66);
             int filterToDateTimePickerHeightLocation = (int)(heightSize / 1.88);
             int filterComboBoxLocation = (int)(heightSize / 3.70);
-            
+
             // Ustawienie lokalizacji dla wszystkich kontrolek
             x.FindTaskLabel.Location = new Point(findTaskLabelWidthLocation, labelHeightLocation);
             x.FindTaskTextBox.Location = new Point(textBoxWidthLocation, textBoxHeightLocation);
-            x.FilterLabel.Location = new Point(findTaskLabelWidthLocation,filterLabelHeightLocation);
+            x.FilterLabel.Location = new Point(findTaskLabelWidthLocation, filterLabelHeightLocation);
             x.FilterFromLabel.Location = new Point(filterLabelWidthLocation, filterFromLabelHeightLocation);
             x.FilterToLabel.Location = new Point(filterLabelWidthLocation, filterToLabelHeightLocation);
             x.FilterFrom.Location = new Point(filterDateTimePickerWidthLocation, filterFromDateTimePickerHeight);
@@ -192,7 +195,7 @@ namespace LearningPlanner
             // Ustawienie czcionek dla wszystkich kontrolek
             if (Settings.Default.BoldFont)
             {
-                x.FindTaskLabel.Font = new Font(fontName, labelFontSize,fontStyle);
+                x.FindTaskLabel.Font = new Font(fontName, labelFontSize, fontStyle);
                 x.FindTaskTextBox.Font = new Font(fontName, labelFontTextBox);
                 x.FilterLabel.Font = new Font(fontName, labelFontSize, fontStyle);
                 x.FilterComboBox.Font = new Font(fontName, labelFontTextBox);
@@ -214,14 +217,14 @@ namespace LearningPlanner
             }
 
         }
-        
+
         public void ITNewsDefaultResponse(ITNews x)
         {
             // Zmienne przechowujace szerokosc oraz wysokosc ekranu
             int widthSize = x.Width;
             int heightSize = x.Height;
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
-            int fontSize = (int)(widthSize / 85.37);
+            int fontSize = 8;
             int controlWidthSize = (int)(widthSize / 4.13); 
             int labelHeightSize = (int)(heightSize / 10.88); 
             int buttonHeightSize =(int)(heightSize / 13.6);
