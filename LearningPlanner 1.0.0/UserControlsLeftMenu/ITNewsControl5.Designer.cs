@@ -29,37 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ITNewsControl5));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ITNewsPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ITNewsPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ITNewsPictureBox
             // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-          
+            this.ITNewsPictureBox.Enabled = false;
+            this.ITNewsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ITNewsPictureBox.Image")));
+            this.ITNewsPictureBox.Location = new System.Drawing.Point(3, 23);
+            this.ITNewsPictureBox.Name = "ITNewsPictureBox";
+            this.ITNewsPictureBox.Size = new System.Drawing.Size(45, 50);
+            this.ITNewsPictureBox.TabIndex = 1;
+            this.ITNewsPictureBox.TabStop = false;
             // 
-            // ciekawoskiControl5
+            // ITNewsControl5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "ciekawoskiControl5";
+            this.Controls.Add(this.ITNewsPictureBox);
+            this.Name = "ITNewsControl5";
             this.Size = new System.Drawing.Size(192, 97);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ITNewsControl5_Paint);
-            
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ITNewsPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ITNewsPictureBox;
     }
 }

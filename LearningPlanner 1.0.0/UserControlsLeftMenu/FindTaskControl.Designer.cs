@@ -29,37 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindTaskControl4));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.FindTaskPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.FindTaskPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // FindTaskPictureBox
             // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 46);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-
+            this.FindTaskPictureBox.Enabled = false;
+            this.FindTaskPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("FindTaskPictureBox.Image")));
+            this.FindTaskPictureBox.Location = new System.Drawing.Point(3, 23);
+            this.FindTaskPictureBox.Name = "FindTaskPictureBox";
+            this.FindTaskPictureBox.Size = new System.Drawing.Size(45, 46);
+            this.FindTaskPictureBox.TabIndex = 1;
+            this.FindTaskPictureBox.TabStop = false;
             // 
-            // znajdzZadanieControl4
+            // FindTaskControl4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "znajdzZadanieControl4";
+            this.Controls.Add(this.FindTaskPictureBox);
+            this.Name = "FindTaskControl4";
             this.Size = new System.Drawing.Size(185, 97);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FindTaskControl4_Paint);
-
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FindTaskPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox FindTaskPictureBox;
     }
 }

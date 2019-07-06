@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using System.Xml;
 using System.ServiceModel.Syndication;
 using System.Collections.Generic;
-using System.Linq;
 using LearningPlanner.Properties;
 namespace LearningPlanner
 {
@@ -15,10 +14,24 @@ namespace LearningPlanner
             InitializeComponent();
         }
 
+        private void ITNews_Load(object sender, EventArgs e)
+        {
+
+
+            BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
+
+
+            FillChannels();
+            FillSites();
+
+        }
+
+
+        #region Lists of names and addresses
+
         List<string> rssAdresses = new List<string>
         {
-            "http://technow.pl/feed",
-           "https://pclab.pl/xml/rss.xml",
+            "http://technow.pl/feed",           
            "https://itreseller.com.pl/feed/",
            "http://www.itworld.com/news/index.rss",
            "http://www.computerworld.com/index.rss",
@@ -27,8 +40,7 @@ namespace LearningPlanner
 
         List<string> rssNames = new List<string>
         {
-        "TECHNOW",
-        "PC-LAB",
+        "TECHNOW",      
         "ITRESELLER",
         "ITWORLD",
         "COMPUTERWORLD",       
@@ -45,19 +57,12 @@ namespace LearningPlanner
         "IT NEWS IDG",
         "STACKOVERFLOW"
         };
-        
 
-        private void ITNews_Load(object sender, EventArgs e)
-        {
-         
+        #endregion
 
-            BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
+      
 
-
-            FillChannels();
-            FillSites();
-
-        }
+        #region Fill ListBoxes
 
         private void FillChannels()
         {
@@ -74,7 +79,7 @@ namespace LearningPlanner
                 FavoriteSitesListBox.Items.Add(item);
             }
         }
-
+        #endregion
 
         private void ITNews_SizeChanged(object sender, EventArgs e)
         {
@@ -125,21 +130,21 @@ namespace LearningPlanner
                         copyWWWUrl = wwwAdresses[i];
                 }
                 WWWtextbox.Text = copyWWWUrl;
-                //copyWWWUrl = (FavoriteSitesListBox.SelectedItem as string);
             }
 
         }
         #endregion
 
-       
 
-      
-
+        #region ListBoxes and buttons clicks
 
         private void AddUrlButton_Click(object sender, EventArgs e)
         {
-         try
+                       
+            try
             {
+
+
                 XmlReader feedReadXML = XmlReader.Create(UrlTextBox.Text);
                 SyndicationFeed feedXML = SyndicationFeed.Load(feedReadXML);
                 TabPage feedTab = new TabPage(feedXML.Title.Text);
@@ -149,11 +154,15 @@ namespace LearningPlanner
                 feedList.Dock = DockStyle.Fill;
                 feedList.HorizontalScrollbar = true;
 
+                //foreach (SyndicationItem feedItem in feedXML.Items)
+                //{
+
+
 
                 foreach (SyndicationItem feedItem in feedXML.Items)
                 {
-
-
+                  
+                  
                     string summary = feedItem.Summary.Text;
                     bool running = true;
 
@@ -187,7 +196,7 @@ namespace LearningPlanner
 
                     }
 
-                   
+                  
                     feedList.Items.Add(feedItem.Title.Text);
                    
                     feedList.Items.Add(fix_sum);
@@ -223,6 +232,6 @@ namespace LearningPlanner
      
            
         }
-
+        #endregion
     }
 }

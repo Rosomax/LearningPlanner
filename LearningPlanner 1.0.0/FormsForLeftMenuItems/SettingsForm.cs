@@ -16,17 +16,18 @@ namespace LearningPlanner
         public SettingsForm()
         {
             InitializeComponent();
-          
+                      
         }
        
 
         private void SettingsForm_Load(object sender, EventArgs e)
-        {           
+        {
+
             SetColorFromSettings();
             SetMusicFromSettings();
             SetFontFromSettings();
-         //   SettingsFormChangeFont();
-            
+            SettingsFormChangeFont();
+
         }
 
      

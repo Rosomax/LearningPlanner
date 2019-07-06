@@ -43,17 +43,16 @@ namespace LearningPlanner
 
             if (Size.Width <= 799)
             {
-                DefaultResponsives dresp = new DefaultResponsives();
+                DefaultResponsives dresp = new DefaultResponsives();              
                 dresp.CategoryFormDefaultResponse(this);
             }
             else
             {
-                Responsiveness resp = new Responsiveness();
-                resp.CategoryResponse(this);
+                Responsiveness resp = new Responsiveness();          
+                    resp.CategoryResponse(this);
             }
 
         }
-
 
         #region GridHandlers
 
@@ -109,36 +108,6 @@ namespace LearningPlanner
 
         #endregion
 
-
-        //#region ChangeFontFromSettings
-
-        //public IEnumerable<Control> GetAll(Control control, Type type)
-        //{
-        //    var controls = control.Controls.Cast<Control>();
-
-        //    return controls.SelectMany(ctrl => GetAll(ctrl, type))
-        //                              .Concat(controls)
-        //                              .Where(c => c.GetType() == type);
-        //}
-
-
-        //public void CategoryFormChangeFont()
-        //{
-        //    string font = Settings.Default.RememberFont;
-        //    bool boldFont = Settings.Default.BoldFont;
-
-        //    foreach (var lbl in GetAll(this, typeof(Label)))
-        //    {
-        //        if (boldFont)
-        //            (lbl as Label).Font = new Font(font, 14, FontStyle.Bold);
-        //        else
-        //            (lbl as Label).Font = new Font(font, 14);
-
-        //    }
-          
-
-        //}
-        //#endregion
 
 
     }

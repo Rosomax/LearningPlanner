@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SettingsPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // SettingsPictureBox
             // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::LearningPlanner.Properties.Resources.Ustawienia_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 47);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.SettingsPictureBox.Enabled = false;
+            this.SettingsPictureBox.Image = global::LearningPlanner.Properties.Resources.Settings_icon;
+            this.SettingsPictureBox.Location = new System.Drawing.Point(4, 26);
+            this.SettingsPictureBox.Name = "SettingsPictureBox";
+            this.SettingsPictureBox.Size = new System.Drawing.Size(42, 47);
+            this.SettingsPictureBox.TabIndex = 1;
+            this.SettingsPictureBox.TabStop = false;
             // 
-            // ustawieniaControl6
+            // SettingsControl6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "ustawieniaControl6";
+            this.Controls.Add(this.SettingsPictureBox);
+            this.Name = "SettingsControl6";
             this.Size = new System.Drawing.Size(185, 97);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.SettingsControl6_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox SettingsPictureBox;
     }
 }

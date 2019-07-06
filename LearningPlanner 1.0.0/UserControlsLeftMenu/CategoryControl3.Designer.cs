@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CategoryPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // CategoryPictureBox
             // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::LearningPlanner.Properties.Resources.kategoria_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 37);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.CategoryPictureBox.Enabled = false;
+            this.CategoryPictureBox.Image = global::LearningPlanner.Properties.Resources.Category_icon;
+            this.CategoryPictureBox.Location = new System.Drawing.Point(4, 28);
+            this.CategoryPictureBox.Name = "CategoryPictureBox";
+            this.CategoryPictureBox.Size = new System.Drawing.Size(41, 37);
+            this.CategoryPictureBox.TabIndex = 1;
+            this.CategoryPictureBox.TabStop = false;
             // 
-            // kategorieControl3
+            // categoryControl3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "kategorieControl3";
+            this.Controls.Add(this.CategoryPictureBox);
+            this.Name = "categoryControl3";
             this.Size = new System.Drawing.Size(185, 97);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.CategoryControl3_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox CategoryPictureBox;
     }
 }

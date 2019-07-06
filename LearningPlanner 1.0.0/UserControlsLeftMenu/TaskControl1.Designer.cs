@@ -28,38 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.TaskPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // TaskPictureBox
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::LearningPlanner.Properties.Resources.Zadanie_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 47);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.TaskPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TaskPictureBox.Enabled = false;
+            this.TaskPictureBox.Image = global::LearningPlanner.Properties.Resources.Task_icon;
+            this.TaskPictureBox.Location = new System.Drawing.Point(4, 30);
+            this.TaskPictureBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.TaskPictureBox.Name = "TaskPictureBox";
+            this.TaskPictureBox.Size = new System.Drawing.Size(45, 38);
+            this.TaskPictureBox.TabIndex = 1;
+            this.TaskPictureBox.TabStop = false;
             // 
-            // ZadaniaControl1
+            // TaskControl1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ZadaniaControl1";
-            this.Size = new System.Drawing.Size(247, 119);
+            this.Controls.Add(this.TaskPictureBox);
+            this.Name = "TaskControl1";
+            this.Size = new System.Drawing.Size(185, 97);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.TaskControl1_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox TaskPictureBox;
     }
 }

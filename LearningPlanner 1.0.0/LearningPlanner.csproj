@@ -81,16 +81,16 @@
       <DependentUpon>Model2.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="DefaultResponsives.cs" />
+    <Compile Include="Classes\DefaultResponsives.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReportErrorForm.cs">
+    <Compile Include="OtherForms\ReportErrorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportErrorForm.Designer.cs">
+    <Compile Include="OtherForms\ReportErrorForm.Designer.cs">
       <DependentUpon>ReportErrorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model2.Context.cs">
@@ -111,13 +111,13 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="OtherForms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="OtherForms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Responsiveness.cs" />
+    <Compile Include="Classes\Responsiveness.cs" />
     <Compile Include="UserControlsLeftMenu\ITNewsControl5.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,10 +130,10 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IntroForm.cs">
+    <Compile Include="OtherForms\IntroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IntroForm.Designer.cs">
+    <Compile Include="OtherForms\IntroForm.Designer.cs">
       <DependentUpon>IntroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlsLeftMenu\CategoryControl3.cs">
@@ -148,22 +148,22 @@
     <Compile Include="FormsForLeftMenuItems\CategoryForm.Designer.cs">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LeftActiveControl.cs">
+    <Compile Include="OtherControls\LeftActiveControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LeftActiveControl.Designer.cs">
+    <Compile Include="OtherControls\LeftActiveControl.Designer.cs">
       <DependentUpon>LeftActiveControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model2.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="QuotationControl.cs">
+    <Compile Include="OtherControls\QuotationControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include=".Designer.cs">
+    <Compile Include="OtherControls\.Designer.cs">
       <DependentUpon>QuotationControl.cs</DependentUpon>
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,16 +229,16 @@
       <DependentUpon>Model2.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="TaskInfoForm.cs">
+    <Compile Include="OtherForms\TaskInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TaskInfoForm.Designer.cs">
+    <Compile Include="OtherForms\TaskInfoForm.Designer.cs">
       <DependentUpon>TaskInfoForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReportErrorForm.resx">
+    <EmbeddedResource Include="OtherForms\ReportErrorForm.resx">
       <DependentUpon>ReportErrorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="OtherForms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsLeftMenu\ITNewsControl5.resx">
@@ -247,7 +247,7 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IntroForm.resx">
+    <EmbeddedResource Include="OtherForms\IntroForm.resx">
       <DependentUpon>IntroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsLeftMenu\CategoryControl3.resx">
@@ -256,7 +256,7 @@
     <EmbeddedResource Include="FormsForLeftMenuItems\CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LeftActiveControl.resx">
+    <EmbeddedResource Include="OtherControls\LeftActiveControl.resx">
       <DependentUpon>LeftActiveControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -264,7 +264,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuotationControl.resx">
+    <EmbeddedResource Include="OtherControls\QuotationControl.resx">
       <DependentUpon>QuotationControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlsLeftMenu\SettingsControl6.resx">
@@ -294,7 +294,7 @@
     <EmbeddedResource Include="FormsForLeftMenuItems\FindTaskForm.resx">
       <DependentUpon>FindTaskForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaskInfoForm.resx">
+    <EmbeddedResource Include="OtherForms\TaskInfoForm.resx">
       <DependentUpon>TaskInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model2.edmx">
@@ -322,57 +322,57 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ZadanieIcon.ico">
+    <None Include="Resources\Task icon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\Zadanie icon.png">
+    <None Include="Icons\Task icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\Zakonczone zadanie icon.png">
+    <None Include="Icons\Completed Task icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\Znajdz zadanie icon.png">
+    <None Include="Icons\Find Task icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\kategoria icon.png">
+    <None Include="Icons\Category icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\ze swiata icon.png">
+    <None Include="Icons\ITNews icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\Ustawienia icon.png">
+    <None Include="Icons\Settings icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\delete icon.png">
+    <None Include="Icons\Delete icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\info icon.png">
+    <None Include="Icons\Info icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\stronaGlowna icon.png">
+    <None Include="Icons\Home icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\close icon.png" />
+    <None Include="Icons\Close icon.png" />
     <None Include="Icons\FindPicture.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -428,16 +428,10 @@
     <None Include="WindowIcons\maximize-window.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\Tlo.jpg">
+    <None Include="Resources\QuotationBackground.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\TloCytat.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Icon1.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <Content Include="Resources\Kursor.cur">
+    <Content Include="Resources\Cursor.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\maximize-window.png">
@@ -446,15 +440,6 @@
     <Content Include="Resources\minimize-window.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\RssImagePNG.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="Resources\Taskbar icon.bmp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\RssImagePNG1.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">
@@ -488,9 +473,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
