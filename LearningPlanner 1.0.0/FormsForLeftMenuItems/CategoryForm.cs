@@ -27,7 +27,7 @@ namespace LearningPlanner
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             
 
-            chooseCategoryDataGrid.DataSource = categoryModel.Zadania.Select(c => new
+            chooseCategoryDataGrid.DataSource = categoryModel.Tasks.Select(c => new
             {
                 c.Kategoria,
                 c.IDUzytkownika
@@ -67,7 +67,7 @@ namespace LearningPlanner
                 chooseTaskDataGrid.Visible = true;
                 describeTaskLabel.Visible = false;
                 describeTaskRichTextBox.Visible = false;
-                chooseTaskDataGrid.DataSource = categoryModel.Zadania.Select(t => new
+                chooseTaskDataGrid.DataSource = categoryModel.Tasks.Select(t => new
                 {
                     t.Nazwa,
                     t.Kategoria,
@@ -101,9 +101,9 @@ namespace LearningPlanner
         public string GetDescribe(string activeCell)
         {
 
-            return (from Zadania in categoryModel.Zadania
-                    where Zadania.Nazwa.Equals(activeCell)
-                    select Zadania.Opis).SingleOrDefault().ToString();
+            return (from Tasks in categoryModel.Tasks
+                    where Tasks.Nazwa.Equals(activeCell)
+                    select Tasks.Opis).SingleOrDefault().ToString();
         }
 
         #endregion

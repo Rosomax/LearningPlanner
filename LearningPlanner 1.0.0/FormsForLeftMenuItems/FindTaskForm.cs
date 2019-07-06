@@ -26,7 +26,7 @@ namespace LearningPlanner
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             
 
-            FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+            FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
             {
                 h.IDZadania,
                 h.Nazwa,
@@ -66,7 +66,7 @@ namespace LearningPlanner
 
         public void FillGrid()
         {
-            FindTaskDataGrid.DataSource = model.Zadania.Select(o => new
+            FindTaskDataGrid.DataSource = model.Tasks.Select(o => new
             {
                 o.IDZadania,
                 o.Nazwa,
@@ -89,7 +89,7 @@ namespace LearningPlanner
 
             if (FilterComboBox.SelectedIndex == 0)
             {
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,
@@ -108,7 +108,7 @@ namespace LearningPlanner
             }
             else if (FilterComboBox.SelectedIndex == 1)
             {
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,
@@ -126,7 +126,7 @@ namespace LearningPlanner
             }
             else if (FilterComboBox.SelectedIndex == 2)
             {
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,
@@ -145,7 +145,7 @@ namespace LearningPlanner
 
 
             else
-                FindTaskDataGrid.DataSource = model.Zadania.Select(h => new
+                FindTaskDataGrid.DataSource = model.Tasks.Select(h => new
                 {
                     h.IDZadania,
                     h.Nazwa,

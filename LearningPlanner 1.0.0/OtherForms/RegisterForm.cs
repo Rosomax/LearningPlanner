@@ -118,22 +118,22 @@ namespace LearningPlanner
         
            private void AddUserToDataBase()
            {
-            Uzytkownicy model = new Uzytkownicy
+            Users model = new Users
             {
                 Login = Login,
                 Haslo = Password
             };
 
-            using (EntitiesModel entitiesModel = new EntitiesModel())
+            using (EntitiesModel EntitiesModel = new EntitiesModel())
             {
-                if (entitiesModel.Uzytkownicy.Where(u => u.Login == Login).Any())
+                if (EntitiesModel.Users.Where(u => u.Login == Login).Any())
                 {
                     MessageBox.Show("Podana nazwa uzytkownika jest juz zajęta");
                 }
                 else
                 {
-                    entitiesModel.Uzytkownicy.Add(model);
-                    entitiesModel.SaveChanges();
+                    EntitiesModel.Users.Add(model);
+                    EntitiesModel.SaveChanges();
                     MessageBox.Show("Utworzono konto!");
                     Close();
                 }

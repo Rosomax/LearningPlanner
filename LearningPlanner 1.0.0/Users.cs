@@ -12,9 +12,10 @@ namespace LearningPlanner
     using System;
     using System.Collections.Generic;
     
-    public partial class Cytaty
+    public partial class Users
     {
-        public int IDcytatu { get; set; }
-        public string Tresc { get; set; }
+        public int IDosoby { get; set; }
+        public string Login { get; set; }
+        public string Haslo { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace LearningPlanner
     using System;
     using System.Collections.Generic;
     
-    public partial class Zadania
+    public partial class Tasks
     {
         public int IDZadania { get; set; }
         public string Nazwa { get; set; }
@@ -20,6 +20,6 @@ namespace LearningPlanner
         public string Opis { get; set; }
         public System.DateTime DataUtworzenia { get; set; }
         public bool CzyZakonczone { get; set; }
-        public short IDUzytkownika { get; set; }
+        public int IDUzytkownika { get; set; }
     }
 }

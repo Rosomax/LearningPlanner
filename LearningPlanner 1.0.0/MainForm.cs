@@ -264,7 +264,7 @@ namespace LearningPlanner
             using (EntitiesModel x = new EntitiesModel())
             {
 
-                var user = x.Uzytkownicy.FirstOrDefault(e => e.Login == login);
+                var user = x.Users.FirstOrDefault(e => e.Login == login);
                 if (user != null)
                 {
                     if (user.Haslo == password)
