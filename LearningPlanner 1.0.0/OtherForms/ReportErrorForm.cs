@@ -3,6 +3,9 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+
 namespace LearningPlanner
 {
     public partial class ReportErrorForm : Form
@@ -12,15 +15,13 @@ namespace LearningPlanner
             InitializeComponent();
         }
 
-     const string programMail = "plannerteaminfo@gmail.com";
-     const string programMailPassword = "kubamichal123";
+     const string programMail = "plannerteaminfo@gmail.com";  
      const string authorsMailK = "benzef@tlen.pl";
      const string authorsMailM = "m.biaek91@gmail.com";
 
         string emailAddress;
-
-
-        private bool SendMessage(string emailAddr)
+               
+private bool SendMessage(string emailAddr)
         {
 
 
@@ -43,7 +44,7 @@ namespace LearningPlanner
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587)
                 {
                     EnableSsl = true,
-                    Credentials = new NetworkCredential(programMail, programMailPassword)
+                    Credentials = new NetworkCredential(programMail, Secrets.GetEmailSecret())
                 };
                 smtpClient.Send(message);
                 MessageBox.Show("Wyslano wiadomosc!");
@@ -57,8 +58,6 @@ namespace LearningPlanner
               
             }
         }
-
-
 
 
         private void SendErrorButton_Click(object sender, EventArgs e)

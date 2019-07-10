@@ -4,7 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LearningPlannerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LearningPlannerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Secret">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'LearningPlanner.dbo.sysdiagrams' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="sysdiagrams">
@@ -19,6 +26,24 @@ warning 6002: The table/view 'LearningPlanner.dbo.sysdiagrams' does not have a p
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.FILKRA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.FILMY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.FILRODZ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.KASETY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.Kiedy_Badany' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.KLIENCI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.KRAJ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.Naz_Cwicz' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.pytanka' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Quotations">
           <Key>
             <PropertyRef Name="IDcytatu" />
@@ -26,27 +51,50 @@ warning 6002: The table/view 'LearningPlanner.dbo.sysdiagrams' does not have a p
           <Property Name="IDcytatu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Tresc" Type="char" MaxLength="200" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.Rehabilitant' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.REZYSER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.RODZAJ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Tasks">
           <Key>
             <PropertyRef Name="IDZadania" />
           </Key>
-          <Property Name="IDZadania" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nazwa" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Kategoria" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Opis" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="DataUtworzenia" Type="datetime" Nullable="false" />
-          <Property Name="CzyZakonczone" Type="bit" Nullable="false" />
-          <Property Name="IDUzytkownika" Type="int" Nullable="false" />
+          <Property Name="IDZadania" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Nazwa" Nullable="false" MaxLength="100" Type="varchar" />
+          <Property Name="Kategoria" Nullable="false" MaxLength="100" Type="varchar" />
+          <Property Name="Opis" Nullable="false" MaxLength="500" Type="varchar" />
+          <Property Name="DataUtworzenia" Nullable="false" Type="datetime" />
+          <Property Name="CzyZakonczone" Nullable="false" Type="bit" />
+          <Property Name="IDUzytkownika" Nullable="false" Type="int" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="IDosoby" />
           </Key>
-          <Property Name="IDosoby" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Login" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Haslo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="IDosoby" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Login" Nullable="false" MaxLength="100" Type="varchar" />
+          <Property Name="Haslo" Nullable="false" MaxLength="100" Type="varchar" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'LearningPlanner.Z406_01.Wykonanie' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Wykonanie">
+          <Property Name="IDKB" Type="int" />
+          <Property Name="IDC" Type="int" />
+          <Property Name="ILOSC" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlanner.Z406_01.WYPO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'LearningPlanner.Z406_01.Zamowienia' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Zamowienia">
+          <Property Name="IDzamowienia" Type="int" />
+          <Property Name="IDklienta" Type="int" />
+          <Property Name="Wartosc" Type="int" />
+        </EntityType>-->
         <EntityContainer Name="LearningPlannerModelStoreContainer">
+          <EntitySet Name="Secret" EntityType="Self.Secret" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Quotations" EntityType="Self.Quotations" Schema="Z406_01" store:Type="Tables" />
           <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="Z406_01" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="Z406_01" store:Type="Tables" />
@@ -60,8 +108,7 @@ warning 6002: The table/view 'LearningPlanner.dbo.sysdiagrams' does not have a p
     FROM [dbo].[sysdiagrams] AS [sysdiagrams]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LearningPlannerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -76,21 +123,21 @@ warning 6002: The table/view 'LearningPlanner.dbo.sysdiagrams' does not have a p
           <Key>
             <PropertyRef Name="IDZadania" />
           </Key>
-          <Property Name="IDZadania" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nazwa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Kategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Opis" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DataUtworzenia" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="CzyZakonczone" Type="Boolean" Nullable="false" />
-          <Property Name="IDUzytkownika" Type="Int32" Nullable="false" />
+          <Property Name="IDZadania" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Nazwa" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Kategoria" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Opis" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="DataUtworzenia" Nullable="false" Precision="3" Type="DateTime" />
+          <Property Name="CzyZakonczone" Nullable="false" Type="Boolean" />
+          <Property Name="IDUzytkownika" Nullable="false" Type="Int32" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="IDosoby" />
           </Key>
-          <Property Name="IDosoby" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Haslo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDosoby" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Login" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Haslo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" Type="String" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -109,7 +156,15 @@ warning 6002: The table/view 'LearningPlanner.dbo.sysdiagrams' does not have a p
           <EntitySet Name="Tasks" EntityType="Self.Tasks" />
           <EntitySet Name="Users" EntityType="Self.Users" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Secret" EntityType="LearningPlannerModel.Secret" />
         </EntityContainer>
+        <EntityType Name="Secret">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -154,6 +209,14 @@ warning 6002: The table/view 'LearningPlanner.dbo.sysdiagrams' does not have a p
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Secret">
+            <EntityTypeMapping TypeName="LearningPlannerModel.Secret">
+              <MappingFragment StoreEntitySet="Secret">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

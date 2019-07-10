@@ -21,12 +21,8 @@ namespace LearningPlanner
 
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {
-
             CompletedTaskFormChangeFont();
-
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
-
-
 
             CompletedTaskDataGridView1.DataSource = model.Tasks.Select(o => new
             {
@@ -45,14 +41,8 @@ namespace LearningPlanner
             CompletedTaskDataGridView1.Columns["CzyZakonczone"].Visible = false;
             CompletedTaskDataGridView1.Columns["IDUzytkownika"].Visible = false;
 
-
-
-
-
         }
        
-
-
         public void FillGrid()
         {
             CompletedTaskDataGridView1.DataSource = model.Tasks.Select(o => new
@@ -68,8 +58,6 @@ namespace LearningPlanner
             }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone).ToList();
         }
 
-
-
         public static int Id { get; private set; }
         public DataGridViewRow SelectedRow { get; private set; }
 
@@ -80,7 +68,6 @@ namespace LearningPlanner
                 int selectedrowindex = CompletedTaskDataGridView1.SelectedCells[0].RowIndex;
 
                 SelectedRow = CompletedTaskDataGridView1.Rows[selectedrowindex];
-
 
                 var creationDate = DateTime.Now;
                 Id = Convert.ToInt32(SelectedRow.Cells["IDZadania"].Value);
@@ -103,24 +90,19 @@ namespace LearningPlanner
 
             }
 
-
         }
 
 
         #region ExportToCSV
         StringBuilder sb = new StringBuilder();
-
         private void CSVExport()
-        {
-          
+        {        
             CompletedTaskDataGridView1.Columns.Remove("IDUzytkownika");
             CompletedTaskDataGridView1.Columns.Remove("IDZadania");
             CompletedTaskDataGridView1.Columns.Remove("CzyZakonczone");
 
-
             var headers = CompletedTaskDataGridView1.Columns.Cast<DataGridViewColumn>();
             sb.AppendLine(string.Join(",", headers.Select(column => column.HeaderText).ToArray()));
-
 
             foreach (DataGridViewRow row in CompletedTaskDataGridView1.Rows)
             {
@@ -128,15 +110,11 @@ namespace LearningPlanner
                 sb.AppendLine(string.Join(",", cells.Select(cell => cell.Value).ToArray()));
             }
 
-
         }
 
         private void CSVExportFileDialog()
         {
-
             saveFileDialog1.FileName = "export.csv";
-
-
             saveFileDialog1.Filter = "CSV files (*.csv)|*.csv";
 
             try
@@ -175,8 +153,6 @@ namespace LearningPlanner
                                       .Concat(controls)
                                       .Where(c => c.GetType() == type);
         }
-
-
 
         public void CompletedTaskFormChangeFont()
         {

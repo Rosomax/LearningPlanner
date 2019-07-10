@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using System.Collections.Generic;
 using LearningPlanner.Properties;
 
 namespace LearningPlanner
@@ -18,15 +17,11 @@ namespace LearningPlanner
 
         EntitiesModel categoryModel = new EntitiesModel();
 
-
         private void Category_Load(object sender, EventArgs e)
         {
-           // CategoryFormChangeFont();
-
 
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
             
-
             chooseCategoryDataGrid.DataSource = categoryModel.Tasks.Select(c => new
             {
                 c.Kategoria,
@@ -39,8 +34,6 @@ namespace LearningPlanner
 
         private void CategoryForm_SizeChanged(object sender, EventArgs e)
         {
-
-
             if (Size.Width <= 799)
             {
                 DefaultResponsives dresp = new DefaultResponsives();              
@@ -51,7 +44,6 @@ namespace LearningPlanner
                 Responsiveness resp = new Responsiveness();          
                     resp.CategoryResponse(this);
             }
-
         }
 
         #region GridHandlers
@@ -107,8 +99,6 @@ namespace LearningPlanner
         }
 
         #endregion
-
-
 
     }
 }
