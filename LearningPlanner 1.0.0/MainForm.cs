@@ -353,21 +353,17 @@ namespace LearningPlanner
         #endregion
 
 
-
        private void RegisterLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegisterForm rf = new RegisterForm();
             rf.Show();
         }
-
-       
-
+     
        private void MainForm_Load(object sender, EventArgs e)
         {
             SetCredentials();
-           
-        }
 
+        }
        
     }
 

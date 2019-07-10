@@ -65,9 +65,7 @@ namespace LearningPlanner
                 currentForm.FillGrid();
                 Close();
             }
-         
-               
-
+                       
         }
         
         public void HideFinishTaskButton()
@@ -82,10 +80,8 @@ namespace LearningPlanner
             EditTaskButton.Hide();
         }
 
-
         private void EditTask_Click(object sender, EventArgs e)
         {
-
 
             DescriptionInfoRichTextBox.ReadOnly = false;
             using (EntitiesModel mod = new EntitiesModel())
@@ -99,7 +95,7 @@ namespace LearningPlanner
                 
             }
             EditTaskButton.Click += EditTask_Click1;
-            this.Text = ("Szczególy Tasks [Tryb edytowania]");
+            Text = ("Szczególy Tasks [Tryb edytowania]");
         }
 
         private void EditTask_Click1(object sender, EventArgs e)

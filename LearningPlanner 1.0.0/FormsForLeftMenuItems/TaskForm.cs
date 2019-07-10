@@ -9,7 +9,6 @@ using System.Collections.Generic;
 
 namespace LearningPlanner
 {
-
     public partial class TaskForm : Form
     {
         public TaskForm()
@@ -18,23 +17,21 @@ namespace LearningPlanner
          
         }
 
-       private readonly int IDUser = MainForm.UserID;
+        private readonly int IDUser = MainForm.UserID;
 
         private void TaskForm_Load(object sender, EventArgs e)
         {
-           
-            
+        
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
 
             FillGrid();
             
-
             TaskDataGridView.Columns["IDZadania"].Visible = false;
             TaskDataGridView.Columns["DataUtworzenia"].Visible = false;
             TaskDataGridView.Columns["CzyZakonczone"].Visible = false;
             TaskDataGridView.Columns["IDUzytkownika"].Visible = false;
 
-            SaveTaskLogToFile();
+           // SaveTaskLogToFile();
             
         }
 
@@ -56,8 +53,7 @@ namespace LearningPlanner
         #region CRUDMethods
         
         EntitiesModel model = new EntitiesModel();
-        Tasks taskModel = new Tasks();
-
+      
         public void FillGrid()
         {
             TaskDataGridView.DataSource = model.Tasks.Select(o => new
@@ -72,14 +68,14 @@ namespace LearningPlanner
             }).Where(o => o.IDUzytkownika == IDUser).Where(o => o.CzyZakonczone == false).ToList();
         }
 
+        Tasks taskModel = new Tasks();
+
         private void TaskDataGridView_Click(object sender, EventArgs e)
         {
             try
-            {
-                
+            {              
                if (TaskDataGridView.CurrentRow.Index !=-1 )
-                {
-                                     
+                {                                     
                         taskModel.IDZadania = Convert.ToInt32(TaskDataGridView.CurrentRow.Cells["IDZadania"].Value);
                         using (EntitiesModel model = new EntitiesModel())
                         {
@@ -87,20 +83,13 @@ namespace LearningPlanner
                             TaskNameTextBox.Text = taskModel.Nazwa;
                             CategoryTextBox.Text = taskModel.Kategoria;
                             DescriptionTextBox.Text = taskModel.Opis;
-                        } 
-                     
+                        }                      
                 }
-
                 SaveButton.Text = "Zaaktualizuj";
-
             }
             catch (NullReferenceException) { }
-
         }
 
-        
-       
-      
         private void CancelButton_Click(object sender, EventArgs e)
         {
             ClearTextBoxes();
@@ -108,7 +97,6 @@ namespace LearningPlanner
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-
             taskModel.Nazwa = TaskNameTextBox.Text.Trim();
             taskModel.Kategoria = CategoryTextBox.Text.Trim();
             taskModel.Opis = DescriptionTextBox.Text.Trim();
@@ -138,17 +126,12 @@ namespace LearningPlanner
                 FillGrid();
                 ClearTextBoxes();
                 MessageBox.Show("Pomyślnie dodano zadanie");
-            }
-            
-         
-
+            }                   
         }
-
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Czy jesteś pewien, że chcesz usunąć to zadanie?", "USUWANIE REKORDU", MessageBoxButtons.YesNo) == DialogResult.Yes)
-
                 try
                 {
                     using (EntitiesModel dbmodel = new EntitiesModel())
@@ -173,15 +156,10 @@ namespace LearningPlanner
                     Timer exceptionTimer = new Timer
                     {
                         Interval = 7000
-
                     };
                     exceptionTimer.Tick += ExceptionTimer_Tick;
                     exceptionTimer.Start();
-
-
                 }
-
-
         }
 
         private void ClearTextBoxes()
@@ -194,7 +172,36 @@ namespace LearningPlanner
 
         #endregion
 
+        private void SaveTaskLogToFile()
+        {
+            var tasksNumber = TaskDataGridView.Rows.Count.ToString();
+            var actualDate = DateTime.Now.ToString();
 
+            const string path = "Logs\\Log.txt";
+
+            try
+            {
+                using (StreamWriter write = new StreamWriter(path, true))
+                {
+                    write.WriteLine("Liczba zadan: " + tasksNumber
+                       + ", " + actualDate);
+                }
+            }
+            catch (IOException exc)
+            {
+                string logError = exc.Message;
+                errorLabel.Visible = true;
+                errorLabel.Text = logError;
+                Timer excTimer = new Timer
+                {
+                    Interval = 7000
+                };
+                excTimer.Tick += ExceptionTimer_Tick;
+                excTimer.Start();
+
+            }
+
+        }
 
         public DataGridViewRow SelectedRow { get; private set; }
         public bool Status { get; private set; }
@@ -230,11 +237,8 @@ namespace LearningPlanner
 
 
                 frm.LoadOrders(this);
-
-            }
-            
+            }           
         }
-
 
         private void ExceptionTimer_Tick(object sender, EventArgs e)
         {
@@ -242,41 +246,7 @@ namespace LearningPlanner
             errorLabel.Text = "";
         }
 
-
-        private void SaveTaskLogToFile()
-        {
-            var tasksNumber = TaskDataGridView.Rows.Count.ToString();
-            var actualDate = DateTime.Now.ToString();
-
-           const string path = "Logs\\Log.txt";
-
-            try
-            {
-                    using (StreamWriter write = new StreamWriter(path, true))
-                    {
-                        write.WriteLine("Liczba zadan: " + tasksNumber
-                           + ", " + actualDate);
-                    }             
-            }
-            catch (IOException exc)
-            {
-                string logError = exc.Message;
-                errorLabel.Visible = true;
-                errorLabel.Text = logError;
-                Timer excTimer = new Timer
-                {
-                    Interval = 7000
-                };
-                excTimer.Tick += ExceptionTimer_Tick;
-                excTimer.Start();
-
-            }
-
-        }
-
+       
 
     }
-
-
-
 }

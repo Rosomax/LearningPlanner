@@ -29,5 +29,6 @@ namespace LearningPlanner
         public virtual DbSet<Tasks> Tasks { get; set; }
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Secret> Secret { get; set; }
     }
 }

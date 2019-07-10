@@ -11,10 +11,8 @@ namespace LearningPlanner
         {
             InitializeComponent();
         }
-
-        
-        string login;
-        
+       
+        string login;       
         bool logi = false;
         
        public string Login
@@ -53,7 +51,6 @@ namespace LearningPlanner
 
         string password;
 
-
         public string Password
         {
 
@@ -85,7 +82,6 @@ namespace LearningPlanner
 
         }
 
-
         void CreateAccount()
         {
 
@@ -114,8 +110,7 @@ namespace LearningPlanner
             }
 
         }
-      
-        
+            
            private void AddUserToDataBase()
            {
             Users model = new Users
@@ -140,7 +135,6 @@ namespace LearningPlanner
             }
         }
         
-
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {

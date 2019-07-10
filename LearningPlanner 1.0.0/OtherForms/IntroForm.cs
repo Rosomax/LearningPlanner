@@ -18,9 +18,9 @@ namespace LearningPlanner
         private void SystemLog()
         {
             var dateStart = DateTime.Now.ToString();
-            var netBIOS = System.Environment.MachineName.ToString();
-            var physicalMemory = System.Environment.WorkingSet.ToString();
-            var loggedUserName = System.Environment.UserName.ToString();
+            var netBIOS = Environment.MachineName.ToString();
+            var physicalMemory = Environment.WorkingSet.ToString();
+            var loggedUserName = Environment.UserName.ToString();
 
             string path = "Logs\\LocalLogs.txt";
 
@@ -37,17 +37,13 @@ namespace LearningPlanner
                     write.WriteLine();
                    
                 }
-
-            
-
+         
         }
 
         private void OkButton_Click(object sender, EventArgs e)
-        {
-       
+        {     
             Thread t = new Thread(new ThreadStart(SystemLog));
             t.Start();
-
             Close();           
         }
 
@@ -66,7 +62,7 @@ namespace LearningPlanner
         {
             OkButton.Visible = true;
             Invalidate();
-            
+           
         }
     }
 }

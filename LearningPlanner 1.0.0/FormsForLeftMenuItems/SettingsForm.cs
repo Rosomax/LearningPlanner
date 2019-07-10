@@ -10,27 +10,20 @@ using System.Linq;
 namespace LearningPlanner
 {
 
-
     public partial class SettingsForm : Form
     {
         public SettingsForm()
         {
-            InitializeComponent();
-                      
+            InitializeComponent();                    
         }
        
-
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-
             SetColorFromSettings();
             SetMusicFromSettings();
             SetFontFromSettings();
             SettingsFormChangeFont();
-
-        }
-
-     
+        }    
         
         private void SettingsForm_Paint(object sender, PaintEventArgs e)
         {
@@ -78,9 +71,7 @@ namespace LearningPlanner
             e.Graphics.Transform = m;
             e.Graphics.TranslateTransform(190, 135);
             e.Graphics.DrawLine(Pens.Black, 0, 0, -23, 0);
-            //////////////////////////////////////
-            // Rysowanie napisu settings/////////
-            /////////////////////////////////////
+            
             string drawString = "Settings";
             Font drawFont = new Font("Century Gothic", 18, FontStyle.Bold);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
@@ -93,7 +84,6 @@ namespace LearningPlanner
             e.Graphics.RotateTransform(rotate);
             e.Graphics.DrawString(drawString, drawFont, drawBrush, 0, 0, drawFormat);
 
-
         }
 
 
@@ -103,8 +93,6 @@ namespace LearningPlanner
         {
             Invalidate();
         }
-
-
 
         private void ChangeColorTimer_Tick(object sender, EventArgs e)
         {
@@ -117,8 +105,6 @@ namespace LearningPlanner
             var blue = Convert.ToInt32(BtextBox.Text);
 
             BackColor = Color.FromArgb(red, green, blue);
-
-
         }
 
 
@@ -128,7 +114,6 @@ namespace LearningPlanner
             Settings.Default.GValue = GtrackBar.Value;
             Settings.Default.BValue = BtrackBar.Value;
             Settings.Default.Save();
-
         }
 
      
@@ -137,14 +122,12 @@ namespace LearningPlanner
             RtrackBar.Value = Settings.Default.RValue;
             GtrackBar.Value = Settings.Default.GValue;
             BtrackBar.Value = Settings.Default.BValue;
-
         }
 
         private void SaveColorChangesButton_Click(object sender, EventArgs e)
         {
             SaveBackColorChanges();
             MessageBox.Show("Zapisano");
-
         }
 
         #endregion
@@ -153,7 +136,7 @@ namespace LearningPlanner
         #region MusicMethods
 
         SoundPlayer player = new SoundPlayer();
-     
+    
         private void PlayCheckedMusic(object music)
         {        
                 if (Settings.Default.CalmMusic)
@@ -167,8 +150,7 @@ namespace LearningPlanner
                 else if (Settings.Default.RelaxMusic)
                 {
                     player.SoundLocation = "Music\\relax.wav";
-                }
-           
+                }          
             player.PlayLooping();
         }
 
@@ -178,15 +160,12 @@ namespace LearningPlanner
             player.Stop();
         }
        
-
        public void BackgroundMusic()
         {            
            WaitCallback waitCallback = new WaitCallback(PlayCheckedMusic);
             ThreadPool.QueueUserWorkItem(waitCallback);            
         }
-       
-    
-        // Ustawienie muzyki
+                   
         private void SetMusicFromSettings()
         {
             if (BackgroundMusicCheckBox.Checked = Settings.Default.Music)
@@ -197,8 +176,6 @@ namespace LearningPlanner
 
                 RadioBtnsVisibleOn();
             }
-
-
         }
         
         private void SaveMusicStatusToSettings()
@@ -213,7 +190,6 @@ namespace LearningPlanner
             Settings.Default.Save();
         }
 
-
         private void SaveDefaultMusicStatusSettings()
         {
             Settings.Default.Music = BackgroundMusicCheckBox.Checked = false;
@@ -222,8 +198,6 @@ namespace LearningPlanner
             Settings.Default.ClassicMusic = ClassicMusicRadioButton.Checked = false;
             Settings.Default.RelaxMusic = RelaxMusicRadioButton.Checked = false;
         }
-
-
 
         private void RadioBtnsVisibleOn()
         {
@@ -238,7 +212,6 @@ namespace LearningPlanner
             ClassicMusicRadioButton.Visible = false;
             RelaxMusicRadioButton.Visible = false;
         }
-
 
         private void BackgroundMusicCheckBox_Click(object sender, EventArgs e)
         {
@@ -255,9 +228,7 @@ namespace LearningPlanner
                 SaveMusicStatusToSettings();
             }
                     
-
         }
-
 
         private void CalmMusicRadioButton_Click(object sender, EventArgs e)
         {
@@ -295,8 +266,7 @@ namespace LearningPlanner
 
 
         string fontName;
-
-       
+      
         private void SetCheckedFont()
        {
             if (ArialBlackRadioButton.Checked)
@@ -310,18 +280,15 @@ namespace LearningPlanner
             else if (CourierRadioButton.Checked)
             {
                 fontName = "Courier New";               
-            }
-                
+            }                
             else if (TimesNewRomanRadioButton.Checked)
             {
                 fontName = "Times New Roman";             
-            }
-              
+            }             
             else if (VerdanaRadioButton.Checked)
             {
                 fontName = "Verdana";               
             }
- 
            
         }
 
@@ -348,7 +315,6 @@ namespace LearningPlanner
             TimesNewRomanRadioButton.Checked = Settings.Default.TimesNewRomanFont;
             VerdanaRadioButton.Checked = Settings.Default.VerdanaFont;
             BoldCheckBox.Checked = Settings.Default.BoldFont;
-
         }
 
         
@@ -489,7 +455,6 @@ namespace LearningPlanner
 
         private void RestoreDefaultButton_Click(object sender, EventArgs e)
         {
-
             RtrackBar.Value = 138;
             GtrackBar.Value = 197;
             BtrackBar.Value = 222;
@@ -498,7 +463,6 @@ namespace LearningPlanner
             SaveDefaultMusicStatusSettings();
             StopMusic(0);
             Settings.Default.Save();
-
         }
 
         private void ReportErrorButton_Click(object sender, EventArgs e)
@@ -512,15 +476,12 @@ namespace LearningPlanner
         private void SettingTimer_Tick(object sender, EventArgs e)
         {
                 rotate += 1.5f;
-                
-
         }
 
         private void AuthorsButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Jakub Benzef\nbenzef@tlen.pl\n\nMichał Białek\nm.biaek91@gmail.com", "Autorzy", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         
     }
 }

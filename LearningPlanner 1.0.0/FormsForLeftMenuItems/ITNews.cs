@@ -16,14 +16,10 @@ namespace LearningPlanner
 
         private void ITNews_Load(object sender, EventArgs e)
         {
-
-
             BackColor = Color.FromArgb(Settings.Default.RValue, Settings.Default.GValue, Settings.Default.BValue);
-
 
             FillChannels();
             FillSites();
-
         }
 
 
@@ -115,7 +111,6 @@ namespace LearningPlanner
                 
         }
 
-
         private void TransferToUrlWWWTextBox()
         {
             if (FavoriteSitesListBox.SelectedItem != null)
@@ -140,11 +135,9 @@ namespace LearningPlanner
 
         private void AddUrlButton_Click(object sender, EventArgs e)
         {
-                       
+
             try
             {
-
-
                 XmlReader feedReadXML = XmlReader.Create(UrlTextBox.Text);
                 SyndicationFeed feedXML = SyndicationFeed.Load(feedReadXML);
                 TabPage feedTab = new TabPage(feedXML.Title.Text);
@@ -153,16 +146,9 @@ namespace LearningPlanner
                 feedTab.Controls.Add(feedList);
                 feedList.Dock = DockStyle.Fill;
                 feedList.HorizontalScrollbar = true;
-
-                //foreach (SyndicationItem feedItem in feedXML.Items)
-                //{
-
-
-
+          
                 foreach (SyndicationItem feedItem in feedXML.Items)
-                {
-                  
-                  
+                {                                   
                     string summary = feedItem.Summary.Text;
                     bool running = true;
 
@@ -193,33 +179,26 @@ namespace LearningPlanner
                                 running = false;
                             }
                         }
-
                     }
-
                   
-                    feedList.Items.Add(feedItem.Title.Text);
-                   
-                    feedList.Items.Add(fix_sum);
-                                   
-                    
+                    feedList.Items.Add(feedItem.Title.Text);                  
+                    feedList.Items.Add(fix_sum);                                                      
                     feedList.Items.Add("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
                 }
             }
             catch { MessageBox.Show("Nie dodano żadengo adresu URL kanału RSS", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error ); }
-
-
         }
       
         private void ChannelsListBox_MouseClick(object sender, MouseEventArgs e)
         {
             TransferToUrlTextBox();
         }
+
         private void FavoriteSitesListBox_MouseClick(object sender, MouseEventArgs e)
         {
             TransferToUrlWWWTextBox();
         }
    
-
         private void LoadWWWbutton_Click(object sender, EventArgs e)
         {
             try
@@ -228,9 +207,7 @@ namespace LearningPlanner
                 WebBrowserForXml.Url = uri;
             }
             
-            catch { MessageBox.Show("Nie dodano żadengo adresu URL strony WWW", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-     
-           
+            catch { MessageBox.Show("Nie dodano żadengo adresu URL strony WWW", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error); }              
         }
         #endregion
     }

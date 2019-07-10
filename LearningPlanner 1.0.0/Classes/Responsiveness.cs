@@ -258,11 +258,5 @@ namespace LearningPlanner
 
         }
 
-        public void SettingsResponse(SettingsForm x)
-        {
-
-        }
-
-
     }
 }
