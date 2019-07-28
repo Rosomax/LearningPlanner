@@ -48,7 +48,7 @@ namespace LearningPlanner
 
         private void FinishTask_Click(object sender, EventArgs e)
         {
-          if  (MessageBox.Show("Czy napewno chcesz zakończyć to zadanie?","Koniec Tasks", MessageBoxButtons.YesNo) == DialogResult.Yes)
+          if  (MessageBox.Show("Czy napewno chcesz zakończyć to zadanie?","Koniec Zadania", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 var selectedRowId = TaskForm.Id;
             
@@ -95,7 +95,7 @@ namespace LearningPlanner
                 
             }
             EditTaskButton.Click += EditTask_Click1;
-            Text = ("Szczególy Tasks [Tryb edytowania]");
+            Text = ("Szczególy Zadania [Tryb edytowania]");
         }
 
         private void EditTask_Click1(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace LearningPlanner
             MessageBox.Show("Zaktualizowano opis");
             EditTaskButton.Click -= EditTask_Click1;
             EditTaskButton.Text = "Edytuj";
-            Text = ("Szczególy Tasks");
+            Text = ("Szczególy Zadania");
             currentForm2.FillGrid();
         }
 
