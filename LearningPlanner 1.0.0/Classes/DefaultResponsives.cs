@@ -126,7 +126,7 @@ namespace LearningPlanner
             int heightSize = x.Height;
             //zmienne przechowujace skalowanie dla wiekszej liczby kontrolek
             FontStyle fontStyle = FontStyle.Bold;
-            int labelFontSize = widthSize / 55;
+            int labelFontSize =   widthSize / 55;
             int labelHeightSize = (int)(heightSize / 26.31);
             int labelHeightLocation = (int)(heightSize / 12.82);
             int textBoxHeightSize = (int)(heightSize / 2.5);
