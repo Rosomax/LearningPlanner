@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LearningPlannerDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Quotations">
+          <Key>
+            <PropertyRef Name="IDCytatu" />
+          </Key>
+          <Property Name="IDCytatu" Type="int" Nullable="false" />
+          <Property Name="Tresc" Type="char" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Secret">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tasks">
+          <Key>
+            <PropertyRef Name="IDZadania" />
+          </Key>
+          <Property Name="IDZadania" Type="int" Nullable="false" />
+          <Property Name="Nazwa" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Kategoria" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Opis" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="DataUtworzenia" Type="datetime" Nullable="false" />
+          <Property Name="CzyZakonczone" Type="bit" Nullable="false" />
+          <Property Name="IDUzytkownika" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="IDosoby" />
+          </Key>
+          <Property Name="IDosoby" Type="int" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Haslo" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LearningPlannerDataBaseModelStoreContainer">
+          <EntitySet Name="Quotations" EntityType="Self.Quotations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Secret" EntityType="Self.Secret" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LearningPlannerDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Quotations">
+          <Key>
+            <PropertyRef Name="IDCytatu" />
+          </Key>
+          <Property Name="IDCytatu" Type="Int32" Nullable="false" />
+          <Property Name="Tresc" Type="String" MaxLength="200" FixedLength="true" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Secret">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tasks">
+          <Key>
+            <PropertyRef Name="IDZadania" />
+          </Key>
+          <Property Name="IDZadania" Type="Int32" Nullable="false" />
+          <Property Name="Nazwa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Kategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Opis" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataUtworzenia" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CzyZakonczone" Type="Boolean" Nullable="false" />
+          <Property Name="IDUzytkownika" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="IDosoby" />
+          </Key>
+          <Property Name="IDosoby" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Haslo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LearningPlannerDataBaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Quotations" EntityType="Self.Quotations" />
+          <EntitySet Name="Secret" EntityType="Self.Secret" />
+          <EntitySet Name="Tasks" EntityType="Self.Tasks" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LearningPlannerDataBaseModelStoreContainer" CdmEntityContainer="LearningPlannerDataBaseEntities">
+          <EntitySetMapping Name="Quotations">
+            <EntityTypeMapping TypeName="LearningPlannerDataBaseModel.Quotations">
+              <MappingFragment StoreEntitySet="Quotations">
+                <ScalarProperty Name="IDCytatu" ColumnName="IDCytatu" />
+                <ScalarProperty Name="Tresc" ColumnName="Tresc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Secret">
+            <EntityTypeMapping TypeName="LearningPlannerDataBaseModel.Secret">
+              <MappingFragment StoreEntitySet="Secret">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="LearningPlannerDataBaseModel.Tasks">
+              <MappingFragment StoreEntitySet="Tasks">
+                <ScalarProperty Name="IDZadania" ColumnName="IDZadania" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="Kategoria" ColumnName="Kategoria" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+                <ScalarProperty Name="DataUtworzenia" ColumnName="DataUtworzenia" />
+                <ScalarProperty Name="CzyZakonczone" ColumnName="CzyZakonczone" />
+                <ScalarProperty Name="IDUzytkownika" ColumnName="IDUzytkownika" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="LearningPlannerDataBaseModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IDosoby" ColumnName="IDosoby" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Haslo" ColumnName="Haslo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

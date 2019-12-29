@@ -52,7 +52,7 @@ namespace LearningPlanner
 
         #region CRUDMethods
         
-        EntitiesModel model = new EntitiesModel();
+        LearningPlannerDataBaseEntities model = new LearningPlannerDataBaseEntities();
       
         public void FillGrid()
         {
@@ -77,7 +77,7 @@ namespace LearningPlanner
                if (TaskDataGridView.CurrentRow.Index !=-1 )
                 {                                     
                         taskModel.IDZadania = Convert.ToInt32(TaskDataGridView.CurrentRow.Cells["IDZadania"].Value);
-                        using (EntitiesModel model = new EntitiesModel())
+                        using (LearningPlannerDataBaseEntities model = new LearningPlannerDataBaseEntities())
                         {
                             taskModel = model.Tasks.Where(x => x.IDZadania == taskModel.IDZadania).FirstOrDefault();
                             TaskNameTextBox.Text = taskModel.Nazwa;
@@ -110,7 +110,7 @@ namespace LearningPlanner
             }
             else
             {
-                using (EntitiesModel dbmodel = new EntitiesModel())
+                using (LearningPlannerDataBaseEntities dbmodel = new LearningPlannerDataBaseEntities())
                 {
                     if (taskModel.IDZadania == 0)
                     {
@@ -134,7 +134,7 @@ namespace LearningPlanner
             if (MessageBox.Show("Czy jesteś pewien, że chcesz usunąć to zadanie?", "USUWANIE REKORDU", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 try
                 {
-                    using (EntitiesModel dbmodel = new EntitiesModel())
+                    using (LearningPlannerDataBaseEntities dbmodel = new LearningPlannerDataBaseEntities())
                     {
                         var entry = dbmodel.Entry(taskModel);
                         if (entry.State == System.Data.Entity.EntityState.Detached)

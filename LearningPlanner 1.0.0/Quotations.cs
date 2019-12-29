@@ -14,7 +14,7 @@ namespace LearningPlanner
     
     public partial class Quotations
     {
-        public int IDcytatu { get; set; }
+        public int IDCytatu { get; set; }
         public string Tresc { get; set; }
     }
 }

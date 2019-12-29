@@ -119,16 +119,16 @@ namespace LearningPlanner
                 Haslo = Password
             };
 
-            using (EntitiesModel EntitiesModel = new EntitiesModel())
+            using (LearningPlannerDataBaseEntities LearningPlannerDataBaseEntities = new LearningPlannerDataBaseEntities())
             {
-                if (EntitiesModel.Users.Where(u => u.Login == Login).Any())
+                if (LearningPlannerDataBaseEntities.Users.Where(u => u.Login == Login).Any())
                 {
                     MessageBox.Show("Podana nazwa uzytkownika jest juz zajęta");
                 }
                 else
                 {
-                    EntitiesModel.Users.Add(model);
-                    EntitiesModel.SaveChanges();
+                    LearningPlannerDataBaseEntities.Users.Add(model);
+                    LearningPlannerDataBaseEntities.SaveChanges();
                     MessageBox.Show("Utworzono konto!");
                     Close();
                 }

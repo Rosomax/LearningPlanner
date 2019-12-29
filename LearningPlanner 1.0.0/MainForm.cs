@@ -261,7 +261,7 @@ namespace LearningPlanner
             var login = LogintextBox1.Text;
             var password = PasswordTextBox.Text;
 
-            using (EntitiesModel x = new EntitiesModel())
+            using (LearningPlannerDataBaseEntities x = new LearningPlannerDataBaseEntities())
             {
 
                 var user = x.Users.FirstOrDefault(e => e.Login == login);

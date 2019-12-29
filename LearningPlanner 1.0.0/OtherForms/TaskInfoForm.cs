@@ -52,7 +52,7 @@ namespace LearningPlanner
             {
                 var selectedRowId = TaskForm.Id;
             
-                using (EntitiesModel mod = new EntitiesModel())
+                using (LearningPlannerDataBaseEntities mod = new LearningPlannerDataBaseEntities())
                 {
                     var selectedTask = mod.Tasks.Single(z => z.IDZadania == selectedRowId);
                     selectedTask.CzyZakonczone = true;
@@ -84,7 +84,7 @@ namespace LearningPlanner
         {
 
             DescriptionInfoRichTextBox.ReadOnly = false;
-            using (EntitiesModel mod = new EntitiesModel())
+            using (LearningPlannerDataBaseEntities mod = new LearningPlannerDataBaseEntities())
             {
                 DescriptionInfoRichTextBox.TextChanged += DescriptionInfoRichTextBox_TextChanged;
 

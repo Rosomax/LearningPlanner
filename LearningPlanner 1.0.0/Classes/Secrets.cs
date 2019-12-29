@@ -5,7 +5,7 @@ namespace LearningPlanner
     {
         public static string GetEmailSecret()
         {
-            using (EntitiesModel entities = new EntitiesModel())
+            using (LearningPlannerDataBaseEntities entities = new LearningPlannerDataBaseEntities())
             {
                 return (from Secret in entities.Secret
                         where Secret.Id.Equals(1)

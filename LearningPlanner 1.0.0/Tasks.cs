@@ -20,6 +20,6 @@ namespace LearningPlanner
         public string Opis { get; set; }
         public System.DateTime DataUtworzenia { get; set; }
         public bool CzyZakonczone { get; set; }
-        public int IDUzytkownika { get; set; }
+        public short IDUzytkownika { get; set; }
     }
 }

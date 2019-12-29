@@ -17,7 +17,7 @@ namespace LearningPlanner
        
         private readonly int IDUser = MainForm.UserID;
 
-        EntitiesModel model = new EntitiesModel();
+        LearningPlannerDataBaseEntities model = new LearningPlannerDataBaseEntities();
 
         private void CompletedTasksForm_Load(object sender, EventArgs e)
         {

@@ -16,14 +16,14 @@ namespace LearningPlanner
         private void QuotationControl_Load(object sender, EventArgs e)
         {
             
-            using (EntitiesModel context = new EntitiesModel())
+            using (LearningPlannerDataBaseEntities context = new LearningPlannerDataBaseEntities())
             {
                 int quotationSum = context.Quotations.Count();
 
                 Random rand = new Random();
                 int randomQuotation = rand.Next(quotationSum) + 1;
 
-                var tmp = context.Quotations.Single(p => p.IDcytatu == randomQuotation);
+                var tmp = context.Quotations.Single(p => p.IDCytatu == randomQuotation);
                 QuotationLabel.Text = tmp.Tresc;
 
             }

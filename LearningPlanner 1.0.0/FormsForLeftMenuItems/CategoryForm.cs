@@ -15,7 +15,7 @@ namespace LearningPlanner
 
        private readonly int IDUser = MainForm.UserID;
 
-        EntitiesModel categoryModel = new EntitiesModel();
+        LearningPlannerDataBaseEntities categoryModel = new LearningPlannerDataBaseEntities();
 
         private void Category_Load(object sender, EventArgs e)
         {

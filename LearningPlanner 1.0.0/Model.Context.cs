@@ -13,10 +13,10 @@ namespace LearningPlanner
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EntitiesModel : DbContext
+    public partial class LearningPlannerDataBaseEntities : DbContext
     {
-        public EntitiesModel()
-            : base("name=EntitiesModel")
+        public LearningPlannerDataBaseEntities()
+            : base("name=LearningPlannerDataBaseEntities")
         {
         }
     
@@ -26,9 +26,8 @@ namespace LearningPlanner
         }
     
         public virtual DbSet<Quotations> Quotations { get; set; }
+        public virtual DbSet<Secret> Secret { get; set; }
         public virtual DbSet<Tasks> Tasks { get; set; }
         public virtual DbSet<Users> Users { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Secret> Secret { get; set; }
     }
 }
