@@ -40,6 +40,7 @@
             this.ChannelsListBox = new System.Windows.Forms.ListBox();
             this.DisplayForNewsTabControl = new System.Windows.Forms.TabControl();
             this.WebBrowserForXml = new System.Windows.Forms.WebBrowser();
+            this.TwitterButton = new System.Windows.Forms.Button();
             this.urlGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             // 
             this.urlGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.urlGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.urlGroupBox.Controls.Add(this.TwitterButton);
             this.urlGroupBox.Controls.Add(this.WWWtextbox);
             this.urlGroupBox.Controls.Add(this.LoadWWWbutton);
             this.urlGroupBox.Controls.Add(this.FavoriteSitesListBox);
@@ -215,6 +217,29 @@
             this.WebBrowserForXml.TabIndex = 5;
             this.WebBrowserForXml.Url = new System.Uri("", System.UriKind.Relative);
             // 
+            // TwitterButton
+            // 
+            this.TwitterButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.TwitterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(197)))), ((int)(((byte)(222)))));
+            this.TwitterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TwitterButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.TwitterButton.FlatAppearance.BorderSize = 3;
+            this.TwitterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TwitterButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TwitterButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TwitterButton.Location = new System.Drawing.Point(13, 458);
+            this.TwitterButton.Margin = new System.Windows.Forms.Padding(8);
+            this.TwitterButton.MaximumSize = new System.Drawing.Size(300, 100);
+            this.TwitterButton.Name = "TwitterButton";
+            this.TwitterButton.Padding = new System.Windows.Forms.Padding(2);
+            this.TwitterButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TwitterButton.Size = new System.Drawing.Size(175, 69);
+            this.TwitterButton.TabIndex = 10;
+            this.TwitterButton.Text = "Tweety";
+            this.TwitterButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.TwitterButton.UseVisualStyleBackColor = false;
+            this.TwitterButton.Click += new System.EventHandler(this.TwitterButton_Click);
+            // 
             // ITNews
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -249,5 +274,6 @@
         public System.Windows.Forms.Label SitesLabel;
         public System.Windows.Forms.Button LoadWWWbutton;
         public System.Windows.Forms.TextBox WWWtextbox;
+        public System.Windows.Forms.Button TwitterButton;
     }
 }

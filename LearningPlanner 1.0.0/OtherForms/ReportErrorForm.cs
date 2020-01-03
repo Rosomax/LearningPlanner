@@ -15,6 +15,8 @@ namespace LearningPlanner
             InitializeComponent();
         }
 
+        Secrets sec = new Secrets();
+
      const string programMail = "plannerteaminfo@gmail.com";  
      const string authorsMailK = "benzef@tlen.pl";
      const string authorsMailM = "m.biaek91@gmail.com";
@@ -44,7 +46,7 @@ private bool SendMessage(string emailAddr)
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587)
                 {
                     EnableSsl = true,
-                    Credentials = new NetworkCredential(programMail, Secrets.GetEmailSecret())
+                    Credentials = new NetworkCredential(programMail, sec.GetEmailSecret())
                 };
                 smtpClient.Send(message);
                 MessageBox.Show("Wyslano wiadomosc!");

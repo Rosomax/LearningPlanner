@@ -210,5 +210,11 @@ namespace LearningPlanner
             catch { MessageBox.Show("Nie dodano żadengo adresu URL strony WWW", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error); }              
         }
         #endregion
+
+        private void TwitterButton_Click(object sender, EventArgs e)
+        {
+            TwitterForm twitterForm = new TwitterForm();
+            twitterForm.Show();
+        }
     }
 }
