@@ -29,5 +29,7 @@ namespace LearningPlanner
         public virtual DbSet<Secret> Secret { get; set; }
         public virtual DbSet<Tasks> Tasks { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<TweetsHistory> TweetsHistory { get; set; }
+        public virtual DbSet<Top3Users> Top3Users { get; set; }
     }
 }

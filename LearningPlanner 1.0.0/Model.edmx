@@ -31,6 +31,14 @@
           <Property Name="CzyZakonczone" Type="bit" Nullable="false" />
           <Property Name="IDUzytkownika" Type="smallint" Nullable="false" />
         </EntityType>
+        <EntityType Name="TweetsHistory">
+          <Key>
+            <PropertyRef Name="IDTweet" />
+          </Key>
+          <Property Name="IDTweet" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDosoby" Type="int" Nullable="false" />
+          <Property Name="TwitterUser" Type="char" MaxLength="25" Nullable="false" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="IDosoby" />
@@ -39,11 +47,43 @@
           <Property Name="Login" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Haslo" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LearningPlannerDataBase.dbo.Top3Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Top3Users">
+          <Key>
+            <PropertyRef Name="TwitterUser" />
+          </Key>
+          <Property Name="TwitterUser" Type="char" MaxLength="25" Nullable="false" />
+          <Property Name="Ile" Type="int" />
+        </EntityType>
+        <Association Name="FK__TweetsHis__IDoso__4D94879B">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="TweetsHistory" Type="Self.TweetsHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDosoby" />
+            </Principal>
+            <Dependent Role="TweetsHistory">
+              <PropertyRef Name="IDosoby" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="LearningPlannerDataBaseModelStoreContainer">
           <EntitySet Name="Quotations" EntityType="Self.Quotations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Secret" EntityType="Self.Secret" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TweetsHistory" EntityType="Self.TweetsHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Top3Users" EntityType="Self.Top3Users" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Top3Users].[TwitterUser] AS [TwitterUser], 
+    [Top3Users].[Ile] AS [Ile]
+    FROM [dbo].[Top3Users] AS [Top3Users]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__TweetsHis__IDoso__4D94879B" Association="Self.FK__TweetsHis__IDoso__4D94879B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TweetsHistory" EntitySet="TweetsHistory" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -82,13 +122,48 @@
           <Property Name="IDosoby" Type="Int32" Nullable="false" />
           <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Haslo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TweetsHistory" Relationship="LearningPlannerDataBaseModel.FK__TweetsHis__IDoso__4D94879B" FromRole="Users" ToRole="TweetsHistory" />
         </EntityType>
         <EntityContainer Name="LearningPlannerDataBaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Quotations" EntityType="Self.Quotations" />
           <EntitySet Name="Secret" EntityType="Self.Secret" />
           <EntitySet Name="Tasks" EntityType="Self.Tasks" />
           <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="TweetsHistory" EntityType="LearningPlannerDataBaseModel.TweetsHistory" />
+          <AssociationSet Name="FK__TweetsHis__IDoso__4D94879B" Association="LearningPlannerDataBaseModel.FK__TweetsHis__IDoso__4D94879B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TweetsHistory" EntitySet="TweetsHistory" />
+          </AssociationSet>
+          <EntitySet Name="Top3Users" EntityType="LearningPlannerDataBaseModel.Top3Users" />
         </EntityContainer>
+        <EntityType Name="TweetsHistory">
+          <Key>
+            <PropertyRef Name="IDTweet" />
+          </Key>
+          <Property Name="IDTweet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDosoby" Type="Int32" Nullable="false" />
+          <Property Name="TwitterUser" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Users" Relationship="LearningPlannerDataBaseModel.FK__TweetsHis__IDoso__4D94879B" FromRole="TweetsHistory" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK__TweetsHis__IDoso__4D94879B">
+          <End Type="LearningPlannerDataBaseModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="LearningPlannerDataBaseModel.TweetsHistory" Role="TweetsHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDosoby" />
+            </Principal>
+            <Dependent Role="TweetsHistory">
+              <PropertyRef Name="IDosoby" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Top3Users">
+          <Key>
+            <PropertyRef Name="TwitterUser" />
+          </Key>
+          <Property Name="TwitterUser" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="Ile" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -130,6 +205,23 @@
                 <ScalarProperty Name="IDosoby" ColumnName="IDosoby" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Haslo" ColumnName="Haslo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TweetsHistory">
+            <EntityTypeMapping TypeName="LearningPlannerDataBaseModel.TweetsHistory">
+              <MappingFragment StoreEntitySet="TweetsHistory">
+                <ScalarProperty Name="TwitterUser" ColumnName="TwitterUser" />
+                <ScalarProperty Name="IDosoby" ColumnName="IDosoby" />
+                <ScalarProperty Name="IDTweet" ColumnName="IDTweet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Top3Users">
+            <EntityTypeMapping TypeName="LearningPlannerDataBaseModel.Top3Users">
+              <MappingFragment StoreEntitySet="Top3Users">
+                <ScalarProperty Name="Ile" ColumnName="Ile" />
+                <ScalarProperty Name="TwitterUser" ColumnName="TwitterUser" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

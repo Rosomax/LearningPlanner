@@ -12,7 +12,7 @@ namespace LearningPlanner
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);            
+            Application.SetCompatibleTextRenderingDefault(false);           
             Application.Run(new IntroForm());
             Application.Run(new MainForm());
             

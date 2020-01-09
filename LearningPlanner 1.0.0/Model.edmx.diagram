@@ -9,6 +9,9 @@
         <EntityTypeShape EntityType="LearningPlannerDataBaseModel.Secret" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LearningPlannerDataBaseModel.Tasks" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LearningPlannerDataBaseModel.Users" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningPlannerDataBaseModel.TweetsHistory" Width="1.5" PointX="5" PointY="3.75" />
+        <AssociationConnector Association="LearningPlannerDataBaseModel.FK__TweetsHis__IDoso__4D94879B" />
+        <EntityTypeShape EntityType="LearningPlannerDataBaseModel.Top3Users" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

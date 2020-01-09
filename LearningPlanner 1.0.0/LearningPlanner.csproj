@@ -206,6 +206,12 @@
     <Compile Include="Tasks.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Top3Users.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TweetsHistory.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="TwitterForm.cs">
       <SubType>Form</SubType>
     </Compile>

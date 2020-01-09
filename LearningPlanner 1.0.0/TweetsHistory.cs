@@ -12,19 +12,12 @@ namespace LearningPlanner
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class TweetsHistory
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
-        {
-            this.TweetsHistory = new HashSet<TweetsHistory>();
-        }
-    
+        public int IDTweet { get; set; }
         public int IDosoby { get; set; }
-        public string Login { get; set; }
-        public string Haslo { get; set; }
+        public string TwitterUser { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TweetsHistory> TweetsHistory { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

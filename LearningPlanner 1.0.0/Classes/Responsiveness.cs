@@ -243,6 +243,9 @@ namespace LearningPlanner
             x.WWWtextbox.Location = new Point(controlWidthLocation, wWWtextboxLocationHeight);
             x.DisplayForNewsTabControl.Location = new Point(displayForNewTabControlLocationWidth, 0);
             x.WebBrowserForXml.Location = new Point(displayForNewTabControlLocationWidth, xmlBrowserHeightSize);
+           
+            
+            
             // Ustawienie czcionek dla wszystkich kontrolek
             if (Settings.Default.BoldFont)
             {
